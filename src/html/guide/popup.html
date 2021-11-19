@@ -1,0 +1,111 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2>popup</h2>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">팝업버튼 코드복사</button>
+        <xmp id="code1" class="brush: html;">
+            
+            모달창 생성하고자 하는 버튼에 btn-open 클래스 & data-name="popup$" 너어주기
+
+                <button class="btn btn-block btn-open" type="button" data-name="popup1" >클릭</button>
+        </xmp>
+    </div>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code2');" title="주소 복사">팝업 코드복사</button>
+        <xmp id="code2" class="brush: html;">
+
+            첫번째 모달입니다. 
+            <div class="modal-wrap" id="popup1">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h1>임시저장을 하시겠습니까?</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            귀하께서는 신청서 작성중에 있었으며,<br/>
+                            확인을 클릭하시면 임시저장이 완료됩니다.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-close button-grey">취소</button>
+                        <button type="button" class="button-blue">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            두번째 모달입니다. 
+            <div class="modal-wrap" id="popup2">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h1>저장 하시겠습니까?</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            귀하께서는 신청정보 확인/수정에 있었으며,<br/>
+                            확인을 클릭하시면 저장이 완료됩니다.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-close button-grey">취소</button>
+                        <button type="button" class="button-blue">확인</button>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <div>
+
+
+        <div class="modal-wrap" id="popup1">
+            <div class="modal">
+                <div class="modal-header">
+                    <h1>임시저장을 하시겠습니까?</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        귀하께서는 신청서 작성중에 있었으며,<br/>
+                        확인을 클릭하시면 임시저장이 완료됩니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close button-grey">취소</button>
+                    <button type="button" class="button-blue">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-wrap" id="popup2">
+            <div class="modal">
+                <div class="modal-header">
+                    <h1>저장 하시겠습니까?</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        귀하께서는 신청정보 확인/수정에 있었으며,<br/>
+                        확인을 클릭하시면 저장이 완료됩니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close button-grey">취소</button>
+                    <button type="button" class="button-blue">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>popup1</h4>
+        <div class="formInput mt-5">
+         <button class="btn btn-block btn-open" type="button" data-name="popup1" >클릭</button>
+        </div>
+
+        <h4>popup2</h4>
+        <div class="formInput mt-5">
+         <button class="btn btn-block btn-open" type="button" data-name="popup2" >클릭</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

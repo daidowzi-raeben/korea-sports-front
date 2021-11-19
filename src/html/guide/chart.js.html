@@ -1,0 +1,85 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2> chart </h2>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">차트 html 복사</button>
+        <xmp id="code1" class="brush: html;">
+            <div class="chart-wrapper" style="width:190px; height:200px;">
+                <canvas id="todayChart" width="190px" height="190px"></canvas>
+                <span class="todayPer"><em></em>%</span>
+                <span class="todayText"></span>
+            </div>
+        </xmp>
+    </div>
+    <div class="codebox">
+    <button class="copybtn" onclick="copyText('#code2');" title="주소 복사">차트 js 복사</button>
+    <xmp id="code2" class="brush: html;">
+        var todayChart = document.getElementById('chartID').getContext('2d');
+        var todayData = 80 // 데이터 입력
+            dataesle =  100 - todayData;
+            todayText = '차트이름',
+        
+        $('.todayPer em').text(todayData);
+        $('.todayText').text(todayText)
+        
+        new Chart(todayChart, {
+            type: 'doughnut', // 차트형식
+            data: {
+                datasets: [{
+                    label: false,
+                    data: [todayData,dataesle],
+                    backgroundColor: ['#36BAC6'],
+                }],
+                labels: false
+            },
+            options: {
+                responsive: true,
+                
+                legend: {
+                    position: 'bottom'
+                },
+                cutoutPercentage:82,
+                plugins: {
+                    datalabels: {
+                        color: ['#fff'],
+                        borderWidth: 0,
+                        borderColor: ['#fff'],
+                        borderRadius : 25,
+                        anchor: 'center',
+                        formatter: function(value, context) {
+                            return (value > 10) ? null : null //data가 10 미만이면 숫자 값은 출력되지 않습니다.
+                        }
+                    },
+                },
+                title: {
+                    display: true,
+                    position: 'bottom',
+                },
+                tooltips: {
+                    enabled: false
+                },
+                hover: {
+                    animationDuration: 0
+                },
+            }
+        });
+    </xmp>
+    </div>
+    <h4>chart</h4>
+    <div class="chart-wrapper" style="width:190px; height:200px;">
+        <canvas id="todayChart" width="190px" height="190px"></canvas>
+        <span class="todayPer"><em></em>%</span>
+        <span class="todayText"></span>
+    </div>
+    <div class="commentBox font-13">
+        <p> 차트이름 : class="todayText"</p>
+        <p> 퍼센트 : class="todayPer"</p>
+        <p> 데이터 변경 : js에서 todayData값 변경</p>
+        
+    </div>
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

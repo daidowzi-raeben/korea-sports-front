@@ -1,0 +1,78 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+<h2>inputbox</h2>
+<div class="codebox">
+<button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
+<xmp id="code1"class="brush: html;">
+    <div class="table-wrap">
+        <table>
+            <caption>시도체육회 안내</caption>
+            <colgroup>
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">번호</th>
+                    <th scope="col">번호</th>
+                    <th scope="col">번호</th>
+                    <th scope="col">번호</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</xmp>
+</div>
+
+    <div class="conWrap">
+        <div class="table-wrap">
+            <table>
+                <caption>시도체육회 안내</caption>
+                <colgroup>
+                    <col width="">
+                    <col width="">
+                    <col width="">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">번호</th>
+                        <th scope="col">번호</th>
+                        <th scope="col">번호</th>
+                        <th scope="col">번호</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

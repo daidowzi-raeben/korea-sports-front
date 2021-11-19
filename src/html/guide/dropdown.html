@@ -1,0 +1,123 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2>dropdown</h2>
+    <div class="codebox">
+    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">드롭다운 기본 코드복사</button>
+    <xmp id="code1" class="brush: html;">
+        <div class="dropBox">
+            <p>drop down title</p>
+            <!-- items 갯수만큼 출력, 미설정 시 전체 출력 -->
+            <dl data-items='3'>
+                <dt>drop down</dt>   
+                <dd>
+                    <ul>
+                        <li><a href="">drop down item1</a></li>
+                        <li><a href="">drop down item2</a></li>
+                        <li><a href="">drop down item3</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </xmp>
+    </div>
+    <div class="conWrap clb">
+        <div class="dropBox float-left condiv">
+            <h4>Normal</h4>
+            <dl data-items='20'>
+                <dt>drop down</dt>   
+                <dd>
+                    <ul>
+                        <li><a href="">drop down item1</a></li>
+                        <li><a href="">drop down item2</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                        <li><a href="">drop down item3</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="dropBox float-left condiv">
+            <h4>Mouse over</h4>
+            <dl>
+                <dt class="mouseOver">drop down</dt>   
+                <dd>
+                    <ul>
+                        <li><a href="">drop down item1</a></li>
+                        <li><a href="">drop down item2</a></li>
+                        <li><a href="">drop down item3</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#3D3D3D</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="dropBox float-left condiv">
+            <h4>Focus</h4>
+            <dl>
+                <dt class="mouseFocus is_active">drop down</dt>   
+                <dd>
+                    <ul>
+                        <li><a href="">drop down item1</a></li>
+                        <li><a href="">drop down item2</a></li>
+                        <li><a href="">drop down item3</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#224B9E</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="dropBox disabled float-left condiv">
+            <h4>Diabled / ReadOnly</h4>
+            <dl>
+                <dt>drop down</dt>   
+                <dd>
+                    <ul>
+                        <li><a href="">drop down item4</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#BEBEBE</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#F3F3F3</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#959595</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="conWrap clb">
+        <div class="dropBox float-left condiv">
+            <p>drop down title</p>
+            <dl>
+                <dt>drop down long text</dt>   
+                <dd>
+                    <ul>
+                        <li><a href="">drop down item long drop down item long drop down item long</a></li>
+                        <li><a href="">drop down item2</a></li>
+                        <li><a href="">drop down item3</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

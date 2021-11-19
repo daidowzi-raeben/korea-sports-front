@@ -220,7 +220,7 @@ button, input {
 a, button {
   color: #3d3d3d;
   cursor: pointer;
-  font-family: "roboto", "NotoSerifCJKkr", "Malgun Gothic", sans-serif;
+  font-family: "NotoSerifCJKkr","roboto",  "Malgun Gothic", sans-serif;
 }
 
 button:focus,
@@ -280,9 +280,7 @@ select {
 select::-ms-expand{
   display:none;/*for IE10,11*/
 }
-select {
-  background:url('../img/common/select_arrow.svg') no-repeat 94% 50%/15px auto#fff;
-}
+
 textarea{
   resize: none;
   font-family: 'NotoSerifCJKkr',sans-serif;

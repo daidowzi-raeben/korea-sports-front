@@ -1,0 +1,30 @@
+@mixin flex(){
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pos-center-y($type:absolute) {
+    position: $type;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin pos-center-x($type:absolute) {
+    position: $type;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+@mixin pos-center($type:absolute) {
+    position: $type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+.point{
+    color: $red;
+    @include flex;
+    @include pos-center
+}

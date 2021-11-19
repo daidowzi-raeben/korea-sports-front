@@ -1,3 +1,4 @@
+@import "./var";
 
 // mixin 
 // 
@@ -26,18 +27,11 @@
     white-space: nowrap;
 }
 %inputBox{
-    height:35px;
-    padding:0px 10px 0 5px;
+    height:40px;
+    padding:0px 10px 0 7px;
     border:1px solid $gray2;
     border-radius: 3px;
-    font-size:15px;
-    &:hover{
-        border-color: $black;
-        color:$black;
-    }
-    &:focus{
-        border-color:$blue2;
-    }
+    font-size:16px;
 }
 
 %seleciconBox{
@@ -82,6 +76,9 @@
     &-l{
         font-weight: 100;
     }
+    &-s{
+        font-weight: 300;
+    }
     &-r{
         font-weight: 400;
     }
@@ -117,6 +114,9 @@
     }
     &-22{
         font-size:22px;
+    }
+    &-21{
+        font-size:21px;
     }
     &-20{
         font-size:20px;
@@ -159,3 +159,4 @@
     background-image:linear-gradient($deg, rgba(22,65,148,1) 0%, rgba(54,186,198,1) 100%);
 }
     
+

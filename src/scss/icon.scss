@@ -1,3 +1,6 @@
+@import './var';
+@import './mixin';
+
 %num{
     display: inline-block;
     width: 16px;
@@ -160,5 +163,107 @@
         height: 18px;
         background: url(../img/ssp/plus_w.svg) no-repeat center / 100%;
         display: inline-block;
+    }
+    &-select__arrow{
+        width: 18px;
+        height: 18px;
+        background: url(../img/common/select-arrow.svg) no-repeat center / 100%;
+        display: inline-block;
+    }
+    &-remote{
+        display: inline-block;
+        width: 16px;
+        height: 11px;
+        background: url(../img/ggin_golf/remote.svg)no-repeat center/ 100%;
+    }
+    &-top__arrow{
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        background: url(../img/common/top-arrow.svg)no-repeat center/ 100%;
+    }
+    &-talk{
+        display: inline-block;
+        width: 18px;
+        height: 16px;
+        background: url(../img/common/icon-talk.svg)no-repeat center/ 100%;
+    }
+    &-print{
+        display: inline-block;
+        width: 37px;
+        height: 37px;
+        background: url(../img/ggin_golf/service_print.svg)no-repeat center/ 100%;
+    }
+    &-transfer{
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        background: url(../img/ggin_golf/service_transfer.svg)no-repeat center/ 100%;
+    }
+    &-app_check{
+        display: inline-block;
+        width: 34px;
+        height: 39px;
+        background: url(../img/ggin_golf/service_app_check.svg)no-repeat center/ 100%;
+    }
+    &-app_write{
+        display: inline-block;
+        width: 32px;
+        height: 36px;
+        background: url(../img/ggin_golf/service_app_write.svg)no-repeat center/ 100%;
+    }
+    &-light{
+        display: inline-block;
+        width: 32px;
+        height: 36px;
+        background: url(../img/common/icon-light.svg)no-repeat center/ 100%;
+    }
+    &-more_view{
+        display: inline-block;
+        width: 68px;
+        height: 24px;
+        background: url(../img/ggin_golf/more_view.svg)no-repeat center/ 100%;
+    }
+    &-running_circle{
+        display: inline-block;
+        width: 46px;
+        height: 46px;
+        background: url(../img/ggin_golf/top_select_img_1_circle.svg)no-repeat center/ 100%;
+    }
+    &-ear{
+        display: inline-block;
+        width: 12px;
+        height: 15px;
+        background: url(../img/common/icon-ear.svg)no-repeat center/ 100%;
+    }
+    &-again{
+        display: inline-block;
+        width: 12px;
+        height: 15px;
+        background: url(../img/common/icon-again.svg)no-repeat center/ 100%;
+    }
+    &-select_close{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: url(../img/ggin_golf/top_btn_close.svg)no-repeat center/ 100%;
+    }
+    &-grey_close{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url(../img/common/grey-close.svg)no-repeat center/ 100%;
+    }
+    &-camera{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../img/common/icon-camera.svg)no-repeat center/ 100%;
+    }
+    &-talk--grey{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../img/common/talk-grey.svg)no-repeat center/ 100%;
     }
 }

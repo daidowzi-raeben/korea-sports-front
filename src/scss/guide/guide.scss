@@ -1,0 +1,184 @@
+@import '../var.scss';
+@import '../mixin.scss';
+
+.guide{
+    position: relative;
+    height: 100%;
+    h1{font-size:40px;}
+    h2{font-size:30px; text-transform: uppercase;}
+    h3{font-size:25px; text-transform: uppercase;}
+    h4{font-size:20px;}
+    .mt-5{
+        margin-top: 15px;
+    }
+    .commentBox{
+        margin-top:10px;
+        +.commentBox {
+            margin-left:30px;
+        }
+        p{
+            text-transform: none;
+            line-height: 1.7;
+        }
+        .colorTag{
+            &.gradient{
+                i{
+                    @include gradient(0deg);
+                }
+            }
+            i{
+                display: inline-block;
+                margin:0 10px 0 0;
+                background-color: #aaa;
+                border:#111;
+                border-radius: 100%;
+                width: 13px;
+                height: 13px;
+            }
+        }
+    }
+    &-list{
+        position: fixed;
+        float:left;
+        width:310px;
+        height: 100%;
+        padding:10px 50px;
+        border-right:1px solid #B5B5B5;
+        background-color: #F4F4F4;
+        li{
+            &:first-child{
+                font-size:30px;
+                margin: 0 0 50px 0;
+                list-style: none;
+            }
+            height: 25px;
+            font-size:15px;
+            list-style: disc;
+            a:hover{
+                color:$blue2;
+            }
+        }
+    }
+    &-content{
+        width: calc(100% - 310px);
+        margin:0 0 0 310px;
+        font-size: 20px;
+        >div{
+            padding:80px 60px;
+            .conWrap{
+                width:100%;
+                margin:20px 0;
+
+                
+            }
+            .condiv{
+                min-width:20%;
+                padding:10px;
+                &-50{
+                    min-width: calc(50% - 50px);
+                    padding:10px;
+                }
+            }
+        }
+    }
+    .codebox{
+        background-color: #0f192a;
+        color:$white;
+        @extend %font-13;
+        xmp{
+            margin:10px;
+            padding: 20px;
+        }
+        .copybtn{
+            padding:3px 6px;
+            margin:10px 10px 0;
+            border: 2px solid $input_gray;
+            border-radius: 3px;
+            background-color: $white;
+            cursor: pointer;
+        }
+    }
+}
+.ul,ol,li
+   {list-style-type: disc, circle;}
+
+// 임시
+.guideSpin{
+    i.icon-arrow-com{
+        &.guideSpinhover,&.guideSpinactive{
+            background-image: url('../img/common/arrow-com-w.svg')!important;
+            }
+    }
+}
+.mouseOver{
+    border-color: $black!important;
+    background-color: #ffffff!important;
+}
+.mouseFocus{
+    border-color: $blue2!important;
+    background-color: #FFFFFF!important;
+}
+.mouseOverbg{
+    background-color: $black!important;
+}
+.mouseFocusbg{
+    background-color: $blue2!important;
+}
+
+
+.slide{
+    position: relative;
+    margin:40px 0 0 0 ;
+    width: 200px;
+    height: 200px;
+    &-con{
+        border:1px solid #aaa;
+        border-radius: 10px;
+        padding:20px;
+    }
+    &-btn{
+        position: absolute;
+        top:-25px;
+        &.next{
+            right:0;
+        }
+    }
+}
+
+// icon
+.iconBox{
+    margin:10px 0 0;
+    padding:10px;
+    background-color: $gray3;
+    .icon{
+        // min-width: 20px;
+        // min-height: 20px;
+    }
+}
+
+.cirarrowbtn{
+    background-color: $white;
+    border-radius: 100%;
+    border:1px solid $gray2;
+    &:hover{
+        border-color: $black;
+    }
+    &.is_active,&:focus{
+        border-color: $blue2;
+        background-color: $blue2;
+        i{
+            background-image: url('../img/common/arrow-circle-w.svg');
+        }
+    }
+    &.disabled{
+        border-color:$input-gray;
+        background-color: $bg_white;
+        color:$input_gray3;
+        &:hover{
+            cursor:auto;
+        }
+        i{
+            background-image: url('../img/common/arrow-circle-g.svg');
+        }
+    }
+}

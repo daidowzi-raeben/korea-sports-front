@@ -1,0 +1,137 @@
+@@include('./include/header.html')
+<div class="content clb">
+<h2>calender</h2>
+<div class="codebox">
+<button class="copybtn" onclick="copyText('#code3');" title="주소 복사">월선택 캘린더 코드복사</button>
+<xmp id="code3"class="brush: html;">
+    <div class="formInput clb">
+        <div class="">
+            <h4>Normal</h4>
+            <label for="" class="labelTitle">Normal</label>
+            <input type='text' id="datepicker1" class="calender month datepicker-here" data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
+        </div>
+    </div>
+    <script src="../../js/ksDatepicker.js"></script>
+    <script>
+        var cntr = $('.conWrap');
+        ksdatepicker.fnc_set(cntr);
+    </script>
+
+</xmp>
+</div>
+
+<div class="codebox">
+    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일선택 캘린더 코드복사</button>
+    <xmp id="code1"class="brush: html;">
+        <div class="formInput clb">
+            <div class="">
+                <h4>Normal</h4>
+                <label for="" class="labelTitle">Normal</label>
+                <input type='text' id="datepicker1" class="calender datepicker-here" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd" />
+            </div>
+        </div>
+        <script src="../../js/ksDatepicker.js"></script>
+        <script>
+            var cntr = $('.conWrap');
+            ksdatepicker.fnc_set(cntr);
+        </script>
+
+    </xmp>
+    </div>
+
+
+<div class="codebox">
+    <button class="copybtn" onclick="copyText('#code2');" title="주소 복사">다중캘린더복사</button>
+    <xmp id="code2"class="brush: html;">
+    <div class="formInput clb">
+        <h4>select</h4>
+            <label for="" class="labelTitle">Term</label>
+            <label class="sound-only" for="date_term">date_term</label>
+            <input type="text" class="calender datepicker-here term" placeholder="기간" data-date-format="yyyy/mm/dd">
+        </div>
+        <script src="../../js/ksDatepicker.js"></script>
+        <script>
+            var cntr = $('.conWrap');
+            ksdatepicker.fnc_set(cntr);
+        </script>
+
+</xmp>
+</div>
+<div class="conWrap">
+    <div class="formInput clb">
+        <div class="float-left condiv">
+            <h4>Normal 월선택</h4>
+            <label for="" class="labelTitle">Normal</label>
+            <input type='text' id="datepicker1" class="calender months datepicker-here" data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="float-left condiv">
+            <h4>Normal 일선택</h4>
+            <label for="" class="labelTitle">Normal</label>
+            <input type='text' id="datepicker1" class="calender datepicker-here" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd" />
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="float-left condiv disabled">
+            <h4>DIsabled / ReadOnly</h4>
+            <label for="" class="labelTitle">disabled</label>
+            <input type='text' class="calender datepicker-here disabled" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd"  placeholder="disabled"/>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#BEBEBE</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#F3F3F3</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#959595</span></p>
+                <p>* 비활성화시 input에 disabled속성</p>
+            </div>
+        </div>
+        <div class="float-left condiv error">
+            <h4>error</h4>
+            <label for="" class="labelTitle">error</label>
+            <input type='text' class="calender single datepicker-here error auto" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd"  placeholder="error"/>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#FF6600</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#FF6600</span></p>
+            </div>
+        </div>
+        <div class="float-left condiv">
+            <h4>select</h4>
+            <label for="" class="labelTitle">Term</label>
+            <label class="sound-only" for="date_term">date_term</label>
+            <input type="text" class="calender datepicker-here term" placeholder="기간" data-date-format="yyyy/mm/dd">
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+</div>
+<div class="commentBox font-13">
+    <p>- Font family : 글자(Noto Sans CJK KR / Regular)  size 15 / 숫자(Roboto / Regular)  size 15</p>
+    <p>- Vertex(꼭지점) : Rounding 3px</p>
+</div>
+<div class="commentBox font-13">
+    <p>- Font family : CALENDAR (Roboto / Medium)  size 15pt</p>
+    <p>2021 (Roboto / Medium)  size 23pt</p>
+    <p>08 (Roboto / Bold)  size 30pt</p>
+    <p>AUGUST (Roboto / Medium)  size 13pt</p>
+    <p>DAY (Roboto / Regular)  size 15pt</p>
+    <p>- Vertex(꼭지점) : Rounding 3px</p>
+</div>
+</div>
+
+<script src="../../js/ksDatepicker.js"></script>
+<script>
+    var cntr = $('.conWrap');
+    ksdatepicker.fnc_set(cntr);
+</script>
+
+
+@@include('./include/footer.html')
+

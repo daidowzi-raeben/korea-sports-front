@@ -1,0 +1,177 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2>check-radio</h2>
+    <h3>Checkbox</h3>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">원형 체크박스 코드복사</button>
+        <xmp id="code1" class="brush: html;">
+            <!-- - formInput클래스 안에 있는 input만 적용 -->
+            <div class="formInput">
+                <div class="formInput-check">
+                    <!-- 비활성화시 checkArea에 disabled클래스 추가-->
+                    <div class="checkArea checkRound clb">
+                        <input type="checkbox" name="" id="">
+                        <label for="">원형체크박스</label>
+                    </div>
+                </div>
+            </div>
+
+        </xmp>
+    </div>
+
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code2');" title="주소 복사">사각 체크박스 코드복사</button>
+        <xmp id="code2" class="brush: html;">
+            <!-- - formInput클래스 안에 있는 input만 적용 -->
+            <div class="formInput">
+                <div class="formInput-check">
+                    <!-- 비활성화시 checkArea에 disabled클래스 추가-->
+                    <div class="checkArea checkSquare clb">
+                        <input type="checkbox" name="" id="">
+                        <label for="">사각체크박스</label>
+                    </div>
+                </div>
+            </div>
+
+        </xmp>
+    </div>
+
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code3');" title="주소 복사">라디오박스 코드복사</button>
+        <xmp id="code3" class="brush: html;">
+            <!-- - formInput클래스 안에 있는 input만 적용 -->
+            <div class="formInput">
+                <!-- 비활성화시 checkArea에 disabled클래스 추가-->
+                <div class="formInput-radio">
+                    <div class="radioArea clb">
+                        <input  type="radio" name="groupa" title="GroupA-라디오버튼1" id="radiobtn1">
+                        <label for="radiobtn1">GroupA-라디오버튼1</label>
+                    </div>
+                    <div class="radioArea clb">
+                        <input  type="radio" name="groupa" title="GroupA-라디오버튼2" id="radiobtn2">
+                        <label for="radiobtn2">GroupA-라디오버튼2</label>
+                    </div>
+                </div>
+                
+            </div>
+        </xmp>
+    </div>
+    
+    <div class="conWrap">
+        <div class="formInput-check formInput-radio clb">
+            <div class="float-left condiv">
+                <h4>Normal</h4>
+                <div class="checkArea checkRound commentBox clb">
+                    <input type="checkbox" name="" id="" onchange="fnChecked(this)">
+                    <label for="">원형체크박스</label>
+                </div>
+                <div class="checkArea checkSquare commentBox clb">
+                    <input type="checkbox" name="" id="">
+                    <label for="">사각체크박스</label>
+                </div>
+                <div class="radioArea commentBox clb">
+                    <input type="radio" name="test1" id="">
+                    <label for="">라디오버튼</label>
+                </div>
+                <div class="commentBox font-13">
+                    <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                    <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                    <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+                </div>
+            </div>
+            <div class="float-left condiv">
+                <h4>Mouse over</h4>
+                <div class="checkArea checkRound commentBox clb">
+                    <input type="checkbox" name="" id="">
+                    <label for="">원형체크박스</label>
+                </div>
+                <div class="checkArea checkSquare commentBox clb">
+                    <input type="checkbox" name="" id="">
+                    <label for="">사각체크박스</label>
+                </div>
+                <div class="radioArea commentBox clb">
+                    <input type="radio" name="test1" id="">
+                    <label for="">라디오버튼</label>
+                </div>
+                <div class="commentBox font-13">
+                    <p class="colorTag"><i></i>Line color : <span>#3D3D3D </span> / 1px</p>
+                    <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                    <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+                    <p class="colorTag"><i></i>Check / Radio color : <span>#3D3D3D </span></p>
+                </div>
+            </div>
+            <div class="float-left condiv">
+                <h4>Focus</h4>
+                <div class="checkArea checkRound commentBox clb">
+                    <input type="checkbox" name="" id="" class="" checked="checked">
+                    <label for="" class="is_active">원형체크박스</label>
+                </div>
+                <div class="checkArea checkSquare commentBox clb">
+                    <input type="checkbox" name="" id="" checked="checked">
+                    <label for="" class="is_active">사각체크박스</label>
+                </div>
+                <div class="radioArea commentBox clb">
+                    <input type="radio" name="test1" id="" checked="checked">
+                    <label for="" class="is_active">라디오버튼</label>
+                </div>
+                <div class="commentBox font-13">
+                    <p class="colorTag"><i></i>Line color : <span>#224B9E</span> / 1px</p>
+                    <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                    <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+                    <p class="colorTag"><i></i>Check / Radio color : <span>#224B9E</span></p>
+                </div>
+            </div>
+            <div class="float-left condiv">
+                <h4>Diabled / ReadOnly</h4>
+                <div class="checkArea checkRound commentBox clb disabled">
+                    <input type="checkbox" name="" id="">
+                    <label for="">원형체크박스</label>
+                </div>
+                <div class="checkArea checkSquare commentBox clb disabled">
+                    <input type="checkbox" name="" id="">
+                    <label for="">사각체크박스</label>
+                </div>
+                <div class="radioArea commentBox clb disabled">
+                    <input type="radio" name="test1" id="">
+                    <label for="">라디오버튼1</label>
+                </div>
+                <div class="commentBox font-13">
+                    <p class="colorTag"><i></i>Line color : <span>#BEBEBE</span> / 1px</p>
+                    <p class="colorTag"><i></i>BG color : <span>#F3F3F3</span></p>
+                    <p class="colorTag"><i></i>Text color : <span>#959595</span></p>
+                    <p class="colorTag"><i></i>Check / Radio color : <span>#959595</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="conWrap">
+            <div class="formInput-check formInput-radio clb">
+                <div class="float-left condiv">
+                    <h4>라디오버튼 사용시</h4>
+                    <div class="radioArea clb">
+                        <input  type="radio" name="groupa" title="GroupA-라디오버튼1" id="radiobtn1">
+                        <label for="radiobtn1">GroupA-라디오버튼1</label>
+                    </div>
+                    <div class="radioArea clb">
+                        <input  type="radio" name="groupa" title="GroupA-라디오버튼2" id="radiobtn2">
+                        <label for="radiobtn2">GroupA-라디오버튼2</label>
+                    </div>
+                    <div class="commentBox font-13">
+                        <p>- 항목 개수만큼 .radioArea 생성</p>
+                        <p>- radioArea는 <strong>같은 레벨</strong>에 있어야함</p>
+                        <p>- 항목별 input의 name 통일</p>
+                        <p>- input의 id와 형제인 label for 통일</p>
+                        <p>- 첫번째 라디오버튼 checked 속성 추가되어 있어야함</p>
+                        <p>(input에 checked속성추가 / label에 class="is_active" 추가)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

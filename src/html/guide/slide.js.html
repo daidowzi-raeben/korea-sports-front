@@ -1,0 +1,67 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2> slide.js</h2>
+    <div class="codebox">
+    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">슬라이드html 복사</button>
+    <xmp id="code1" class="brush: html;">
+        <div class="slide clb">
+            <div class="slide-con">
+                <div class="slideItem">
+                    page1
+                </div>
+                <div class="slideItem">
+                    page2
+                </div>
+            </div>
+            <div class="slide-btn btn-cirarrow clb">
+                <!-- [D] 활성화시 button에 is_active클래스, 비활성화시 disabled클래스&속성-->
+                <button type="button" class="next sound-only"> 
+                    <i class="icon icon-cirarrow icon-cirarrow--right"></i>다음</button>
+                <button type="button" class="prev sound-only"> 
+                    <i class="icon icon-cirarrow icon-cirarrow--left"></i>이전 </button>
+            </div>
+        </div>
+    </xmp>
+    </div>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code2');" title="주소 복사">슬라이드js 복사</button>
+        <xmp id="code2" class="brush: js;">
+            <!-- 필요시 옵션 추가해서 사용 -->
+            $('.slide .slide-con').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                nextArrow:$('.slide .next'),
+                prevArrow:$('.slide .prev'),
+                draggable : false,
+                arrows : true,
+            });
+            
+        </xmp>
+        </div>
+        <h4>Normal</h4>
+        <div class="slide clb">
+            <div class="slide-con">
+                <div class="slideItem">
+                    page1
+                </div>
+                <div class="slideItem">
+                    page2
+                </div>
+            </div>
+            <div class="slide-btn btn-cirarrow clb">
+                <!-- [D] 활성화시 button에 is_active클래스, 비활성화시 disabled클래스&속성-->
+                <button type="button" class="cirarrowbtn next sound-only"> 
+                    <i class="icon icon-cirarrow icon-cirarrow--right"></i>다음
+                </button>
+                <button type="button" class="cirarrowbtn prev sound-only"> 
+                    <i class="icon icon-cirarrow"></i>이전
+                </button>
+            </div>
+        </div>
+    </div>
+    
+<!-- 푸터 시작 -->   
+@@include('./include/footer.html')

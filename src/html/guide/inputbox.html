@@ -1,0 +1,34 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+<h2>inputbox</h2>
+<div class="codebox">
+<button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
+<xmp id="code1"class="brush: html;">
+<div class="formInput">
+    <div class="formInput-input">
+        <input type="text">
+    </div>
+</div>
+</xmp>
+</div>
+
+    <div class="conWrap">
+        <div class="formInput clb">
+            <div>
+                <label for="a">기본 인풋</label>
+                <input type="text">
+            </div>
+            <div class="mt-5">
+                <label for="">기본 인풋 Disabled</label>
+                <input type="text" disabled>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

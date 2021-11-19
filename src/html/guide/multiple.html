@@ -1,0 +1,273 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2> Multiple combo box</h2>
+    <div class="codebox">
+    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">멀티박스 기본 코드복사</button>
+    <xmp id="code1" class="brush: html;">
+        <!-- - formInput클래스 안에 있는 input만 적용 -->
+        <div class="formInput clb">
+            <div class="formInput-multiBox  formInput-check">
+                <p>Multiple combo title</p>
+                <dl>
+                    <dt>Multiple combo</dt>   
+                    <dd>
+                        <!-- data-items 로 갯수 설정 -->
+                        <div class="optionZone"  data-items="3">
+                            <ul>
+                                <li>
+                                    <div class="checkArea checkSquare clb">
+                                            <input  type="checkbox" name="" id="">
+                                            <label for="">다중 선택값(A)</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="">
+                                        <label for="">다중 선택값(B)</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="">
+                                        <label for="">다중 선택값(C)</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="">
+                                        <label for="">다중 선택값(D)</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button type="button">확인</button>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </xmp>
+    </div>
+    <div class="formInput clb">
+        <div class="formInput-multiBox  formInput-check float-left condiv">
+            <h4>Normal</h4>
+            <dl>
+                <dt>Multiple combo</dt>   
+                <dd>
+                    <div class="optionZone" data-items="5">
+                        <ul>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="" onchange="fnChecked(this)" value="clickTest">
+                                        <label for="">다중 선택값(A)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(B)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(C)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button">확인</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="formInput-multiBox  formInput-check float-left condiv">
+            <h4>Mouse over</h4>
+            <dl>
+                <dt class="mouseOver">Multiple combo</dt>   
+                <dd>
+                    <div class="optionZone"  data-items="3">
+                        <ul>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="">
+                                        <label for="">다중 선택값(A)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(B)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(C)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button">확인</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#3D3D3D</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="formInput-multiBox  formInput-check float-left condiv">
+            <h4>Focus</h4>
+            <dl>
+                <dt class="mouseFocus is_active">Multiple combo</dt>   
+                <dd>
+                    <div class="optionZone"  data-items="3">
+                        <ul>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="">
+                                        <label for="">다중 선택값(A)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(B)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(C)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button">확인</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#224B9E</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="formInput-multiBox  formInput-check float-left condiv disabled">
+            <h4>Diabled / ReadOnly</h4>
+            <dl>
+                <dt>Multiple combo</dt>   
+                <dd>
+                    <div class="optionZone">
+                        <ul>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                        <input  type="checkbox" name="" id="">
+                                        <label for="">다중 선택값(A)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(B)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(C)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkArea checkSquare clb">
+                                    <input  type="checkbox" name="" id="">
+                                    <label for="">다중 선택값(D)</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button">확인</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#BEBEBE</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#F3F3F3</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#959595</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

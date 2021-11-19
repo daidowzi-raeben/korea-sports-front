@@ -1,0 +1,102 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2>spincontrol</h2>
+    <div class="codebox">
+    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">스핀컨트롤 코드복사</button>
+    <xmp id="code1" class="brush: html;">
+        <div class="formInput clb">
+            <div>
+                <div class="formInput-spincontrol">
+                    <label for="" class="labelTitle">단위를 나타내는 숫자</label>
+                    <input name="" type="number" placeholder="number"  value="">
+                </div>
+            </div>
+        </div>
+    </xmp>
+    </div>
+    <div class="formInput clb">
+        <div class="float-left condiv">
+            <h4>Normal</h4>
+            <div class="formInput-spincontrol">
+                <label for="" class="labelTitle">Normal</label>
+                <input name="" type="number" placeholder="number"  value="">
+            </div>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="float-left condiv">
+            <h4>Mouse over</h4>
+            <div class="formInput-spincontrol is_hover guideSpin">
+                <label for="" class="labelTitle">Mouse over</label>
+                <input name="" type="number" placeholder="number"  value="" class="mouseOver">
+                <div class="spinBtn">
+                    <button type="button" class="spinBtn-up mouseOverbg">
+                        <i class="icon icon-arrow-com is_hover"></i>
+                    </button>
+                    <button type="button" class="spinBtn-down">
+                        <i class="icon icon-arrow-com "></i>
+                    </button>
+                </div>
+            </div>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span> #3D3D3D</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="float-left condiv">
+            <h4>Focus</h4>
+            <div class="formInput-spincontrol  is_active guideSpin">
+                <label for="" class="labelTitle">Focus</label>
+                <input name="" type="number" placeholder="number"  value="" class="mouseFocus">
+                <div class="spinBtn">
+                    <button type="button" class="spinBtn-up mouseFocusbg">
+                        <i class="icon icon-arrow-com is_active"></i>
+                    </button>
+                    <button type="button" class="spinBtn-down">
+                        <i class="icon icon-arrow-com "></i>
+                    </button>
+                </div>
+            </div>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#224B9E</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
+            </div>
+        </div>
+        <div class="float-left condiv">
+            <h4>Diabled / ReadOnly</h4>
+            <div class="formInput-spincontrol disabled">
+                <label for="" class="labelTitle">Diabled / ReadOnly</label>
+                <input name="" type="number" placeholder="number"  value="" disabled>
+            </div>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#BEBEBE</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#F3F3F3</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#959595</span></p>
+                <p>* 비활성화시 input에 disabled속성</p>
+            </div>
+        </div>
+        <div class="float-left condiv">
+            <h4>Error</h4>
+            <div class="formInput-spincontrol formInput-error">
+                <label for="" class="labelTitle">Error</label>
+                <input name="" type="number" placeholder="number"  value="">
+            </div>
+            <div class="commentBox font-13">
+                <p class="colorTag"><i></i>Line color : <span>#FF6600</span> / 1px</p>
+                <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
+                <p class="colorTag"><i></i>Text color : <span>#FF6600</span></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')
