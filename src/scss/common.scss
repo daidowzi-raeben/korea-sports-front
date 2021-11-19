@@ -1,536 +1,589 @@
-@import './_mixin.scss';
-@import './global.scss';
-@import './common_lyj.scss';
+@import '_var.scss';
+@import '_mixin.scss';
+@import 'icon.scss';
+@import 'ssp/ssp.scss';
 
-
-%flex-typeA{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-%flex-typeB{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.a {
-    @extend %font-r;
-}
-
-// header
-header{
-    height: 100px;
-    background: #fff;
-    border-bottom: 1px solid #9a9a9a;
-    padding-top: 33px;
-    min-width: 1200px;
-    .inner{
-        @extend %flex-typeA;
-        width: 1200px;
-        margin: 0 auto;
-        &__left{
-        @extend %flex-typeA;
-
-            .logo{
-                position:relative;
+// ssp-sub 스포츠지원포털 서브페이지 공통 레이아웃
+.wrap.ssp-sub{
+    .main-header{
+        position: static;
+        .fixed-top{
+            border-bottom: none;
+        }
+    }
+    .fixed-top{
+        &__mid{
+            margin-right: 115px;
+            li.is_active{
                 a{
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-
+                    color: #095ECE;
+                    font-weight: 500;
+                    white-space: pre;
                 }
                 &::after{
                     content:'';
-                    display: inline-block;
-                    width: 1px;
-                    height: 21px;
-                    background: #b1b1b1;
-                    position: relative;
-                    top: -12px;
-                    margin: 0 15px 0 10px;
-                 }
-            }
-            .select {
-                position: relative;
-                &-option{
-                    color: #fff;
-                    padding: 3px 10px 3px 14px;
-                    border-radius: 18px;
-                    cursor: pointer;
-                    .icon{
-                        vertical-align: middle;
-                        margin-left: 20px;
-                    }
-                }
-                &-option.referee{
-                    background: #029ec6;
-                }
-                &-option.manager{
-                    background: #16b7ac;
-                }
-                &-option.player{
-                    background: #025ac6;
-                }
-                &-option.master{
-                    background: #0283c6;
-                }
-                &-gray {
-                    width: 457px;
-                    height: 301px;
-                    background: url(../img/ggin_golf/top_select_box.svg);
-                    position: absolute;
-                    padding: 35px 30px 27px;
-                    z-index: 1;
-                    top: 30px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: none;
-                    h1 {
-                        font-size: 22px;
-                        color: #71cbff;
-                        font-weight: 500;
-                        text-align: center;
-                        margin-bottom: 19px;
-                    }
-                    .select-close {
-                        position: absolute;
-                        top: 44px;
-                        right: 30px;
-                    }
-                    .select-list {
-                        display: flex;
-                        justify-content: space-between;
-                        li {
-                            float: left;
-                            width: 92px;
-                            height: 147px;
-                            border: 1px solid #6a6a6a;
-                            border-radius: 7px;
-                            box-sizing: border-box;
-                            position: relative;
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                            a {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                            }
-                            div {
-                                height: 82px;
-                                width: 78px;
-                                margin: 0 auto;
-                                border-bottom: 1px solid #6a6a6a;
-                            }
-                            p {
-                                font-size: 16px;
-                                text-align: center;
-                                color: #fff;
-                                padding-top: 7px;
-                                height: 64px;
-                            }
-                            &.player {
-                                &:hover {
-                                    background: #025ac6;
-                                    border: 1px solid #025ac6;
-                                }
-                                div {
-                                    background: url(../img/ggin_golf/top_select_img_1.svg) no-repeat 14px;
-                                }
-                            }
-                            &.master {
-                                &:hover {
-                                    background: #0283c6;
-                                    border: 1px solid #0283c6;
-                                }
-                                div {
-                                    background: url(../img/ggin_golf/top_select_img_2.svg) no-repeat 18px;
-                                }
-                            }
-                            &.referee {
-                                &:hover {
-                                    background: #029ec6;
-                                    border: 1px solid #029ec6;
-                                }
-                                div {
-                                    background: url(../img/ggin_golf/top_select_img_3.svg) no-repeat 14px;
-                                }
-                            }
-                            &.manager {
-                                &:hover {
-                                    background: #16b7ac;
-                                    border: 1px solid #16b7ac;
-                                }
-                                div {
-                                    background: url(../img/ggin_golf/top_select_img_4.svg) no-repeat 10px;
-                                }
-                            }
-                        }
-                    }
-                    .select-bottom {
-                        color: #fff;
-                        text-align: center;
-                        margin-top: 16px;
-                    }
-                }
-                .select-gray.show{
                     display: block;
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                    height: 3px;
+                    background: #095ECE;
+                    width: 100%;
                 }
+             
             }
-        }
-        &__right{
-            ul{
-                @extend %flex-typeA;
-
-                li:not(.nonebar){
-                    
-                    &::after{
-                        content:'';
-                        display: inline-block;
-                        width: 1px;
-                        height: 14px;
-                        background: #b1b1b1;
-                        position:relative;
-                        margin: 0 12px;
-
-                    }
-                }
-                li.help{
-                    border-radius: 30px;
-                    background: #3d3d3d;
-                    display: flex;
-                    align-items: center;
-                    padding: 0 15px;
-                    margin-left: 6px;                
-                    cursor: pointer;
-                    span{
-                        display: inline-block;
-                        color: #fff;
-                        vertical-align: middle;
-                    }
-                    button {
-                        color: #fff;
-                    }
-                    .num{
-                        line-height: 1.6;
-                        &::after {
-                            content: '';
-                            display: inline-block;
-                            width: 1px;
-                            height: 14px;
-                            position: relative;
-                            margin: 0 7px;
-                            background: #fff;
-                            position: relative;
-                            top: 1px;
-                        }
-                    }
-                }
-            }
-            
         }
     }
-}
-// nav
-nav{
-    height: 82px;
-    .inner{
-        height: 100%;
+.nav{
+    height: 60px;
+    background: linear-gradient(270deg, #339FD9, #2B80CB);
+    min-width: 1200px;
+    &-inner{
+        min-width: 1200px;
         width: 1200px;
         margin: 0 auto;
-        height:100%;
-        @extend %flex-typeA;
-        .nav-left{
-            height:100%;
-        @extend %flex-typeA;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .home{
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            a{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                font-weight: 300;
+            }
+        }
+        .menu{
+            padding: 0 23px;
+            border-right: 1px solid #fff;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            width: 190px;
+            background: url(../img/common/nav_arrow_w.svg)no-repeat center;
+            background-size: 12px 8px;
+            background-position: right 23px center;
+            cursor: pointer;
+           
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 15px;
             li{
-                margin-right: 22px;
-                height:100%;
-                display:flex;
-                align-items: center;
+                padding: 0 15px;
                 a{
-                    font-weight: 500;
-                    font-size: 17px;
-
+                    color: #fff;
+                    display: block;
+                    height: 100%;
+                    line-height: 60px;
+                    font-weight: 300;
                 }
             }
             li.is_active{
-                position: relative;
-
                 a{
-                    color: #025ac6;
-                    font-weight: bold;
+                    font-weight: 500;
                 }
-                &::after{
-                    content:'';
-                    display: block;
-                    width: 100%;
-                    height: 5px;
-                    background: #025ac6;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
 
-                }
-            }
-        }
-        .nav-right{
-            height: 100%;
-            ul{
-                @extend %flex-typeA;
-                height: 100%;
-                li{
-                    height: 100%;
-                    @extend %flex-typeB;
-                    a{
-                        font-size: 15px;
-                        height: 100%;
-                        @extend %flex-typeB;
-
-                    }
-                
-                }
-                li.is_active{
-                    a{
-                        color: #025ac6;
-                        position: relative;
-                        font-weight: bold;
-                        &::after{
-                            content:'';
-                            display: block;
-                            width: 100%;
-                            height: 5px;
-                            background: #025ac6;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-        
-                        }
-                    }
-                }
-                li:not(.nonebar){
-                    &::after{
-                        content:'';
-                        display: inline-block;
-                        width: 1px;
-                        height: 10px;
-                        background: #b1b1b1;
-                        position:relative;
-                        margin: 0 12px;
-
-                    }
-                }
-                .logout{
-                    width: 68px;
-                    height: 25px;
-                    text-align: center;
-                    
-                    margin-left: 30px;
-                    border-radius: 3px;
-                    border: solid 1px #b1b1b1;
-                    background-color: #f5f5f5;
-                    font-size: 14px;
-                    cursor:pointer;
-                }
             }
         }
     }
 }
-footer{
-    padding: 38px 0 78px 0;
-    background: #fff;
+.ssp-banner{
+    height: 300px;
+    width: 100%;
     min-width: 1200px;
+    
     .inner{
         width: 1200px;
         margin: 0 auto;
-        position: relative;
-        &-top{
-            margin-bottom: 10px;
+        padding: 72px 0 35px; 
+        height: 100%;
+        h1{
+            color: #fff;
         }
-        &-mid{
-            margin-bottom: 15px;
-            ul{
-                li{
-                    margin-bottom: 5px;
-                    span:not(.nonebar){
-                        &::after{
-                            content:'';
-                            display: inline-block;
-                            width: 1px;
-                            height: 15px;
-                            background: #b1b1b1;
-                            position:relative;
-                            margin: 0 15px 0 17px;
-                            top:2px;
-                            
-                        }
-                    }
-                }
-            }
+        p{
+            color: #fff;
+            margin-bottom: 80px;
         }
-        &-foot{
-            ul{
-               display: flex;
-               justify-content: flex-start;
-                .blue{
-                    color: #0082ab;
-                    font-weight: 500;
-                    margin-bottom: 5px;
-                    &::after{
-                        content:'';
-                        display: inline-block;
-                        width: 1px;
-                        height: 15px;
-                        background: #b1b1b1;
-                        position:relative;
-                        margin: 0 17px;
-                        top:1px;
-
-                    }
-                }
-                li{
-                    .icon-remote{
-                        margin-right: 3px;
-                    }
-                }
-              
-            }
-        }
-        .right-logos{
-            position: absolute;
-            right: 0;
+        ul{
             display: flex;
-            top: 20px;
-            ul{
-                li{
-                    display: flex;
-                    flex-direction: column;
-                    .sports-logo{
-                        width: 167px;
-                    }
+            align-items: center;
+            li{
+                font-size: 15px;
+                color: #fff;
+                margin-right: 30px;
+                position: relative;
+                &::after{
+                    content:'>';
+                    display: block;
+                    position: absolute;
+                    right: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
-                .error{
-                    padding: 3px 0 0 65px;
-                    background: url(../img/common/foot_support.svg)no-repeat left center;
-                    margin-bottom: 30px;
+                &:last-child{
+                    &::after{
+                        content: none;
+                    }
+
                 }
             }
         }
     }
 }
+.ssp-banner.typeA{
+    background: url(../img/common/banner_1.png)no-repeat center;
+}
+.ssp-banner.typeB{
+    background: url(../img/common/banner_2.png)no-repeat center;
+}
+.ssp-banner.typeC{
+    background: url(../img/common/banner_3.png)no-repeat center;
+}
+.footer{
+    border-top: none;
+    background: #fff;
+    &-inner{
+        border-top: 1px solid #9dadbb;
+    }
+}
+.container{
+    width: 100%;
+    &-inner{
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 76px;
+    }
+}
 
+}
 
-/* 화면 도움말 모달 */
-.modal {
-    &_type {
-        &01 {
-            z-index: 100;
-            .modal {            
-                border: 1px solid #b1b1b1;    
-                border-radius: 0;
-                .modal {
-                    &-top {
-                        position: relative;
-                        height: 38px;
-                        line-height: 38px;
-                        text-align: center;
-                        span {
-                            font-weight: 700;
-                            font-size: 15px;
-                            color: #3d3d3d;
-                        }
-                        button {
-                            position: absolute;
-                            top: 50%;
-                            right: 12px;
-                            transform: translateY(-50%);
-                        }
-                    }
-                    &-header {
-                        display: flex;                        
-                        justify-content: space-between;
-                        align-items: center;
+// main - footer
+.sports-main {
+
+    .guide {
+        &-foot {
+            padding-top: 38px;
+
+            &__info {
+                display: flex;
+                align-items: flex-start;
+
+                &--left {
+                    position: relative;
+                    margin-right: 20px;
+
+                    a {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
                         width: 100%;
-                        height: 72px;
-                        padding: 0 24px;
-                        background: linear-gradient(265deg, #339fd9, #035ac6);
-                        .left {
-                            h1 {
-                                color: #fff;
+                        height: 100%;
+                    }
+
+                    img {
+                        width: 165px;
+                    }
+                }
+
+                &--right {
+                    padding-top: 16px;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        li {
+                            a {
+                                font-size: 15px;
+
+                            }
+
+                            &:nth-child(2) {
+                                padding: 0 15px;
+                                position: relative;
+
+                                &::before,
+                                &::after {
+                                    content: '|';
+                                    display: block;
+                                    position: absolute;
+                                    font-size: 13px;
+                                    top: 46%;
+                                    transform: translateY(-50%);
+                                }
+
+                                &::before {
+                                    left: 0;
+                                }
+
+                                &::after {
+                                    right: 0;
+
+                                }
+                            }
+
+                            &:last-child {
+                                margin-left: 15px;
                             }
                         }
-                        .right {
-                            .screen_numb_area {
-                                span {
-                                    display: inline-block;
-                                    vertical-align: middle;
-                                }
-                                .txt {
-                                    font-weight: 700;
-                                    font-size: 15px;
-                                    color: #fff;
-                                }
-                                .numb {
-                                    width: 60px;
-                                    height: 30px;
-                                    line-height: 30px;
-                                    background: #3d3d3d;
-                                    border-radius: 16px;
-                                    font-family: 'roboto', 'sans-serif';
-                                    font-weight: 700;
-                                    font-size: 20px;
-                                    color: #fff;
-                                    text-align: center;
-                                }
+
+                        li.strong {
+                            margin-right: 15px;
+
+                            a {
+                                font-weight: bold;
+                                color: #307fd9;
                             }
                         }
                     }
-                    &-body {
-                        overflow: auto;
-                        height: 622px;
-                    }   
-                    &-footer {
+
+                    span {
+                        display: block;
+                        margin-bottom: 13px;
+                        font-size: 15px;
 
                     }
                 }
             }
-       }
-    }
-}
-.maxwd-1200 {width: 92% !important; max-width: 1200px !important;}
 
-/* 목록01 */
-.list_type {
-    &01 {
-        line-height: 2;
-        padding: 30px;
-        font-size: 16px;
-        color: #3d3d3d;
-        .depth {
-            &01 {
-                > li{
-                    > span {
+            &__sponsor {
+                &--logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
+                    ul {
+                        display: flex;
+                        padding: 37px 0 12px 0;
+                        align-items: center;
+
+                        li {
+                            margin-right: 25px;
+                            position: relative;
+
+                            a {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        width: 91px;
+                        height: 66px;
+                        background: url(../img/main/guide_wa.svg)no-repeat center;
+                        position: relative;
+
+                        a {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
-            }
-            &02 {
-                > li {
-                    > span {
-                        
-                    }
-                }
-            }
-            &03 {
-                > li {
 
+                p {
+                    font-size: 15px;
                 }
             }
         }
     }
 }
-/* //목록01 */
+
+
+
+// sub foot
+.footer {
+    width: 100%;
+    background: #f8f8f8;
+    border-top: 2px solid #3d3d3d;
+    min-width: 1200px;
+    &-inner {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 47px 0 85px 0;
+
+        &__info {
+            display: flex;
+            align-items: flex-start;
+
+            &--left {
+                position: relative;
+                margin-right: 20px;
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    width: 165px;
+                }
+            }
+
+            &--right {
+                padding-top: 16px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    li {
+                        a {
+                            font-size: 15px;
+
+                        }
+
+                        &:nth-child(2) {
+                            padding: 0 15px;
+                            position: relative;
+
+                            &::before,
+                            &::after {
+                                content: '|';
+                                display: block;
+                                position: absolute;
+                                font-size: 13px;
+                                top: 46%;
+                                transform: translateY(-50%);
+                            }
+
+                            &::before {
+                                left: 0;
+                            }
+
+                            &::after {
+                                right: 0;
+
+                            }
+                        }
+
+                        &:last-child {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    li.strong {
+                        margin-right: 15px;
+
+                        a {
+                            font-weight: bold;
+                            color: #307fd9;
+                        }
+                    }
+                }
+
+                span {
+                    display: block;
+                    margin-bottom: 13px;
+                    font-size: 15px;
+
+                }
+            }
+        }
+
+        &__sponsor {
+            &--logo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                ul {
+                    display: flex;
+                    padding: 37px 0 12px 0;
+                    align-items: center;
+
+                    li {
+                        margin-right: 25px;
+                        position: relative;
+
+                        a {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    width: 91px;
+                    height: 66px;
+                    background: url(../img/main/guide_wa.svg)no-repeat center;
+                    position: relative;
+
+                    a {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.checkbox-area {
+    display: inline-block;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .label-check::before {
+        content: "";
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        background: url(../img/common/check-round.svg)no-repeat center #8d8d8d;
+        margin-right: 7px;
+        border-radius: 50%;
+        position: relative;
+        top: 7px;
+    }
+
+    .input-check:checked+.label-check::before,
+    .input-check[checked="checked"]+.label-check::before {
+        background: url(../img/common/check-round.svg)no-repeat center #df3818;
+
+    }
+
+}
+
+// 라디오박스
+.radio-area {
+    display: inline-block;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .form-radio::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../img/join/join_radio.svg)no-repeat center;
+        border: solid 1px #686868;
+        margin-right: 4px;
+        border-radius: 50%;
+        position: relative;
+        top: 2px;
+    }
+
+    .input-radio {
+        display: none;
+    }
+
+    .input-radio:checked+.form-radio::before,
+    .input-radio[checked="checked"]+.form-radio::before {
+        background: url(../img/join/join_radio_active.svg)no-repeat center;
+
+    }
+
+    .label-select {
+        display: inline-block;
+        width: 60px;
+        height: 37px;
+        border: solid 1px #b1b1b1;
+        border-radius: 3px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .radio-select:checked+.label-select {
+        color: #006dbc;
+        border: 1px solid #006dbc;
+    }
+}
+
+// 인풋 박스
+.input-area {
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        border: solid 1px #b1b1b1;
+        border-radius: 3px;
+        width: 330px;
+        height: 40px;
+        padding: 0 0 0 4px;
+        font-size: 16px;
+        background: #fff;
+
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+    .tit {
+        margin-right: 8px;
+    }
+
+    .btn-check {
+        border-radius: 3px;
+        border: solid 1px #b1b1b1;
+        background-color: #f5f5f5;
+        height: 40px;
+        width: auto;
+        padding: 0 15px;
+    }
+}
+
+// 셀렉트 박스
+.select-area {
+    select {
+        border: solid 1px #b1b1b1;
+        border-radius: 3px;
+        width: 330px;
+        height: 40px;
+        padding: 10px 0 7px 8px;
+        font-size: 16px;
+        display: inline-block;
+    }
+}
+

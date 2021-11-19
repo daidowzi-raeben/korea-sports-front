@@ -1,20 +1,17 @@
 @@include('../include/header.html', {
-title : "mycycle",
+title : "게시판_상세",
 type : "ssp-sub",
 active_1 : 'is_active'
 })
-<!-- header end-->
 @@include('../include/ssp.nav.html')
-<!-- nav end-->
 @@include('../include/ssp.banner.html',{
 type : "typeA"
 })
-<!-- subbanner end -->
 <div class="container">
     <div class="container-inner">
         <h2 class="tit font-25">Board title</h2>
         <div class="contents">
-            <div class="board-list board-list--normal">
+            <div class="board-list board-list--cardH">
                 <div class="board-list__top">
                     <div class="board-list__top--l">
                         <i class="icon-list"></i>
@@ -37,76 +34,71 @@ type : "typeA"
                     </div>
                 </div>
                 <div class="board-list__con">
-                    <table>
-                        <colgroup>
-                            <col width="6%">
-                            <col width="54%">
-                            <col width="10%">
-                            <col width="10%">
-                            <col width="10%">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-
-                            <tr>
-                                <th>번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>조회수</th>
-                                <th>등록일</th>
-                                <th>첨부파일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>15</td>
-                                <td class="tit">
-                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집2021년 '스포츠교육 플래닛'
-                                </td>
-                                <td>강대한</td>
-                                <td>257</td>
-                                <td>2021/09/23</td>
-                                <td>
-                                    <div class="add-file">
-                                        <button type="button"><i class="icon-download"></i></button>
-                                        <button type="button"><i class="icon-watch"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td class="tit">
-                                    2021년 '스포츠교육 플래닛' 과정
-                                </td>
-                                <td>강대한</td>
-                                <td>257</td>
-                                <td>2021/09/23</td>
-                                <td>
-                                    <div class="add-file">
-                                        <button type="button"><i class="icon-download"></i></button>
-                                        <button type="button"><i class="icon-watch"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>13</td>
-                                <td class="tit">
-                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집2021년 '스포츠교육 플래닛'
-                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집2021년 '스포츠교육 플래닛'
-                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집2021년 '스포츠교육 플래닛'
-                                </td>
-                                <td>강대한</td>
-                                <td>257</td>
-                                <td>2021/09/23</td>
-                                <td>
-                                    <div class="add-file">
-                                        <button type="button"><i class="icon-download"></i></button>
-                                        <button type="button"><i class="icon-watch"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="board-list__con--item is_active">
+                        <ul>
+                            <li class="num">15</li>
+                            <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                            <li class="name">강대한</li>
+                            <li class="date">2021/09/23</li>
+                            <li class="file">
+                                <div class="add-file">
+                                    <button type="button"><i class="icon-download"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="board-list__con--item">
+                        <ul>
+                            <li class="num">15</li>
+                            <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                            <li class="name">강대한</li>
+                            <li class="date">2021/09/23</li>
+                            <li class="file">
+                                <div class="add-file">
+                                    <button type="button"><i class="icon-download"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="board-list__con--item">
+                        <ul>
+                            <li class="num">15</li>
+                            <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                            <li class="name">강대한</li>
+                            <li class="date">2021/09/23</li>
+                            <li class="file">
+                                <div class="add-file">
+                                    <button type="button"><i class="icon-download"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="board-list__con--item">
+                        <ul>
+                            <li class="num">15</li>
+                            <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                            <li class="name">강대한</li>
+                            <li class="date">2021/09/23</li>
+                            <li class="file">
+                                <div class="add-file">
+                                    <button type="button"><i class="icon-download"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="board-list__con--item">
+                        <ul>
+                            <li class="num">15</li>
+                            <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                            <li class="name">강대한</li>
+                            <li class="date">2021/09/23</li>
+                            <li class="file">
+                                <div class="add-file">
+                                    <button type="button"><i class="icon-download"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="pagination">
                         <div class="pagination-wrap">
                             <span class="arrow-d"></span>
@@ -148,7 +140,6 @@ type : "typeA"
                                 <dd>211005 2021년_스포츠교육 플래닛 과정_교육신청 안내(pakage).pdf
                                     <div class="add-file">
                                         <button type="button"><i class="icon-download"></i></button>
-                                        <button type="button"><i class="icon-watch"></i></button>
                                     </div>
                                 </dd>
                             </dl>
@@ -193,7 +184,6 @@ type : "typeA"
         </div>
     </div>
 </div>
-<!-- footer start-->
 @@include('../include/footer.html',{
 type : 'ssp-sub'
 })
