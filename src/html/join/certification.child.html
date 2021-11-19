@@ -1,0 +1,65 @@
+@@include('../include/join.header.html',{
+    title : "본인인증"
+})
+
+<!-- nav, title -->
+@@include('../include/join.nav.html',
+    {
+        type : 'nav',
+        'nav-tit' : '본인인증',
+        active_1 : '',
+        active_2 : 'is_active',
+        active_3 : '',
+        active_4 : ''
+    }
+)
+<div class="container certification certification-child">
+    <div class="container-inner">
+        <p class="exp-txt font-17">대한체육회는 사용자의 중복가입으로 인한 피해를 방지하기 위하여 본인인증을 시행하고 있습니다.</p>
+        <div class="tab-type2">
+            <span class="font-m"><a href=""></a>14세 이상 본인인증</span>
+            <span class="is_active font-m"><a href=""></a>14세 미만 법정대리인 인증</span>
+        </div>
+        <div class="con-tit border-b">
+            <h3 class="font-25 font-r">본인인증</h3>
+        </div>
+        <p class="sub-txt">자주 사용하시는 인증 수단으로 본인인증을 진행해주세요.</p>
+        <div class="ctf border-b--thin">
+            <div class="ctf-item">
+                <div class="phone">
+                    <span class="btn-go font-17 font-b">휴대폰 인증<i class="icon-arrow"></i></span>
+                </div>
+                <div class="txt">
+                    <p class="font-15">본인명의로 가입된 휴대폰으로 이용하여 인증합니다.</p>
+                    <p class="font-15">타인명의의 휴대폰을 또는 법인폰을 이용중인 회원님은 휴대폰 본인인증이 불가합니다.</p>
+                </div>
+            </div>
+            <div class="ctf-item">
+                <div class="ipin">
+                    <span class="btn-go font-17 font-b">아이핀(I-PIN) 인증<i class="icon-arrow"></i></span>
+                </div>
+                <div class="txt">
+                    <p class="font-15">주민번호 대체 수단인 아이핀을 통해 인증합니다.</p>
+                    <p class="font-15">아이핀 계정이 없는 경우(또는 14세 미만 어린이인 경우) I-PIN 센터에서 발급 받으세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="agree agree-ch2">
+            <div class="checkbox-area">
+                <input type="checkbox" class="input-check" name="check" id="check1" value="">
+                <label for="check1" class="label-check font-17">만 14세 미만의 회원가입에 동의합니다.</label>
+            </div>
+            <div class="checkbox-area">
+                <input type="checkbox" class="input-check" name="check" id="check2" value="">
+                <label for="check2" class="label-check font-17">법정대리인의 개인정보 수집에 동의합니다.</label>
+            </div>
+        </div>
+        <div class="bottom-area">
+            <a href="" class="btn-gray font-23 font-m">취소</a>
+            <a href="" class="btn-red font-23 font-m">약관동의</a>
+        </div>
+    </div>
+</div>
+@@include('../include/footer.html',{
+    type : 'join'
+})

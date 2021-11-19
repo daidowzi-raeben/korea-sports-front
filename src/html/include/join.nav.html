@@ -1,0 +1,40 @@
+@@if(context.type == "nav") {
+<div class="join-nav">
+    <div class="inner">
+        <div class="inner-tit">
+            <h1>@@nav-tit</h1>
+        </div>
+        <ul>
+            <li class="@@active_1">
+                <span>Step 01</span>
+                <h2>약관동의</h2>
+            </li>
+            <li class="@@active_2">
+                <span>Step 02</span>
+                <h2>본인인증</h2>
+            </li>
+            <li class="@@active_3">
+                <span>Step 03</span>
+                <h2>회원정보 입력</h2>
+            </li>
+            <li class="@@active_4">
+                <span>Step 04</span>
+                <h2>가입완료</h2>
+            </li>
+        </ul>
+    </div>
+</div>
+}
+
+
+@@if(context.type == "title") {
+<div class="join-nav">
+    <div class="inner">
+        <div class="inner-tit">
+            <h1>@@nav-tit</h1>
+        </div>
+        <p class="inner-txt">@@nav-txt</p>
+    </div>
+</div>
+
+}

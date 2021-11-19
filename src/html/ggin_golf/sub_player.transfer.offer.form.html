@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- header start -->
+    @@include('include/header.html', {
+        page_title : "소속변경(이적)신청 상세",
+        page_name : "소속변경(이적)신청 상세",
+        page_css : "style_sub.player.transfer.offer.form"
+    })
+    <!-- header end -->
+    <body>
+        <!-- top start -->
+        @@include('include/top_navi.html', {
+            type : "player",
+            sub : "true",
+            navi_active : "5"
+        })
+        <!-- top end -->
+
+        <!-- content start -->
+        <div class="section sub">
+            <div class="sub_box">
+                <ul class="sub_ul">
+                    <li class="sub_left hide">
+                        <ul class="sub_frame">
+                            <li class="top"></li>
+                            <li class="mid"></li>
+                            <li class="bot"></li>
+                        </ul>
+                    </li>
+                    <li class="sub_center form">
+                        <ul class="sub_frame">
+                            <li class="top">
+                                <ul>
+                                    <li class="left_item">
+                                        <p class="title font-b font-25">소속변경(이적)신청</p>
+                                    </li>
+                                    <!--li class="right_item">
+                                        <ul class="right_menu">
+                                            <li class="btn font-17 font-b">이적신청</li>
+                                            <li class="btn font-17 font-b">활동종료 신청</li>
+                                            <li class="btn font-17 font-b">활동재개 신청</li>
+                                        </ul>
+                                    </li-->
+                                </ul>
+                            </li>
+                            <li class="mid">
+                                <ul class="ul_form">
+                                    <li class="li_form form_1">
+                                        <ul class="tab_form">
+                                            <li class="form_top">
+                                                <p class="font-m font-18">소속변경(이적)신청 등록</p>
+                                            </li>
+                                            <li class="form_mid">
+                                                <ul class="text_info clearfix">
+                                                    <li class="info_list">
+                                                        <p class="font-r font-16">신청종목</p>
+                                                        <input id="apply_athletics" class="input_gray font-r font-16" placeholder="패러글라이딩" />
+                                                    </li>
+                                                    <li class="info_list">
+                                                        <p class="font-r font-16">현재등록정보</p>
+                                                        <ul class="clearfix">
+                                                            <li class="font-r font-16">- 년도 : </li>
+                                                            <li class="font-r font-16">2021</li>
+                                                        </ul>
+                                                        <ul class="clearfix">
+                                                            <li class="font-r font-16">- 소속 : </li>
+                                                            <li class="font-r font-16">부산광역시체육회 (WU01465), 세부종목 : 남권</li>
+                                                        </ul>
+                                                        <ul class="clearfix">
+                                                            <li class="font-r font-16">- 종별 : </li>
+                                                            <li class="font-r font-16">실업(일반)</li>
+                                                        </ul>
+                                                        <ul class="clearfix">
+                                                            <li class="font-r font-16">- 시도 : </li>
+                                                            <li class="font-r font-16">부산광역시</li>
+                                                        </ul>
+                                                        <ul class="clearfix">
+                                                            <li class="font-r font-16">- 주소 : </li>
+                                                            <li class="font-r font-16">(04782) 서울특별시 성동구 연무장5길 9-16 (성수동2가)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul class="team_form clearfix">
+                                                    <li class="input_set">
+                                                        <ul class="input_set_ul clearfix">
+                                                            <li>
+                                                                <p class="font-r font-16">소속팀<upper>*</upper></p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <input id="team_code" class="input_gray font-16 font-roboto" type="text" placeholder="AF00420" />
+                                                                <input id="team_name" class="input_gray font-16 font-r" type="text" placeholder="sky prince golf club" />
+                                                                <input id="team_search" class="btn font-notosans font-16 font-r" type="button" value="소속팀 검색" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="input_set_2">
+                                                        <ul class="input_set_ul clearfix">
+                                                            <li>
+                                                                <p class="font-r font-16">팀 입단일<upper>*</upper></p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <input id="in_date" class="input_white font-16 font-roboto" type="date" value="2021-10-28" />
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">세부종목</p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <select id="select_athletics" class="input_white font-16" name="">
+                                                                    <option>세부종목을 선택하세요.</option>
+                                                                    <option selected>개인전</option>
+                                                                </select>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">학년</p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <select id="select_grade" class="input_white font-16" name="">
+                                                                    <option>학년을 선택하세요.</option>
+                                                                    <option selected>3학년</option>
+                                                                </select>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="input_set_3">
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">이적사유<upper>*</upper></p>
+                                                                <div class="">
+                                                                    <input id="transfer_check" type="checkbox" checked />
+                                                                    <label for="transfer_check" class="font-r font-16">이적동의서 있음</label>
+                                                                </div>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <input id="transfer_reason" class="input_white font-16" type="text" placeholder="" value="집안 이사" />
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">이적동의서 (업로드 완료)</p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <input id="agreement_search" class="btn font-notosans font-16 font-r" type="button" value="이적동의서 조회" />
+                                                                <input id="agreement_delete" class="btn font-notosans font-16 font-r" type="button" value="이적동의서 삭제" />
+                                                                <input id="agreement_download" class="btn font-notosans font-16 font-r" type="button" value="이적동의서 양식 다운로드" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="input_set_4">
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">학제에 따른 활동사유<upper>*</upper></p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <input id="transfer_reason" class="input_white font-16" type="text" placeholder="" value="질병으로 인한 휴학" />
+                                                            </li>
+                                                            <li>
+                                                                <p>선수나이 : 14세(등록구분 :  16세이하부) / 선택한 소속팀 : 13세이하부</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="input_set_5">
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">소속팀과 금전계약(근로/연봉계약 등) 체결 여부</p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <div class="checkbox_wrap">
+                                                                    <div class="inside">
+                                                                        <input id="conclude" class="input_white font-16 font-roboto" type="checkbox" />
+                                                                        <label for="">체결</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="checkbox_wrap checked">
+                                                                    <div class="inside">
+                                                                        <input id="unconclude" class="input_white font-16 font-roboto" type="checkbox" checked />
+                                                                        <label for="">미체결</label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul class="address_info">
+                                                    <li class="input_set_1">
+                                                        <ul class="input_set_ul">
+                                                            <li>
+                                                                <p class="font-r font-16">주소<upper>*</upper></p>
+                                                            </li>
+                                                            <li class="li_input_wrap">
+                                                                <input id="zipcode" class="input_white font-16" type="text" placeholder="우편번호" value="069841" />
+                                                                <input id="search_zipcode" class="input_gray font-16 btn" type="button" value="우편번호 검색" />
+                                                                <input id="address_1" class="input_white font-16" type="text" placeholder="상세주소 1" value="서울특별시 노원 동일로 42길 4로 중계그린아파트" />
+                                                                <input id="address_2" class="input_white font-16" type="text" placeholder="상세주소 2" value="103동 102호(중계동)" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="bot"></li>
+                        </ul>
+                    </li>
+                    <li class="sub_right info">
+                        <ul class="sub_frame clearfix">
+                            <li class="top"></li>
+                            <li class="mid mid-fixed">
+                                <ul class="mid_item">
+                                    <li class="li_info">
+                                        <!--p class="title font-m font-16"></p-->
+                                        <div class="title_img"></div>
+                                        <p class="font-r font-16">
+                                            소속변경(이적)신청은<br/>
+                                            최초 등록 신청 후 승인이<br/>
+                                            완료된 이후 가능하며,<br/>
+                                            이미 신청한 건이 처리중일<br/>
+                                            경우 이적신청을 할 수<br/>
+                                            없습니다. 신청 후 승인은<br/>
+                                            각 회원종목 단체의 절차에<br/>
+                                            따라 진행됩니다.
+                                        </p>
+                                    </li>
+                                    <li class="li_btn">
+                                        <ul class="btn_set">
+                                            <li class="btn btn_1 btn_gray btn_cancel">
+                                                <p class="font-r font-17">취소</p>
+                                            </li>
+                                            <li class="btn btn_2 btn_save">
+                                                <p class="font-r font-17">저장</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="li_phone">
+                                        <ul class="info_phone">
+                                            <li class="phone_1">
+                                                <div class="img"></div>
+                                            </li>
+                                            <li class="phone_2">
+                                                <div class="img"></div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="li_bot">
+                                        <a class="btn btn_top" href="#top"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="bot"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- content end -->
+
+        <!-- footer start -->
+        @@include('include/footer.html',{
+            type : "main"
+        })
+        <!-- footer end -->
+
+        <!-- popup start -->
+        @@include('include/popup.html',{
+            type : "confirm"
+        })
+        <!-- popup end -->
+    </body>
+</html>

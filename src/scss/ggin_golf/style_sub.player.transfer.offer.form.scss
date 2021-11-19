@@ -1,0 +1,593 @@
+/* 이적 신청 */
+.sub {
+    width: 100%;
+    height: auto;
+    background: #F2F4F7;
+    border-top: 2px solid #025AC6;
+
+    .sub_box {
+        width: 1200px;
+        height: auto;
+        margin: 49px auto 0px auto;
+        display: table;
+
+        .sub_ul {
+            width: inherit;
+            height: inherit;
+
+            li {
+                height: inherit;
+                float: left;
+
+                .sub_frame {
+                    .top {
+                        height: 37px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                &.hide {
+                    display: none;
+                }
+
+                &.sub_left {
+                    width: 0px;
+                }
+
+                &.sub_center {
+                    width: 955px;
+
+                    &.form {
+                        width: 955px;
+                    }
+
+                    .sub_frame {
+                        width: inherit;
+                        height: inherit;
+
+                        li {
+                            width: inherit;
+                        }
+
+                        .top {
+
+                            .left_item {
+                                float: left;
+                            }
+
+                            .right_item {
+                                float: right;
+                                position: relative;
+                                top: 8px;
+
+                                .right_menu {
+                                    li {
+                                        &.li_border {
+                                            width: 1px; height: 20px;
+                                            margin: 0px 12px 0px 12px;
+                                            background: #3D3D3D;
+                                            position: relative;
+                                            top: 4px;
+                                        }
+
+                                        &:hover {
+                                            color: #025AC6;
+                                        }
+
+                                        &.active {
+                                            color: #025AC6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // mid > ul_form > li_form(form1 ~ 4) > form_mid
+                        .mid {
+                            height: auto;
+                            margin-bottom: 35px;
+
+                            // 폼 인풋 스타일 화이트
+                            .input_white {
+                                background: white 0% 0% no-repeat padding-box;
+                                border: 1px solid #B1B1B1;
+                                border-radius: 3px;
+                            }
+
+                            // 폼 인풋 스타일 그레이
+                            .input_gray {
+                                background: #F3F3F3 0% 0% no-repeat padding-box;
+                                border: 1px solid #B1B1B1;
+                                border-radius: 3px;
+                            }
+
+                            .ul_form {
+                                .li_form {
+                                    width: 955px;
+                                    border: 1px solid #DCE1EB;
+                                    background: white;
+                                    margin-bottom: 35px;
+
+                                    &:last-child {
+                                        margin-bottom: 0px;
+                                    }
+
+                                    .tab_form {
+                                        width: 100%;
+
+                                        .form_top {
+                                            padding: 35px 0px 17px 40px;
+                                            border-bottom: 1px solid #CCCCCC;
+                                        }
+
+                                        .form_mid {
+                                            padding: 35px;
+
+                                            .text_info {
+                                                border-bottom: 1px #CCCCCC solid;
+                                                padding-bottom: 40px;
+
+                                                >li {
+                                                    width: 100%;
+                                                }
+
+                                                .info_list {
+
+                                                    &:nth-child(1) {
+                                                        margin-bottom: 25px;
+                                                    }
+
+                                                    >p {
+                                                        margin-bottom: 13px;
+                                                    }
+
+                                                    >ul {
+                                                        margin-bottom: 8px;
+                                                    }
+                                                }
+                                            }
+
+                                            .team_form {
+                                                width: inherit;
+                                                margin-top: 40px;
+                                                border-bottom: 1px #CCCCCC solid;
+                                                padding-bottom: 40px;
+
+                                                >li {
+                                                    width: inherit;
+                                                }
+
+                                                .input_set {        
+                                                    margin-bottom: 25px;                                            
+
+                                                    .input_set_ul {
+                                                        width: inherit;
+
+                                                        li {
+                                                            &:nth-child(1) {
+                                                                width: inherit;
+                                                                margin-bottom: 8px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    &_2 {
+                                                        margin-bottom: 25px;
+
+                                                        .input_set_ul {
+                                                            width: 265px;
+                                                            float: left;
+
+                                                            li {
+                                                                &:nth-child(1) {
+                                                                    margin-bottom: 8px;
+                                                                }
+                                                            }
+
+                                                            &:nth-child(2) {
+                                                                margin-left: 40px;
+                                                            }
+
+                                                            &:nth-child(3) {
+                                                                margin-left: 40px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    &_3 {
+                                                        margin-bottom: 25px;
+                                                        
+                                                        .input_set_ul {
+                                                            width: 265px;
+                                                            float: left;
+
+                                                            li {
+                                                                &:nth-child(1) {
+                                                                    margin-bottom: 8px;
+                                                                }
+                                                            }
+
+                                                            &:nth-child(1) {
+                                                                p {
+                                                                    float: left;
+                                                                }
+                                                                div {
+                                                                    float: right;
+                                                                }
+                                                            }
+
+                                                            &:nth-child(2) {
+                                                                width: 490px;
+                                                                margin-left: 40px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    &_4 {
+                                                        margin-bottom: 25px;
+                                                        
+                                                        .input_set_ul {
+                                                            width: 100%;
+                                                            float: left;
+
+                                                            li {
+                                                                &:nth-child(1) {
+                                                                    margin-bottom: 8px;
+                                                                }
+
+                                                                &:nth-child(2) {
+                                                                    margin-bottom: 8px;
+                                                                }
+                                                            }
+
+                                                            &:nth-child(2) {
+                                                                margin-left: 40px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    &_5 {
+                                                        .input_set_ul {                                                            
+                                                            float: left;
+
+                                                            .checkbox_wrap {
+                                                                width: 130px; height: 40px;
+                                                                background: #FFFFFF 0% 0% no-repeat padding-box;
+                                                                border: 1px solid #B1B1B1;
+                                                                border-radius: 3px;
+                                                                display: table;
+
+                                                                .inside {
+                                                                    display: table-cell;
+                                                                    vertical-align: middle;
+                                                                    text-align: center;
+                                                                    margin: auto;
+                                                                }
+
+                                                                &.checked {
+                                                                    border: 1px solid #224B9E;
+                                                                }
+
+                                                                &:nth-child(2) {
+                                                                    margin-left: 5px;
+                                                                }
+                                                            }
+
+                                                            &:nth-child(1) {
+                                                                width: 320px;
+
+                                                                li {
+                                                                    >div {
+                                                                        float: left;
+                                                                    }
+
+                                                                    &:nth-child(1) {
+                                                                        margin-bottom: 8px;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-child(2) {
+                                                                margin-left: 40px;
+                                                            }                                                            
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .address_info {
+                                                margin-top: 40px;
+
+                                                .input_set_1 {
+                                                    .input_set_ul {
+                                                        >li {
+                                                            &:nth-child(1) {
+                                                                margin-bottom: 8px;;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.sub_right {
+                    width: 230px;
+                    margin-left: 15px;
+
+                    .sub_frame {
+                        width: inherit;
+
+                        li {
+                            width: inherit;
+                        }
+
+                        .top {
+                            
+                        }
+                        .mid {
+                            height: 1279px;
+                            background: white;
+                            border: 1px solid #DCE1EB;
+
+                            .mid_item {
+                                width: inherit;
+
+                                >li {
+                                    height: auto;
+
+                                    &.li_info {
+                                        padding: 25px 0px 51px 27px;
+
+                                        .title {
+                                            color: #3D3D3D;
+                                            margin-bottom: 31px;
+                                        }
+
+                                        .title_img {
+                                            width: 41px; height: 41px;
+                                            background: url(../../img/ggin_golf/icon_question_box.svg) no-repeat;
+                                            margin-bottom: 13px;
+                                        }
+
+                                        ul {
+                                            width: inherit;
+
+                                            li {
+
+                                                &.item {
+                                                    width: 220px;
+                                                    margin-bottom: 26px;
+
+                                                    &:only-child() p {
+                                                        margin-top: 16px;
+                                                    }
+
+                                                    &:nth-child(1) p {
+                                                        margin-top: 0px;
+                                                    }
+
+                                                    p {
+                                                        width: auto;
+                                                        color: #3D3D3D;
+
+                                                        &::before {
+                                                            content: "";
+                                                            background: url(../../img/ggin_golf/item_circle_gray.svg) no-repeat;
+                                                            display: inline-block;
+                                                            font-size: 20px;
+                                                            margin-right: 7px;
+                                                            width: 7px; height: 7px;
+                                                            transform: translate(0px, -2px);
+                                                        }
+                                                    }
+
+                                                    &.active {
+                                                        p {
+                                                            color: #035AC6;
+                                                            &::before {
+                                                                background: url(../../img/ggin_golf/item_circle_blue.svg) no-repeat;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    &.chain {
+                                                        &::before {
+                                                            content:"";
+                                                            background: #9A9A9A;
+                                                            width: 1px; height: 43px;
+                                                            transform: translate(3px, -33px);
+                                                            position: absolute;
+                                                        }
+                                                    }                                                    
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn_set {
+                                    li {
+                                        width: 114px;
+                                        height: 60px;
+                                        text-align: center;
+                                        background: #03A5C6;
+                                        display: table;
+
+                                        p {
+                                            color: white;
+                                            display: table-cell;
+                                            text-align: center;
+                                            vertical-align: middle;
+                                        }
+
+                                        &.btn_gray {
+                                            background: #A7A7A7;
+                                        }
+
+                                        &:nth-child(1) {
+                                            
+                                        }
+
+                                        &:nth-child(2) {
+                                            margin-left: 1px;
+                                            border-right: 1px solid #DCE1EB;
+                                        }
+                                    }
+                                }
+
+                                .info_phone {
+                                    width: inherit;
+                                    height: auto;
+                                    background: #F6F6F6;
+                                    
+                                    li {
+                                        width: 228px;
+                                        height: 90px;
+                                        background: #F6F6F6;
+                                        border-bottom: 1px solid #DCE1EB;
+                                        text-align: center;
+                                        display: table;
+
+                                        &.phone_1 {
+
+                                            .div_table {
+                                                width: inherit; height: inherit;
+                                                display: table;
+                                            }
+
+                                            .img {
+                                                width: 185px;
+                                                height: 51px;
+                                                background: url(../../img/ggin_golf/sub_right_btn_1.svg) no-repeat;
+                                                margin: 20px auto auto auto;
+                                            }
+                                        }
+                                        &.phone_2 {
+
+                                            .img {
+                                                width: 183px;
+                                                height: 64px;
+                                                background: url(../../img/ggin_golf/sub_right_btn_2.svg) no-repeat;
+                                                margin: 12px auto auto auto;
+                                            }
+                                        }
+                                    }
+                                }
+                                .li_bot {
+                                    width: inherit;
+                                    text-align: center;
+
+                                    .btn_top {
+                                        display: inline-block;
+                                        width: 52px;
+                                        height: 80px;
+                                        background: url(../../img/ggin_golf/btn_top.svg) no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.outline {
+                        width: 230px;
+                        background: lightcoral;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#apply_athletics {
+    width: 265px; height: 40px;
+    padding: 8px 10px 8px 10px;
+}
+
+#team_code {
+    width: 149px; height: 40px;
+    padding: 8px 10px 8px 10px;
+}
+#team_name {
+    width: 309px; height: 40px;
+    padding: 8px 10px 8px 10px;
+}
+#team_search {
+    width: 107px; height: 40px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #B1B1B1;
+    border-radius: 3px;
+}
+#in_date {
+    width: 265px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+}
+#select_athletics {
+    width: 265px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+}
+#select_grade {
+    width: 265px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+}
+#transfer_reason {
+    width: 265px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+}
+#agreement_search {
+    width: 137px; height: 40px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #B1B1B1;
+    border-radius: 3px;
+}
+#agreement_delete {
+    width: 137px; height: 40px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #B1B1B1;
+    border-radius: 3px;
+}
+#agreement_download {
+    width: 199px; height: 40px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #B1B1B1;
+    border-radius: 3px;
+}
+
+#zipcode {
+    width: 138px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+}
+#search_zipcode {
+    width: 122px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+    margin-left: 5px;
+}
+#address_1 {
+    width: 885px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+    margin-top: 10px;
+}
+#address_2 {
+    width: 885px; height: 40px;
+    padding: 8px 10px 8px 10px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.clearfix::after {
+    content:"";
+    clear: both;
+    display: block;
+}

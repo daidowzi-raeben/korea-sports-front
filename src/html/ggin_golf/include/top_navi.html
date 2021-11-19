@@ -1,0 +1,245 @@
+<div class="section top_navi">
+    <div class="top ggin">
+        <ul class="top_ul">
+            <li class="pos_top">
+                <ul class="pos_top_left">
+                    <li>
+                        <div class="top_logo">
+                            <img src="" />
+                        </div>
+                        <div class="top_bi">
+                            <p class="font-25 font-b">대한골프협회</p>
+                        </divn>
+                    </li>
+                    <li>
+                        <div class="li_line"></div>
+                    </li>
+                    <li>
+                        @@if(context.type == "player"){
+                            <div class="btn btn_top_select top_left_menu type_1">
+                                <p class="font-16 font-m">선수 등록 신청</p>
+                            </div>
+                        }
+                        @@if(context.type == "master") {
+                            <div class="btn btn_top_select top_left_menu type_2">
+                                <p class="font-16 font-m">지도자 등록 신청</p>
+                            </div>
+                        }
+                        @@if(context.type == "referee") {
+                            <div class="btn btn_top_select top_left_menu type_3">
+                                <p class="font-16 font-m">심판 등록 신청</p>
+                            </div>
+                        }
+                        @@if(context.type == "manager") {
+                            <div class="btn btn_top_select top_left_menu type_4">
+                                <p class="font-16 font-m">선수관리자 등록 신청</p>
+                            </div>
+                        }
+                    </li>
+                </ul>
+                <div class="unlimit_line"></div>
+                <ul class="pos_top_right">
+                    <li id="top_r_link_1" class="btn top_r_link after_line font-16">종목변경</li>
+                    <li id="top_r_link_2" class="btn top_r_link after_line font-16">스포츠지원포털</li>
+                    <li>
+                        <ul class="pos_top_right_in">
+                            <li class="font-16 font-b">화면번호</li>
+                            <li>
+                                <div class="round_box">
+                                    <ul>
+                                        <li id="top_r_screen_num" class="font-20 font-b">130</li>
+                                        <li id="top_r_link_3" class="btn top_r_link front_line font-16">화면도움말</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="popup_select">
+                    
+                    <ul>
+                        <li class="top_box">
+                            <div class="img"></div>
+                        </li>
+                        <li class="bottom_box">
+                            <!--div>X</div-->
+                            <ul>
+                                <li>
+                                    <p class="font-m font-22">대한골프협회 경기인 선택</p>
+                                </li>
+                                <li>
+                                    <ul class="btn btn_select select_1">
+                                        <li>
+                                            <div class="img_table">
+                                                <div class="img"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="li_line"></div>
+                                        </li>
+                                        <li>
+                                            <p>선수</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="btn btn_select select_2">
+                                        <div class="img_table">
+                                            <div class="img"></div>
+                                        </div>
+                                        <li>
+                                            <div class="li_line"></div>
+                                        </li>
+                                        <li>
+                                            <p>지도자</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="btn btn_select select_3">
+                                        <div class="img_table">
+                                            <div class="img"></div>
+                                        </div>
+                                        <li>
+                                            <div class="li_line"></div>
+                                        </li>
+                                        <li>
+                                            <p>심판</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="btn btn_select select_4">
+                                        <div class="img_table">
+                                            <div class="img"></div>
+                                        </div>
+                                        <li>
+                                            <div class="li_line"></div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                선수관리<br/>
+                                                담당자
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>해당되는 경기인을 선택하세요.</p>
+                                </li>
+                            </ul>
+                            <div class="btn btn_close"></div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="pos_mid"></li>
+
+            <li class="pos_bottom">
+                <ul class="pos_bottom_left navi_left">
+                    <!-- navi 1 player -->
+                    @@if(context.type == "player" && context.navi_active != "1"){
+                        <li class="btn link_1 font-m font-17">선수 등록 개요</li>
+                    }
+                    @@if(context.type == "player" && context.navi_active == "1"){
+                        <li class="btn link_1 font-m font-17 font-b active">선수 등록 개요</li>
+                    }
+                    <!-- navi 1 master -->
+                    @@if(context.type == "master" && context.navi_active != "1") {
+                        <li class="btn link_1 font-m font-17">지도자 등록 개요</li>
+                    }
+                    @@if(context.type == "master" && context.navi_active == "1") {
+                        <li class="btn link_1 font-m font-17 font-b active">지도자 등록 개요</li>
+                    }
+                    <!-- navi 1 referee -->
+                    @@if(context.type == "referee" && context.navi_active != "1") {
+                        <li class="btn link_1 font-m font-17">심판 등록 개요</li>
+                    }
+                    @@if(context.type == "referee" && context.navi_active == "1"){
+                        <li class="btn link_1 font-m font-17 font-b active">심판 등록 개요</li>
+                    }
+                    <!-- navi 1 manager -->
+                    @@if(context.type == "manager" && context.navi_active != "1"){
+                        <li class="btn link_1 font-m font-17">선수관리자 등록 개요</li>
+                    }
+                    @@if(context.type == "manager" && context.navi_active == "1"){
+                        <li class="btn link_1 font-m font-17 font-b active">선수관리자 등록 개요</li>
+                    }
+                    
+                    <!-- navi 2 -->
+                    @@if(context.navi_active != "2"){
+                        <li class="btn link_2 font-m font-17">신청서 작성</li>
+                    }
+                    @@if(context.navi_active == "2"){
+                        <li class="btn link_2 font-m font-17 font-b active">신청서 작성</li>
+                    }
+
+                    <!-- navi 3 -->
+                    @@if(context.navi_active != "3"){
+                        <li class="btn link_3 font-m font-17">신청정보 확인/수정</li>
+                    }
+                    @@if(context.navi_active == "3"){
+                        <li class="btn link_3 font-m font-17 font-b active">신청정보 확인/수정</li>
+                    }
+
+                    <!-- navi 4 -->
+                    @@if(context.navi_active != "4"){
+                        <li class="btn link_4 font-m font-17">신청서 인쇄</li>
+                    }
+                    @@if(context.navi_active == "4"){
+                        <li class="btn link_4 font-m font-17 font-b active">신청서 인쇄</li>
+                    }
+
+                    <!-- navi 5 -->
+                    @@if(context.type == "player"){
+                        @@if(context.navi_active != "5"){
+                            <li class="btn link_5 font-m font-17">소속변경(이적)신청</li>
+                        }
+                        @@if(context.navi_active == "5"){
+                            <li class="btn link_5 font-m font-17 font-b active">소속변경(이적)신청</li>
+                        }
+                    }
+                    
+                    <!-- navi 6 -->
+                    @@if(context.navi_active != "6"){
+                        <li class="btn link_6 font-m font-17">전화번호 안내</li>
+                    }
+                    @@if(context.navi_active == "6"){
+                        <li class="btn link_6 font-m font-17 font-b active">전화번호 안내</li>
+                    }
+                </ul>
+                <ul class="pos_bottom_right navi_right">
+                    <!-- navi 11 -->
+                    @@if(context.navi_active != "11"){
+                        <li class="btn link_1 font-r font-15">공지사항</li>
+                    }
+                    @@if(context.navi_active == "11"){
+                        <li class="btn link_1 font-r font-15 font-m active">공지사항</li>
+                    }
+                    <li class="line">|</li>
+                    <!-- navi 12 -->
+                    @@if(context.navi_active != "12"){
+                        <li class="btn link_2 font-r font-15">자주하는 질문</li>
+                    }
+                    @@if(context.navi_active == "12"){
+                        <li class="btn link_2 font-r font-15 font-m active">자주하는 질문</li>
+                    }
+                    <li class="line">|</li>
+                    <!-- navi 13 -->
+                    @@if(context.type == "player" && context.navi_active != "13"){
+                        <li class="btn oneonone link_3 font-r font-15">1:1 문의</li>
+                    }
+                    @@if(context.type == "player" && context.navi_active == "13"){
+                        <li class="btn oneonone link_3 font-r font-15 font-m active">1:1 문의</li>
+                    }
+                    @@if(context.type == "master" || context.type == "referee" || context.type == "manager") {
+                        @@if(context.navi_active != "13") {
+                            <li class="btn link_3 font-r font-15">묻고 답하기</li>
+                        }
+                        @@if(context.navi_active == "13") {
+                            <li class="btn link_3 font-r font-15 font-m active">묻고 답하기</li>
+                        }
+                    }
+                    <!-- navi 14 -->
+                    <li class="btn link_4 btn_logout font-m font-14">로그아웃</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

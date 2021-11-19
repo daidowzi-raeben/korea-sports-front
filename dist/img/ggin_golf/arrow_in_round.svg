@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+    <clipPath id="clip-2">
+      <use xlink:href="#fill-2"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_1234" data-name="그룹 1234" transform="translate(-718 -51)">
+    <g id="타원_3" data-name="타원 3" transform="translate(718 51)" fill="#fff" stroke="#3d3d3d" stroke-width="2">
+      <circle cx="13.5" cy="13.5" r="13.5" stroke="none"/>
+      <circle cx="13.5" cy="13.5" r="12.5" fill="none"/>
+    </g>
+    <g id="사각형_324" data-name="사각형 324" transform="translate(729.844 68.473) rotate(-45)" fill="#3d3d3d" stroke="#3d3d3d" stroke-width="3">
+      <rect id="fill" width="9.42" height="2.569" rx="1.285" stroke="none"/>
+      <path d="M0,1.069075584411621h9.419943809509277M7.919943809509277,0v2.569075584411621M9.419943809509277,1.5h-9.419943809509277M1.5,2.569075584411621v-2.569075584411621" fill="none" clip-path="url(#clip)"/>
+    </g>
+    <g id="사각형_325" data-name="사각형 325" transform="translate(731.66 70.289) rotate(-135)" fill="#3d3d3d" stroke="#3d3d3d" stroke-width="3">
+      <rect id="fill-2" width="9.42" height="2.569" rx="1.285" stroke="none"/>
+      <path d="M0,1.069075584411621h9.419943809509277M7.919943809509277,0v2.569075584411621M9.419943809509277,1.5h-9.419943809509277M1.5,2.569075584411621v-2.569075584411621" fill="none" clip-path="url(#clip-2)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,300 @@
+@@include('../include/join.header.html',{
+title : "가입완료"
+})
+
+<!-- nav, title -->
+@@include('../include/join.nav.html',
+{
+type : 'nav',
+'nav-tit' : '가입완료',
+active_1 : '',
+active_2 : '',
+active_3 : '',
+active_4 : 'is_active'
+}
+)
+<div class="container done done-edu">
+    <div class="container-inner">
+        <div class="con-top">
+            <h1 class="font-30">강대한님 환영합니다!</h1>
+            <p class="b-icon font-17 ">스포츠지원포털 웹사이트 가입이 완료되었습니다.</p>
+            <button type="button" class="font-16">Main으로</button>
+            <p class="font-17">소셜계정 연동을 하시면, 간편한 로그인이 가능합니다. 자주 사용하시는 소셜을 선택해주세요.</p>
+            <ul class="social">
+                <li class="na"><a href=""></a></li>
+                <li class="ka"><a href=""></a></li>
+                <li class="face"><a href=""></a></li>
+                <li class="goo"><a href=""></a></li>
+                <li class="fin"><a href=""></a></li>
+            </ul>
+        </div>
+        <div class="con-info">
+            <div class="con-info__tit">
+                <h2 class="font-25">추가정보 입력</h2>
+                <p>입력은 선택사항입니다. 서비스의 종류에 따라 추가정보 요청이 요구 될 수 있습니다.</p>
+            </div>
+            <div class="con-info__tab">
+                <ul>
+                    <li class="is_active"><a href="">학력사항</a></li>
+                    <li><a href="">수상경력</a></li>
+                    <li><a href="">연수 및 교육사항</a></li>
+                    <li><a href="">상훈</a></li>
+                </ul>
+            </div>
+            <div class="con-info__detail">
+                <p class="sub-tit font-16">3개의 학력사항이 등록되어 있습니다. 추가를 원하시면 아래 +버튼을 클릭하세요.</p>
+                <div class="contents">
+                    <div class="contents-item">
+                        <div class="inner">
+                            <div class="btn-area">
+                                <button type="button" class="font-16">삭제</button>
+                                <button type="button" class="font-16 edit">수정</button>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학교명</dt>
+                                    <dd>성균관대학교</dd>
+                                </dl>
+                                <dl>
+                                    <dt>재학기간</dt>
+                                    <dd>2021/09/06 ~ 2021/09/06</dd>
+                                </dl>
+                                <dl>
+                                    <dt>졸업구분</dt>
+                                    <dd>졸업</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학력구분</dt>
+                                    <dd>대학교(4년제)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>지역구분</dt>
+                                    <dd>서울특별시</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학교주소</dt>
+                                    <dd>(03063) 서울특별시 종로구 성균관로 25-2 인문사회과학캠퍼스(명륜동)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="contents-edit">
+                            <div class="contents-edit__con">
+                                <div class="left">
+                                    <span class="font-20">학력사항<br>등록</span>
+                                    <i class="icon-edu"></i>
+                                </div>
+                                <div class="right">
+                                    <div class="right-top">
+                                        <div class="right-top__l">
+                                            <div class="input-area">
+                                                <span class="tit w-64">학교명</span>
+                                                <input type="text" value="">
+                                                <button type="button" class="btn-check font-16">검색</button>
+                                            </div>
+                                            <!-- 학교명 검색 후 선택 옵션 존재하면 t-select에 active 클래스 추가 -->
+                                            <div class="t-select active">
+                                                <div class="radio-area">
+                                                    <input type="radio" class="input-radio" name="radio1" id="radio1_1"
+                                                        value="" checked>
+                                                    <label for="radio1_1" class="form-radio font-16">성균관대학교
+                                                        인문사회과학캠퍼스</label>
+                                                </div>
+                                                <div class="radio-area">
+                                                    <input type="radio" class="input-radio" name="radio1" id="radio1_2"
+                                                        value="">
+                                                    <label for="radio1_2" class="form-radio font-16">성균관대학교
+                                                        자연과학캠퍼스</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-top__r input-area">
+                                            <span class="tit w-64">지역구분</span>
+                                            <input type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="right-middle">
+                                        <div class="input-area">
+                                            <span class="tit w-64">학교주소</span>
+                                            <input type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="right-bottom">
+                                        <div class="input-area">
+                                            <span class="tit w-64">재학기간</span>
+                                            <input type="text" class="calender datepicker-here date_start"
+                                                data-date-format="yyyy-mm-dd" placeholder="2021/09/06"> ~
+                                            <input type="text" class="calender datepicker-here date_end"
+                                                data-date-format="yyyy-mm-dd" placeholder="2021/09/06">
+                                        </div>
+                                        <div class="select-area">
+                                            <select name="" id="">
+                                                <option value="">졸업1</option>
+                                                <option value="">졸업2</option>
+                                                <option value="">졸업3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-edit__foot">
+                                <button type="button" class="font-16 cancel">취소</button>
+                                <button type="button" class="font-16 save">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-item">
+                        <div class="inner">
+                            <div class="btn-area">
+                                <button type="button" class="font-16 remove">삭제</button>
+                                <button type="button" class="font-16 edit">수정</button>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학교명</dt>
+                                    <dd>성균관대학교</dd>
+                                </dl>
+                                <dl>
+                                    <dt>재학기간</dt>
+                                    <dd>2021/09/06 ~ 2021/09/06</dd>
+                                </dl>
+                                <dl>
+                                    <dt>졸업구분</dt>
+                                    <dd>졸업</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학력구분</dt>
+                                    <dd>대학교(4년제)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>지역구분</dt>
+                                    <dd>서울특별시</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학교주소</dt>
+                                    <dd>(03063) 서울특별시 종로구 성균관로 25-2 인문사회과학캠퍼스(명륜동)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-item">
+                        <div class="inner">
+                            <div class="btn-area">
+                                <button type="button" class="font-16 remove">삭제</button>
+                                <button type="button" class="font-16 edit">수정</button>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학교명</dt>
+                                    <dd>성균관대학교</dd>
+                                </dl>
+                                <dl>
+                                    <dt>재학기간</dt>
+                                    <dd>2021/09/06 ~ 2021/09/06</dd>
+                                </dl>
+                                <dl>
+                                    <dt>졸업구분</dt>
+                                    <dd>졸업</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학력구분</dt>
+                                    <dd>대학교(4년제)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>지역구분</dt>
+                                    <dd>서울특별시</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-64">학교주소</dt>
+                                    <dd>(03063) 서울특별시 종로구 성균관로 25-2 인문사회과학캠퍼스(명륜동)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <button type="button"><i class="icon-plus"></i></button>
+
+                    </div>
+                    <div class="contents-edit">
+                        <div class="contents-edit__con">
+                            <div class="left">
+                                <span class="font-20">학력사항<br>등록</span>
+                                <i class="icon-edu"></i>
+                            </div>
+                            <div class="right">
+                                <div class="right-top">
+                                    <div class="right-top__l">
+                                        <div class="input-area">
+                                            <span class="tit w-64">학교명</span>
+                                            <input type="text" value="">
+                                            <button type="button" class="btn-check font-16">검색</button>
+                                        </div>
+                                        <div class="t-select">
+                                            <div class="radio-area">
+                                                <input type="radio" class="input-radio" name="radio2" id="radio2_1"
+                                                    value="" checked>
+                                                <label for="radio2_1" class="form-radio font-16">성균관대학교
+                                                    인문사회과학캠퍼스</label>
+                                            </div>
+                                            <div class="radio-area">
+                                                <input type="radio" class="input-radio" name="radio2" id="radio2_2"
+                                                    value="">
+                                                <label for="radio2_2" class="form-radio font-16">성균관대학교 자연과학캠퍼스</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-top__r input-area">
+                                        <span class="tit w-64">지역구분</span>
+                                        <input type="text" value="">
+                                    </div>
+                                </div>
+                                <div class="right-middle">
+                                    <div class="input-area">
+                                        <span class="tit w-64">학교주소</span>
+                                        <input type="text" value="">
+                                    </div>
+                                </div>
+                                <div class="right-bottom">
+                                    <div class="input-area">
+                                        <span class="tit w-64">재학기간</span>
+                                        <input type="text" class="calender datepicker-here date_start"
+                                            data-date-format="yyyy-mm-dd" placeholder="2021/09/06"> ~
+                                        <input type="text" class="calender datepicker-here date_end"
+                                            data-date-format="yyyy-mm-dd" placeholder="2021/09/06">
+                                    </div>
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">졸업1</option>
+                                            <option value="">졸업2</option>
+                                            <option value="">졸업3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents-edit__foot">
+                            <button type="button" class="font-16 cancel">취소</button>
+                            <button type="button" class="font-16 save">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@@include('../include/footer.html',{
+type : 'join'
+})

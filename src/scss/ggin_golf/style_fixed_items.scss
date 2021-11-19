@@ -1,0 +1,28 @@
+/*
+2021.11.12
+요청사항
+
+서브페이지 우측 메뉴 위치 고정
+.sub .sub_box .sub_ul li.sub_right .sub_frame .mid
+*/
+.sub .sub_box .sub_ul li.sub_right {
+    //position: sticky;
+    //top: 0px;
+    .sub_frame {
+        li {
+            &.mid {
+                &.mid-fixed {
+                    position: fixed;
+                    top: 284px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+*.clearfix::after {
+    content:"";
+    clear: both;
+    display: block;
+}

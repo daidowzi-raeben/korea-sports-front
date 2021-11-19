@@ -1,0 +1,34 @@
+<!-- header -->
+@@include('../include/join.header.html',{
+    title : "아이디 찾기"
+})
+
+<!-- nav, title -->
+@@include('../include/join.nav.html',
+    {
+        type : 'title',
+        'nav-tit' : '아이디 찾기',
+        'nav-txt' : '아이디를 찾기 위해서는 본인인증 절차가 필요합니다.'
+    }
+)
+
+<div class="container">
+    <div class="container-inner cir">
+        <div class="center">
+            <div class="check-form id">
+                <p class="id-is">귀하의 아이디는</p>
+                <strong class="font-30">rosa2020</strong>
+            </div>
+        </div>
+        <div class="under">
+            <span class="btn-go font-17"><a href=""></a>웹사이트 로그인<i class="arrow"></i></span>
+            <span class="btn-go font-17"><a href=""></a>비밀번호 찾기<i class="arrow"></i></span>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+@@include('../include/footer.html',{
+    type : 'join'
+})
+

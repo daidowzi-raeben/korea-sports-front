@@ -1,0 +1,151 @@
+<!-- footer start -->
+@@if(context.type == "main") {
+<div class="guide-foot">
+    <div class="guide-foot__info">
+        <div class="guide-foot__info--left">
+            <a href=""></a>
+            <img src="../img/main/guide_logo.svg" alt="">
+        </div>
+        <div class="guide-foot__info--right">
+            <ul>
+                <li class="strong"><a href="">개인정보처리방침</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">스포츠지원포털 소개</a></li>
+            </ul>
+            <span>[05540] 서울특별시 송파구 올림픽로 424올림픽문화(올림픽컨벤션)센터</span>
+            <span>ⓒ 스포츠지원포털</span>
+        </div>
+    </div>
+    <div class="guide-foot__sponsor">
+        <div class="guide-foot__sponsor--logo">
+            <ul>
+                <li><img src="../img/main/sponsor_dea.svg" alt=""><a href=""></a></li>
+                <li><img src="../img/main/sponsor_mun.svg" alt=""><a href=""></a></li>
+                <li><img src="../img/main/sponsor_guc.svg" alt=""><a href=""></a></li>
+            </ul>
+            <span><a href=""></a></span>
+        </div>
+        <p>본 사업은 문화체육관광부와 국민체육진흥공단의 재정후원을 받고 있습니다.</p>
+    </div>
+</div>
+</div>
+<span class="ssp-text">SPORTS SUPPORT PORTAL</span>
+</div>
+</div>
+
+
+</body>
+<script src="../js/index.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.schedule-slider').slick({
+            infinite: false,
+            // draggable: false
+        });
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+
+
+        const list = document.querySelectorAll(".circle");
+        const length = list.length;
+        let index = 0;
+
+        change();
+
+        // setInterval(() => {
+        //   index = (index + 1) % length;
+        //   change();
+        // }, 3000);
+
+        function change() {
+            list.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add("active");
+                } else {
+                    item.classList.remove("active");
+                }
+            });
+        }
+    });
+</script>
+
+<script src="../js/countUp.js"></script>
+<script src="../js/jquery.counterup.min.js"></script>
+<script src="../js/jquery.counterup.js"></script>
+
+</html>
+}
+@@if(context.type == "join") {
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-inner__info">
+            <div class="footer-inner__info--left">
+                <a href=""></a>
+                <img src="../../img/main/guide_logo.svg" alt="">
+            </div>
+            <div class="footer-inner__info--right">
+                <ul>
+                    <li class="strong"><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">스포츠지원포털 소개</a></li>
+                </ul>
+                <span>[05540] 서울특별시 송파구 올림픽로 424올림픽문화(올림픽컨벤션)센터</span>
+                <span>ⓒ 스포츠지원포털</span>
+            </div>
+        </div>
+        <div class="footer-inner__sponsor">
+            <div class="footer-inner__sponsor--logo">
+                <ul>
+                    <li><img src="../../img/main/sponsor_dea.svg" alt=""><a href=""></a></li>
+                    <li><img src="../../img/main/sponsor_mun.svg" alt=""><a href=""></a></li>
+                    <li><img src="../../img/main/sponsor_guc.svg" alt=""><a href=""></a></li>
+                </ul>
+                <span><a href=""></a></span>
+            </div>
+            <p>본 사업은 문화체육관광부와 국민체육진흥공단의 재정후원을 받고 있습니다.</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
+}
+@@if(context.type == "ssp-sub") {
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-inner__info">
+            <div class="footer-inner__info--left">
+                <a href=""></a>
+                <img src="../../img/main/guide_logo.svg" alt="">
+            </div>
+            <div class="footer-inner__info--right">
+                <ul>
+                    <li class="strong"><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">스포츠지원포털 소개</a></li>
+                </ul>
+                <span>[05540] 서울특별시 송파구 올림픽로 424올림픽문화(올림픽컨벤션)센터</span>
+                <span>ⓒ 스포츠지원포털</span>
+            </div>
+        </div>
+        <div class="footer-inner__sponsor">
+            <div class="footer-inner__sponsor--logo">
+                <ul>
+                    <li><img src="../../img/main/sponsor_dea.svg" alt=""><a href=""></a></li>
+                    <li><img src="../../img/main/sponsor_mun.svg" alt=""><a href=""></a></li>
+                    <li><img src="../../img/main/sponsor_guc.svg" alt=""><a href=""></a></li>
+                </ul>
+                <span><a href=""></a></span>
+            </div>
+            <p>본 사업은 문화체육관광부와 국민체육진흥공단의 재정후원을 받고 있습니다.</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
+}

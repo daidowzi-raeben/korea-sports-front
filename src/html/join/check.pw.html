@@ -1,0 +1,31 @@
+@@include('../include/join.header.html',{
+title : "비밀번호 확인"
+})
+
+<!-- nav, title -->
+@@include('../include/join.nav.html',
+{
+type : 'title',
+'nav-tit' : '비밀번호 확인',
+'nav-txt' : '회원가입 시 등록한 아이디를 입력하세요.'
+}
+)
+<div class="container">
+    <div class="container-inner">
+        <div class="center">
+            <div class="check-form pw">
+                    <span class="tit">비밀번호</span>
+                    <div class="input-wrap">
+                        <input type="password" placeholder="비밀번호를 입력하세요" />
+                        <input type="submit" value="ID 확인" />
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+@@include('../include/footer.html',{
+type : 'join'
+})

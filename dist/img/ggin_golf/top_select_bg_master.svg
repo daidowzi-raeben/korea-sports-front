@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159" height="30" viewBox="0 0 159 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0283c6;
+      }
+
+      .cls-2 {
+        fill: #3d3d3d;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip);
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-2);
+      }
+    </style>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+    <clipPath id="clip-2">
+      <use xlink:href="#fill-2"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_1603" data-name="그룹 1603" transform="translate(-588.031 -56)">
+    <rect id="사각형_2122" data-name="사각형 2122" class="cls-1" width="159" height="30" rx="15" transform="translate(588.031 56)"/>
+    <g id="그룹_22" data-name="그룹 22" transform="translate(728.975 62.486) rotate(45)">
+      <g id="사각형_324" data-name="사각형 324" class="cls-2" transform="translate(6.938 9.54) rotate(-90)">
+        <rect id="fill" class="cls-3" width="9.54" height="2.602" rx="1.301"/>
+        <path class="cls-4" d="M0,1.101851463317871h9.540122032165527M8.040122032165527,0v2.601851463317871M9.540122032165527,1.5h-9.540122032165527M1.5,2.601851463317871v-2.601851463317871"/>
+      </g>
+      <g id="사각형_325" data-name="사각형 325" class="cls-2" transform="translate(9.54 9.54) rotate(180)">
+        <rect id="fill-2" class="cls-3" width="9.54" height="2.602" rx="1.301"/>
+        <path class="cls-5" d="M0,1.101851463317871h9.540122032165527M8.040122032165527,0v2.601851463317871M9.540122032165527,1.5h-9.540122032165527M1.5,2.601851463317871v-2.601851463317871"/>
+      </g>
+    </g>
+  </g>
+</svg>

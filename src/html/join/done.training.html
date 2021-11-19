@@ -1,0 +1,222 @@
+@@include('../include/join.header.html',{
+title : "가입완료"
+})
+
+<!-- nav, title -->
+@@include('../include/join.nav.html',
+{
+type : 'nav',
+'nav-tit' : '가입완료',
+active_1 : '',
+active_2 : '',
+active_3 : '',
+active_4 : 'is_active'
+}
+)
+<div class="container done done-training">
+    <div class="container-inner">
+        <div class="con-top">
+            <h1 class="font-30">강대한님 환영합니다!</h1>
+            <p class="b-icon font-17 ">스포츠지원포털 웹사이트 가입이 완료되었습니다.</p>
+            <button type="button" class="font-16">Main으로</button>
+            <p class="font-17">소셜계정 연동을 하시면, 간편한 로그인이 가능합니다. 자주 사용하시는 소셜을 선택해주세요.</p>
+            <ul class="social">
+                <li class="na"><a href=""></a></li>
+                <li class="ka"><a href=""></a></li>
+                <li class="face"><a href=""></a></li>
+                <li class="goo"><a href=""></a></li>
+                <li class="fin"><a href=""></a></li>
+            </ul>
+        </div>
+        <div class="con-info">
+            <div class="con-info__tit">
+                <h2 class="font-25">추가정보 입력</h2>
+                <p>입력은 선택사항입니다. 서비스의 종류에 따라 추가정보 요청이 요구 될 수 있습니다.</p>
+            </div>
+            <div class="con-info__tab">
+                <ul>
+                    <li><a href="">학력사항</a></li>
+                    <li><a href="">수상경력</a></li>
+                    <li class="is_active"><a href="">연수 및 교육사항</a></li>
+                    <li><a href="">상훈</a></li>
+                </ul>
+            </div>
+            <div class="con-info__detail">
+                <p class="sub-tit font-16">3개의 연수 및 교육사항이 등록되어 있습니다. 추가를 원하시면 아래 +버튼을 클릭하세요.</p>
+                <div class="contents">
+                    <div class="contents-item">
+                        <div class="inner">
+                            <div class="btn-area">
+                                <button type="button" class="font-16">삭제</button>
+                                <button type="button" class="font-16 edit">수정</button>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt class="w-107">연수/교육명</dt>
+                                    <dd>2021 상임심판을 위한 클린심판아카데미</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl class="w-415">
+                                    <dt class="w-107">연수/교육 장소</dt>
+                                    <dd>태능선수촌</dd>
+                                </dl>
+                                <dl>
+                                    <dt>연수/교육기관 구분</dt>
+                                    <dd>대한체육회</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl class="w-415">
+                                    <dt class="w-107">연수/교육 기간</dt>
+                                    <dd>2021/09/06 ~ 2021/09/06</dd>
+                                </dl>
+                                <dl>
+                                    <dt>연수/교육기관 이름</dt>
+                                    <dd>문화체육관광부, 대한체육회</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl class="w-415">
+                                    <dt class="w-107">수료여부</dt>
+                                    <dd>수료</dd>
+                                </dl>
+                                <dl>
+                                    <dt>내용(취득자격)</dt>
+                                    <dd>상임심판을 위한 클린심판아카데미 수료</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="contents-edit active">
+                            <div class="contents-edit__con">
+                                <div class="left">
+                                    <span class="font-20">연수 및 교육사항<br>등록</span>
+                                    <i class="icon-training"></i>
+                                </div>
+                                <div class="right">
+                                    <div class="col long">
+                                        <div class="input-area">
+                                            <span class="tit w-139">연수/교육명</span>
+                                            <input type="text" class="long" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-area">
+                                            <span class="tit w-139">연수/교육 기간</span>
+                                            <input type="text" class="calender datepicker-here date_start"
+                                                data-date-format="yyyy-mm-dd" placeholder="2021/09/06"> ~
+                                            <input type="text" class="calender datepicker-here date_end"
+                                                data-date-format="yyyy-mm-dd" placeholder="2021/09/06">
+                                        </div>
+                                        <div class="select-area">
+                                            <span class="tit w-106">수료여부</span>
+                                            <select name="" id="">
+                                                <option value="">수료</option>
+                                                <option value="">미수료</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="select-area">
+                                            <span class="tit w-139">연수/교육기관 구분</span>
+                                            <select name="" id="">
+                                                <option value="">대한체육회</option>
+                                                <option value="">대한체육회2</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-area">
+                                            <span class="tit w-106">연수/교육 장소</span>
+                                            <input type="text" class="">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-area">
+                                            <span class="tit w-139">연수/교육기관 이름</span>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-area">
+                                            <span class="tit w-106">내용(취득자격)</span>
+                                            <input type="text" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents-edit__foot">
+                                <button type="button" class="font-16 cancel">취소</button>
+                                <button type="button" class="font-16 save">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <button type="button"><i class="icon-plus"></i></button>
+                    </div>
+                    <div class="contents-edit active">
+                        <div class="contents-edit__con">
+                            <div class="left">
+                                <span class="font-20">연수 및 교육사항<br>등록</span>
+                                <i class="icon-training"></i>
+                            </div>
+                            <div class="right">
+                                <div class="col long">
+                                    <div class="input-area">
+                                        <span class="tit w-139">연수/교육명</span>
+                                        <input type="text" class="long" value="">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="input-area">
+                                        <span class="tit w-139">연수/교육 기간</span>
+                                        <input type="text" class="calender datepicker-here date_start"
+                                            data-date-format="yyyy-mm-dd" placeholder="2021/09/06"> ~
+                                        <input type="text" class="calender datepicker-here date_end"
+                                            data-date-format="yyyy-mm-dd" placeholder="2021/09/06">
+                                    </div>
+                                    <div class="select-area">
+                                        <span class="tit w-106">수료여부</span>
+                                        <select name="" id="">
+                                            <option value="">수료</option>
+                                            <option value="">미수료</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="select-area">
+                                        <span class="tit w-139">연수/교육기관 구분</span>
+                                        <select name="" id="">
+                                            <option value="">대한체육회</option>
+                                            <option value="">대한체육회2</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-area">
+                                        <span class="tit w-106">연수/교육 장소</span>
+                                        <input type="text" class="">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="input-area">
+                                        <span class="tit w-139">연수/교육기관 이름</span>
+                                        <input type="text">
+                                    </div>
+                                    <div class="input-area">
+                                        <span class="tit w-106">내용(취득자격)</span>
+                                        <input type="text" class="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents-edit__foot">
+                            <button type="button" class="font-16 cancel">취소</button>
+                            <button type="button" class="font-16 save">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@@include('../include/footer.html',{
+type : 'join'
+})

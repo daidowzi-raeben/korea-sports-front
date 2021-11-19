@@ -1,0 +1,56 @@
+@@include('../include/join.header.html',{
+title : "회원 로그인"
+})
+
+<!-- nav, title -->
+@@include('../include/join.nav.html',
+{
+type : 'title',
+'nav-tit' : '회원 로그인',
+'nav-txt' : '스포츠지원포털을 방문해주셔서 감사합니다. 로그인하시면 보다 편리하게 서비스 이용이 가능합니다.'
+}
+)
+<div class="container login">
+    <div class="container-inner">
+        <div class="center">
+            <div class="center-l">
+
+            </div>
+            <div class="center-r">
+                <h1 class="font-35">Login</h1>
+                <div class="center-r__login">
+                    <div class="input-area">
+                        <input type="text" placeholder="아이디">
+                    </div>
+                    <div class="input-area pw">
+                        <input type="password" placeholder="비밀번호">
+                    </div>
+                    <div class="input-area sb">
+                        <input type="submit" value="로그인" class="font-16">
+                    </div>
+                    <ul>
+                        <li><a href="">아이디 찾기</a></li>
+                        <li><a href="">비밀번호 찾기</a></li>
+                        <li><a href="">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="center-r__social">
+                    <span class="tit font-17">간편로그인</span>
+                    <ul class="social">
+                        <li class="na"><a href=""></a></li>
+                        <li class="ka"><a href=""></a></li>
+                        <li class="face"><a href=""></a></li>
+                        <li class="goo"><a href=""></a></li>
+                        <li class="fin"><a href=""></a></li>
+                    </ul>
+                    <p>간편로그인은 회원가입 후 소셜계정 연동하신 분들에 한하여<br />지원되는 서비스입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@@include('../include/footer.html',{
+type : 'join'
+})

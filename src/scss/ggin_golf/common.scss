@@ -1,0 +1,156 @@
+@import '_var.scss';
+@import '_mixin.scss';
+@import '../join/join.scss';
+@import 'icon.scss';
+
+// 체크박스
+.agree {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 13px;
+}
+
+.agree-ch2 {
+    .checkbox-area {
+        &:first-child {
+            margin-right: 28px;
+        }
+    }
+}
+
+.checkbox-area {
+    display: inline-block;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .label-check::before {
+        content: "";
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        background: url(../../img/common/check-round.svg)no-repeat center #8d8d8d;
+        margin-right: 7px;  
+        border-radius: 50%;
+        position: relative;
+        top: 7px;
+    }
+
+    .input-check:checked+.label-check::before,
+    .input-check[checked="checked"]+.label-check::before {
+        background: url(../../img/common/check-round.svg)no-repeat center #df3818;
+
+    }
+
+}
+
+// 라디오박스
+.radio-area {
+    display: inline-block;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .form-radio::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../../img/join/join_radio.svg)no-repeat center;
+        border: solid 1px #686868;
+        margin-right: 4px;
+        border-radius: 50%;
+        position: relative;
+        top: 2px;
+    }
+
+    .input-radio {
+        display: none;
+    }
+
+    .input-radio:checked+.form-radio::before,
+    .input-radio[checked="checked"]+.form-radio::before {
+        background: url(../../img/join/join_radio_active.svg)no-repeat center;
+
+    }
+
+    .label-select {
+        display: inline-block;
+        width: 60px;
+        height: 37px;
+        border: solid 1px #b1b1b1;
+        border-radius: 3px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .radio-select:checked+.label-select {
+        color: #006dbc;
+        border: 1px solid #006dbc;
+    }
+}
+
+// 인풋 박스
+.input-area {
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        border: solid 1px #b1b1b1;
+        border-radius: 3px;
+        width: 330px;
+        height: 40px;
+        padding: 0 0 0 4px;
+        font-size: 16px;
+        background: #fff;
+
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+    .tit {
+        margin-right: 8px;
+    }
+
+    .btn-check {
+        border-radius: 3px;
+        border: solid 1px #b1b1b1;
+        background-color: #f5f5f5;
+        height: 40px;
+        width: auto;
+        padding: 0 15px;
+    }
+}
+
+// 셀렉트 박스
+.select-area {
+    select {
+        border: solid 1px #b1b1b1;
+        border-radius: 3px;
+        width: 330px;
+        height: 40px;
+        padding: 10px 0 7px 8px;
+        font-size: 16px;
+        display: inline-block;
+    }
+}
+textarea{
+    resize: none;
+}
+textarea:focus {
+    outline: none;
+  }
