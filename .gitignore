@@ -2,3 +2,4 @@
 dist/css/**
 dist/html/**
 dist/js/**
+node_modules
