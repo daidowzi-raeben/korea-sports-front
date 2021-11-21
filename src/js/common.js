@@ -1,3 +1,5 @@
+$('.nav.cycle')
+
 // 스크롤 이벤트 --
 
 $('ul.tabList li').on('click',function(){
