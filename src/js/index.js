@@ -148,8 +148,6 @@ $(document).ready(function () {
     $('.slider-nav').slick('slickPause');
     $('.slick-dots .btn-play').addClass('pause');
    });
-   $('.slider-nav--item').attr('aria-hidden', trus).prev($('.slider-nav--item').attr('aria-hidden', false)).addClass('hide');
-   aria-hidden
     // 우측 fixed 메뉴 인터랙션
     var indicator_li = $('.fixed-right ul li');
     var section = $('.section');

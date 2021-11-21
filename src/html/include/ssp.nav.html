@@ -1,15 +1,17 @@
-<div class="nav">
-    <div class="nav-inner">
-        <div class="home"><a href=""></a><i class="icon-home"></i></div>
-        <div class="menu font">
-            S 미디어
+@@if(context.type == "mycycle"){
+
+    <div class="nav">
+        <div class="nav-inner">
+            <div class="home"><a href=""></a><i class="icon-home"></i></div>
+            <div class="menu font">
+                내 생애주기
+            </div>
+            <ul>
+                <li class="@@active_1"><a href="">타임라인</a></li>
+                <li class="@@active_2"><a href="">신청이력</a></li>
+                <li class="@@active_3"><a href="">활동이력</a></li>
+                <li class="@@active_4"><a href="">교육이력</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="">대회경기</a></li>
-            <li class="is_active"><a href="">스포츠 실험실</a></li>
-            <li><a href="">스포츠 스타</a></li>
-            <li><a href="">배워봅시다</a></li>
-            <li><a href="">생생스포츠</a></li>
-        </ul>
     </div>
-</div>
+}

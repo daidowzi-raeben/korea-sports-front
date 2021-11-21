@@ -1,173 +1,295 @@
 @import '_var.scss';
 @import '_mixin.scss';
 @import 'icon.scss';
-@import 'ssp/ssp.scss';
+@import 'global.scss';
 
-// ssp-sub 스포츠지원포털 서브페이지 공통 레이아웃
-.wrap.ssp-sub{
-    .main-header{
-        position: static;
-        .fixed-top{
-            border-bottom: none;
-        }
-    }
-    .fixed-top{
-        &__mid{
-            margin-right: 115px;
-            li.is_active{
-                a{
-                    color: #095ECE;
-                    font-weight: 500;
-                    white-space: pre;
-                }
-                &::after{
-                    content:'';
-                    display: block;
+//  main,sub header - common style 
+.wrap {
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        
+        .fixed-top {
+            width: 100%;
+            min-width: 1200px;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 25px 40px 0 40px;
+            transition: all .2s;
+            background: #fff;
+            border-bottom: 1px solid #bebebe;
+            
+            &__left {
+                position: relative;
+                
+                a {
                     position: absolute;
-                    left:0;
-                    bottom:0;
-                    height: 3px;
-                    background: #095ECE;
+                    top: 0;
+                    left: 0;
                     width: 100%;
-                }
-             
-            }
-        }
-    }
-.nav{
-    height: 60px;
-    background: linear-gradient(270deg, #339FD9, #2B80CB);
-    min-width: 1200px;
-    &-inner{
-        min-width: 1200px;
-        width: 1200px;
-        margin: 0 auto;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        .home{
-            border-left: 1px solid #fff;
-            border-right: 1px solid #fff;
-            height: 100%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0 24px;
-            a{
-                position: absolute;
-                top:0;
-                left:0;
-                width: 100%;
-                height: 100%;
-                font-weight: 300;
-            }
-        }
-        .menu{
-            padding: 0 23px;
-            border-right: 1px solid #fff;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            width: 190px;
-            background: url(../img/common/nav_arrow_w.svg)no-repeat center;
-            background-size: 12px 8px;
-            background-position: right 23px center;
-            cursor: pointer;
-           
-        }
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding-left: 15px;
-            li{
-                padding: 0 15px;
-                a{
-                    color: #fff;
-                    display: block;
                     height: 100%;
-                    line-height: 60px;
-                    font-weight: 300;
                 }
+                
+                .logo {
+                    width: 203px;
+                    height: 67px;
+                    transition: all .2s;
+                    background: url('../img/main/logo_color.svg')no-repeat center;
+                    
+                    
+                }
+                
             }
-            li.is_active{
-                a{
-                    font-weight: 500;
+            
+            &__mid {
+                display: flex;
+                
+                li {
+                    position: relative;
+                    margin: 0 13px;
+                    
+                    a {
+                        font-size: 17px;
+                        color: #3d3d3d;
+                        font-weight: 400;
+                        transition: all .2s;
+                        display: block;
+                        padding-bottom: 22px;
+                        white-space: pre;
+                    }
+                    
+                }
+                
+            }
+            
+            &__right {
+                display: flex;
+                align-items: center;
+                position: relative;
+                
+                .lj-btn {
+                    position: absolute;
+                    right: 0px;
+                    top: -53px;
+                    width: 116px;
+                    
+                    span {
+                        a {
+                            font-size: 15px;
+                            transition: all .2s;
+                            color: #3d3d3d;
+                            
+                        }
+                    }
+                    
+                    .login {
+                        margin-right: 14px;
+                    }
+                }
+                
+                i {
+                    width: 24px;
+                    height: 25px;
+                    cursor: pointer;
+                    display: block;
+                }
+                
+                .search {
+                    background: url('../img/main/search_black.svg')no-repeat center;
+                    margin-right: 20px;
+                    background-position: 0 2px;
+                    background-size: 100%;
+                }
+
+                .menu {
+                    background: url('../img/main/menu_color.svg')no-repeat center;
+                    background-size: 100% 100%;
                 }
 
             }
         }
     }
 }
-.ssp-banner{
-    height: 300px;
-    width: 100%;
-    min-width: 1200px;
+
+// 스포츠지원포털 서브페이지 공통 레이아웃
+.wrap.ssp-sub {
+    .header {
+        position: static;
+        
+        .fixed-top {
+            border-bottom: none;
+        }
+    }
     
-    .inner{
-        width: 1200px;
-        margin: 0 auto;
-        padding: 72px 0 35px; 
-        height: 100%;
-        h1{
-            color: #fff;
-        }
-        p{
-            color: #fff;
-            margin-bottom: 80px;
-        }
-        ul{
-            display: flex;
-            align-items: center;
-            li{
-                font-size: 15px;
-                color: #fff;
-                margin-right: 30px;
-                position: relative;
-                &::after{
-                    content:'>';
+    .fixed-top {
+        &__mid {
+            margin-right: 115px;
+            
+            li.is_active {
+                a {
+                    color: #095ECE;
+                    font-weight: 500;
+                    white-space: pre;
+                }
+
+                &::after {
+                    content: '';
                     display: block;
                     position: absolute;
-                    right: -20px;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    left: 0;
+                    bottom: 0;
+                    height: 3px;
+                    background: #095ECE;
+                    width: 100%;
                 }
-                &:last-child{
-                    &::after{
-                        content: none;
+
+            }
+        }
+    }
+
+    .nav {
+        height: 60px;
+        background: linear-gradient(270deg, #339FD9, #2B80CB);
+        min-width: 1200px;
+
+        &-inner {
+            min-width: 1200px;
+            width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .home {
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 0 24px;
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    font-weight: 300;
+                }
+            }
+
+            .menu {
+                padding: 0 23px;
+                border-right: 1px solid #fff;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                width: 190px;
+                background: url(../img/common/nav_arrow_w.svg)no-repeat center;
+                background-size: 12px 8px;
+                background-position: right 23px center;
+                cursor: pointer;
+
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 15px;
+
+                li {
+                    padding: 0 15px;
+
+                    a {
+                        color: #fff;
+                        display: block;
+                        height: 100%;
+                        line-height: 60px;
+                        font-weight: 300;
+                    }
+                }
+
+                li.is_active {
+                    a {
+                        font-weight: 500;
                     }
 
                 }
             }
         }
     }
-}
-.ssp-banner.typeA{
-    background: url(../img/common/banner_1.png)no-repeat center;
-}
-.ssp-banner.typeB{
-    background: url(../img/common/banner_2.png)no-repeat center;
-}
-.ssp-banner.typeC{
-    background: url(../img/common/banner_3.png)no-repeat center;
-}
-.footer{
-    border-top: none;
-    background: #fff;
-    &-inner{
+
+    .ssp-banner {
+        height: 300px;
+        width: 100%;
+        min-width: 1200px;
+
+        .inner {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 72px 0 35px;
+            height: 100%;
+
+            h1 {
+                color: #fff;
+            }
+
+            p {
+                color: #fff;
+                margin-bottom: 80px;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    font-size: 15px;
+                    color: #fff;
+                    margin-right: 30px;
+                    position: relative;
+
+                    &::after {
+                        content: '>';
+                        display: block;
+                        position: absolute;
+                        right: -20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:last-child {
+                        &::after {
+                            content: none;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .ssp-banner.mycycle {
+        background: url(../img/common/banner_1.png)no-repeat center;
+    }
+
+
+    .footer {
+        border-top: none;
+        background: #f2f7f9;
         border-top: 1px solid #9dadbb;
+
     }
-}
-.container{
-    width: 100%;
-    &-inner{
-        width: 1200px;
-        margin: 0 auto;
-        padding-top: 76px;
-    }
-}
+
+  
 
 }
 
@@ -319,6 +441,7 @@
     background: #f8f8f8;
     border-top: 2px solid #3d3d3d;
     min-width: 1200px;
+
     &-inner {
         width: 1200px;
         margin: 0 auto;
@@ -586,4 +709,3 @@
         display: inline-block;
     }
 }
-
