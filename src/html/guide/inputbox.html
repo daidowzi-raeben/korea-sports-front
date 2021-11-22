@@ -2,27 +2,35 @@
 <!-- 헤더 끝 -->
 
 <div class="content clb">
-<h2>inputbox</h2>
-<div class="codebox">
-<button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
-<xmp id="code1"class="brush: html;">
-<div class="formInput">
-    <div class="formInput-input">
-        <input type="text">
+    <h2>inputbox</h2>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
+        <xmp id="code1"class="brush: html;">
+            <div class="formInput">
+                <div class="formInput-input">
+                    <input type="text">
+                </div>
+            </div>
+        </xmp>
     </div>
-</div>
-</xmp>
-</div>
 
     <div class="conWrap">
-        <div class="formInput clb">
-            <div>
-                <label for="a">기본 인풋</label>
+        <div class="formInput speople">
+            <div class="formInput-input">
+                <label for="a">s피플</label>
+                <input type="text" placeholder="선수이름을 검색하세요">
+            </div>
+        </div>
+        <div class="formInput notice mt-20">
+            <div class="formInput-input">
+                <label for="a">게시판</label>
                 <input type="text">
             </div>
-            <div class="mt-5">
-                <label for="">기본 인풋 Disabled</label>
-                <input type="text" disabled>
+        </div>
+        <div class="formInput player mt-20">
+            <div class="formInput-input">
+                <label for="a">선수통합검색</label>
+                <input type="text">
             </div>
         </div>
     </div>
