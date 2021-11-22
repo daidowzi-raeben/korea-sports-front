@@ -617,76 +617,76 @@
 }
 
 
-.pagination{
-    display: flex;
-    justify-content: center;
-
-    button,
-    li{
-        min-width: 35px;
-        height: 35px;
-        border-radius: 3px;
-        border: 1px solid #BCBCBC;
-        background-color: #fff;
-        text-align: center;
-        line-height: 35px;
-        &:hover{
-            background: #3D3D3D;
-            border: 1px solid #3D3D3D;
-            a{
-                color: #fff;
-            }
-        }
-        a{
-            display:block;
-            height: 100%;
-        }
-    }
-
-    &-list{
+    .pagination{
         display: flex;
+        justify-content: center;
 
+        button,
         li{
-            margin-right: 5px;
-            font-size: 16px;
-            font-weight: 400;
-
-            &:last-child{
-                margin-right: 0;
-            }
-
-            &.is_active{
-                background-color: #686868;
-                border: none;
-                color: #fff;
+            min-width: 35px;
+            height: 35px;
+            border-radius: 3px;
+            border: 1px solid #BCBCBC;
+            background-color: #fff;
+            text-align: center;
+            line-height: 35px;
+            &:hover{
+                background: #3D3D3D;
+                border: 1px solid #3D3D3D;
                 a{
-                    color: inherit;
+                    color: #fff;
+                }
+            }
+            a{
+                display:block;
+                height: 100%;
+            }
+        }
+
+        &-list{
+            display: flex;
+
+            li{
+                margin-right: 5px;
+                font-size: 16px;
+                font-weight: 400;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                &.is_active{
+                    background-color: #686868;
+                    border: none;
+                    color: #fff;
+                    a{
+                        color: inherit;
+                    }
                 }
             }
         }
-    }
 
-    &-control--prev{
-        font-size: 0;
-        margin-right: 25px;
+        &-control--prev{
+            font-size: 0;
+            margin-right: 25px;
 
-        .prev{
-            margin-left: 5px;
+            .prev{
+                margin-left: 5px;
+            }
+        }
+
+        &-control--next{
+            font-size: 0;
+            margin-left: 25px;
+
+            i{
+                transform: rotate(180deg);
+            }
+            .next{
+                margin-right: 5px;
+            }
         }
     }
-
-    &-control--next{
-        font-size: 0;
-        margin-left: 25px;
-
-        i{
-            transform: rotate(180deg);
-        }
-        .next{
-            margin-right: 5px;
-        }
-    }
-}
 
 .tab{
     &-nav{
