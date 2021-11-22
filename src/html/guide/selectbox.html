@@ -2,27 +2,27 @@
 <!-- 헤더 끝 -->
 
 <div class="content clb">
-    <h2>selectbox</h2>
-    <div class="codebox">
-        <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">셀렉트박스 기본 코드복사</button>
-        <xmp id="code1" class="brush: html;">
-            <div class="formInput">
-                <div class="formInput-select">
-                    <select name="" id="b" disabled>
-                        <option value="0" selected>선택</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                    <i class="icon icon-select__arrow" aria-hidden="true"></i>
-                </div>
-            </div>
-        </xmp>
+<h2>selectbox</h2>
+<div class="codebox">
+    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">셀렉트박스 기본 코드복사</button>
+    <xmp id="code1" class="brush: html;">
+    <div class="formInput">
+        <div class="select-group">
+            <select name="" id="b" disabled>
+                <option value="0" selected>선택</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <i class="icon icon-select__arrow" aria-hidden="true"></i>
+        </div>
     </div>
+    </xmp>
+</div>
     <h3>Basic Guide</h3>
     <div class="conWrap">
         <div class="formInput">
             <label for="a">기본셀렉트</label>
-            <div class="formInput-select">
+            <div class="select-group">
                 <select name="" id="a">
                     <option value="0" selected>선택</option>
                     <option value="1">1</option>
@@ -30,64 +30,20 @@
                 </select>
                 <i class="icon icon-select__arrow" aria-hidden="true"></i>
             </div>
-            <div class="formInput-select mt-5">
+            <div class="mt-5">
                 <label for="b">기본셀렉트</label>
                 <div class="select-group">
-                    <select name="" id="b" disabled>
-                        <option value="0" selected>선택</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
+                <select name="" id="b" disabled>
+                    <option value="0" selected>선택</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
                     <i class="icon icon-select__arrow" aria-hidden="true"></i>
                 </div>
-            </div>
-        </div>
-        <div class="formInput">
-            <label for="a">등록현황</label>
-            <div class="formInput-select">
-                <select name="" id="a" class="years">
-                    <option value="0" selected>2021</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-                <i class="icon icon-select__arrow" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="formInput">
-            <label for="a">선수 훈련이력</label>
-            <div class="formInput-select">
-                <select name="" id="a" class="category">
-                    <option value="0" selected>전체</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-                <i class="icon icon-select__arrow" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="formInput">
-            <label for="a">게시판</label>
-            <div class="formInput-select">
-                <select name="" id="a" class="noticeAll">
-                    <option value="0" selected>전체</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-                <i class="icon icon-select__arrow" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="formInput">
-            <label for="a">게시판</label>
-            <div class="formInput-select">
-                <select name="" id="a" class="noticeName">
-                    <option value="0" selected>제목+내용</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-                <i class="icon icon-select__arrow" aria-hidden="true"></i>
             </div>
         </div>
     </div>
 </div>
 
 <!-- 푸터 시작 -->
-@@include('./include/footer.html')
+@@include('./include/footer.html') 

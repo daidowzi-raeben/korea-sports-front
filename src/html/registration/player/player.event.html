@@ -1,87 +1,174 @@
 @@include('../../include/header.html', {
-    title : "등록현황 - 선수",
-    type : "ssp-sub",
-    active_4 : 'is_active'
-    })
-    <!-- header -->
-    @@include('../../include/ssp.nav.html',{
-    type: "registration",
-    active_5 : "is_active"
-    })
-    <!-- nav -->
-    @@include('../../include/ssp.banner.html',{
-    type : "registration",
-    depth_2 : "팀"
-    })
-    <!-- banner -->
-    
-    <!-- contents start -->
-    <div class="container registration">
-        <div class="container-inner">
-            <div class="topSelect">
-                <h3>등록현황 선택</h1>
-                <div class="topSelect-con">
-                    <div class="topSelect-con__left">
-                        <ul>
-                            <li class="is_active">
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <i class="icon icon-player"></i>
-                                </div>
-                                <span>선수</span>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <i class="icon icon-player"></i>
-                                </div>
-                                <span>지도자</span>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <i class="icon icon-player"></i>
-                                </div>
-                                <span>심판</span>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <i class="icon icon-player"></i>
-                                </div>
-                                <span>선수관리<br>담당자</span>
-                            </li>
-                            <li>
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <i class="icon icon-player"></i>
-                                </div>
-                                <span>팀</span>
-                            </li>
-                        </ul>
-                        <p class="txt">원하시는 등록현황을 선택해보세요.</p>
-                    </div>
-                    <div class="topSelect-con__right">
-                        <ul>
-                            <li class="is_active">종별 현황</li>
-                            <li>시도별 현황</li>
-                            <li>실업 시군구 현황</li>
-                            <li>동계종목 현황</li>
-                            <li>학년별 현황</li>
-                            <li>선수등록 목록</li>
-                            <li>선수등록 이력조회</li>
-                            <li>2021년 이전자료</li>
-                            <li>2013~2021년 이전자료</li>
-                            <li>선수통합검색</li>
-                        </ul>
-                    </div>
+title : "등록현황 - 선수",
+type : "ssp-sub",
+active_4 : 'is_active'
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "registration",
+active_5 : "is_active"
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "registration",
+depth_2 : "팀"
+})
+<!-- banner -->
+
+<!-- contents start -->
+<div class="container registration">
+    <div class="container-inner">
+        <div class="topSelect">
+            <h3>등록현황 선택</h3>
+            <div class="topSelect-con">
+                <div class="topSelect-con__left">
+                    <ul>
+                        <li class="player is_active">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_player.svg" alt="">
+                            </div>
+                            <span>선수</span>
+                        </li>
+                        <li class="master">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_master.svg" alt="">
+                            </div>
+                            <span>지도자</span>
+                        </li>
+                        <li class="referee">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_referee.svg" alt="">
+                            </div>
+                            <span>심판</span>
+                        </li>
+                        <li class="manager">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_manager.svg" alt="">
+                            </div>
+                            <span>선수관리<br>담당자</span>
+                        </li>
+                        <li class="team">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_team.svg" alt="">
+
+                            </div>
+                            <span>팀</span>
+                        </li>
+                    </ul>
+                    <p class="txt">원하시는 등록현황을 선택해보세요.</p>
+                </div>
+                <div class="topSelect-con__right">
+                    <ul class="player">
+                        <li><a href=""></a>종별 현황</li>
+                        <li><a href=""></a>시도별 현황</li>
+                        <li class="is_active"><a href=""></a>실업 시군구 현황</li>
+                        <li><a href=""></a>동계종목 현황</li>
+                        <li><a href=""></a>학년별 현황</li>
+                        <li><a href=""></a>선수등록 목록</li>
+                        <li><a href=""></a>선수등록 이력조회</li>
+                        <li><a href=""></a>2021년 이전자료</li>
+                        <li><a href=""></a>2013~2021년 자료</li>
+                        <li><a href=""></a>선수통합검색</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- contents end -->
-    
-    <!-- footer -->
-    @@include('../../include/footer.html',{
-    type : 'ssp-sub'
-    })
+        <div class="midSelect">
+            <div class="midSelect-tit">
+                <h3>실업 시군구 현황</h3>
+                <span>등록연도</span>
+                <div class="formInput">
+                    <div class="select-group">
+                        <select name="" id="b">
+                            <option value="0" selected>2021</option>
+                            <option value="1">2020</option>
+                            <option value="2">2019</option>
+                        </select>
+                        <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="midSelect-con">
+                <ul>
+                    <li>
+                       <div class="dropdown">종목선택</div> 
+                       <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">검도</label>
+                            </div>
+                       </div> 
+                    </li>
+                    <li>
+                       <div class="dropdown">종목선택</div> 
+                       <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">검도</label>
+                            </div>
+                       </div> 
+                    </li>
+                    <li>
+                       <div class="dropdown">종목선택</div> 
+                       <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">검도</label>
+                            </div>
+                       </div> 
+                    </li>
+                    <li>
+                       <div class="dropdown">종목선택</div> 
+                       <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">검도</label>
+                            </div>
+                       </div> 
+                    </li>
+                    <li>
+                       <div class="dropdown">종목선택</div> 
+                       <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">검도</label>
+                            </div>
+                       </div> 
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>  
+</div>
+<!-- contents end -->
+
+<!-- footer -->
+@@include('../../include/footer.html',{
+type : 'ssp-sub'
+})
