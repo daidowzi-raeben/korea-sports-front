@@ -73,51 +73,6 @@
     
 }
 
-.pagination {
-    display: inline-block;
-    a {
-        display: block;
-        min-width: 35px;
-        padding:0 5px;
-        height: 35px;
-        
-        border: 1px solid #a7a7a7;
-        border-radius: 3px;
-        background-color: #fff;
-    }
 
-    a[role="button"] {
-        display: inline-block;
-        margin-right: 5px;
-    }
 
-    li {
-        float: left;
-        border: none;
-    }
 
-    .is_active {
-        background-color: #4d4d4d;
-        color: #fff;
-    }
-
-    &-before {
-        margin-right: 20px;
-
-        .icon-arrow--s {
-            transform: rotate(90deg);
-        }
-    }
-
-    &-after {
-        margin-left: 20px;
-
-        .icon-arrow-double {
-            transform: rotate(180deg);
-        }
-
-        .icon-arrow--s {
-            transform: rotate(-90deg);
-        }
-    }
-}
