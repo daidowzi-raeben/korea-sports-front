@@ -1,30 +1,82 @@
 @@include('../../include/header.html', {
-title : "신청이력",
-page_name : "경기인 신청이력",
-type : "ssp-sub",
-active_1 : 'is_active'
-})
-<!-- header -->
-@@include('../../include/ssp.nav.html',{
-type: "mycycle",
-active_2 : "is_active"
-})
-<!-- nav -->
-@@include('../../include/ssp.banner.html',{
-type : "mycycle",
-depth_2 : "신청이력",
-depth_3 : "경기인 신청이력"
-})
-<!-- banner -->
-
-<!-- contents start -->
-<div class="container">
-    <div class="container-inner">
+    title : "신청이력",
+    page_name : "경기인 신청이력 조회",
+    type : "ssp-sub",
+    active_1 : 'is_active'
+    })
+    <!-- header -->
+    @@include('../../include/ssp.nav.html',{
+    type: "mycycle",
+    active_2 : "is_active"
+    })
+    <!-- nav -->
+    @@include('../../include/ssp.banner.html',{
+    type : "mycycle",
+    depth_2 : "신청이력",
+    depth_3 : "경기인 신청이력"
+    })
+    <!-- banner -->
+    
+    <!-- contents start -->
+    <div class="container">
+        <div class="container-inner">
+            <form action="" method="GET">
+                <div class="searchBox">
+                    <h2>경기인 신청이력</h2>
+                    <div>
+                        <ul class="formInput">
+                            <li class="searchBox-item">
+                                <span class="searchTitle">등록신청년도</span>
+                                <div class="select-group wd-229">
+                                    <select name="year" id="year">
+                                        <option value="0" selected>선택</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                    <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="searchBox-item searchBox-btn">
+                                <button type="button" class="btn btn-block">조회</button>
+                            </li>
+                        </ul>
+                        <div class="searchBox-img"></div>
+                    </div>
+                </div>
+            </form>
+            <div class="titleWithEX">
+                <p class="font-m font-18">2021년 선수 등록신청이력</p>
+                <h2>조회결과</h2>
+            </div>
+            <div class="emptyBox">
+                선택된 데이터가 없습니다. 조회를 시작해보세요.
+            </div>
+            <div class="titleWithEX">
+                <p class="font-m font-18">2021년 지도자(팀임원) 등록신청이력</p>
+                <h2>조회결과</h2>
+            </div>
+            <div class="emptyBox">
+                선택된 데이터가 없습니다. 조회를 시작해보세요.
+            </div>
+            <div class="titleWithEX">
+                <p class="font-m font-18">2021년 심판 등록신청이력</p>
+                <h2>조회결과</h2>
+            </div>
+            <div class="emptyBox">
+                선택된 데이터가 없습니다. 조회를 시작해보세요.
+            </div>
+            <div class="titleWithEX">
+                <p class="font-m font-18">2021년 선수관리담당자 등록신청이력</p>
+                <h2>조회결과</h2>
+            </div>
+            <div class="emptyBox">
+                선택된 데이터가 없습니다. 조회를 시작해보세요.
+            </div>
+        </div>
     </div>
-</div>
-<!-- contents end -->
-
-<!-- footer -->
-@@include('../../include/footer.html',{
-type : 'ssp-sub'
-})
+    <!-- contents end -->
+    
+    <!-- footer -->
+    @@include('../../include/footer.html',{
+    type : 'ssp-sub'
+    })

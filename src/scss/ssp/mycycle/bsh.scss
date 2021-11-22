@@ -1,0 +1,26 @@
+.wd-362 {
+    width: 362px;
+}
+.text-left {
+    text-align: left;
+}
+.table-wrap.blue-table {
+    margin-bottom: 80px;
+    &:last-child {
+        margin-bottom: 100px;
+    }
+    table {
+        border-top: 1px solid #d2d2d2;
+        thead {
+            th {
+                background: #f1f4f6;
+            }
+        }
+        tbody {
+            td {
+                padding: 8px 11px;
+                line-height: 24px;
+            }
+        }
+    }
+}
