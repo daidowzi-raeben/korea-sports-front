@@ -20,6 +20,48 @@ depth_3 : "증명서 발급신청이력"
 <!-- contents start -->
 <div class="container">
     <div class="container-inner">
+        <form action="" method="GET">
+            <div class="searchBox">
+                <h2>증명서 발급신청이력</h2>
+                <div>
+                    <ul class="formInput">
+                        <li class="searchBox-item">
+                            <span class="searchTitle">구분</span>
+                            <div class="select-group wd-229">
+                                <select name="year" id="year">
+                                    <option value="0" selected>전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">신청기간</span>
+                                <div class="item-content">
+                                    <input type='text' placeholder="2020/10/25" id="datepicker1" class="calender datepicker-here wd-160 ml-53 mr-5-none" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd" />
+                                    <input type='text' placeholder="마감일" id="datepicker1" class="calender datepicker-here wd-160" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd" />
+                                </div>
+                        </li>
+                        <li class="searchBox-item searchBox-btn">
+                            <button type="button" class="btn btn-block">조회</button>
+                        </li>
+                    </ul>
+                    <div class="searchBox-img"></div>
+                </div>
+            </div>
+            
+        </form>
+        <div class="container-inner-contents">
+            <h3>증명서 발급신청이력</h3>
+            <h2>조회결과</h2>
+            <hr class="content-border">
+            <div class="certification-content">
+                <span>선택된 데이터가 없습니다. 조회를 시작해보세요.</span>
+
+
+            </div> 
+        </div>
     </div>
 </div>
 <!-- contents end -->

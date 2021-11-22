@@ -56,3 +56,68 @@
 }
 
 //증명서 발급신청
+.container-inner-contents{
+    h3{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .content-border{
+        color: #bebebe;
+        margin-top: 20px;
+    }
+    .certification-content{
+        text-align: center;
+        padding-top: 133px;
+        padding-bottom: 218px;
+    }
+    
+}
+
+.pagination {
+    display: inline-block;
+    a {
+        display: block;
+        min-width: 35px;
+        padding:0 5px;
+        height: 35px;
+        
+        border: 1px solid #a7a7a7;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+
+    a[role="button"] {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    li {
+        float: left;
+        border: none;
+    }
+
+    .is_active {
+        background-color: #4d4d4d;
+        color: #fff;
+    }
+
+    &-before {
+        margin-right: 20px;
+
+        .icon-arrow--s {
+            transform: rotate(90deg);
+        }
+    }
+
+    &-after {
+        margin-left: 20px;
+
+        .icon-arrow-double {
+            transform: rotate(180deg);
+        }
+
+        .icon-arrow--s {
+            transform: rotate(-90deg);
+        }
+    }
+}
