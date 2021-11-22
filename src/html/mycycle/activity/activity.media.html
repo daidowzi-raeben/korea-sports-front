@@ -20,6 +20,38 @@ depth_3 : "경기대회 영상"
 <!-- contents start -->
 <div class="container">
     <div class="container-inner">
+        <form action="" method="GET">
+            <div class="searchBox">
+                <h2>대회경기영상</h2>
+                <div>
+                    <ul class="formInput">
+                        <li class="searchBox-item">
+                            <span class="searchTitle">대회년도</span>
+                            <div class="wd-229">
+                                <input type="number" name="contestYear">
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">대회명</span>
+                            <div class="wd-362">
+                                <input type="text" name="contestName">
+                            </div>
+                        </li>
+                        <li class="searchBox-item searchBox-btn">
+                            <button class="btn btn-block">조회</button>
+                        </li>
+                    </ul>
+                    <div class="searchBox-img"></div>
+                </div>
+            </div>
+        </form>
+        <div class="titleWithEX">
+            <p class="font-m font-18">대회경기영상</p>
+            <h2>조회결과</h2>
+        </div>
+        <div class="emptyBox">
+            대회경기영상이 존재하지 않습니다.
+        </div>
     </div>
 </div>
 <!-- contents end -->

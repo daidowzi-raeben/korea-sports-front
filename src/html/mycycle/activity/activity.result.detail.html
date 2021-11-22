@@ -1,0 +1,241 @@
+@@include('../../include/header.html', {
+title : "활동이력",
+page_name : "선수실적 조회",
+type : "ssp-sub",
+active_1 : 'is_active'
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "mycycle",
+active_3 : "is_active"
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "mycycle",
+depth_2 : "활동이력",
+depth_3 : "선수실적"
+})
+<!-- banner -->
+
+<!-- contents start -->
+<div class="container">
+    <div class="container-inner">
+        <form action="" method="GET">
+            <div class="searchBox">
+                <h2>선수실적</h2>
+                <div>
+                    <ul class="formInput">
+                        <li class="searchBox-item">
+                            <span class="searchTitle">종목</span>
+                            <div class="select-group wd-229">
+                                <select name="event" id="event">
+                                    <option value="0" selected>선택</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">개인번호</span>
+                            <div class="select-group wd-229">
+                                <select name="personalNumber" id="personalNumber">
+                                    <option value="0" selected>선택</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">구분</span>
+                            <div class="select-group wd-229">
+                                <select name="kind" id="kind">
+                                    <option value="0" selected>전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">대회년도</span>
+                            <div class="wd-229">
+                                <input type="number" name="contestYear">
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">대회명</span>
+                            <div class="wd-362">
+                                <input type="text" name="contestName">
+                            </div>
+                        </li>
+                        <li class="searchBox-item searchBox-btn">
+                            <button class="btn btn-block">조회</button>
+                        </li>
+                    </ul>
+                    <div class="searchBox-img"></div>
+                </div>
+            </div>
+        </form>
+        <div class="table-wrap blue-table mb-30">
+            <div class="titleWithEX">
+                <p class="font-m font-18">선수실적</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table class="pn-10">
+                <colgroup>
+                    <col width="137">
+                    <col width="53">
+                    <col width="232">
+                    <col width="138">
+                    <col width="86">
+                    <col width="103">
+                    <col width="103">
+                    <col width="75">
+                    <col width="109">
+                    <col width="*">
+                    <col width="90">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">대회기간</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">대회명</th>
+                        <th scope="col">장소</th>
+                        <th scope="col">참가팀수</th>
+                        <th scope="col">경기방식</th>
+                        <th scope="col">출전유무</th>
+                        <th scope="col">포지션</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">순위</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="font-roboto">
+                            2021.08.11<br/>
+                            ~2021.08.12
+                        </span></td>
+                        <td>국내</td>
+                        <td class="text-left">
+                            2018 청주직지CUP 핸드볼<br/>
+                            코리아 대회
+                        </td>
+                        <td>SK 핸드볼경기장</td>
+                        <td><span class="font-roboto">15</span></td>
+                        <td>토너먼트</td>
+                        <td>출전</td>
+                        <td><span class="font-roboto">RW</span></td>
+                        <td>남자대학부</td>
+                        <td>1위</td>
+                        <td>후보선수</td>
+                    </tr>
+                    <tr>
+                        <td><span class="font-roboto">
+                            2021.08.11<br/>
+                            ~2021.08.12
+                        </span></td>
+                        <td>국내</td>
+                        <td class="text-left">
+                            2021 대학핸드볼 통합리그<br/>
+                            FINAL
+                        </td>
+                        <td>SK 핸드볼경기장</td>
+                        <td><span class="font-roboto">15</span></td>
+                        <td>토너먼트</td>
+                        <td>출전</td>
+                        <td><span class="font-roboto">RW</span></td>
+                        <td>남자대학부</td>
+                        <td>1위</td>
+                        <td>후보선수</td>
+                    </tr>
+                    <tr>
+                        <td><span class="font-roboto">
+                            2021.08.11<br/>
+                            ~2021.08.12
+                        </span></td>
+                        <td>국내</td>
+                        <td class="text-left">
+                            제16회 태백산기전국종합대회
+                        </td>
+                        <td>SK 핸드볼경기장</td>
+                        <td><span class="font-roboto">15</span></td>
+                        <td>토너먼트</td>
+                        <td>출전</td>
+                        <td><span class="font-roboto">RW</span></td>
+                        <td>남자대학부</td>
+                        <td>1위</td>
+                        <td>후보선수</td>
+                    </tr>
+                    <tr>
+                        <td><span class="font-roboto">
+                            2021.08.11<br/>
+                            ~2021.08.12
+                        </span></td>
+                        <td>국내</td>
+                        <td class="text-left">
+                            2019 대학핸드볼리그(정규리그)
+                        </td>
+                        <td>SK 핸드볼경기장</td>
+                        <td><span class="font-roboto">15</span></td>
+                        <td>토너먼트</td>
+                        <td>출전</td>
+                        <td><span class="font-roboto">RW</span></td>
+                        <td>남자대학부</td>
+                        <td>1위</td>
+                        <td>후보선수</td>
+                    </tr>
+                    @@for(var i = 6; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">
+                                2021.08.11<br/>
+                                ~2021.08.12
+                            </span></td>
+                            <td>국내</td>
+                            <td class="text-left">
+                                2021 대학핸드볼 통합리그<br/>
+                                FINAL
+                            </td>
+                            <td>SK 핸드볼경기장</td>
+                            <td><span class="font-roboto">15</span></td>
+                            <td>토너먼트</td>
+                            <td>출전</td>
+                            <td><span class="font-roboto">RW</span></td>
+                            <td>남자대학부</td>
+                            <td>1위</td>
+                            <td>후보선수</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination mb-100">
+            <div class="pagination-control--prev">
+                <button type="button"><i class="icon icon-pagination--d"></i></button>
+                <button type="button" class="prev"><i class="icon icon-pagination"></i></button>
+            </div>
+            <ol class="pagination-list">
+                <li><a href="#">1</a></li>
+                <li class="is_active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ol>
+            <div class="pagination-control--next">
+                <button type="button" class="next"><i class="icon icon-pagination"></i></button>
+                <button type="button"><i class="icon icon-pagination--d"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contents end -->
+
+<!-- footer -->
+@@include('../../include/footer.html',{
+type : 'ssp-sub'
+})
