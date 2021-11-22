@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-
+    // console.log($('.itv-banner--topslider li[aria-hidden=false]'));
+    // $('.itv-banner--topslider li[aria-hidden=false]:last-child').hide();
     // 메인 슬라이드 
     var m_slide_idx = $('.main-slider ul li').length;
     var m_slide_interval = setInterval(function () {
@@ -16,6 +17,13 @@ $(document).ready(function () {
         m_itv_slide('right');
 
     });
+
+    var _el = $('.itv-banner--topslider li[aria-hidden=false]'),
+            _elLength = _el.length;
+            $('.itv-banner--topslider li[aria-hidden=true]').animate({"opacity":"0"},0);
+            _el.eq(0).animate({"opacity":"0"},0);
+            _el.eq(_el.length - 1).animate({"opacity":"0"},0);
+            
 
     function m_itv_slide(event) {
         if (event == 'right') {
