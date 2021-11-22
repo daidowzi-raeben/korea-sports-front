@@ -401,3 +401,91 @@
         }
     }
 }
+
+.tab{
+    &-nav{
+        display: flex;
+        li{
+            width: 241px;
+            height: 45px;
+            padding: 11px 10px 10px 20px;
+            background-color: #EEEFF1;
+            border: 1px solid #b9bcc4;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-size: 16px;
+                color: #3d3d3d;
+                font-family: NotoSansCJKkr;
+                font-weight: 500;
+            }
+        }
+        li.is_active{
+            background-color: #4a5470;
+            a{
+                color: #fff;
+            }
+        }
+    }
+}
+
+.chart {
+    position: relative;
+    width: 1200px;
+    height: 370px;
+    border: solid #BEBEBE;
+    border-width: 1px 0;
+    &-wrapper{
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        ul li {
+            width: 132px;
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .chart-content-item{
+                float: left;
+                width: 12px;
+                height: 100px;
+                background-color: #00B3CA;
+                border-radius: 10px;
+                margin: 12px;
+                .item-per {
+                    position: absolute;
+                    top: -10px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+                .item-title {
+                    position: absolute;
+                    bottom: -20px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+                &.item02{
+                    background-color: #7DD0B6;
+                }
+                &.item03{
+                    background-color: #E38690;
+                }
+            }
+            .chart-content-name {
+                display: block;
+                position: absolute;
+                bottom: -60px;
+                width: 94px;
+                height: 35px;
+                line-height: 34px;
+                text-align: center;
+                border: 1px solid #969EB2;
+                border-radius: 18px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}

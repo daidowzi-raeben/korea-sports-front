@@ -20,6 +20,225 @@ depth_3 : "경기인 등록이력"
 <!-- contents start -->
 <div class="container">
     <div class="container-inner">
+        <form action="" method="GET">
+            <div class="searchBox">
+                <h2>경기인 등록이력</h2>
+                <div>
+                    <ul class="formInput">
+                        <li class="searchBox-item">
+                            <span class="searchTitle">구분</span>
+                            <div class="select-group wd-229">
+                                <select name="kind" id="kind">
+                                    <option value="0" selected>전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">등록년도</span>
+                            <div>
+                                <input type="number" name="applicationYear1" class="wd-161 mr-5">
+                                <input type="number" name="applicationYear2" class="wd-161">
+                            </div>
+                        </li>
+                        <li class="searchBox-item searchBox-btn">
+                            <button type="button" class="btn btn-block">조회</button>
+                        </li>
+                    </ul>
+                    <div class="searchBox-img"></div>
+                </div>
+            </div>
+        </form>
+        <div class="table-wrap blue-table">
+            <div class="titleWithEX">
+                <p class="font-m font-18">선수 등록이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="227">
+                    <col width="153">
+                    <col width="162">
+                    <col width="*">
+                    <col width="162">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">등록년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속팀명</th>
+                        <th scope="col">등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>19세이하부</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrap blue-table">
+            <div class="titleWithEX">
+                <p class="font-m font-18">지도자(팀임원) 등록이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="201">
+                    <col width="117">
+                    <col width="146">
+                    <col width="*">
+                    <col width="77">
+                    <col width="193">
+                    <col width="110">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">등록년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속팀명</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">기간</th>
+                        <th scope="col">승인일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>19세이하부</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td>지도자</td>
+                            <td><span class="font-roboto">2021.01.01~2021.02.02</span></td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrap blue-table">
+            <div class="titleWithEX">
+                <p class="font-m font-18">심판 등록이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="227">
+                    <col width="162">
+                    <col width="*">
+                    <col width="121">
+                    <col width="150">
+                    <col width="131">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">등록년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속기관</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">자격명</th>
+                        <th scope="col">신청일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="font-roboto">2021</span></td>
+                        <td>야구소프트볼(소프트볼)</td>
+                        <td>세종특별자치시</td>
+                        <td class="text-left">서울아트란티스피닉스</td>
+                        <td>심판</td>
+                        <td>국제심판</td>
+                        <td><span class="font-roboto">2021.01.01</span></td>
+                    </tr>
+                    @@for(var i = 9; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td>심판</td>
+                            <td>1급</td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrap blue-table">
+            <div class="titleWithEX">
+                <p class="font-m font-18">선수관리담당자 등록이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="201">
+                    <col width="117">
+                    <col width="146">
+                    <col width="*">
+                    <col width="77">
+                    <col width="193">
+                    <col width="110">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">등록년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속팀명</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">기간</th>
+                        <th scope="col">승인일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 15; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>19세이하부</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td>지도자</td>
+                            <td><span class="font-roboto">2021.01.01~2021.02.02</span></td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 <!-- contents end -->
