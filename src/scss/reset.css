@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/* reset : 브라우저 세팅(css) 초기화 */
+/* 본고딕,노토산스(NotoSans) */
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansKR-Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansKR-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansKR-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansKR-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansKR-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansTC";
+  src: url("../fonts/NotoSansTC-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("../fonts/noto-serif-kr-v13-korean-200.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("../fonts/noto-serif-kr-v13-korean-300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("../fonts/noto-serif-kr-v13-korean-500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("../fonts/noto-serif-kr-v13-korean-600.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("../fonts/noto-serif-kr-v13-korean-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url("../fonts/noto-serif-kr-v13-korean-900.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-DemiLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerifCJKkr";
+  src: url("../fonts/NotoSansCJKkr-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* body, html */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "NotoSerifCJKkr", "roboto",  "Malgun Gothic", sans-serif;
+  color: #3d3d3d;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+.header-nav * {
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dt, dd, p, pre, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #3d3d3d;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+table, thead, tbody, tfoot, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+abbr {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+button, input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+a, button {
+  color: #3d3d3d;
+  cursor: pointer;
+  font-family: "NotoSerifCJKkr","roboto",  "Malgun Gothic", sans-serif;
+}
+
+button:focus,
+input:focus,
+select:focus {
+  outline: 0;
+}
+
+xmp {
+  margin: 0;
+  padding: 0;
+}
+
+/* html5 ==================================================  */
+main, header, footer, aside, nav, section, article, figure, figcaption {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* form ===================================================  */
+form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input {
+  text-indent: 5px;
+}
+
+input[type=text]::-ms-clear,
+input[type=password]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal,
+input[type=password]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  /* for chrome */
+  -moz-appearance: none;
+  /*for firefox*/
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+  /*for IE10,11*/
+}
+
+textarea {
+  resize: none;
+  font-family: 'NotoSerifCJKkr',sans-serif;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+/*# sourceMappingURL=reset.css.map */
