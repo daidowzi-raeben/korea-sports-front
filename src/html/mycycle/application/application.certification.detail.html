@@ -20,6 +20,118 @@ depth_3 : "증명서 발급신청이력"
 <!-- contents start -->
 <div class="container">
     <div class="container-inner">
+        <form action="" method="GET">
+            <div class="searchBox">
+                <h2>증명서 발급신청이력</h2>
+                <div>
+                    <ul class="formInput">
+                        <li class="searchBox-item">
+                            <span class="searchTitle">구분</span>
+                            <div class="select-group wd-229">
+                                <select name="year" id="year">
+                                    <option value="0" selected>전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">신청기간</span>
+                                <div class="item-content">
+                                    <input type='text' placeholder="2020/10/25" id="datepicker1" class="calender datepicker-here wd-160 ml-53 mr-5-none" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd" />
+                                    <input type='text' placeholder="마감일" id="datepicker1" class="calender datepicker-here wd-160" data-position="bottom left" data-language='en' data-date-format="yyyy/mm/dd" />
+                                </div>
+                        </li>
+                        <li class="searchBox-item searchBox-btn">
+                            <button type="button" class="btn btn-block">조회</button>
+                        </li>
+                    </ul>
+                    <div class="searchBox-img"></div>
+                </div>
+            </div>
+            
+        </form>
+        <div class="table-wrap blue-table">
+            <div class="titleWithEX">
+                <p class="font-m font-18">2021년 선수 등록신청이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="4.6%">
+                    <col width="16.4%">
+                    <col width="*">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="11.8%">
+                    <col width="9.6%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">신청년도</th>
+                        <th scope="col">증명서종류</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">발급일</th>
+                        <th scope="col">결제금액</th>
+                        <th scope="col">결제종류</th>
+                        <th scope="col">처리상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">1</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td class="text-left">국가대표이하 우수 선수 확인서 </td>
+                            <td>2021.10.28</td>
+                            <td>2021.10.28</td>
+                            <td>30,000</td>
+                            <td>무통장 입금</td>
+                            <td>결제대기</td>
+                        </tr>
+                        
+                    }
+                    
+                </tbody>
+            </table>
+            <div class="pagination clb">
+                <div class="pagination-before float-left">
+                    <a href="#" role="button"><i class="icon icon-arrow icon-arrow--s"></i></a>
+                    <a href="#" role="button"><i class="icon icon-arrow-double"></i></a>
+                </div>
+
+                <div class="pagination-main float-left">
+                    <ol>
+                        <li>
+                            <a href="#" role="button">01</a>
+                        </li>
+                        <li>
+                            <a href="#" class="is_active" role="button">02</a>
+                        </li>
+                        <li>
+                            <a href="#" role="button">03</a>
+                        </li>
+                        <li>
+                            <a href="#" role="button">04</a>
+                        </li>
+                        <li>
+                            <a href="#" role="button">05</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="pagination-after float-left">
+                    <a href="#" role="button"><i class="icon icon-arrow-double"></i></a>
+                    <a href="#" role="button"><i class="icon icon-arrow icon-arrow--s"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- contents end -->
