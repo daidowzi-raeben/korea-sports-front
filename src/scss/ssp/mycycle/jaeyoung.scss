@@ -1,3 +1,4 @@
+//교육이력
 .container-inner {
     &-education {
         padding-top: 76px;
@@ -19,6 +20,7 @@
             display: flex;
             text-align: center;
             h2 {
+               
                 font-size: 21px;
                 margin-bottom: 5px
             }
@@ -42,15 +44,15 @@
                     border: 1px solid #acacac;
                     border-radius: 10px;
                     padding: 42px 189px 35px;
-                    margin-right: 22px;
                 }
 
                 .right-lower {
                     margin-top: 10px;
-                    color: #717171;
                 }
             }
         }
     }
 
 }
+
+//증명서 발급신청
