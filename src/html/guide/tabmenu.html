@@ -1,86 +1,29 @@
 @@include('./include/header.html')
 <!-- 헤더 끝 -->
-
-<div class="content clb">
-    <h2>tabmenu</h2>
-    <div class="codebox">
-    <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">Large TAB MENU 코드복사</button>
-    <xmp id="code1" class="brush: html;">
-        <div class="tab tabLarge">
-            <ul class="tab-nav clb">
-                <!-- [D] 활성화시 li에 is_active -->
-                <li data-tab="tab-0" class="is_active"><a href=""  >탭메뉴0</a></li>
-                <li data-tab="tab-1"><a href=""  >탭메뉴1탭메뉴1탭메뉴1탭메뉴1</a></li>
-                <li data-tab="tab-2"><a href="">탭메뉴2</a></li>
-                <li data-tab="tab-3"><a href="">탭메뉴3</a></li>
-            </ul>
-            <ul class="tab-con">
-                <!-- [D] 활성화시 li에 is_active -->
-                <li id="tab-0" class="is_active"><div>내용0</div></li>
-                <li id="tab-1"><div>내용1</div></li>
-                <li id="tab-2"><div>내용2</div></li>
-                <li id="tab-3"><div>내용3</div></li>
-            </ul>
-        </div>
-    </xmp>
-    </div>
-    <div class="codebox">
-        <button class="copybtn" onclick="copyText('#code2');" title="주소 복사">Large TAB MENU 코드복사</button>
-        <xmp id="code2" class="brush: html;">
-            <div class="tab tabMedium">
-                <ul class="tab-nav clb">
-                    <!-- [D] 활성화시 li에 is_active -->
-                    <li data-tab="tab-4" class="is_active"><a href="">탭메뉴4</a></li>
-                    <li data-tab="tab-5"><a href="">탭메뉴5</a></li>
-                    <li data-tab="tab-6"><a href="">탭메뉴6</a></li>
-                </ul>
-                <ul class="tab-con">
-                    <!-- [D] 활성화시 li에 is_active -->
-                    <li id="tab-4" class="is_active"><div>내용4</div></li>
-                    <li id="tab-5"><div>내용5</div></li>
-                    <li id="tab-6"><div>내용6</div></li>
-                </ul>
-            </div>
-        </xmp>
-        </div>
-
-    <div class="float-left condiv-50 clb">
-        <h4>Medium TAB MENU</h4>
-        <div class="tab tabMedium">
-            <ul class="tab-nav clb">
-                <!-- [D] 활성화시 li에 is_active -->
-                <li data-tab="tab-4" class="is_active"><a href="">탭메뉴4</a></li>
-                <li data-tab="tab-5"><a href="">탭메뉴5</a></li>
-                <li data-tab="tab-6"><a href="">탭메뉴6</a></li>
-            </ul>
-            <ul class="tab-con">
-                <!-- [D] 활성화시 li에 is_active -->
-                <li id="tab-4" class="is_active"><div>내용4</div></li>
-                <li id="tab-5"><div>내용5</div></li>
-                <li id="tab-6"><div>내용6</div></li>
-            </ul>
-        </div>
-        <div class="commentBox font-13 float-left">
-            <p>Normal</p>
-            <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
-            <p class="colorTag"><i></i>BG color : <span>#F3F3F3</span></p>
-            <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
-        </div>
-        <div class="commentBox font-13 float-left">
-            <p>Mouse over / Focus</p>
-            <p class="colorTag"><i></i>Line color : <span>#B1B1B1</span> / 1px</p>
-            <p class="colorTag"><i></i>BG color : <span>#FFFFFF</span></p>
-            <p class="colorTag"><i></i>Text color : <span>#3D3D3D</span></p>
-            
-        </div>
-        <div class="commentBox font-13 float-left">
-            <p>- Font family</p>
-            <p>글자(Noto Sans CJK KR / Regular) size 14</p>
-            <p>숫자(Roboto / Regular) size 14</p>
-            <p>- Vertex(꼭지점) : Rounding 3px - Vertex(꼭지점) : Rounding 3px</p>
-        </div>
-    </div>
-
+<div class="tab">
+    <ul class="tab-nav">
+        <!-- [D] 활성화시 li에 is_active -->
+        <li data-tab="tab-0" class="is_active"><a href="#">종목선택</a></li>
+        <li data-tab="tab-1"><a href="#">도 선택</a></li>
+        <li data-tab="tab-2"><a href="#">시군구 선택</a></li>
+        <li data-tab="tab-3"><a href="#">소속구분</a></li>
+        <li data-tab="tab-4"><a href="#">종별선택</a></li>
+    </ul>
+</div>
+<div class="comment">
+    <p>-Normal-</p>
+    <p>BG color : <span>#eeeeff1</span></p>
+    <p>Text color : <span>#3d3d3d</span></p>
+    <p>Line color : <span>#b9bcc4</span> / 1px</p>
+</div>
+<div class="comment">
+    <p>-Active-</p>
+    <p>BG color : <span>#4a5470</span></p>
+    <p>Text color : <span>#fff</span></p>
+</div>
+<div class="comment">
+    <p>-Font family-</p>
+    <p>글자(Noto Sans CJK KR / Regular) size 16</p>
 </div>
 
 <!-- 푸터 시작 -->
