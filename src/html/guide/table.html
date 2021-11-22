@@ -1,7 +1,7 @@
 @@include('./include/header.html')
 <!-- 헤더 끝 -->
 
-<div class="content clb">
+<!-- <div class="content clb">
 <h2>inputbox</h2>
 <div class="codebox">
 <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
@@ -10,17 +10,25 @@
         <table>
             <caption>시도체육회 안내</caption>
             <colgroup>
-                <col width="">
-                <col width="">
-                <col width="">
+                <col width="80">
+                <col width="130">
+                <col width="127">
+                <col width="96">
+                <col width="162">
+                <col width="227">
+                <col width="153">
+                <col width="230">
             </colgroup>
             <thead>
                 <tr>
                     <th scope="col">번호</th>
-                    <th scope="col">번호</th>
-                    <th scope="col">번호</th>
-                    <th scope="col">번호</th>
-                    <th scope="col">번호</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">출생년도</th>
+                    <th scope="col">성별</th>
+                    <th scope="col">시도</th>
+                    <th scope="col">종목</th>
+                    <th scope="col">종별</th>
+                    <th scope="col">소속팀명</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,43 +43,76 @@
         </table>
     </div>
 </xmp>
-</div>
+</div> -->
 
     <div class="conWrap">
-        <div class="table-wrap">
+        <div class="table-wrap table-wrap-player">
             <table>
-                <caption>시도체육회 안내</caption>
+                <caption>
+                    <p class="font-18">선수통합검색</p>
+                    <p>
+                        <span class="font-23 font-b">조회결과</span>
+                        <span class="font-20 font-b">252</span><span class="font-17">건</span>
+                    </p>   
+                </caption>
                 <colgroup>
-                    <col width="">
-                    <col width="">
-                    <col width="">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
                 </colgroup>
                 <thead>
                     <tr>
                         <th scope="col">번호</th>
-                        <th scope="col">번호</th>
-                        <th scope="col">번호</th>
-                        <th scope="col">번호</th>
-                        <th scope="col">번호</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">출생년도</th>
+                        <th scope="col">성별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">소속팀명</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @@for(var i = 10; i > 0; i--){
+                    @@for(var i = 16; i > 0; i--){
                         <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
+                            <td class="num">15</td>
+                            <td class="playerName">강대한</td>
+                            <td class="playerBirth">1983</td>
+                            <td class="playerGender">남성</td>
+                            <td class="playerArea">세종특별자치시</td>
+                            <td class="sportEntries">야구소프트볼(소프트볼)</td>
+                            <td class="sportsTypes">19세이하부</td>
+                            <td class="teamName">서울아트란티스피닉스</td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
-
     </div>
+</div>
 
-
+<div class="pagination table-pagination">
+    <div class="pagination-control--prev">
+        <button type="button"><i class="icon icon-pagination--d"></i></button>
+        <button type="button" class="prev"><i class="icon icon-pagination"></i></button>
+    </div>
+    <ol class="pagination-list">
+        <li><a href="#">1</a></li>
+        <li class="is_active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ol>
+    <div class="pagination-control--next">
+        <button type="button" class="next"><i class="icon icon-pagination"></i></button>
+        <button type="button"><i class="icon icon-pagination--d"></i></button>
+    </div>
 </div>
 
 <!-- 푸터 시작 -->

@@ -1,0 +1,247 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<!-- <div class="content clb">
+<h2>inputbox</h2>
+<div class="codebox">
+<button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
+<xmp id="code1"class="brush: html;">
+    <div class="table-wrap">
+        <table>
+            <caption>시도체육회 안내</caption>
+            <colgroup>
+                <col width="80">
+                <col width="130">
+                <col width="127">
+                <col width="96">
+                <col width="162">
+                <col width="227">
+                <col width="153">
+                <col width="230">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">출생년도</th>
+                    <th scope="col">성별</th>
+                    <th scope="col">시도</th>
+                    <th scope="col">종목</th>
+                    <th scope="col">종별</th>
+                    <th scope="col">소속팀명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</xmp>
+</div> -->
+
+    <div class="conWrap">
+        <div class="caption">
+            <p class="font-18">실업 시군구 현황</p>
+            <p><span class="font-23 font-b">조회결과</span><span class="font-18">(도표)</span></p>
+            <p><span class="font-16">통계생성 기준:</span> <span>2020/12/31</span> <span>23:44:03</span></p>
+        </div>
+        <div class="table-wrap-map">
+           
+            <table class="tableTh">
+                <!-- <caption>
+                    <p class="font-18">실업 시군구 현황</p>
+                    <p><span class="font-23 font-b">조회결과</span><span class="font-18">(도표)</span></p>
+                    <p><span class="font-16">통계생성 기준:</span> <span>2020/12/31</span> <span>23:44:03</span></p>
+                </caption> -->
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">종목구분</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>총계</td>
+                    </tr>
+                    <tr>
+                        <td>검도</td>
+                    </tr>
+                    <tr>
+                        <td>레슬링</td>
+                    </tr>
+                    <tr>
+                        <td>롤러</td>
+                    </tr>
+                    <tr>
+                        <td>바둑</td>
+                    </tr>
+                    <tr>
+                        <td>보디빌딩</td>
+                    </tr>
+                    <tr>
+                        <td>사격</td>
+                    </tr>
+                    <tr>
+                        <td>씨름 </td>
+                    </tr>
+                    <tr>
+                        <td>역도</td>
+                    </tr>
+                    <tr>
+                        <td>유도</td>
+                    </tr>
+                    <tr>
+                        <td>조정</td>
+                    </tr>
+                    <tr>
+                        <td>체조</td>
+                    </tr>
+                    <tr>
+                        <td>카누</td>
+                    </tr>
+                    <tr>
+                        <td>탁구</td>
+                    </tr>
+                    <tr>
+                        <td>택견</td>
+                    </tr>
+                    <tr>
+                        <td>테니스</td>
+                    </tr>
+                    <tr>
+                        <td>펜싱</td>
+                    </tr>
+                    <tr>
+                        <td>핸드볼</td>
+                    </tr>
+                    <tr>
+                        <td>택견</td>
+                    </tr>           
+                </tbody>
+            </table>
+
+            <table class="tableCon">
+                <thead>
+                    <tr class="city">
+                        <th colspan="3">전체</th>
+                        <th colspan="3">강남구</th> 
+                        <th colspan="3">강동구</th> 
+                        <th colspan="3">강북구</th> 
+                        <th colspan="3">강서구</th> 
+                        <th colspan="3">관악구</th> 
+                        <th colspan="3">광진구</th> 
+                        <th colspan="3">구로구</th> 
+                        <th colspan="3">금천구</th> 
+                        <th colspan="3">노원구</th> 
+                        <th colspan="3">도봉구</th> 
+                        <th colspan="3">동작구</th> 
+                        <th colspan="3">마포구</th> 
+                        <th colspan="3">서대문구</th> 
+                        <th colspan="3">서초구</th> 
+                        <th colspan="3">성동구</th> 
+                        <th colspan="3">성북구</th> 
+                        <th colspan="3">송파구</th> 
+                        <th colspan="3">영등포구</th> 
+                        <th colspan="3">용산구</th> 
+                        <th colspan="3">은평구</th> 
+                        <th colspan="3">종로구</th> 
+                        <th colspan="3">중구</th> 
+                        <th colspan="3">중랑구</th> 
+                    </tr>
+                   
+                    <tr class="sub-title">
+                        @@for(var t = 0 ; t < 24; t++) {
+                        <th>남</th>
+                        <th>여</th>
+                        <th>소계</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var k = 0 ; k < 24; k++) {
+                        <tr class="tatal">
+                            @@for(var i = 0 ; i < 24; i++) {
+                            <td>587</td>
+                            <td>252</td>
+                            <td>734</td>
+                            }
+                        </tr>
+                        }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="pagination table-pagination">
+    <div class="pagination-control--prev">
+        <button type="button"><i class="icon icon-pagination--d"></i></button>
+        <button type="button" class="prev"><i class="icon icon-pagination"></i></button>
+    </div>
+    <ol class="pagination-list">
+        <li><a href="#">1</a></li>
+        <li class="is_active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ol>
+    <div class="pagination-control--next">
+        <button type="button" class="next"><i class="icon icon-pagination"></i></button>
+        <button type="button"><i class="icon icon-pagination--d"></i></button>
+    </div>
+</div>
+
+<script>
+/////////드래그 스크롤 이동
+var x,left,down;
+
+$(".table-wrap-map").mousedown(function(e){
+    e.preventDefault();
+    down = true;
+    x = e.pageX;
+    left = $(this).scrollLeft();
+});
+
+$(".table-wrap-map").mousemove(function(e){
+    if(down){
+    var newX = e.pageX;
+    $("#tb1").scrollLeft(left - newX + x);
+    }
+});
+
+$(".table-wrap-map").mouseup(function(e){down = false;});
+</script>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')

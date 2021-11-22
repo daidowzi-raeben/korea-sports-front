@@ -293,32 +293,59 @@
     }
 }
 
-.table-wrap{
+.table-wrap-player{
 
     table{
         width: 100%;
         text-align: center;
         border-collapse: collapse;
-        border-top: 2px solid #3D3D3D;
+        // border-top: 2px solid #3D3D3D;
         caption{
             text-align: left;
             margin-bottom: 23px;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 500;
         }
 
         thead{
             th{
-                background-color: #F5F5F5;
-                padding: 13px 0;
-                font-weight: 500;
+                background-color: #f1f4f6;
+                // padding: 13px 0;
+                font-weight: 700;
+                font-size: 16px;
+                height: 50px;
             }
         }
 
         tbody{
             td{
-                padding: 10px;
+                font-size: 16px;
                 background-color: #fff;
+            }
+
+            .num{
+                padding: 13px 25px 13px 26px;
+            }
+            .playerName{
+                padding: 8px 75px 8px 11px;
+            }
+            .playerBirth{
+                padding: 8px 33px;
+            }
+            .playerGender{
+                padding: 8px 33px;
+            } 
+            .playerArea{
+                padding: 8px 29px;
+            }
+            .sportEntries{
+                padding: 8px 34px 8px 35px;
+            }
+            .sportsTypes{
+                padding: 8px 38px 8px 39px;
+            }
+            .teamName{
+                padding: 8px 71px 8px 11px;
             }
         }
 
@@ -330,6 +357,118 @@
         }
     }
 }
+
+.table-wrap-map{
+        display: flex;
+        width: 1200px;
+        overflow-x: scroll;
+        font-size: 16px;
+        .tableTh{
+                min-width: 116px;
+                border-right:2px solid $black;
+        thead{
+            width: 116px;
+            height: 90px;
+        th{
+            font-weight: 500;
+            color: $black;
+            background-color: #f1f4f6;
+            border-right:2px solid $black;
+            }
+
+        }
+        tbody td{
+            width: 116px;
+            height: 40px;
+            padding: 0 1px 8px 0;
+            font-weight: 500;
+            background: #f1f4f6;
+        }
+    }
+    table{
+        max-width: 1200px;
+        text-align: center;
+        // border-collapse: collapse;
+        // border-top: 2px solid #3D3D3D;
+        .caption{
+            text-align: left;
+            margin-bottom: 23px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        thead{
+            th{
+                background-color: #f1f4f6;
+                // padding: 13px 0;
+                font-weight: 700;
+                font-size: 16px;
+                height: 50px;
+            }
+        }
+
+        tbody{
+            td{
+                font-size: 16px;
+                background-color: #fff;
+            }
+        }
+
+        th,
+        td{
+            border: 1px solid #D2D2D2;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .tableCon{
+            width: 1200px;
+            overflow-x: scroll;
+            text-align: center;
+            // border-collapse: collapse;
+            // border-top: 2px solid #3D3D3D;
+
+            thead{
+                height: 50px;
+                .city{
+                    
+                  th{
+                        background-color: #f1f4f6;
+                        // padding: 13px 0;
+                        font-weight: 700;
+                        font-size: 16px;
+                        min-width: 150px;
+        
+                    }
+                }
+                .sub-title {
+                    
+                    th {
+                        height: 40px;
+                         width: 50px;
+                        background: #f5f4ef;
+                    }
+        
+                }
+
+            tbody{
+                td{
+                    font-size: 16px;
+                    background-color: #fff;
+                    padding: 9px 12px 10px 13px;
+                }
+            }
+
+            th,
+            td{
+                border: 1px solid #D2D2D2;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+}
+
 
 .pagination{
     display: flex;
@@ -492,4 +631,5 @@
     }
 
 
+}
 }
