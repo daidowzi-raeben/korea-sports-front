@@ -235,15 +235,61 @@
                 li{
                     width: 20%;
                     .dropdown{
-
+                        font-weight: 500;
+                        height: 45px;
+                        line-height: 45px;
+                        background: url(../../img/ssp/regist_arrow.svg)no-repeat center right 9px #eeeff1;
+                        border: 1px solid #b9bcc4;
+                        border-right: none;
+                        padding-left: 20px;
                     }
                     .select-con{
+                        border-left: 1px solid #b9bcc4;
+                        border-bottom: 1px solid #b9bcc4;
+                        height: 311px;
+                        overflow-y: scroll;
+                        padding:8px 9px;
+                        &::-webkit-scrollbar{
+                            
+                        }
+                        &::-webkit-scrollbar-thumb{
+                            width: 8px;
+                        }
+                        &::-webkit-scrollbar-track{
+                            background: #f4f4f4;
+                        }
                         &--item{
+                            position: relative;
+                            height: 30px;
+                            margin-bottom: 3px;
+                            input{
+                                display: none;
+                            }
+                            label{
+                                position: absolute;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                line-height: 30px;
+                                padding-left: 16px;
+                                cursor: pointer;
+                            }
+                            input:checked + label{
+                                border: 1px solid #1971e3;
+                                border-radius: 20px;
+                                color: #1971e3;
+                                line-height: 28px;
+                                padding-left: 15px;
 
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
+
+.b-right{
+    border-right: 1px solid #b9bcc4 !important;
 }
