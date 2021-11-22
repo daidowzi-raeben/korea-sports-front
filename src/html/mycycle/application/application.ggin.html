@@ -20,8 +20,210 @@ depth_3 : "경기인 신청이력"
 <!-- contents start -->
 <div class="container">
     <div class="container-inner">
+        <div class="searchBox">
+            <h2>경기인 신청이력</h2>
+            <div>
+                <ul class="formInput">
+                    <li class="searchBox-item">
+                        <span class="searchTitle">등록신청년도</span>
+                        <div class="select-group wd-229">
+                            <select name="year" id="year">
+                                <option value="0" selected>선택</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                            <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="searchBox-item searchBox-btn">
+                        <button class="btn btn-block">조회</button>
+                    </li>
+                </ul>
+                <div class="searchBox-img"></div>
+            </div>
+        </div>
+        <div class="table-wrap blue-table">
+            <div>
+                <p class="font-m font-18">2021년 선수 등록신청이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="227">
+                    <col width="153">
+                    <col width="162">
+                    <col width="*">
+                    <col width="162">
+                    <col width="139">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">신청년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속팀명</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">진행상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>19세이하부</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                            <td>진행중</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrap blue-table">
+            <div>
+                <p class="font-m font-18">2021년 지도자(팀임원) 등록신청이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="227">
+                    <col width="153">
+                    <col width="162">
+                    <col width="*">
+                    <col width="162">
+                    <col width="139">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">신청년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속팀명</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">진행상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>19세이하부</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                            <td>진행중</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrap blue-table">
+            <div>
+                <p class="font-m font-18">2021년 심판 등록신청이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="227">
+                    <col width="162">
+                    <col width="*">
+                    <col width="140">
+                    <col width="101">
+                    <col width="131">
+                    <col width="110">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">신청년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속기관</th>
+                        <th scope="col">국내/국제구분</th>
+                        <th scope="col">급수</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">진행상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td>국내</td>
+                            <td>1급</td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                            <td>진행중</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrap blue-table">
+            <div>
+                <p class="font-m font-18">2021년 선수관리담당자 등록신청이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="81">
+                    <col width="227">
+                    <col width="153">
+                    <col width="162">
+                    <col width="*">
+                    <col width="162">
+                    <col width="139">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">신청년도</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">종별</th>
+                        <th scope="col">시도</th>
+                        <th scope="col">소속팀명</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">진행상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for(var i = 10; i > 0; i--){
+                        <tr>
+                            <td><span class="font-roboto">2021</span></td>
+                            <td>야구소프트볼(소프트볼)</td>
+                            <td>19세이하부</td>
+                            <td>세종특별자치시</td>
+                            <td class="text-left">서울아트란티스피닉스</td>
+                            <td><span class="font-roboto">2021.01.01</span></td>
+                            <td>진행중</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
 <!-- contents end -->
 
 <!-- footer -->
