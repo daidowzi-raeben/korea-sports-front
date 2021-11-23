@@ -146,6 +146,7 @@ input::placeholder{
         &-text{
             margin-top: 10px
         }
+        
         .heroName{
             font-size: 18px;
             font-weight: 500;
@@ -161,9 +162,10 @@ input::placeholder{
         span{
             font-size: 14px;
             text-align: center;
-            img{
-
-            }
+        }
+        img{
+            position: relative;
+            top: 5px;
         }
     }
     
