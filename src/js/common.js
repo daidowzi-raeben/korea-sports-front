@@ -2,16 +2,6 @@
 $(document).ready(function(){
     var navList = $('.nav-sub__item');
 
-    // navList.hover(function(){
-    //     navList.removeClass('is_active');
-    //     $(this).addClass('is_active');
-    //     $('.nav-sub__wrap').hide();
-    //     $(this).children('.nav-sub__wrap').show();
-    // });
-    // $('.nav-sub__wrap').on('mouseleave', function(){
-    //     $(this).hide()
-    // });
-
     navList.on('mouseover', function(){
         navList.removeClass('is_active');
         $(this).addClass('is_active');
