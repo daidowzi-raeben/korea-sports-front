@@ -116,12 +116,6 @@ input::placeholder{
 .sportshero-header{
     padding: 76px 0 56px 0;
 }
-.sportshero-main{
-    &-upper{
-        display: flex;
-        justify-content: space-between;
-    }
-}
 
 .hero{
     &-list{
@@ -146,6 +140,7 @@ input::placeholder{
         &-text{
             margin-top: 10px
         }
+        
         .heroName{
             font-size: 18px;
             font-weight: 500;
@@ -161,10 +156,77 @@ input::placeholder{
         span{
             font-size: 14px;
             text-align: center;
-            img{
-
-            }
+        }
+        img{
+            position: relative;
+            top: 5px;
         }
     }
     
+}
+
+//스포츠히어로상세
+.font-17{
+    font-size: 17px;
+}
+
+.mb-85{
+    margin-bottom: 85px;
+}
+
+.mb-78{
+    margin-bottom: 78px;
+}
+
+.hero-title{
+    font-size: 25px;
+
+}
+
+.hero-detail{
+    .detail-upper{
+        display: flex;
+        justify-content: space-between
+    }
+    &__text{
+        position: relative;
+        top: -14px;
+        .semiTitle{
+            font-size: 17px;
+            font-weight: 600;
+        }
+        font-size: 32px;
+        line-height: 1.22;
+        .large-blue{
+            color: #2b6cac;
+        }
+        img{
+            margin-top: 37px;
+        }
+    }
+
+    &__detailText{
+        line-height: 2;
+        letter-spacing: normal;
+       h2{
+           font-size: 23px;
+           font-weight: 300 !important;
+           margin-bottom: 21px;
+       }
+      
+       
+    }
+    
+}
+
+.detail-lower{
+    display: flex;
+    justify-content: flex-end
+}
+
+.sports_1{
+   img{
+    position: relative;      
+    top: 5px;
+   }
 }
