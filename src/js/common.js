@@ -1,4 +1,23 @@
-$('.nav.cycle')
+
+$(document).ready(function(){
+    var nav_li = $('.nav .nav-inner ul li');
+    var nav_drop = $('.nav .nav-drop .nav-drop--item');
+    nav_li.mouseenter(function(){
+        nav_drop.eq($(this).index()).addClass('active');
+    });
+    nav_li.mouseleave(function(){
+        nav_drop.eq($(this).index()).removeClass('active');
+
+    });
+    nav_drop.mouseenter(function(){
+        $(this).addClass('active');
+    });
+    nav_drop.mouseout(function(){
+        $(this).removeClass('active');
+
+    })
+    
+});
 
 // 스크롤 이벤트 --
 

@@ -9,7 +9,7 @@
         position: fixed;
         width: 100%;
         z-index: 2;
-        
+
         .fixed-top {
             width: 100%;
             min-width: 1200px;
@@ -22,10 +22,29 @@
             transition: all .2s;
             background: #fff;
             border-bottom: 1px solid #bebebe;
-            
+            position: relative;
+            .join {
+                position: absolute;
+                right: 0px;
+                display: flex;
+                li {
+                    a {
+                        font-size: 15px;
+                        transition: all .2s;
+                        color: #3d3d3d;
+
+                    }
+                    &:first-child{
+                        margin-right: 14px;
+                    }
+                }
+
+               
+            }
+
             &__left {
                 position: relative;
-                
+
                 a {
                     position: absolute;
                     top: 0;
@@ -33,25 +52,25 @@
                     width: 100%;
                     height: 100%;
                 }
-                
+
                 .logo {
                     width: 203px;
                     height: 67px;
                     transition: all .2s;
                     background: url('../img/main/logo_color.svg')no-repeat center;
-                    
-                    
+
+
                 }
-                
+
             }
-            
+
             &__mid {
                 display: flex;
-                
+
                 li {
                     position: relative;
                     margin: 0 13px;
-                    
+
                     a {
                         font-size: 17px;
                         color: #3d3d3d;
@@ -61,43 +80,24 @@
                         padding-bottom: 22px;
                         white-space: pre;
                     }
-                    
+
                 }
-                
+
             }
-            
+
             &__right {
                 display: flex;
                 align-items: center;
                 position: relative;
-                
-                .lj-btn {
-                    position: absolute;
-                    right: 0px;
-                    top: -53px;
-                    width: 123px;
-                    
-                    span {
-                        a {
-                            font-size: 15px;
-                            transition: all .2s;
-                            color: #3d3d3d;
-                            
-                        }
-                    }
-                    
-                    .login {
-                        margin-right: 14px;
-                    }
-                }
-                
+
+              
                 i {
                     width: 24px;
                     height: 25px;
                     cursor: pointer;
                     display: block;
                 }
-                
+
                 .search {
                     background: url('../img/main/search_black.svg')no-repeat center;
                     margin-right: 20px;
@@ -119,16 +119,16 @@
 .wrap.ssp-sub {
     .header {
         position: static;
-        
+
         .fixed-top {
             border-bottom: none;
         }
     }
-    
+
     .fixed-top {
         &__mid {
             margin-right: 115px;
-            
+
             li.is_active {
                 a {
                     color: #095ECE;
@@ -156,6 +156,7 @@
         background: linear-gradient(270deg, #339FD9, #2B80CB);
         min-width: 1200px;
         position: relative;
+
         &-inner {
             min-width: 1200px;
             width: 1200px;
@@ -225,42 +226,52 @@
                 }
             }
         }
-        &-drop{
-            position: absolute;
-            top: 100%;
-            width: 100%;
-            background: #339fd9;
+
+        &-drop {
             height: 43px;
-            border-top: 1px solid #57b7eb;
-            // display: none;
-            ul{
-                width: 1200px;
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                padding-left: 283px;
-                li{
-                    height: 100%;
-                    position: relative;
-                    margin-right: 30px;
-                    a{
-                        color: #fff;
-                        font-weight: 400;
-                        display: block;
+            .nav-drop--item.active{
+                display: block;
+            }
+            &--item:not(.no-item) {
+                background: #339fd9;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                display: none;
+                border-top: 1px solid #57b7eb;
+                
+                ul {
+                    width: 1200px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 283px;
+
+                    li {
                         height: 100%;
-                        line-height: 43px;
+                        position: relative;
+                        margin-right: 30px;
+
+                        a {
+                            color: #fff;
+                            font-weight: 400;
+                            display: block;
+                            height: 100%;
+                            line-height: 43px;
+                        }
                     }
-                }
-                li.is_active{
-                    &::after{
-                        content:'';
-                        background: #fff;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        bottom: 2px;
-                        left: 0;
+
+                    li.is_active {
+                        &::after {
+                            content: '';
+                            background: #fff;
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            bottom: 2px;
+                            left: 0;
+                        }
                     }
                 }
             }
@@ -320,6 +331,7 @@
     .ssp-banner.mycycle {
         background: url(../img/ssp/banner_1.png)no-repeat center;
     }
+
     .ssp-banner.registration {
         background: url(../img/ssp/banner_2.png)no-repeat center;
     }
@@ -332,7 +344,7 @@
 
     }
 
-  
+
 
 }
 
