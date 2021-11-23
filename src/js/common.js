@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+// 서브메뉴
+
     var navList = $('.nav-sub__item');
 
     navList.on('mouseover', function(){
@@ -14,10 +16,26 @@ $(document).ready(function(){
 
     })
 
-    $('.dropdown').click(function(){
-        $(this).next().toggle();
-    });
-    
+// dropdown click
+
+$('.dropdown').click(function(){
+    $('.dropdown').removeClass('is_active');
+    $(this).toggleClass('is_active');
+    $('.option').show();
+});
+
+$('.option .event li').click(function(){
+    $(this).toggleClass('is_active');
+});
+
+$('.event--all').click(function(){
+    if($(this).hasClass('is_active')){
+        $('.option .event li').addClass('is_active');
+    }else{
+        $('.option .event li').removeClass('is_active');
+    }
+});
+
 
 // 스크롤 이벤트 --
 
