@@ -257,6 +257,12 @@ $border: #BEBEBE;
                         border: 1px solid #b9bcc4;
                         border-right: none;
                         padding-left: 20px;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            background: url(../../img/ssp/regist_arrow-white.svg)no-repeat center right 9px #4A5470;
+                            color: #fff;
+                        }
                     }
                     .select-con{
                         border-left: 1px solid #b9bcc4;
