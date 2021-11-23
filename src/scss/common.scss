@@ -22,25 +22,6 @@
             transition: all .2s;
             background: #fff;
             border-bottom: 1px solid #bebebe;
-            position: relative;
-            .join {
-                position: absolute;
-                right: px;
-                display: flex;
-                li {
-                    a {
-                        font-size: 15px;
-                        transition: all .2s;
-                        color: #3d3d3d;
-
-                    }
-                    &:first-child{
-                        margin-right: 14px;
-                    }
-                }
-
-               
-            }
 
             &__left {
                 position: relative;
@@ -90,7 +71,28 @@
                 align-items: center;
                 position: relative;
 
-              
+                .join {
+                    position: absolute;
+                    right: 0px;
+                    top: -53px;
+                    width: 115px;
+                    display: flex;
+
+                    li {
+                        a {
+                            font-size: 15px;
+                            transition: all .2s;
+                            color: #3d3d3d;
+
+                        }
+                        &:first-child{
+                            margin-right: 18px;
+                        }
+                    }
+
+                 
+                }
+
                 i {
                     width: 24px;
                     height: 25px;
@@ -219,19 +221,8 @@
                 }
 
                 li.is_active {
-                    
                     a {
                         font-weight: 500;
-                        position: relative;
-                        &::after{
-                            content: '';
-                            background: #fff;
-                            position: absolute;
-                            width: 100%;
-                            height: 2px;
-                            bottom: 16px;
-                            left: 0;
-                        }
                     }
 
                 }
