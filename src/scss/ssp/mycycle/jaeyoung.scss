@@ -164,3 +164,69 @@ input::placeholder{
     }
     
 }
+
+//스포츠히어로상세
+.font-17{
+    font-size: 17px;
+}
+
+.mb-85{
+    margin-bottom: 85px;
+}
+
+.mb-78{
+    margin-bottom: 78px;
+}
+
+.hero-title{
+    font-size: 25px;
+
+}
+
+.hero-detail{
+    .detail-upper{
+        display: flex;
+        justify-content: space-between
+    }
+    &__text{
+        position: relative;
+        top: -14px;
+        .semiTitle{
+            font-size: 17px;
+            font-weight: 600;
+        }
+        font-size: 32px;
+        line-height: 1.22;
+        .large-blue{
+            color: #2b6cac;
+        }
+        img{
+            margin-top: 37px;
+        }
+    }
+
+    &__detailText{
+        line-height: 2;
+        letter-spacing: normal;
+       h2{
+           font-size: 23px;
+           font-weight: 300 !important;
+           margin-bottom: 21px;
+       }
+      
+       
+    }
+    
+}
+
+.detail-lower{
+    display: flex;
+    justify-content: flex-end
+}
+
+.sports_1{
+   img{
+    position: relative;      
+    top: 5px;
+   }
+}

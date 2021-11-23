@@ -23,11 +23,11 @@
     &-arrow-half{
         width: 27px;
         height: 10px;
-        background: url(../img/common/arrow-half.svg) no-repeat center;
+        background: url(../img/common/arrow-half.svg) no-repeat center;  
         background-size: 100%; 
         display: inline-block;
     }
-
+ 
     &-num {
         &__1 {
             @extend %num;
