@@ -1,9 +1,14 @@
 
 $(document).ready(function(){
-    var nav_li = $('.nav .nav-inner ul li');
-    var nav_drop = $('.nav .nav-drop .nav-drop--item');
+    var navList = $('.nav-sub__item');
 
-    
+    navList.click(function(){
+        navList.removeClass('is_active');
+        $(this).addClass('is_active');
+        $('.nav-sub__wrap').hide();
+        $(this).children('.nav-sub__wrap').show();
+    });
+
 });
 
 // 스크롤 이벤트 --
@@ -58,9 +63,6 @@ $(window).on('scroll', function(){
         }
 
 });
-
-
-
 
 
 

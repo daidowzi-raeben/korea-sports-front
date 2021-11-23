@@ -5,34 +5,57 @@
         <div class="menu font">
             내 생애주기
         </div>
-        <ul>
-            <li class="@@active_1"><a href="">타임라인</a></li>
-            <li class="@@active_2"><a href="">신청이력</a></li>
-            <li class="@@active_3"><a href="">활동이력</a></li>
-            <li class="@@active_4"><a href="">교육이력</a></li>
+        <ul class="nav-sub">
+            <li class="@@active_1 nav-sub__item">
+                <a href="#">타임라인</a>
+            </li>
+            <li class="@@active_2 nav-sub__item">
+                <a href="#">신청이력</a>
+                <div class="nav-sub__wrap">
+                    <ul>
+                        <li><a href="#">경기인 신청이력</a></li>
+                        <li><a href="#">훈·포장 신청이력</a></li>
+                        <li><a href="#">증명서 발급신청이력</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="@@active_3 nav-sub__item">
+                <a href="#">활동이력</a>
+                <div class="nav-sub__wrap">
+                    <ul>
+                        <li class="is_active"><a href="#">경기인 등록이력</a></li>
+                        <li><a href="#">대표선수·후보선수 훈련이력</a></li>
+                        <li><a href="#">선수실적</a></li>
+                        <li><a href="#">대회경기영상</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="@@active_4 nav-sub__item">
+                <a href="#">교육이력</a>
+            </li>
         </ul>
     </div>
-    <div class="nav-drop">
+    <!-- <div class="nav-drop">
         <div class="nav-drop--item no-item">
         </div>
         <div class="nav-drop--item">
             <ul>
-                <li><a href="">경기인 신청이력</a></li>
-                <li><a href="">훈·포장 신청이력</a></li>
-                <li><a href="">증명서 발급신청이력</a></li>
+                <li><a href="#">경기인 신청이력</a></li>
+                <li><a href="#">훈·포장 신청이력</a></li>
+                <li><a href="#">증명서 발급신청이력</a></li>
             </ul>
         </div>
         <div class="nav-drop--item">
             <ul>
-                <li><a href="">경기인 등록이력</a></li>
-                <li><a href="">대표선수·후보선수 훈련이력</a></li>
-                <li><a href="">선수실적</a></li>
-                <li><a href="">대회경기영상</a></li>
+                <li><a href="#">경기인 등록이력</a></li>
+                <li><a href="#">대표선수·후보선수 훈련이력</a></li>
+                <li><a href="#">선수실적</a></li>
+                <li><a href="#">대회경기영상</a></li>
             </ul>
         </div>
         <div class="nav-drop--item no-item">
         </div>
-    </div>
+    </div> -->
 </div>
 }
 @@if(context.type == "registration"){
@@ -43,12 +66,12 @@
             내 생애주기
         </div>
         <ul>
-            <li class="@@active_1"><a href="">선수</a></li>
-            <li class="@@active_2"><a href="">지도자</a></li>
-            <li class="@@active_3"><a href="">심판</a></li>
-            <li class="@@active_4"><a href="">선수관리담당자</a></li>
-            <li class="@@active_5"><a href="">팀</a></li>
-            <li class="@@active_6"><a href="">선수통합검색</a></li>
+            <li class="@@active_1"><a href="#">선수</a></li>
+            <li class="@@active_2"><a href="#">지도자</a></li>
+            <li class="@@active_3"><a href="#">심판</a></li>
+            <li class="@@active_4"><a href="#">선수관리담당자</a></li>
+            <li class="@@active_5"><a href="#">팀</a></li>
+            <li class="@@active_6"><a href="#">선수통합검색</a></li>
         </ul>
     </div>
 
