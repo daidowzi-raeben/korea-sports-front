@@ -37,20 +37,17 @@ $(document).ready(function () {
                 j < 3 ? j = 5 : j = j;
                 j > 100 ? j = "calc(100% - 40px)" : j = j + '%';
             _elBar.children('.container-graph').eq(key).find('div.item').children('span').eq(key2).css({'height' :  j });
-            _append = '<div class="data-option">'+comma(_elHeight)+'</div>';
+            _append = '<div class="data-option">'+ __comma(_elHeight) +'</div>';
             _appendTitle = '<div class="data-title">'+_elDataTitle+'</div>';
             _elBar.children('.container-graph').eq(key).find('div.item').eq(key2).append(_append + _appendTitle);
             $('.container-graph').eq(key).children('div.item').find('.data-option').eq(key2).css({'bottom' : j})
         })
 
     })
-    
-    $(".graph-scroll--bar ul.container").draggable({
-        cursor: "move",
-        containment: "parent",
-        stop: function () {
-            if (jQuery(".graph-scroll--bar ul.container").position().left < 0)
-                jQuery(".graph-scroll--bar ul.container").css("left", __w / 3 + 'px');
-        }
-    });
+   
 });
+
+function __comma(str) {
+    str = String(str);
+    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+}

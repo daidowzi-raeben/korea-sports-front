@@ -1,13 +1,12 @@
 .graph {
     &-blue {background-color: #00b3ca;}
-    &-mint {background-color: #00b3ca;}
-    &-green {background-color: #7dd0b6;}
-    &-pink {background-color: #98b97c;}
+    &-mint {background-color: #7dd0b6;}
+    &-green {background-color: #98b97c;}    
+    &-pink {background-color: #e38690;}
     &-scroll {
         width: 100%;
         overflow: hidden;
         &--bar {
-            border-top:1px solid #bebebe;
             position:relative;
                     &::after {
                         background-color: #bebebe;
