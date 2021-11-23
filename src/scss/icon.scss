@@ -272,4 +272,10 @@
         height: 29px;
         background: url(../img/ssp/big_arrow.svg)no-repeat center/ 100%;
     }
+    &-multi{
+        display: inline-block;
+        width: 16px;
+        height: 18px;
+        background: url(../img/common/multi-choice.svg)no-repeat center/ 100%;
+    }
 }
