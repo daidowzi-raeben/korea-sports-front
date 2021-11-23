@@ -1,3 +1,18 @@
+%btn-base{
+    height: 45px;
+    min-width: 124px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 0;
+}
+
+$dark: #3d3d3d;
+$border: #BEBEBE;
+
+
+
 .container.registration {
     padding-top: 76px;
 
@@ -287,6 +302,131 @@
                 }
             }
         }
+
+        &-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .discription{
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                i{
+                    margin-right: 8px;
+                }
+                strong{
+                    font-weight: 500;
+                }
+            }
+
+            .btn-group{
+                font-size: 0;
+
+                .btn-dark{
+                    @extend %btn-base;
+                    color: #fff;
+                    background-color: $dark;
+                    font-size: 17px;
+                    font-weight: 500;
+                    margin-right: 7px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
+                    &.btn-sm{
+                        min-width: 96px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .lookup{
+        padding-bottom: 24px;
+        border-bottom: 1px solid $border;
+
+        &-header{
+
+            &__about{
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            &__title{
+                font-size: 23px;
+                margin-bottom: 16px;
+
+                span{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+
+            .standard{
+                display: flex;
+
+                &-day{
+                    display: flex;
+                    font-size: 16px;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: 21px;
+                        background-color: #a1a1a1;
+                        margin-left: 25px;
+                        margin-right: 25px;
+                    }
+
+                    dt{
+                        margin-right: 3px;
+                    }
+                }
+
+                &-list{
+                    display: flex;
+
+                    li{
+                        display: flex;
+                        align-items: center;
+                        margin-right: 30px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &::before{
+                            display: block;
+                            content: '';
+                            width: 17px;
+                            height: 17px;
+                            border-radius: 50%;
+                            margin-right: 8px;
+                        }
+                        &.man{
+                            &::before{
+                                background-color: #00B3CA;
+                            }
+                        }
+                        &.woman{
+                            &::before{
+                                background-color: #7DD0B6;
+                            }
+                        }
+                        &.gender{
+                            &::before{
+                                background-color: #E38690;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
     }
 }
 
