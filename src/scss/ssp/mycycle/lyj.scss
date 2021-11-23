@@ -562,10 +562,10 @@
 // 내 생애주기
 .container.cycle {
     .container-inner {
-        padding-top: 76px;
+        padding-top: 62px;
 
         .info {
-            padding-bottom: 70px;
+            padding-bottom: 64px;
             border-bottom: 1px solid #BEBEBE;
 
             h2 {
@@ -579,7 +579,21 @@
                 justify-content: flex-start;
 
                 &__photo {
-                    width: 263px;
+                    width: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 63px;
+                 img{
+                     width: 200px;
+                 }
+                 .issue{
+                    background: #f1f1f1;
+                    border: 1px solid #929292;
+                    border-radius: 40px;
+                    width: 167px;
+                    padding: 6px 0 6px 0;
+                    margin: 46px auto 0;
+                 }
 
                 }
 
@@ -612,7 +626,7 @@
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            margin-bottom: 10px;
+                            margin-bottom: 12px;
 
                             dt {
                                 width: 76px;
@@ -630,10 +644,10 @@
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            margin-bottom: 10px;
+                            margin-bottom: 12px;
 
                             dt {
-                                width: 76px;
+                                width: 123px;
                                 margin-right: 30px;
                                 font-weight: 300;
 
@@ -661,46 +675,10 @@
             }
         }
 
-        .history {
-            border-top: 1px solid #929292;
-            border-bottom: 1px dashed #929292;
+        .contents {
             position: relative;
             margin-bottom: 226px;
-
-            &-circle {
-                width: 110px;
-                height: 110px;
-                border-radius: 50%;
-                padding: 5px;
-                border: 1px solid #929292;
-                position: absolute;
-                background: #fff;
-                z-index: 1;
-
-                &--inner {
-                    border-radius: 50%;
-                    width: 100%;
-                    height: 100%;
-                    background: #3D3D3D;
-                    color: #fff;
-                    text-align: center;
-                    line-height: 100px;
-
-                }
-
-                &__top {
-                    left: 50%;
-                    top: 0;
-                    transform: translate(-50%, -50%);
-                }
-
-                &__bottom {
-                    left: 50%;
-                    bottom: 0;
-                    transform: translate(-50%, 50%);
-                }
-            }
-
+            border-top: 1px solid #929292;
             .go-more {
                 position: absolute;
                 width: 42px;
@@ -712,72 +690,112 @@
                 transform: translateX(-50%);
                 bottom: -165px;
             }
+            .history {
+                border-bottom: 1px dashed #929292;
+                position: relative;
 
-            &-con {
-                >ul {
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    padding: 80px 0 125px;
+                &-circle {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 50%;
+                    padding: 5px;
+                    border: 1px solid #929292;
+                    position: absolute;
+                    background: #fff;
+                    z-index: 1;
 
-                    .center-bar {
-                        position: absolute;
-                        display: inline-block;
-                        width: 3px;
+                    &--inner {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
                         background: #3D3D3D;
-                        height: 100px;
-                        left: 50%;
-                        top: 0;
-                        transform: translateX(-50%);
+                        color: #fff;
+                        text-align: center;
+                        line-height: 100px;
+
                     }
 
-                    >li {
-                        width: 50%;
+                    &__top {
+                        left: 50%;
+                        top: 0;
+                        transform: translate(-50%, -50%);
+                    }
 
-                        .item {
-                            margin-bottom: 64px;
+                    &__bottom {
+                        left: 50%;
+                        bottom: 0;
+                        transform: translate(-50%, 50%);
+                    }
+                }
 
-                            &-list {
-                                display: flex;
-                                flex-direction: column;
+               
 
-                                &__ch {
-                                    margin-bottom: 24px;
+                &-con {
+                    >ul {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        padding: 80px 0 125px;
 
-                                    h5 {
-                                        position: relative;
-                                        margin-bottom: 6px;
+                        .center-bar {
+                            position: absolute;
+                            display: inline-block;
+                            width: 3px;
+                            background: #3D3D3D;
+                            height: 100px;
+                            left: 50%;
+                            top: 0;
+                            transform: translateX(-50%);
+                        }
 
-                                        &::after {
-                                            content: '';
-                                            display: block;
-                                            width: 9px;
-                                            height: 9px;
-                                            border-radius: 50%;
-                                            background: #a1a1a1;
-                                            position: absolute;
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                        }
-                                    }
+                        >li {
+                            width: 50%;
 
-                                    .line {
-                                        display: block;
-                                        line-height: 30px;
+                            .item {
+                                margin-bottom: 64px;
 
-                                        span {
-                                            color: #717171;
+                                &-list {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    &__ch {
+                                        margin-bottom: 24px;
+
+                                        h5 {
+                                            position: relative;
+                                            margin-bottom: 6px;
 
                                             &::after {
-                                                content: '/';
-                                                display: inline-block;
-                                                position: relative;
-                                                margin: 0 10px 0 11px;
+                                                content: '';
+                                                display: block;
+                                                width: 9px;
+                                                height: 9px;
+                                                border-radius: 50%;
+                                                background: #a1a1a1;
+                                                position: absolute;
+                                                top: 50%;
+                                                transform: translateY(-50%);
                                             }
+                                        }
 
-                                            &:last-child {
+                                        .line {
+                                            display: block;
+                                            line-height: 30px;
+
+                                            span {
+                                                color: #717171;
+
                                                 &::after {
-                                                    content: none;
+                                                    content: '/';
+                                                    display: inline-block;
+                                                    position: relative;
+                                                    margin: 0 10px 0 11px;
+                                                }
+
+                                                &:last-child {
+                                                    &::after {
+                                                        content: none;
+                                                    }
                                                 }
                                             }
                                         }
@@ -785,229 +803,119 @@
                                 }
                             }
                         }
-                    }
 
-                    .item-tit {
-                        margin-bottom: 23px;
-                        position: relative;
-                        display: inline-block;
-
-                        span {
-                            color: #fff;
-                            padding: 6px 20px 6px 20px;
-                            border-radius: 22px;
+                        .item-tit {
+                            margin-bottom: 23px;
                             position: relative;
+                            display: inline-block;
 
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                transform: translateY(-50%);
-                            }
-                        }
-
-                    }
-
-                    .history-con__left {
-                        display: flex;
-                        flex-direction: column;
-                        text-align: right;
-                        padding-right: 64px;
-
-                        .item {
-                            position: relative;
-
-                            &-bar {
-                                position: absolute;
-                                background: #a1a1a1;
-                                width: 1px;
-                                right: 0;
-                                top: 9px;
-                            }
-
-                            &-tit {
-                                right: 23px;
-
-                                &::before {
-                                    content: '';
-                                    display: block;
-                                    width: 9px;
-                                    height: 9px;
-                                    border-radius: 50%;
-                                    background: #3d3d3d;
-                                    position: absolute;
-                                    right: -27px;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                }
+                            span {
+                                color: #fff;
+                                padding: 6px 20px 6px 20px;
+                                border-radius: 22px;
+                                position: relative;
 
                                 &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 64px;
-                                    height: 3px;
+                                    content: "";
                                     position: absolute;
-                                    right: -87px;
-                                    background: #3d3d3d;
                                     top: 50%;
                                     transform: translateY(-50%);
                                 }
-
-                                span {
-
-                                    &::after {
-                                        right: -13px;
-                                        border-top: 7px solid transparent;
-                                        border-bottom: 7px solid transparent;
-                                    }
-                                }
-
-                                .blue {
-                                    &::after {
-                                        border-left: 16px solid #006dbc;
-                                    }
-                                }
-
-                                .red {
-                                    &::after {
-                                        border-left: 16px solid #e30826;
-                                    }
-                                }
-
-                                .yellow {
-                                    &::after {
-                                        border-left: 16px solid #ffbb00;
-                                    }
-                                }
                             }
 
-                            &-list {
-                                padding-right: 19px;
+                        }
 
-                                &__ch {
-                                    h5 {
-                                        &::after {
-                                            right: -23px;
-                                        }
-                                    }
+                        .history-con__left {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: right;
+                            padding-right: 64px;
 
-                                    .line {
+                            .item {
+                                position: relative;
+
+                                &-bar {
+                                    position: absolute;
+                                    background: #a1a1a1;
+                                    width: 1px;
+                                    right: 0;
+                                    top: 9px;
+                                }
+
+                                &-tit {
+                                    right: 23px;
+
+                                    &::before {
+                                        content: '';
                                         display: block;
-
-                                        span {}
+                                        width: 9px;
+                                        height: 9px;
+                                        border-radius: 50%;
+                                        background: #3d3d3d;
+                                        position: absolute;
+                                        right: -27px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
                                     }
-
-                                    .media {
-                                        padding-right: 46px;
-                                        margin-top: 5px;
-
-                                        h5 {
-                                            margin-bottom: 10px;
-                                            position: relative;
-
-                                            &::before {
-                                                content: '';
-                                                display: block;
-                                                width: 50px;
-                                                height: 1px;
-                                                background: #a1a1a1;
-                                                position: absolute;
-                                                top: 50%;
-                                                transform: translateY(-50%);
-                                                right: -65px;
-
-                                            }
-                                        }
-
-                                        ul {
-                                            display: flex;
-                                            justify-content: flex-end;
-
-                                            li {
-                                                margin-left: 10px;
-                                            }
-
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-
-                    .history-con__right {
-                        padding-left: 64px;
-
-                        .item {
-                            position: relative;
-
-                            &-bar {
-                                position: absolute;
-                                background: #a1a1a1;
-                                width: 1px;
-                                left: 0;
-                                top: 9px;
-                            }
-
-                            &-tit {
-                                left: 23px;
-
-                                &::before {
-                                    content: '';
-                                    display: block;
-                                    width: 9px;
-                                    height: 9px;
-                                    border-radius: 50%;
-                                    background: #3d3d3d;
-                                    position: absolute;
-                                    left: -27px;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                }
-
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 64px;
-                                    height: 3px;
-                                    position: absolute;
-                                    left: -87px;
-                                    background: #3d3d3d;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                }
-
-                                span {
 
                                     &::after {
-                                        left: -13px;
-                                        border-top: 7px solid transparent;
-                                        border-bottom: 7px solid transparent;
+                                        content: '';
+                                        display: block;
+                                        width: 64px;
+                                        height: 3px;
+                                        position: absolute;
+                                        right: -87px;
+                                        background: #3d3d3d;
+                                        top: 50%;
+                                        transform: translateY(-50%);
                                     }
-                                }
 
-                                .green {
-                                    &::after {
-                                        border-right: 16px solid #92bb28;
-                                    }
-                                }
-                            }
+                                    span {
 
-                            &-list {
-                                padding-left: 19px;
-
-                                &__ch {
-                                    h5 {
                                         &::after {
-                                            left: -23px;
+                                            right: -13px;
+                                            border-top: 7px solid transparent;
+                                            border-bottom: 7px solid transparent;
                                         }
                                     }
 
-                                    .line {
-                                        span {}
+                                    .blue {
+                                        &::after {
+                                            border-left: 16px solid #006dbc;
+                                        }
+                                    }
+
+                                    .red {
+                                        &::after {
+                                            border-left: 16px solid #e30826;
+                                        }
+                                    }
+
+                                    .yellow {
+                                        &::after {
+                                            border-left: 16px solid #ffbb00;
+                                        }
+                                    }
+                                }
+
+                                &-list {
+                                    padding-right: 19px;
+
+                                    &__ch {
+                                        h5 {
+                                            &::after {
+                                                right: -23px;
+                                            }
+                                        }
+
+                                        .line {
+                                            display: block;
+
+                                            span {}
+                                        }
 
                                         .media {
-                                            padding-left: 46px;
+                                            padding-right: 46px;
                                             margin-top: 5px;
 
                                             h5 {
@@ -1023,19 +931,129 @@
                                                     position: absolute;
                                                     top: 50%;
                                                     transform: translateY(-50%);
-                                                    left: -65px;
+                                                    right: -65px;
 
                                                 }
                                             }
 
                                             ul {
                                                 display: flex;
-                                                align-items: center;
+                                                justify-content: flex-end;
 
                                                 li {
-                                                    margin-right: 10px;
+                                                    margin-left: 10px;
                                                 }
 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .history-con__right {
+                            padding-left: 64px;
+
+                            .item {
+                                position: relative;
+
+                                &-bar {
+                                    position: absolute;
+                                    background: #a1a1a1;
+                                    width: 1px;
+                                    left: 0;
+                                    top: 9px;
+                                }
+
+                                &-tit {
+                                    left: 23px;
+
+                                    &::before {
+                                        content: '';
+                                        display: block;
+                                        width: 9px;
+                                        height: 9px;
+                                        border-radius: 50%;
+                                        background: #3d3d3d;
+                                        position: absolute;
+                                        left: -27px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+
+                                    &::after {
+                                        content: '';
+                                        display: block;
+                                        width: 64px;
+                                        height: 3px;
+                                        position: absolute;
+                                        left: -87px;
+                                        background: #3d3d3d;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+
+                                    span {
+
+                                        &::after {
+                                            left: -13px;
+                                            border-top: 7px solid transparent;
+                                            border-bottom: 7px solid transparent;
+                                        }
+                                    }
+
+                                    .green {
+                                        &::after {
+                                            border-right: 16px solid #92bb28;
+                                        }
+                                    }
+                                }
+
+                                &-list {
+                                    padding-left: 19px;
+
+                                    &__ch {
+                                        h5 {
+                                            &::after {
+                                                left: -23px;
+                                            }
+                                        }
+
+                                        .line {
+                                            span {}
+
+                                            .media {
+                                                padding-left: 46px;
+                                                margin-top: 5px;
+
+                                                h5 {
+                                                    margin-bottom: 10px;
+                                                    position: relative;
+
+                                                    &::before {
+                                                        content: '';
+                                                        display: block;
+                                                        width: 50px;
+                                                        height: 1px;
+                                                        background: #a1a1a1;
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        transform: translateY(-50%);
+                                                        left: -65px;
+
+                                                    }
+                                                }
+
+                                                ul {
+                                                    display: flex;
+                                                    align-items: center;
+
+                                                    li {
+                                                        margin-right: 10px;
+                                                    }
+
+                                                }
                                             }
                                         }
                                     }
@@ -1046,10 +1064,60 @@
                 }
             }
         }
+        .state{
+            margin-bottom: 70px;
+            &-top{
+                margin-bottom: 25px;
+                h3{
+                    margin-bottom: 3px;
+                }
+                p{
+                    color: #717171;
+                }
+            }
+            ul{
+                display: flex;
+                justify-content: space-between;
+                li{
+                    width: 50%;
+                    &:first-child{
+                        margin-right: 22px;
+                    }
+                    .state-item{
+                        border: 1px solid #acacac;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        height: 136px;
+                        a{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
 
+                        }
+                        h3{
+                            margin-bottom: 5px;
+                        }
+                        p{
+                            color: #717171;
+                        }
+                    }
+                    .sub-tit{
+                        color: #717171;
+                        text-align: center;
+                        margin-top: 11px;
+                    }
+                }
+            }
+        }
         .service {
             &-top {
-                margin-bottom: 45px;
+                margin-bottom: 25px;
 
                 h3 {
                     margin-bottom: 5px;
@@ -1339,4 +1407,3 @@
 .green {
     background: #92bb28;
 }
-

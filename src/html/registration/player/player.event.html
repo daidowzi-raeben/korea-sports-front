@@ -22,6 +22,28 @@ depth_2 : "팀"
 })
 <!-- banner -->
 
+
+<!-- 모달창 -->
+<div class="modal-wrap" id="popup1">
+    <div class="modal">
+        <div class="modal-header">
+            <h1>파일을 다운로드 하시겠습니까?</h1>
+        </div>
+        <div class="modal-body">
+            <p>
+                확인버튼을 클릭하시면<br/>
+                선수 / 실업 시군구 현황 엑셀파일이 <br/>
+                다운로드됩니다.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-close button-grey">취소</button>
+            <button type="button" class="button-blue">확인</button>
+        </div>
+    </div>
+</div>
+
+
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -31,35 +53,35 @@ depth_2 : "팀"
                 <div class="topSelect-con__left">
                     <ul>
                         <li class="player is_active">
-                            <a href=""></a>
+                            <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_player.svg" alt="regist_player">
                             </div>
                             <span>선수</span>
                         </li>
                         <li class="master">
-                            <a href=""></a>
+                            <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_master.svg" alt="regist_master">
                             </div>
                             <span>지도자</span>
                         </li>
                         <li class="referee">
-                            <a href=""></a>
+                            <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_referee.svg" alt="regist_referee">
                             </div>
                             <span>심판</span>
                         </li>
                         <li class="manager">
-                            <a href=""></a>
+                            <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_manager.svg" alt="regist_manager">
                             </div>
                             <span>선수관리<br>담당자</span>
                         </li>
                         <li class="team">
-                            <a href=""></a>
+                            <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_team.svg" alt="regist_team">
 
@@ -71,16 +93,16 @@ depth_2 : "팀"
                 </div>
                 <div class="topSelect-con__right">
                     <ul class="player">
-                        <li class="is_active"><a href=""></a>종별 현황</li>
-                        <li><a href=""></a>시도별 현황</li>
-                        <li><a href=""></a>실업 시군구 현황</li>
-                        <li><a href=""></a>동계종목 현황</li>
-                        <li><a href=""></a>학년별 현황</li>
-                        <li><a href=""></a>선수등록 목록</li>
-                        <li><a href=""></a>선수등록 이력조회</li>
-                        <li><a href=""></a>2021년 이전자료</li>
-                        <li><a href=""></a>2013~2021년 자료</li>
-                        <li><a href=""></a>선수통합검색</li>
+                        <li class="is_active"><a href="#"></a>종별 현황</li>
+                        <li><a href="#"></a>시도별 현황</li>
+                        <li><a href="#"></a>실업 시군구 현황</li>
+                        <li><a href="#"></a>동계종목 현황</li>
+                        <li><a href="#"></a>학년별 현황</li>
+                        <li><a href="#"></a>선수등록 목록</li>
+                        <li><a href="#"></a>선수등록 이력조회</li>
+                        <li><a href="#"></a>2021년 이전자료</li>
+                        <li><a href="#"></a>2013~2021년 자료</li>
+                        <li><a href="#"></a>선수통합검색</li>
                     </ul>
                 </div>
             </div>
@@ -245,10 +267,70 @@ depth_2 : "팀"
                     </li>
                 </ul>
             </div>
-            <div class="midSelect-footer">
-                
+            <div class="midSelect-footer mt-20">
+                <p class="discription">
+                    <i class="icon icon-multi"></i> 
+                    각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
+                </p>
+                <div class="btn-group">
+                    <button type="button" class="btn-dark btn-open" data-name="popup1">다운로드</button>
+                    <button type="button" class="btn-dark">조건 초기화</button>
+                    <a href="#" role="button" class="btn-dark btn-sm">조회</a>
+                </div>
             </div>
         </div>
+
+
+<!-- 조회 결과  -->
+        <div class="lookup">
+            <div class="lookup-header">
+                <strong class="lookup-header__about">실업 시군구 현황</strong>
+                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                <div class="standard">
+                    <dl class="standard-day">
+                        <dt>통계생성 기준 :</dt>
+                        <dd>2020/12/31  23:44:03</dd>
+                    </dl>
+                    <ul class="standard-list">
+                        <li class="man">남자합계</li>
+                        <li class="woman">여자합계</li>
+                        <li class="gender">남여총계</li>
+                    </ul>
+                </div>
+                <button type="button" class="deskTop">
+                    <i class="icon icon-deskTop"></i>
+                </button>
+            </div>
+            <div class="lookup-body">
+                <!-- 데이터 조회 전 -->
+                <div class="empty">
+                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                </div>
+            </div>
+        </div> 
+
+        <div class="lookup">
+            <div class="lookup-header">
+                <strong class="lookup-header__about">실업 시군구 현황</strong>
+                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                <div class="standard">
+                    <dl class="standard-day">
+                        <dt>통계생성 기준 :</dt>
+                        <dd>2020/12/31  23:44:03</dd>
+                    </dl>
+                </div>
+                <button type="button" class="deskTop">
+                    <i class="icon icon-deskTop"></i>
+                </button>
+            </div>
+            <div class="lookup-body">
+                <!-- 데이터 조회 전 -->
+                <div class="empty">
+                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                </div>
+            </div>
+        </div> 
+
     </div>
 </div>
 <!-- contents end -->

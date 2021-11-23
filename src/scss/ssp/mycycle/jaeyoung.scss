@@ -80,3 +80,30 @@ input::placeholder{
     margin-top: 30px;
 }
 
+//등록현황
+
+.wd-34{
+    width: 34% !important;
+}
+
+.mb-18{
+    margin-bottom: 18px;
+}
+
+.lowerContents{
+    display: flex;
+    justify-content: space-between;
+    .lower-icontext{
+        margin-top: 20px;
+        .icon-multi{
+            margin-right: 5px;
+        }
+    }
+    .bottom-btn-wrap{
+        .player-btn-block{
+            height: 45px;
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+    }
+}
