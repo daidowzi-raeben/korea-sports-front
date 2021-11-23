@@ -14,7 +14,10 @@ $(document).ready(function(){
 
     })
 
-});
+    $('.dropdown').click(function(){
+        $(this).next().toggle();
+    });
+    
 
 // 스크롤 이벤트 --
 
@@ -467,6 +470,8 @@ new Chart(todayChart, {
 
 
 })(jQuery);
+
+});
 
 
 // 스크롤 이벤트
