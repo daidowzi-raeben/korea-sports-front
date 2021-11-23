@@ -18,12 +18,12 @@ $(document).ready(function () {
 
     });
 
-    var _el = $('.itv-banner--topslider li[aria-hidden=false]'),
-            _elLength = _el.length;
-            $('.itv-banner--topslider li[aria-hidden=true]').animate({"opacity":"0"},0);
-            _el.eq(0).animate({"opacity":"0"},0);
-            _el.eq(_el.length - 1).animate({"opacity":"0"},0);
-            
+    
+        var _el = $('.itv-banner--topslider li[aria-hidden=false]'),
+        _elLength = _el.length;
+        $('.itv-banner--topslider li[aria-hidden=true]').animate({"opacity":"0"},0);
+        _el.eq(0).css({"opacity":"0"});
+        _el.eq(_el.length - 1).animate({"opacity":"0"},0);
 
     function m_itv_slide(event) {
         if (event == 'right') {
