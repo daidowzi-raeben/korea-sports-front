@@ -27,12 +27,13 @@ depth_2 : "팀"
 <div class="modal-wrap" id="popup1">
     <div class="modal">
         <div class="modal-header">
-            <h1>임시저장을 하시겠습니까?</h1>
+            <h1>파일을 다운로드 하시겠습니까?</h1>
         </div>
         <div class="modal-body">
             <p>
-                귀하께서는 신청서 작성중에 있었으며,<br/>
-                확인을 클릭하시면 임시저장이 완료됩니다.
+                확인버튼을 클릭하시면<br/>
+                선수 / 실업 시군구 현황 엑셀파일이 <br/>
+                다운로드됩니다.
             </p>
         </div>
         <div class="modal-footer">
@@ -296,14 +297,40 @@ depth_2 : "팀"
                         <li class="gender">남여총계</li>
                     </ul>
                 </div>
-                <button type="button" class="share">
-                    <i class="icon"></i>
+                <button type="button" class="deskTop">
+                    <i class="icon icon-deskTop"></i>
                 </button>
             </div>
             <div class="lookup-body">
-
+                <!-- 데이터 조회 전 -->
+                <div class="empty">
+                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                </div>
             </div>
         </div> 
+
+        <div class="lookup">
+            <div class="lookup-header">
+                <strong class="lookup-header__about">실업 시군구 현황</strong>
+                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                <div class="standard">
+                    <dl class="standard-day">
+                        <dt>통계생성 기준 :</dt>
+                        <dd>2020/12/31  23:44:03</dd>
+                    </dl>
+                </div>
+                <button type="button" class="deskTop">
+                    <i class="icon icon-deskTop"></i>
+                </button>
+            </div>
+            <div class="lookup-body">
+                <!-- 데이터 조회 전 -->
+                <div class="empty">
+                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                </div>
+            </div>
+        </div> 
+
     </div>
 </div>
 <!-- contents end -->
