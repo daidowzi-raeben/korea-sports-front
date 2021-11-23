@@ -107,3 +107,64 @@ input::placeholder{
         }
     }
 }
+
+//스포츠히어로
+.mr-33{
+    margin-right: 33px;
+}
+
+.sportshero-header{
+    padding: 76px 0 56px 0;
+}
+.sportshero-main{
+    &-upper{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.hero{
+    &-list{
+        &::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        &__item{
+            float: left;
+        }
+    }
+
+    .heroPics{
+        padding: 25px 15px 28px 15px;
+        margin: 0 0 65px 0;
+        width: 275px;
+        height: 298px;
+        border: 1px solid #bcbcbc;
+        border-radius: 5px;
+        &-text{
+            margin-top: 10px
+        }
+        .heroName{
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 120px;
+        }
+
+    }
+
+    &-lowerText{
+        margin: 32px;
+        padding-bottom: 100px;
+        text-align: center;
+        span{
+            font-size: 14px;
+            text-align: center;
+            img{
+
+            }
+        }
+    }
+    
+}
