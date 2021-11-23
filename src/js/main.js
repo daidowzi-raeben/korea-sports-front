@@ -152,10 +152,12 @@ $(document).ready(function () {
         $('.slider-nav').slick('slickPause');
     }
    });
-   $('.slider-nav--item').click(function(){
+   slider_li.click(function(){
     $('.slider-nav').slick('slickPause');
     $('.slick-dots .btn-play').addClass('pause');
+    $('.itv-banner--topslider .hidden-box').hide();
    });
+
     // 우측 fixed 메뉴 인터랙션
     var indicator_li = $('.fixed-right ul li');
     var section = $('.section');
