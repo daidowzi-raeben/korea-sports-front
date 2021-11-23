@@ -44,6 +44,18 @@ $(document).ready(function () {
         })
 
     })
+
+    $(".graph-scroll--bar ul.container").draggable({
+        cursor: "move",
+        containment: "parent",
+        stop: function () {
+            // var __w = $(this).parents('.graph-scroll--bar .parent').width();
+            // console.log(__w / 2);
+            if (jQuery(".graph-scroll--bar ul.container").position().left < 0)
+                jQuery(".graph-scroll--bar ul.container").css("left", __w / 3 + 'px');
+        }
+    });
+    
    
 });
 
@@ -51,3 +63,4 @@ function __comma(str) {
     str = String(str);
     return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
 }
+
