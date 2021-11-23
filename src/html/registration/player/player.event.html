@@ -22,6 +22,27 @@ depth_2 : "팀"
 })
 <!-- banner -->
 
+
+<!-- 모달창 -->
+<div class="modal-wrap" id="popup1">
+    <div class="modal">
+        <div class="modal-header">
+            <h1>임시저장을 하시겠습니까?</h1>
+        </div>
+        <div class="modal-body">
+            <p>
+                귀하께서는 신청서 작성중에 있었으며,<br/>
+                확인을 클릭하시면 임시저장이 완료됩니다.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-close button-grey">취소</button>
+            <button type="button" class="button-blue">확인</button>
+        </div>
+    </div>
+</div>
+
+
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -195,6 +216,7 @@ depth_2 : "팀"
                     </li>
                 </ul>
             </div>
+<<<<<<< HEAD
             <div class="midSelect-footer">
             </div>
         </div>
@@ -216,6 +238,46 @@ depth_2 : "팀"
         <p class="countTitle">
             <span class="font-roboto">252</span>건
         </p>
+=======
+            <div class="midSelect-footer mt-20">
+                <p class="discription">
+                    <i class="icon icon-multi"></i> 
+                    각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
+                </p>
+                <div class="btn-group">
+                    <button type="button" class="btn-dark btn-open" data-name="popup1">다운로드</button>
+                    <button type="button" class="btn-dark">조건 초기화</button>
+                    <a href="#" role="button" class="btn-dark btn-sm">조회</a>
+                </div>
+            </div>
+        </div>
+
+
+<!-- 조회 결과  -->
+        <div class="lookup">
+            <div class="lookup-header">
+                <strong class="lookup-header__about">실업 시군구 현황</strong>
+                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                <div class="standard">
+                    <dl class="standard-day">
+                        <dt>통계생성 기준 :</dt>
+                        <dd>2020/12/31  23:44:03</dd>
+                    </dl>
+                    <ul class="standard-list">
+                        <li class="man">남자합계</li>
+                        <li class="woman">여자합계</li>
+                        <li class="gender">남여총계</li>
+                    </ul>
+                </div>
+                <button type="button" class="share">
+                    <i class="icon"></i>
+                </button>
+            </div>
+            <div class="lookup-body">
+
+            </div>
+        </div> 
+>>>>>>> 5e0e622acf25efe439c9bfc94e8651ea291807ec
     </div>
 </div>
 <!-- contents end -->
