@@ -1,0 +1,72 @@
+@@include('./include/header.html')
+<!-- 헤더 끝 -->
+
+<div class="content clb">
+    <h2>inputbox</h2>
+    <div class="codebox">
+        <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
+        <xmp id="code1" class="brush: html;">
+            <div class="graph">
+                <div class="graph-scroll graph-scroll--bar">
+                    <div class="parent">
+                        <ul class="container clb">
+                            <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                            <li>
+                                <div class="container-graph">
+                                    <div class="item" data-title="남" data-option="17">
+                                        <span class="graph-blue"></span>
+                                    </div>
+                                    <div class="item" data-title="여" data-option="200">
+                                        <span class="graph-mint"></span>
+                                    </div>
+                                    <div class="item" data-title="혼" data-option="2000">
+                                        <span class="graph-green"></span>
+                                    </div>
+                                    <div class="item" data-title="계" data-option="20">
+                                        <span class="graph-pink"></span>
+                                    </div>
+                                </div>
+                                <span class="container-title">검도</span>
+                            </li>
+                            <!-- 데이터 반복 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    
+    <div class="conWrap">
+        <div class="graph">
+            <div class="graph-scroll graph-scroll--bar">
+                <div class="parent">
+                    <ul class="container clb">
+                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                        <li>
+                            <div class="container-graph">
+                                <div class="item" data-title="남" data-option="17">
+                                    <span class="graph-blue"></span>
+                                </div>
+                                <div class="item" data-title="여" data-option="200">
+                                    <span class="graph-mint"></span>
+                                </div>
+                                <div class="item" data-title="혼" data-option="2000">
+                                    <span class="graph-green"></span>
+                                </div>
+                                <div class="item" data-title="계" data-option="20">
+                                    <span class="graph-pink"></span>
+                                </div>
+                            </div>
+                            <span class="container-title">검도</span>
+                        </li>
+                        <!-- 데이터 반복 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+
+<!-- 푸터 시작 -->
+@@include('./include/footer.html')
