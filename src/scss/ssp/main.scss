@@ -679,7 +679,31 @@
                     margin: 0 auto;
                     position: relative;
                     overflow: hidden;
-
+                    .hidden-box{
+                        position: absolute;
+                        width: 155px;
+                        height: 100%;
+                        z-index: 1;
+                        background: #f3f3f3;
+                        opacity: 1;
+                        animation: .1s box_fadeout 2s forwards;
+                    }
+                    @keyframes box_fadeout {
+                        from{
+                            opacity: 1;
+                        }
+                        to{
+                            opacity: 0;
+                        }
+                    }
+                    .hidden-box.left{
+                        left: 0;
+                        bottom: 64px;
+                    }
+                    .hidden-box.right{
+                        right: 0;
+                        bottom: 64px;
+                    }
                     .center-circle {
                         position: absolute;
                         left: 50%;

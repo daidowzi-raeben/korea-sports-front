@@ -18,12 +18,12 @@ $(document).ready(function () {
 
     });
 
-    var _el = $('.itv-banner--topslider li[aria-hidden=false]'),
-            _elLength = _el.length;
-            $('.itv-banner--topslider li[aria-hidden=true]').animate({"opacity":"0"},0);
-            _el.eq(0).animate({"opacity":"0"},0);
-            _el.eq(_el.length - 1).animate({"opacity":"0"},0);
-            
+    
+        var _el = $('.itv-banner--topslider li[aria-hidden=false]'),
+        _elLength = _el.length;
+        $('.itv-banner--topslider li[aria-hidden=true]').animate({"opacity":"0"},0);
+        _el.eq(0).css({"opacity":"0"});
+        _el.eq(_el.length - 1).animate({"opacity":"0"},0);
 
     function m_itv_slide(event) {
         if (event == 'right') {
@@ -152,10 +152,12 @@ $(document).ready(function () {
         $('.slider-nav').slick('slickPause');
     }
    });
-   $('.slider-nav--item').click(function(){
+   slider_li.click(function(){
     $('.slider-nav').slick('slickPause');
     $('.slick-dots .btn-play').addClass('pause');
+    $('.itv-banner--topslider .hidden-box').hide();
    });
+
     // 우측 fixed 메뉴 인터랙션
     var indicator_li = $('.fixed-right ul li');
     var section = $('.section');
