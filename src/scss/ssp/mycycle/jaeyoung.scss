@@ -1,6 +1,7 @@
-input::placeholder{
+input::placeholder {
     color: #3d3d3d;
 }
+
 //교육이력
 .container-inner {
     &-education {
@@ -22,11 +23,13 @@ input::placeholder{
         .education-content {
             display: flex;
             text-align: center;
+
             h2 {
-               
+
                 font-size: 21px;
                 margin-bottom: 5px
             }
+
             span {
                 color: #717171;
             }
@@ -59,48 +62,53 @@ input::placeholder{
 }
 
 //증명서 발급신청
-.container-inner-contents{
-    h3{
+.container-inner-contents {
+    h3 {
         font-weight: 400;
         font-size: 18px;
     }
-    .content-border{
+
+    .content-border {
         color: #bebebe;
         margin-top: 20px;
     }
-    .certification-content{
+
+    .certification-content {
         text-align: center;
         padding-top: 133px;
         padding-bottom: 218px;
     }
-    
+
 }
 
-.mt-30{
+.mt-30 {
     margin-top: 30px;
 }
 
 //등록현황
 
-.wd-34{
+.wd-34 {
     width: 34% !important;
 }
 
-.mb-18{
+.mb-18 {
     margin-bottom: 18px;
 }
 
-.lowerContents{
+.lowerContents {
     display: flex;
     justify-content: space-between;
-    .lower-icontext{
+
+    .lower-icontext {
         margin-top: 20px;
-        .icon-multi{
+
+        .icon-multi {
             margin-right: 5px;
         }
     }
-    .bottom-btn-wrap{
-        .player-btn-block{
+
+    .bottom-btn-wrap {
+        .player-btn-block {
             height: 45px;
             padding: 10px 30px;
             border-radius: 5px;
@@ -109,39 +117,40 @@ input::placeholder{
 }
 
 //스포츠히어로
-.mr-33{
+.mr-33 {
     margin-right: 33px;
 }
 
-.sportshero-header{
+.sportshero-header {
     padding: 76px 0 56px 0;
 }
 
-.hero{
-    &-list{
-        &::after{
+.hero {
+    &-list {
+        &::after {
             display: block;
             content: '';
             clear: both;
         }
 
-        &__item{
+        &__item {
             float: left;
         }
     }
 
-    .heroPics{
+    .heroPics {
         padding: 25px 15px 28px 15px;
         margin: 0 0 65px 0;
         width: 275px;
         height: 298px;
         border: 1px solid #bcbcbc;
         border-radius: 5px;
-        &-text{
+
+        &-text {
             margin-top: 10px
         }
-        
-        .heroName{
+
+        .heroName {
             font-size: 18px;
             font-weight: 500;
             margin-right: 120px;
@@ -149,126 +158,142 @@ input::placeholder{
 
     }
 
-    &-lowerText{
+    &-lowerText {
         margin: 32px;
         padding-bottom: 100px;
         text-align: center;
-        span{
+
+        span {
             font-size: 14px;
             text-align: center;
         }
-        img{
+
+        img {
             position: relative;
             top: 5px;
             padding: 0 2px;
         }
     }
-    
+
 }
 
 //스포츠히어로상세
-.font-17{
+.font-17 {
     font-size: 17px;
 }
 
-.mt-48{
+.mt-45{
+    margin-top: 45px;
+}
+
+.mt-48 {
     margin-top: 48px;
 }
 
-.mb-47{
+.mb-47 {
     margin-bottom: 47px;
 }
 
-.mb-10{
+.mb-10 {
     margin-bottom: 10px;
 }
 
-.mb-85{
+.mb-85 {
     margin-bottom: 85px;
 }
-.mb-70{
+
+.mb-70 {
     margin-bottom: 70px;
 }
 
-.mb-78{
+.mb-78 {
     margin-bottom: 78px;
 }
 
-.hero-title{
+.hero-title {
+    padding: 76px 0 57px 0;
     font-size: 25px;
 }
 
-.ml-344{
+.ml-344 {
     margin-left: 344px;
 }
 
-.mr-185{
+.mr-185 {
     margin-right: 185px;
 }
 
-.hero-detail{
-    .detail-upper{
+.hero-detail {
+    .detail-upper {
         display: flex;
         justify-content: space-between
     }
-    &__text{
+
+    &__text {
         position: relative;
         top: -14px;
-        .semiTitle{
+
+        .semiTitle {
             font-size: 17px;
             font-weight: 600;
-           
         }
+
         font-size: 32px;
         line-height: 1.22;
-        .large-blue{
+
+        .large-blue {
             margin-top: 10px;
             color: #2b6cac;
             font-weight: 500;
         }
-        .large-black{
+
+        .large-black {
             font-weight: 500;
         }
 
-        img{
+        img {
             margin-top: 37px;
         }
     }
 
-    &__detailText{
+    &__detailText {
         line-height: 2;
         letter-spacing: normal;
-       h2{
-           font-size: 23px;
-           font-weight: 300 !important;
-           margin-bottom: 21px;
-           line-height: 31px;
-       }
-       span{
+
+        h2 {
+            font-size: 23px;
+            font-weight: 300 !important;
+            margin-bottom: 21px;
+            line-height: 31px;
+        }
+
+        span {
             font-weight: normal;
             font-stretch: normal;
             font-style: normal;
-       }
+        }
     }
-    .detail-lower{
+
+    .detail-lower {
         display: flex;
         justify-content: flex-end
     }
 }
 
-.hero-detail__detailEnd{
+.hero-detail__detailEnd {
     display: flex;
     justify-content: space-between;
-    img{
+
+    img {
         margin-bottom: 120px;
     }
 }
 
 
-.sports_1{
-   img{
-    position: relative;      
-    top: 5px;
-    padding: 0 2px;
-   }
+.sports_1 {
+    img {
+        position: relative;
+        top: 5px;
+        padding: 0 2px;
+    }
 }
