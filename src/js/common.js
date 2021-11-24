@@ -32,28 +32,37 @@ $(document).ready(function(){
 
 // dropdown click
 
-var eventList  = $('.option .event li');
+//조건선택 탭
 
-// 조건 선택 탭
+var eventTab = $('.midSelect-con__item .dropdown');
+var eventItem = $('.option li');
 
-$('.dropdown').click(function(){
-    $('.option').eq(0).toggle();
+eventTab.click(function(){
+    if($(this).hasClass('is_active')){
+        $(this).removeClass('is_active');
+        $(this).siblings('.option').hide();
+        return
+    }
+    eventTab.removeClass('is_active');
+    $('.option').hide();
+    $(this).addClass('is_active');
+    $(this).siblings('.option').show();
 });
 
-
-//  oprion  클릭 색상
-eventList.click(function(){
-    if( $('.event--all').hasClass('is_active')){
-        $('.event--all').removeClass('is_active');
+// 조건선택 all
+eventItem.click(function(){
+    if($(this).siblings('.event--all').hasClass('is_active')){
+        $(this).siblings('.event--all').removeClass('is_active');
     }
     $(this).toggleClass('is_active');
 });
 
 $('.event--all').click(function(){
-    if($('.option .event li:not(.event--all)').hasClass('is_active')){
-        $(this).removeClass('is_active');
-    }
+    $(this).siblings('li').removeClass('is_active');
+
 });
+//  oprion  클릭 색상
+
 
 
 
