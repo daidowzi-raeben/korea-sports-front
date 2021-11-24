@@ -329,6 +329,7 @@
         height: 300px;
         width: 100%;
         min-width: 1200px;
+        position: relative;
 
         .inner {
             width: 1200px;
@@ -342,12 +343,13 @@
 
             p {
                 color: #fff;
-                margin-bottom: 105px;
             }
 
             ul {
                 display: flex;
                 align-items: center;
+                position: absolute;
+                bottom: 34px;
 
                 li {
                     font-size: 15px;

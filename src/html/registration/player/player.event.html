@@ -451,8 +451,8 @@ for(var i = 1; i < $('input[name=event]').length; i++){
     종목.push( 라벨0.eq(i).html() )
 }
 
-종목.forEach(function(a,i){
-    var html = '<li><label for="event"></label></li>'
+종목.forEach(function(a){
+    var html = '<li>'+ a +'</li>'
     옵션0.append(html);
 });
 옵션0.prepend('<li class="event--all"><label for="event_all">전체</label></li>')
