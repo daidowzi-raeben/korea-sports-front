@@ -139,6 +139,11 @@
                     }
                 }
                 &--day {
+                    .is_active {
+                        background-color: #025ac6;
+                        border: 1px solid #025ac6;
+                        color:#fff;
+                    }
                     li {
                         border: solid 1px #c8c3c3;
                         position:relative;
@@ -147,6 +152,7 @@
                         font-weight: normal;
                         color: #3d3d3d;
                         line-height: 55px;
+                        cursor: pointer;
                         height:55px;
                         &:nth-child(7n) {
                             margin-right:0;

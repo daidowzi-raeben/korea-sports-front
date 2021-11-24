@@ -95,7 +95,7 @@ depth_2 : "월간일정"
                             <li>14</li>
                             <li>15</li>
                             <li>16</li>
-                            <li>17</li>
+                            <li class="is_active">17</li>
                             <li>18</li>
                             <li>19</li>
                             <li>20</li>
@@ -190,6 +190,17 @@ depth_2 : "월간일정"
         </div>
     </div>
 </div>
+
+<script>
+(function($){
+    $(".calendar-body--day li").on('click', function(e){
+        $('.calendar-body--day li').removeClass('is_active');
+        $(this).addClass('is_active');
+    });
+})(jQuery);
+</script>
+
+
 
 <!-- contents end -->
 <!-- footer -->
