@@ -178,6 +178,10 @@ input::placeholder{
     margin-bottom: 47px;
 }
 
+.mb-10{
+    margin-bottom: 10px;
+}
+
 .mb-85{
     margin-bottom: 85px;
 }
@@ -212,12 +216,19 @@ input::placeholder{
         .semiTitle{
             font-size: 17px;
             font-weight: 600;
+           
         }
         font-size: 32px;
         line-height: 1.22;
         .large-blue{
+            margin-top: 10px;
             color: #2b6cac;
+            font-weight: 500;
         }
+        .large-black{
+            font-weight: 500;
+        }
+
         img{
             margin-top: 37px;
         }
@@ -230,6 +241,13 @@ input::placeholder{
            font-size: 23px;
            font-weight: 300 !important;
            margin-bottom: 21px;
+       }
+       span{
+           font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2;
+            letter-spacing: normal;
        }
     }
     .detail-lower{
