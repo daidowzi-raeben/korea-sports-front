@@ -1,0 +1,82 @@
+.container.scheMonth{
+    .nosearchTitle{
+        margin: 76px 0 45px;
+    }
+.list-info{
+    display: flex;
+    align-items: flex-start;
+    &__left{
+        width: 477px;
+    }
+    &__right{
+        width: calc(100% - 477px);
+        padding-left: 69px;
+        .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-btns{
+                .btn{
+                    border: 1px solid #b1b1b1;
+                    width: 63px;
+                    height: 35px;
+                    border-radius: 3px;
+                    margin-right: 3px;
+                }
+                .btn.is_active{
+                    background: #3d3d3d;
+                    color: #fff;
+                    border: 1px solid #3d3d3d;
+                }
+              
+            }
+            &-search{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                input{
+                    height: 35px;
+                    border-radius: 3px 0 0 3px;
+                    width: 192px;
+                }
+                .btn{
+                    border-radius: 0 3px 3px 0;
+                    background: #686868;
+                    color: #fff;
+                    height: 35px;
+                    width: 65px;
+                    height: 35px;
+                    padding: 0;
+                    font-weight: 300;
+                }
+            }
+        }
+        .con{
+            padding-bottom: 55px;
+            &-item{
+                margin-bottom: 2px;
+               h3{
+                font-size: 21px;
+                font-weight: bold;
+                padding: 47px 0 25px 0;
+               } 
+               dl{
+                   margin-bottom: 25px;
+                   dt{
+                       font-size: 18px;
+                       font-weight: 500;
+                       
+                    }
+                    dd{
+                        
+                    }
+                    .date{
+                        font-family: 'roboto', sans-serif;
+                        margin: 9px 0 5px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+}
