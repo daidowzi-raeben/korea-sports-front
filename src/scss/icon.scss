@@ -297,5 +297,17 @@
         height: 5px;
         background: url(../img/ssp/paragraph_sqare.svg)no-repeat center/ 100%;
     }
-    
+    &-play{
+        width: 68px;
+        height: 68px;
+        display: inline-block;
+        background: url(../img/ssp/media_play.svg)no-repeat center/ 100%;
+    }
+    &-close_w{
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background: url(../img/common/close_w.svg)no-repeat center/ 100%;
+    }
+
 }
