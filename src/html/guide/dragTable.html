@@ -7,55 +7,873 @@
         <button class="copybtn" onclick="copyText('#code1');" title="주소 복사">일반 코드복사</button>
         <xmp id="code1" class="brush: html;">
             <div class="graph">
-                <div class="graph-scroll graph-scroll--bar">
+                <div class="graph-scroll graph-scroll--table">
                     <div class="parent">
-                        <ul class="container clb">
-                            <!-- 데이터 반복 / data-option은 숫자만 입력 -->
-                            <li>
-                                <div class="container-graph">
-                                    <div class="item" data-title="남" data-option="17">
-                                        <span class="graph-blue"></span>
-                                    </div>
-                                    <div class="item" data-title="여" data-option="200">
-                                        <span class="graph-mint"></span>
-                                    </div>
-                                    <div class="item" data-title="혼" data-option="2000">
-                                        <span class="graph-green"></span>
-                                    </div>
-                                    <div class="item" data-title="계" data-option="20">
-                                        <span class="graph-pink"></span>
-                                    </div>
-                                </div>
-                                <span class="container-title">검도</span>
-                            </li>
-                            <!-- 데이터 반복 -->
-                            
-                        </ul>
+                        <div class="container"></div>
                     </div>
                 </div>
         </xmp>
     </div>
     
-    <div class="conWrap">
+    <div class="conWrap" style="width:800px; margin:0 auto;">
         <div class="graph">
-            <div class="graph-scroll graph-scroll--bar">
-                <div class="parent">
-                    <ul class="container clb">
-                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
-                        <li>
-                            <table>
+            <div class="graph-scroll graph-scroll--table clb" >
+                <div class="thead float-left" style="display:none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="title center">
+                                    종목구분
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">총계</th>
+                            </tr>
+                            <tr>
+                                <!-- rowspan 속성이 들어갈 경우 클래스 추가 -->
+                                <th rowspan="4" class="b-r-d">빙상</th>
+                            </tr>
+                            <tr>
+                                <!-- rowspan 자식일 경우 첫번째 클래스 추가 -->
+                                <th class="b-ltb">스피드</th>
+                            </tr>
+                            <tr>
+                                <th>쇼트트랙</th>
+                            </tr>
+                            <tr>
+                                <th>피겨</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="7" class="b-r-d">스키</th>
+                            </tr>
+                            <tr>
+                                <th class="b-ltb">알파인</th>
+                            </tr>
+                            <tr>
+                                <th>크로스컨트리</th>
+                            </tr>
+                            <tr>
+                                <th>스노보드</th>
+                            </tr>
+                            <tr>
+                                <th>스키점프</th>
+                            </tr>
+                            <tr>
+                                <th>프리스타일</th>
+                            </tr>
+                            <tr>
+                                <th>노르딕복합</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="3" class="b-r-d">봅슬레이<br>스켈레톤</th></th>
+                            </tr>
+                            <tr>
+                                <th class="b-ltb">봅슬레이</th>
+                            </tr>
+                            <tr>
+                                <th>스켈레톤</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">아이스하키</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">컬링</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">바이애슬론</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">루지</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                    <div class="parent  float-left">
+                        <div class="container">
+                            <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                            <table >
                                 <thead>
                                     <tr>
-                                        <th colspan="3">
-
+                                        <th colspan="3" rowspan="2" >
+                                            시작
                                         </th>
+                                        <th colspan="3" rowspan="2" >
+                                            전체
+                                        </th>
+                                        <th colspan="3" rowspan="2" >
+                                            전체
+                                        </th>
+                                        <th colspan="3" rowspan="2" >
+                                            전체
+                                        </th>
+                                        <th colspan="3" rowspan="2" >
+                                            전체
+                                        </th>
+                                        <th colspan="3" rowspan="2" >
+                                            전체
+                                        </th>
+                                        <th colspan="3" rowspan="2">
+                                            전체
+                                        </th>
+                                        <th colspan="3" rowspan="2">
+                                            전체
+                                        </th>
+                                        <th colspan="32">
+                                            일반부
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">시도청</th>
+                                        <th colspan="3">끝</th>
+                                    </tr>
+                                    <tr class="kind">
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                        <th>남</th>
+                                        <th>여</th>
+                                        <th class="b-r-3">소계</th>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td class="b-r-3">200</td>
                                     </tr>
                                 </thead>
                             </table>
-                        </li>
-                        <!-- 데이터 반복 -->
-                    </ul>
-                </div>
+                            <!-- 데이터 반복 -->
+                        </div>
+                    </div>
             </div>
         </div>
 </div>
