@@ -93,9 +93,9 @@ depth_2 : "팀"
                 </div>
                 <div class="topSelect-con__right">
                     <ul class="player">
-                        <li class="is_active"><a href="#"></a>종별 현황</li>
+                        <li><a href="#"></a>종별 현황</li>
                         <li><a href="#"></a>시도별 현황</li>
-                        <li><a href="#"></a>실업 시군구 현황</li>
+                        <li class="is_active"><a href="#"></a>실업 시군구 현황</li>
                         <li><a href="#"></a>동계종목 현황</li>
                         <li><a href="#"></a>학년별 현황</li>
                         <li><a href="#"></a>선수등록 목록</li>
@@ -132,44 +132,36 @@ depth_2 : "팀"
                                 <label for="event_all">전체</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_1">
+                                <input type="checkbox" name="event" id="event_0">
                                 <label for="event_1">검도</label>
                             </div>
                             <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_1">
+                                <label for="event_2">골프</label>
+                            </div>
+                            <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_2">
-                                <label for="event_2">검도</label>
+                                <label for="event_3">궁도</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_3">
-                                <label for="event_3">검도</label>
+                                <label for="event_4">수영</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_4">
-                                <label for="event_4">검도</label>
+                                <label for="event_5">택견</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_5">
-                                <label for="event_5">검도</label>
+                                <label for="event_6">컬링</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_6">
-                                <label for="event_6">검도</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_3">
-                                <label for="event_3">검도</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_3">
-                                <label for="event_3">검도</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_3">
-                                <label for="event_3">검도</label>
+                                <label for="event_7">크리켓</label>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="midSelect-con__item">
                         <div class="dropdown" data-id="1">시도선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con">
                             <div class="select-con--item">
@@ -190,7 +182,7 @@ depth_2 : "팀"
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="midSelect-con__item" >
                         <div class="dropdown" data-id="2">시군구 선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con concon">
                             <div class="select-con--item">
@@ -215,7 +207,7 @@ depth_2 : "팀"
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="midSelect-con__item">
                         <div class="dropdown">소속구분</div>
                         <div class="select-con">
                             <div class="select-con--item">
@@ -236,7 +228,7 @@ depth_2 : "팀"
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="midSelect-con__item">
                         <div class="dropdown b-right">종별선택</div>
                         <div class="select-con b-right">
                             <div class="select-con--item">
@@ -283,21 +275,13 @@ depth_2 : "팀"
                         </div>
                         <div class="option-body">
                             <ul class="event">
-                                <li class="event--all">전체</li>
-                                <li>검도</li>
-                                <li>골프</li>
-                                <li>궁도</li>
-                                <li>수영</li>
-                                <li>택견</li>
-                                <li>컬링</li>
-                                <li>크리켓</li>
                             </ul>
                         </div>
                     </div>
                     <div class="option-footer">
                         <div class="btn-group">
-                            <button type="button" class="btn-sky">선택 초기화</button>
-                            <button type="button" class="btn-sky">선택 완료</button>
+                            <button type="button" class="btn-sky btn-reset">선택 초기화</button>
+                            <button type="button" class="btn-sky btn-submit">선택 완료</button>
                         </div>
                     </div>
                 </div>
@@ -310,7 +294,9 @@ depth_2 : "팀"
                         </div>
                         <div class="option-body">
                             <ul class="event">
-                                <li class="event--all">전체</li>
+                                <li class="event--all">
+                                    전체
+                                </li>
                                 <li>서울특별시</li>
                                 <li>부산광역시</li>
                                 <li>대구광역시</li>
@@ -334,8 +320,8 @@ depth_2 : "팀"
                     </div>
                     <div class="option-footer">
                         <div class="btn-group">
-                            <button type="button" class="btn-sky">선택 초기화</button>
-                            <button type="button" class="btn-sky">선택 완료</button>
+                            <button type="button" class="btn-sky btn-reset">선택 초기화</button>
+                            <button type="button" class="btn-sky btn-submit">선택 완료</button>
                         </div>
                     </div>
                 </div>
@@ -349,20 +335,38 @@ depth_2 : "팀"
                         <div class="option-body">
                             <ul class="event">
                                 <li class="event--all">전체</li>
-                                <li>검도</li>
-                                <li>골프</li>
-                                <li>궁도</li>
-                                <li>수영</li>
-                                <li>택견</li>
-                                <li>컬링</li>
-                                <li>크리켓</li>
+                                <li class="event-item">강남구</li>
+                                <li class="event-item">강동구</li>
+                                <li class="event-item">강북구</li>
+                                <li class="event-item">강서구</li>
+                                <li class="event-item">관악구</li>
+                                <li class="event-item">관악구</li>
+                                <li class="event-item">광진구</li>
+                                <li class="event-item">구로구</li>
+                                <li class="event-item">금천구</li>
+                                <li class="event-item">노원구</li>
+                                <li class="event-item">도봉구</li>
+                                <li class="event-item">동작구</li>
+                                <li class="event-item">마포구</li>
+                                <li class="event-item">서대문구</li>
+                                <li class="event-item">서초구</li>
+                                <li class="event-item">성동구</li>
+                                <li class="event-item">성북구</li>
+                                <li class="event-item">송파구</li>
+                                <li class="event-item">양천구</li>
+                                <li class="event-item">영등포구</li>
+                                <li class="event-item">용산구</li>
+                                <li class="event-item">은평구</li>
+                                <li class="event-item">종로구</li>
+                                <li class="event-item">중구</li>
+                                <li class="event-item">중랑구</li>
                             </ul>
                         </div>
                     </div>
                     <div class="option-footer">
                         <div class="btn-group">
-                            <button type="button" class="btn-sky">선택 초기화</button>
-                            <button type="button" class="btn-sky">선택 완료</button>
+                            <button type="button" class="btn-sky btn-reset">선택 초기화</button>
+                            <button type="button" class="btn-sky btn-sebmit">선택 완료</button>
                         </div>
                     </div>
                 </div>
@@ -437,7 +441,29 @@ depth_2 : "팀"
 <!-- contents end -->
 
 <script>
-    var summer = ['검도', '골프', '궁도', '수영', '택견', '컬링', '크리켓'];
+
+var 라벨0 = $('.midSelect-con__item').eq(0).find('label');
+var 옵션0 = $('.option').eq(0).find('.event');
+   
+var 종목 = []
+
+for(var i = 1; i < $('input[name=event]').length; i++){
+    종목.push( 라벨0.eq(i).html() )
+}
+
+종목.forEach(function(a,i){
+    var html = '<li><label for="event"></label></li>'
+    옵션0.append(html);
+});
+옵션0.prepend('<li class="event--all"><label for="event_all">전체</label></li>')
+
+
+
+
+
+
+
+
 
        function fn_sidoChange(me){
             var chk = $(me).is(':checked');
@@ -453,18 +479,20 @@ depth_2 : "팀"
                         });
                     });
                 }
-       }
+            }
 
 
        function clickHandler(){
-            $('.option .event li').click(function(){
-                    $(this).toggleClass('is_active');
+                $('.option .event li').click(function(){
+                    if( $('.event--all').hasClass('is_active')){
+                        $('.event--all').removeClass('is_active');
+                    }
+                     $(this).toggleClass('is_active');
                 })
+
                 $('.event--all').click(function(){
-                    if($(this).hasClass('is_active')){
-                        $('.option .event li').addClass('is_active');
-                    }else{
-                        $('.option .event li').removeClass('is_active');
+                    if($('.option .event li:not(.event--all)').hasClass('is_active')){
+                        $(this).removeClass('is_active');
                     }
                 });
        }
@@ -475,7 +503,7 @@ depth_2 : "팀"
            if($(this).val() == '동계종목'){
                 $.getJSON('../../json/test.json', function(a){
                     a.data.forEach(function(data){
-                        var event = `<li>${data}</li>`
+                        var event = '<li>' + data + '</li>'
 
                         $('ul.event:first').append(event);
                     });
@@ -483,16 +511,32 @@ depth_2 : "팀"
                     clickHandler()
                 });
            }else if($(this).val() == '하계종목'){
-                summer.forEach(function(a){
-                    var summerEvent = `<li>${a}</li>`
-                    $('ul.event:first').append(summerEvent);
-                }); 
-                $('ul.event:first').prepend('<li class="event--all">전체</li>');
-                clickHandler()
+            $.getJSON('../../json/test2.json', function(a){
+                    a.data.forEach(function(data){
+                        var event = '<li>' + data + '</li>'
+
+                        $('ul.event:first').append(event);
+                    });
+                    $('ul.event:first').prepend('<li class="event--all">전체</li>');
+                    clickHandler()
+                });
            }
        });
 
+    //    console.log( $('.midSelect-con__item:not(:first)') )
 
+
+    //    $('.select-con--item label').on('click', function(){
+    //        var parentList =   $(this).parents('.midSelect-con__item');
+    //         console.log(parentList);
+    //        if( parentList.prev().find('input').is(':checked') == false ){
+    //             alert('이전 조건을 클릭하세요')
+    //             // return false;
+    //         }
+
+    //      });
+
+         
         
     
 </script>

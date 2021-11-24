@@ -282,7 +282,7 @@ $border: #BEBEBE;
 
                 &-body{
                     .event{
-                        display: block;
+                        display: table;
 
                         &::after{
                             display: block;
@@ -300,16 +300,22 @@ $border: #BEBEBE;
                             background-color: #fff;
                             font-size: 15px;
                             font-weight: 400;
+                            margin-left: -1px;
+                            margin-bottom: -1px;
                             cursor: pointer;
 
                             &:hover{
                                 border: 1px solid #3D3D3D;
+                                position: relative;
+                                z-index: 3;
                             }
 
                             &.is_active{
                                 background-color: #F1F8FF;
                                 color: #1971E3;
                                 border:1px solid #1971E3;
+                                position: relative;
+                                z-index: 3;
                             }
                         }
                     }

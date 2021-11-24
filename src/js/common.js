@@ -34,37 +34,27 @@ $(document).ready(function(){
 
 var eventList  = $('.option .event li');
 
-// 선택 탭
-function tabOption(data){
-    if($('.dropdown').eq(data).hasClass('is_active')){
-        $('.dropdown').removeClass('is_active');
-        $('.option').eq(data).hide();
-    return
-}
-    $('.dropdown').removeClass('is_active');
-    $('.option').hide();
-    $('.dropdown').eq(data).toggleClass('is_active');
-    $('.option').eq(data).toggle();
-}
+// 조건 선택 탭
 
-$('.midSelect-con__list').click(function(e){
-    tabOption($(e.target).data().id);
-})
+$('.dropdown').click(function(){
+    $('.option').eq(0).toggle();
+});
 
 
-
-//  oprion 색상
+//  oprion  클릭 색상
 eventList.click(function(){
+    if( $('.event--all').hasClass('is_active')){
+        $('.event--all').removeClass('is_active');
+    }
     $(this).toggleClass('is_active');
 });
 
 $('.event--all').click(function(){
-    if($(this).hasClass('is_active')){
-        eventList.addClass('is_active');
-    }else{
-        eventList.removeClass('is_active');
+    if($('.option .event li:not(.event--all)').hasClass('is_active')){
+        $(this).removeClass('is_active');
     }
 });
+
 
 
 // 스크롤 이벤트 --
