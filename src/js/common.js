@@ -426,7 +426,7 @@ $('.top').click(function(){
 });
 
 //체육일정 상단 버튼
-$('.right-btn-wrap button').click(function(){
+$('.schedule-btn').click(function(){
     $(this).addClass('is_active').siblings().removeClass('is_active')
 });
 
