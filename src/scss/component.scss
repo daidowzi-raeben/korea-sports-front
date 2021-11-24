@@ -401,3 +401,23 @@
         }
     }
 } 
+
+.calender{
+	background:url('../img/common/calender.svg') #fff no-repeat 93% 50%;
+    &.disabled{
+	background-image:url('../img/common/calender-gray.svg');
+    }
+    
+    &.error{
+        background-image:url('../img/common/calender-orange.svg');
+        border-color:$input_orange;
+        background-color: $bg_orange;
+        color:$input_orange;
+        &::placeholder {
+            color:$input_orange;
+        }
+        &:hover,&:focus{
+            border-color: $input_orange;
+        }
+    }
+}
