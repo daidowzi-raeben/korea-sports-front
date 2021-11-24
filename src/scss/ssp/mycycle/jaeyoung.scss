@@ -170,8 +170,19 @@ input::placeholder{
     font-size: 17px;
 }
 
+.mt-48{
+    margin-top: 48px;
+}
+
+.mb-47{
+    margin-bottom: 47px;
+}
+
 .mb-85{
     margin-bottom: 85px;
+}
+.mb-70{
+    margin-bottom: 70px;
 }
 
 .mb-78{
@@ -180,7 +191,14 @@ input::placeholder{
 
 .hero-title{
     font-size: 25px;
+}
 
+.ml-344{
+    margin-left: 344px;
+}
+
+.mr-185{
+    margin-right: 185px;
 }
 
 .hero-detail{
@@ -213,16 +231,21 @@ input::placeholder{
            font-weight: 300 !important;
            margin-bottom: 21px;
        }
-      
-       
     }
-    
+    .detail-lower{
+        display: flex;
+        justify-content: flex-end
+    }
 }
 
-.detail-lower{
+.hero-detail__detailEnd{
     display: flex;
-    justify-content: flex-end
+    justify-content: space-between;
+    img{
+        margin-bottom: 120px;
+    }
 }
+
 
 .sports_1{
    img{
