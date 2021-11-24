@@ -123,8 +123,8 @@ depth_2 : "팀"
                 </div>
             </div>
             <div class="midSelect-con mt-17">
-                <ul>
-                    <li>
+                <ul class="midSelect-con__list">
+                    <li class="midSelect-con__item">
                         <div class="dropdown">종목선택</div>
                         <div class="select-con">
                             <div class="select-con--item">
@@ -173,11 +173,11 @@ depth_2 : "팀"
                         <div class="dropdown">시도선택</div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="seoul">
+                                <input type="radio" name="sido" id="seoul" value="seoul">
                                 <label for="seoul">서울</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="busan">
+                                <input type="radio" name="sido" id="busan" value="busan" onclick="fn_sidoChange(this)">
                                 <label for="busan">부산</label>
                             </div>
                             <div class="select-con--item">
@@ -192,7 +192,7 @@ depth_2 : "팀"
                     </li>
                     <li>
                         <div class="dropdown">시군구 선택</div>
-                        <div class="select-con">
+                        <div class="select-con concon">
                             <div class="select-con--item">
                                 <input type="checkbox" name="sigungu" id="sigungu_all">
                                 <label for="sigungu_all">전체</label>
@@ -266,6 +266,41 @@ depth_2 : "팀"
                         </div>
                     </li>
                 </ul>
+                <div class="option formInput">
+                    <div class="option-main">
+                        <div class="option-header">
+                            <div class="select-group wd-290 mr-25">
+                                <select name="event">
+                                    <option value="0" selected>하계 종목</option>
+                                    <option value="동계종목">동계 종목</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                            <p>
+                                <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이 가능합니다.
+                            </p>
+                        </div>
+                        <div class="option-body">
+                            <ul class="event">
+                                <li class="event--all">전체</li>
+                                <li>검도</li>
+                                <li>골프</li>
+                                <li>궁도</li>
+                                <li>수영</li>
+                                <li>택견</li>
+                                <li>컬링</li>
+                                <li>크리켓</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn-sky">선택 초기화</button>
+                            <button type="button" class="btn-sky">선택 완료</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="midSelect-footer mt-20">
                 <p class="discription">
@@ -334,6 +369,46 @@ depth_2 : "팀"
     </div>
 </div>
 <!-- contents end -->
+
+<script>
+
+
+       function fn_sidoChange(me){
+            var chk = $(me).is(':checked');
+                if(chk){
+                    $.getJSON('../../json/test.json', function(a){
+                        $('.concon').html('');
+                        a.data.forEach(function(data,i){
+                                var html = `<div class="select-con--item">
+                                                <input type="checkbox" name="event" id="gong_${i}">
+                                                <label for="gong_${i}">${data}</label>
+                                            </div>`
+                                $('.concon').append(html);
+                        });
+                    });
+                }
+       }
+
+
+       $('select[name="event"]').on('change', function(){
+            $('ul.event').html('');
+           if($(this).val() == '동계종목'){
+                $.getJSON('../../json/test.json', function(a){
+                    a.data.forEach(function(data){
+                        var event = `<li>${data}</li>`
+
+                        $('ul.event').append(event);
+                    });
+                    $('ul.event').prepend('<li class="event--all">전체</li>');
+                    chice();
+                });
+           }
+       });
+
+
+        
+    
+</script>
 
 <!-- footer -->
 @@include('../../include/footer.html',{

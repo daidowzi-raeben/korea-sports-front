@@ -1,23 +1,44 @@
 
 $(document).ready(function(){
+// 서브메뉴
+
     var navList = $('.nav-sub__item');
 
     navList.on('mouseover', function(){
-        navList.removeClass('is_active');
-        $(this).addClass('is_active');
+        navList.removeClass('show');
+        $(this).addClass('show');
         $('.nav-sub__wrap').hide();
         $(this).children('.nav-sub__wrap').show();
     })
 
     $('.nav-sub').on('mouseleave', function(){
+        navList.removeClass('show');
         $('.nav-sub__wrap').hide();
 
     })
 
-    $('.dropdown').click(function(){
-        $(this).next().toggle();
-    });
-    
+// dropdown click
+
+var eventList  = $('.option .event li');
+
+$('.dropdown').click(function(){
+    $('.dropdown').removeClass('is_active');
+    $(this).toggleClass('is_active');
+    $('.option').show();
+});
+
+eventList.click(function(){
+    $(this).toggleClass('is_active');
+});
+
+$('.event--all').click(function(){
+    if($(this).hasClass('is_active')){
+        eventList.addClass('is_active');
+    }else{
+        eventList.removeClass('is_active');
+    }
+});
+
 
 // 스크롤 이벤트 --
 
