@@ -21,12 +21,25 @@ $(document).ready(function(){
 
 var eventList  = $('.option .event li');
 
-$('.dropdown').click(function(){
-    $('.dropdown').removeClass('is_active');
-    $(this).toggleClass('is_active');
-    $('.option').show();
-});
 
+function tabOption(data){
+    $('.dropdown').removeClass('is_active');
+    $('.dropdown').eq(data).addClass('is_active');
+    $('.option').eq(data).toggle();
+}
+
+$('.midSelect-con__list').click(function(e){
+    tabOption($(e.target).data().id);
+})
+
+// $('.dropdown').eq(0).click(function(){
+//     $('.dropdown').removeClass('is_active');
+//     $('.dropdown').eq(0).toggleClass('is_active');
+//     $('.option').eq(0).toggle();
+// });
+
+
+//  oprion 색상
 eventList.click(function(){
     $(this).toggleClass('is_active');
 });

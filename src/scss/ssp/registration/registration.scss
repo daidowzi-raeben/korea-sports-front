@@ -318,6 +318,7 @@ $border: #BEBEBE;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
+                    padding: 20px;
 
                     .btn-sky{
                         height: 45px;
@@ -347,20 +348,43 @@ $border: #BEBEBE;
                         font-weight: 500;
                         height: 45px;
                         line-height: 45px;
-                        background: url(../../img/ssp/regist_arrow.svg)no-repeat center right 9px #eeeff1;
+                        background-color: #eeeff1;
                         border: 1px solid #b9bcc4;
                         border-right: none;
                         padding-left: 20px;
                         cursor: pointer;
+                        position: relative;
+                        i{
+                            position: absolute;
+                            right: 9px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            display: none;
+                            &.icon-regist_arrow{
+                                display: block;
+                            }
+                        }
                         
                         &.is_active{
-                            background: url(../../img/ssp/regist_arrow-white.svg)no-repeat center right 9px #4A5470;
+                            background-color: #4A5470;
                             color: #fff;
+                            .icon-regist_arrow{
+                                display: none;
+                            }
+                            .icon-regist_arrow--white{
+                                display: block;
+                            }
                         }
 
                         &:hover{
-                            background: url(../../img/ssp/regist_arrow-white.svg)no-repeat center right 9px #4A5470;
+                            background-color: #4A5470;
                             color: #fff;
+                            .icon-regist_arrow{
+                                display: none;
+                            }
+                            .icon-regist_arrow--white{
+                                display: block;
+                            }
                         }
                     }
                     .select-con{

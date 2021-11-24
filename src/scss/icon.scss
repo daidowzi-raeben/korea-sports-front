@@ -291,5 +291,17 @@
         height: 21px;
         background: url(../img/common/icon-share.svg)no-repeat center/ 100%;
     }
+    &-regist_arrow{
+        display: inline-block;
+        width: 15px;
+        height: 9px;
+        background: url(../img/ssp/regist_arrow.svg)no-repeat center/ 100%;
+    }
+    &-regist_arrow--white{
+        display: inline-block;
+        width: 15px;
+        height: 9px;
+        background: url(../img/ssp/regist_arrow-white.svg)no-repeat center/ 100%;
+    }
     
 }
