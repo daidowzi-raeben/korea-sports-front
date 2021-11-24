@@ -1,23 +1,71 @@
 
 $(document).ready(function(){
+
+ // 미디어 레이어 팝업
+ var media_li = $('.container.media .img-box');
+
+ media_li.click(function(){
+    console.log('abc');
+    $('.layer-media').fadeIn();
+ });
+
+ $('.layer-media .btn-close,.layer-media .dim').click(function(){
+    $('.layer-media').hide();
+ });
+
+// 서브메뉴
+
     var navList = $('.nav-sub__item');
 
     navList.on('mouseover', function(){
-        navList.removeClass('is_active');
-        $(this).addClass('is_active');
+        navList.removeClass('show');
+        $(this).addClass('show');
         $('.nav-sub__wrap').hide();
         $(this).children('.nav-sub__wrap').show();
     })
 
     $('.nav-sub').on('mouseleave', function(){
+        navList.removeClass('show');
         $('.nav-sub__wrap').hide();
 
     })
 
-    $('.dropdown').click(function(){
-        $(this).next().toggle();
-    });
-    
+// dropdown click
+
+var eventList  = $('.option .event li');
+
+// 선택 탭
+function tabOption(data){
+    if($('.dropdown').eq(data).hasClass('is_active')){
+        $('.dropdown').removeClass('is_active');
+        $('.option').eq(data).hide();
+    return
+}
+    $('.dropdown').removeClass('is_active');
+    $('.option').hide();
+    $('.dropdown').eq(data).toggleClass('is_active');
+    $('.option').eq(data).toggle();
+}
+
+$('.midSelect-con__list').click(function(e){
+    tabOption($(e.target).data().id);
+})
+
+
+
+//  oprion 색상
+eventList.click(function(){
+    $(this).toggleClass('is_active');
+});
+
+$('.event--all').click(function(){
+    if($(this).hasClass('is_active')){
+        eventList.addClass('is_active');
+    }else{
+        eventList.removeClass('is_active');
+    }
+});
+
 
 // 스크롤 이벤트 --
 
@@ -377,6 +425,10 @@ $('.top').click(function(){
     $(window).scrollTop('0')
 });
 
+//체육일정 상단 버튼
+$('.schedule-btn').click(function(){
+    $(this).addClass('is_active').siblings().removeClass('is_active')
+});
 
 // $('.select').click(function(){
 //     $(this).children('.select-gray').show();

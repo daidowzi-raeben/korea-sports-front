@@ -123,9 +123,9 @@ depth_2 : "팀"
                 </div>
             </div>
             <div class="midSelect-con mt-17">
-                <ul>
-                    <li>
-                        <div class="dropdown">종목선택</div>
+                <ul class="midSelect-con__list">
+                    <li class="midSelect-con__item">
+                        <div class="dropdown" data-id="0">종목선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con">
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_all">
@@ -170,14 +170,14 @@ depth_2 : "팀"
                         </div>
                     </li>
                     <li>
-                        <div class="dropdown">시도선택</div>
+                        <div class="dropdown" data-id="1">시도선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="seoul">
+                                <input type="radio" name="sido" id="seoul" value="seoul">
                                 <label for="seoul">서울</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="busan">
+                                <input type="radio" name="sido" id="busan" value="busan" onclick="fn_sidoChange(this)">
                                 <label for="busan">부산</label>
                             </div>
                             <div class="select-con--item">
@@ -191,8 +191,8 @@ depth_2 : "팀"
                         </div>
                     </li>
                     <li>
-                        <div class="dropdown">시군구 선택</div>
-                        <div class="select-con">
+                        <div class="dropdown" data-id="2">시군구 선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
+                        <div class="select-con concon">
                             <div class="select-con--item">
                                 <input type="checkbox" name="sigungu" id="sigungu_all">
                                 <label for="sigungu_all">전체</label>
@@ -266,6 +266,107 @@ depth_2 : "팀"
                         </div>
                     </li>
                 </ul>
+                <div class="option formInput">
+                    <div class="option-main">
+                        <div class="option-header">
+                            <div class="select-group wd-290 mr-25">
+                                <select name="event">
+                                    <option value="하계종목" selected>하계 종목</option>
+                                    <option value="동계종목">동계 종목</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                            <p>
+                                <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이 가능합니다.
+                            </p>
+                        </div>
+                        <div class="option-body">
+                            <ul class="event">
+                                <li class="event--all">전체</li>
+                                <li>검도</li>
+                                <li>골프</li>
+                                <li>궁도</li>
+                                <li>수영</li>
+                                <li>택견</li>
+                                <li>컬링</li>
+                                <li>크리켓</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn-sky">선택 초기화</button>
+                            <button type="button" class="btn-sky">선택 완료</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="option-main">
+                        <div class="option-header">
+                            <p>
+                                <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이 가능합니다.
+                            </p>
+                        </div>
+                        <div class="option-body">
+                            <ul class="event">
+                                <li class="event--all">전체</li>
+                                <li>서울특별시</li>
+                                <li>부산광역시</li>
+                                <li>대구광역시</li>
+                                <li>인천광역시</li>
+                                <li>광주광역시</li>
+                                <li>대전광역시</li>
+                                <li>울산광역시</li>
+                                <li>세종특별자치시</li>
+                                <li>경기도</li>
+                                <li>강원도</li>
+                                <li>충청북도</li>
+                                <li>충청남도</li>
+                                <li>전라북도</li>
+                                <li>전라남도</li>
+                                <li>경상북도</li>
+                                <li>경상남도</li>
+                                <li>제주특별자치도</li>
+                                <li>시도없음</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn-sky">선택 초기화</button>
+                            <button type="button" class="btn-sky">선택 완료</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="option-main">
+                        <div class="option-header">
+                            <p>
+                                <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이 가능합니다.
+                            </p>
+                        </div>
+                        <div class="option-body">
+                            <ul class="event">
+                                <li class="event--all">전체</li>
+                                <li>검도</li>
+                                <li>골프</li>
+                                <li>궁도</li>
+                                <li>수영</li>
+                                <li>택견</li>
+                                <li>컬링</li>
+                                <li>크리켓</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="option-footer">
+                        <div class="btn-group">
+                            <button type="button" class="btn-sky">선택 초기화</button>
+                            <button type="button" class="btn-sky">선택 완료</button>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
             <div class="midSelect-footer mt-20">
                 <p class="discription">
@@ -334,6 +435,67 @@ depth_2 : "팀"
     </div>
 </div>
 <!-- contents end -->
+
+<script>
+    var summer = ['검도', '골프', '궁도', '수영', '택견', '컬링', '크리켓'];
+
+       function fn_sidoChange(me){
+            var chk = $(me).is(':checked');
+                if(chk){
+                    $.getJSON('../../json/test.json', function(a){
+                        $('.concon').html('');
+                        a.data.forEach(function(data,i){
+                                var html = `<div class="select-con--item">
+                                                <input type="checkbox" name="event" id="gong_${i}">
+                                                <label for="gong_${i}">${data}</label>
+                                            </div>`
+                                $('.concon').append(html);
+                        });
+                    });
+                }
+       }
+
+
+       function clickHandler(){
+            $('.option .event li').click(function(){
+                    $(this).toggleClass('is_active');
+                })
+                $('.event--all').click(function(){
+                    if($(this).hasClass('is_active')){
+                        $('.option .event li').addClass('is_active');
+                    }else{
+                        $('.option .event li').removeClass('is_active');
+                    }
+                });
+       }
+
+
+       $('select[name="event"]').on('change', function(){
+            $('ul.event:first').html('');
+           if($(this).val() == '동계종목'){
+                $.getJSON('../../json/test.json', function(a){
+                    a.data.forEach(function(data){
+                        var event = `<li>${data}</li>`
+
+                        $('ul.event:first').append(event);
+                    });
+                    $('ul.event:first').prepend('<li class="event--all">전체</li>');
+                    clickHandler()
+                });
+           }else if($(this).val() == '하계종목'){
+                summer.forEach(function(a){
+                    var summerEvent = `<li>${a}</li>`
+                    $('ul.event:first').append(summerEvent);
+                }); 
+                $('ul.event:first').prepend('<li class="event--all">전체</li>');
+                clickHandler()
+           }
+       });
+
+
+        
+    
+</script>
 
 <!-- footer -->
 @@include('../../include/footer.html',{

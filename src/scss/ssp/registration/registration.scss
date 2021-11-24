@@ -244,6 +244,105 @@ $border: #BEBEBE;
             }
         }
         &-con{
+            position: relative;
+
+            .option{
+                
+                display: none;
+                position: absolute;
+                top: 44px;
+                left: 0;
+                background-color: #fff;
+                width: 100%;
+                border: 1px solid #4A5470;
+                z-index: 10;
+
+                &.show{
+                    display: block;
+                }
+
+                &-main{
+                    padding: 35px 20px 20px 20px;
+                }
+
+                &-header{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    p{
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+
+                    i.icon-multi{
+                        margin-right: 8px;
+                    }
+                }
+
+                &-body{
+                    .event{
+                        display: block;
+
+                        &::after{
+                            display: block;
+                            content: '';
+                            clear: both;
+                        }
+
+                        li{
+                            float: left;
+                            text-align: center;
+                            line-height: 45px;
+                            width: 192.8px;
+                            height: 45px;
+                            border: 1px solid #B9BCC4;
+                            background-color: #fff;
+                            font-size: 15px;
+                            font-weight: 400;
+                            cursor: pointer;
+
+                            &:hover{
+                                border: 1px solid #3D3D3D;
+                            }
+
+                            &.is_active{
+                                background-color: #F1F8FF;
+                                color: #1971E3;
+                                border:1px solid #1971E3;
+                            }
+                        }
+                    }
+                }
+
+                &-footer{
+                    height: 85px;
+                    border-top: 1px solid #4A5470;
+                    background-color: #F5F5F5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 20px;
+
+                    .btn-sky{
+                        height: 45px;
+                        border-radius: 3px;
+                        padding: 0 32px;
+                        background-color: #49B8DB;
+                        color: #fff;
+                        font-size: 17px;
+                        font-weight: 500;
+                        margin-right: 7px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+
+
+
             ul{
                 display: flex;
                 
@@ -253,15 +352,43 @@ $border: #BEBEBE;
                         font-weight: 500;
                         height: 45px;
                         line-height: 45px;
-                        background: url(../../img/ssp/regist_arrow.svg)no-repeat center right 9px #eeeff1;
+                        background-color: #eeeff1;
                         border: 1px solid #b9bcc4;
                         border-right: none;
                         padding-left: 20px;
                         cursor: pointer;
+                        position: relative;
+                        i{
+                            position: absolute;
+                            right: 9px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            display: none;
+                            &.icon-regist_arrow{
+                                display: block;
+                            }
+                        }
                         
-                        &:hover{
-                            background: url(../../img/ssp/regist_arrow-white.svg)no-repeat center right 9px #4A5470;
+                        &.is_active{
+                            background-color: #4A5470;
                             color: #fff;
+                            .icon-regist_arrow{
+                                display: none;
+                            }
+                            .icon-regist_arrow--white{
+                                display: block;
+                            }
+                        }
+
+                        &:hover{
+                            background-color: #4A5470;
+                            color: #fff;
+                            .icon-regist_arrow{
+                                display: none;
+                            }
+                            .icon-regist_arrow--white{
+                                display: block;
+                            }
                         }
                     }
                     .select-con{
