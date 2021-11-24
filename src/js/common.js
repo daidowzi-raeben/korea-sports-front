@@ -34,10 +34,16 @@ $(document).ready(function(){
 
 var eventList  = $('.option .event li');
 
-
+// 선택 탭
 function tabOption(data){
+    if($('.dropdown').eq(data).hasClass('is_active')){
+        $('.dropdown').removeClass('is_active');
+        $('.option').eq(data).hide();
+    return
+}
     $('.dropdown').removeClass('is_active');
-    $('.dropdown').eq(data).addClass('is_active');
+    $('.option').hide();
+    $('.dropdown').eq(data).toggleClass('is_active');
     $('.option').eq(data).toggle();
 }
 
@@ -45,11 +51,6 @@ $('.midSelect-con__list').click(function(e){
     tabOption($(e.target).data().id);
 })
 
-// $('.dropdown').eq(0).click(function(){
-//     $('.dropdown').removeClass('is_active');
-//     $('.dropdown').eq(0).toggleClass('is_active');
-//     $('.option').eq(0).toggle();
-// });
 
 
 //  oprion 색상

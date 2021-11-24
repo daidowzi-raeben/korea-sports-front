@@ -257,6 +257,10 @@ $border: #BEBEBE;
                 border: 1px solid #4A5470;
                 z-index: 10;
 
+                &.show{
+                    display: block;
+                }
+
                 &-main{
                     padding: 35px 20px 20px 20px;
                 }
