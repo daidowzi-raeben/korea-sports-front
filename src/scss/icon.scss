@@ -291,6 +291,24 @@
         height: 21px;
         background: url(../img/common/icon-share.svg)no-repeat center/ 100%;
     }
+    &-content-bar{
+        display: block;
+        width: 25px;
+        height: 5px;
+        background: url(../img/ssp/paragraph_sqare.svg)no-repeat center/ 100%;
+    }
+    &-play{
+        width: 68px;
+        height: 68px;
+        display: inline-block;
+        background: url(../img/ssp/media_play.svg)no-repeat center/ 100%;
+    }
+    &-close_w{
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background: url(../img/common/close_w.svg)no-repeat center/ 100%;
+    }
     &-regist_arrow{
         display: inline-block;
         width: 15px;
@@ -303,5 +321,5 @@
         height: 9px;
         background: url(../img/ssp/regist_arrow-white.svg)no-repeat center/ 100%;
     }
-    
+
 }

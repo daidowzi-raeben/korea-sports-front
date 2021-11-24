@@ -160,6 +160,7 @@ input::placeholder{
         img{
             position: relative;
             top: 5px;
+            padding: 0 2px;
         }
     }
     
@@ -170,8 +171,23 @@ input::placeholder{
     font-size: 17px;
 }
 
+.mt-48{
+    margin-top: 48px;
+}
+
+.mb-47{
+    margin-bottom: 47px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
 .mb-85{
     margin-bottom: 85px;
+}
+.mb-70{
+    margin-bottom: 70px;
 }
 
 .mb-78{
@@ -180,7 +196,14 @@ input::placeholder{
 
 .hero-title{
     font-size: 25px;
+}
 
+.ml-344{
+    margin-left: 344px;
+}
+
+.mr-185{
+    margin-right: 185px;
 }
 
 .hero-detail{
@@ -194,12 +217,19 @@ input::placeholder{
         .semiTitle{
             font-size: 17px;
             font-weight: 600;
+           
         }
         font-size: 32px;
         line-height: 1.22;
         .large-blue{
+            margin-top: 10px;
             color: #2b6cac;
+            font-weight: 500;
         }
+        .large-black{
+            font-weight: 500;
+        }
+
         img{
             margin-top: 37px;
         }
@@ -212,21 +242,33 @@ input::placeholder{
            font-size: 23px;
            font-weight: 300 !important;
            margin-bottom: 21px;
+           line-height: 31px;
        }
-      
-       
+       span{
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+       }
     }
-    
+    .detail-lower{
+        display: flex;
+        justify-content: flex-end
+    }
 }
 
-.detail-lower{
+.hero-detail__detailEnd{
     display: flex;
-    justify-content: flex-end
+    justify-content: space-between;
+    img{
+        margin-bottom: 120px;
+    }
 }
+
 
 .sports_1{
    img{
     position: relative;      
     top: 5px;
+    padding: 0 2px;
    }
 }
