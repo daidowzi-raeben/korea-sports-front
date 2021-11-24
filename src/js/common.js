@@ -5,18 +5,21 @@ $(document).ready(function(){
     var navList = $('.nav-sub__item');
 
     navList.on('mouseover', function(){
-        navList.removeClass('is_active');
-        $(this).addClass('is_active');
+        navList.removeClass('show');
+        $(this).addClass('show');
         $('.nav-sub__wrap').hide();
         $(this).children('.nav-sub__wrap').show();
     })
 
     $('.nav-sub').on('mouseleave', function(){
+        navList.removeClass('show');
         $('.nav-sub__wrap').hide();
 
     })
 
 // dropdown click
+
+var eventList  = $('.option .event li');
 
 $('.dropdown').click(function(){
     $('.dropdown').removeClass('is_active');
@@ -24,15 +27,15 @@ $('.dropdown').click(function(){
     $('.option').show();
 });
 
-$('.option .event li').click(function(){
+eventList.click(function(){
     $(this).toggleClass('is_active');
 });
 
 $('.event--all').click(function(){
     if($(this).hasClass('is_active')){
-        $('.option .event li').addClass('is_active');
+        eventList.addClass('is_active');
     }else{
-        $('.option .event li').removeClass('is_active');
+        eventList.removeClass('is_active');
     }
 });
 
