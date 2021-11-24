@@ -1,0 +1,198 @@
+@@include('../../include/header.html', {
+title : "체육일정",
+page_name : "월간일정",
+type : "ssp-sub",
+active_1 : '',
+active_2 : '',
+active_3 : '',
+active_4 : '',
+active_5 : '',
+active_6 : '',
+active_7 : 'is_active',
+active_8 : ''
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "schedule",
+active_1 : '',
+active_2 : 'is_active'
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "schedule",
+depth_2 : "월간일정"
+})
+<!-- banner -->
+<!-- contents start -->
+
+<div class="container scheMonth">
+    <div class="container-inner">
+        <h2 class="nosearchTitle mb-79">월간일정</h2>
+        <div class="list-info schedule">
+            <div class="list-info__left">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <div class="calendar-header--title">
+                            SPORTS <br>
+                            CALENDAR<br>
+                            <strong>2021</strong>
+                        </div>
+                        <div class="calendar-header--month">
+                            <strong>11</strong><br>
+                            NOVEMBER
+                        </div>
+                        <div class="calendar-header--btn">
+                            <div class="prev">
+                                <i class="icon icon-select__arrow "></i>
+                            </div>
+                            <div class="next">
+                                <i class="icon icon-select__arrow "></i>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="calendar-marker">
+                        <span class="marker-purple">국내대회</span>
+                        <span class="marker-green">국제대회</span>
+                        <span class="marker-blue">회의</span>
+                        <span class="marker-grey">기타</span>
+                    </div>
+                    <div class="calendar-body">
+                        <ul class="calendar-body--month clb">
+                            <li>SUN</li>
+                            <li>MON</li>
+                            <li>TUE</li>
+                            <li>WED</li>
+                            <li>THU</li>
+                            <li>FIR</li>
+                            <li>SAT</li>
+                        </ul>
+                        <ul class="calendar-body--day clb">
+                            <li>1
+                                <div class="marker">
+                                    <span class="marker-purple--sm"></span>
+                                    <span class="marker-green--sm"></span>
+                                    <span class="marker-blue--sm"></span>
+                                    <span class="marker-grey--sm"></span>
+                                </div>
+                            </li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5
+                                <div class="marker">
+                                    <span class="marker-blue--sm"></span>
+                                    <span class="marker-grey--sm"></span>
+                                </div>
+                            </li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li class="grey">1</li>
+                            <li class="grey">2</li>
+                            <li class="grey">3</li>
+                            <li class="grey">4</li>
+                            <li class="grey">5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="list-info__right formInput">
+                <div class="top">
+                    <div class="top-btns">
+                        <button class="btn schedule-btn is_active">전체</button>
+                        <button class="btn schedule-btn">국제</button>
+                        <button class="btn schedule-btn">국내</button>
+                        <button class="btn schedule-btn">회의</button>
+                        <button class="btn schedule-btn">기타</button>
+                    </div>
+                    <div class="top-search">
+                        <input type="text" name="contents" class="" placeholder="체육일정 검색하세요">
+                        <button class="btn">검색</button>
+                    </div>
+                </div>
+                <div class="con">
+                    <div class="con-item">
+                        <h3>국제대회</h3>
+                        <dl>
+                            <dt>[FINA] 제19회 세계수영선수권대회</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>일본 후쿠오카</dd>
+                        </dl>
+                        <dl>
+                            <dt>2021 SportAccord World Sport & Business Summit</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>노르웨이 오슬로</dd>
+                        </dl>
+                        <dl>
+                            <dt>[OCA] 제3회 산터우아시아청소년대회</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>중국 산터우</dd>
+                        </dl>
+                    </div>
+                    <div class="con-item">
+                        <h3>국제대회</h3>
+                        <dl>
+                            <dt>2021 전국시·도대항학생대회 겸 제50회 전국소년체육대회 골프부 경기</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>노벨골프장</dd>
+                        </dl>
+                        <dl>
+                            <dt>제25회 대한스키협회장배 전국롤러스키대회</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>전라북도, 무주군 태권도원</dd>
+                        </dl>
+                        <dl>
+                            <dt>17회 대한태권도협회장배 전국태권도품새선수권대회</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>중국 산터우</dd>
+                        </dl>
+                    </div>
+                    <div class="con-item">
+                        <h3>회의</h3>
+                        <dl>
+                            <dt>2021 SportAccord World Sport & Business Summit</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>노르웨이 오슬로</dd>
+                        </dl>
+                    </div>
+                    <div class="con-item">
+                        <h3>기타</h3>
+                        <dl>
+                            <dt>[IOC] IOC부상방지컨퍼런스</dt>
+                            <dd class="date">2021/11/03~2021/11/07</dd>
+                            <dd>모나코</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- contents end -->
+<!-- footer -->
+@@include('../../include/footer.html',{
+type : 'ssp-sub'
+})

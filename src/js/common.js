@@ -415,6 +415,10 @@ $('.top').click(function(){
     $(window).scrollTop('0')
 });
 
+//체육일정 상단 버튼
+$('.schedule-btn').click(function(){
+    $(this).addClass('is_active').siblings().removeClass('is_active')
+});
 
 // $('.select').click(function(){
 //     $(this).children('.select-gray').show();
@@ -454,57 +458,6 @@ $('.slide .slide-con').slick({
     draggable : false,
     arrows : true,
 });
-
-// chartvar todayChart = document.getElementById('chartID').getContext('2d');
-var todayData = 80 // 데이터 입력
-    dataesle =  100 - todayData;
-    todayText = '차트이름',
-
-$('.todayPer em').text(todayData);
-$('.todayText').text(todayText)
-
-new Chart(todayChart, {
-    type: 'doughnut', // 차트형식
-    data: {
-        datasets: [{
-            label: false,
-            data: [todayData,dataesle],
-            backgroundColor: ['#36BAC6'],
-        }],
-        labels: false
-    },
-    options: {
-        responsive: true,
-        
-        legend: {
-            position: 'bottom'
-        },
-        cutoutPercentage:82,
-        plugins: {
-            datalabels: {
-                color: ['#fff'],
-                borderWidth: 0,
-                borderColor: ['#fff'],
-                borderRadius : 25,
-                anchor: 'center',
-                formatter: function(value, context) {
-                    return (value > 10) ? null : null //data가 10 미만이면 숫자 값은 출력되지 않습니다.
-                }
-            },
-        },
-        title: {
-            display: true,
-            position: 'bottom',
-        },
-        tooltips: {
-            enabled: false
-        },
-        hover: {
-            animationDuration: 0
-        },
-    }
-});
-
 
 
 })(jQuery);

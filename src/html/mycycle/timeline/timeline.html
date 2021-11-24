@@ -103,7 +103,7 @@ depth_3 : ""
             <div class="history-circle history-circle__top">
                 <div class="history-circle--inner font-25">2020</div>
             </div>
-            <!-- 추가요소-->
+            <!-- 연도별 추가요소-->
             <div class="history">
                 <div class="history-circle history-circle__bottom">
                     <div class="history-circle--inner font-25">2021</div>
@@ -130,6 +130,7 @@ depth_3 : ""
                                             <span>등록구분 : 운동부 및 클럽</span>
                                         </div>
                                     </li>
+                                    <!-- item-bar 끝나는 지점 h5에 target 클래스 추가 -->
                                     <li class="item-list__ch">
                                         <h5 class="font-17 font-m target">경기인 구분 : 지도자</h5>
                                         <div class="line">
@@ -234,7 +235,7 @@ depth_3 : ""
                                             <span>종목 : -68Kg</span>
                                             <span>순위 : 1위</span>
                                             <div class="media">
-                                                <h5 class="font-18 font-m">경기영상</h5>
+                                                <h5 class="font-18 font-m ">경기영상</h5>
                                                 <ul>
                                                     <li><img src="../../../img/ssp/match_thumb.png" alt="match_thumb">
                                                     </li>
@@ -268,6 +269,7 @@ depth_3 : ""
                     </ul>
                 </div>
             </div>
+            
             <!-- 추가요소-->
         </div>
         <div class="state">
@@ -454,7 +456,7 @@ depth_3 : ""
             var target_offset = $(this).siblings('.item-list').children().eq(li_length - 1).find('.target')
                 .offset().top;
             console.log(target_offset - item_offset);
-            $(this).css('height', target_offset - item_offset + 4);
+            $(this).css('height', target_offset - item_offset);
 
         });
     }

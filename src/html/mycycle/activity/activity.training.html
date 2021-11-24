@@ -26,11 +26,57 @@
     <!-- contents start -->
     <div class="container">
         <div class="container-inner">
+            <form action="" method="GET">
+                <div class="searchBox">
+                    <h2>대표선수·후보선수 훈련이력</h2>
+                    <div>
+                        <ul class="formInput">
+                            <li class="searchBox-item">
+                                <span class="searchTitle">구분</span>
+                                <div class="select-group wd-229">
+                                    <select name="kind" id="kind">
+                                        <option value="0" selected="">전체</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                    <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="searchBox-item">
+                                <span class="searchTitle">훈련기간</span>
+                                <div>
+                                    <input type='text' id="datepicker1" class="calender month datepicker-here wd-161 mr-5" data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
+                                    <input type='text' id="datepicker1" class="calender month datepicker-here wd-161" data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
+                                </div>
+                            </li>
+                            <li class="searchBox-item searchBox-btn">
+                                <button type="button" class="btn btn-block">조회</button>
+                            </li>
+                        </ul>
+                        <div class="searchBox-img"></div>
+                    </div>
+                </div>
+            </form>
+            <div class="titleWithEX">
+                <p class="font-m font-18">대표선수·후보선수 훈련이력</p>
+                <h2>조회결과</h2>
+            </div>
+            <div class="emptyBox">
+                선수 등록이력이 없습니다.
+            </div>
         </div>
     </div>
     <!-- contents end -->
-    
     <!-- footer -->
     @@include('../../include/footer.html',{
     type : 'ssp-sub'
     })
+
+
+    <script src="../../js/ksDatepicker.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cntr = $('.conWrap');
+            ksdatepicker.fnc_set(cntr);
+        });
+    </script>
