@@ -425,6 +425,10 @@ $('.top').click(function(){
     $(window).scrollTop('0')
 });
 
+//체육일정 상단 버튼
+$('.right-btn-wrap button').click(function(){
+    $(this).addClass('is_active').siblings().removeClass('is_active')
+});
 
 // $('.select').click(function(){
 //     $(this).children('.select-gray').show();
