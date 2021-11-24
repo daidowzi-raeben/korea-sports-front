@@ -5,7 +5,6 @@ $(document).ready(function(){
  var media_li = $('.container.media .img-box');
 
  media_li.click(function(){
-    console.log('abc');
     $('.layer-media').fadeIn();
  });
 
@@ -32,12 +31,21 @@ $(document).ready(function(){
 
 // dropdown click
 
-//조건선택 탭
+
+
+
+
+//조건선택 탭 열기
 
 var eventTab = $('.midSelect-con__item .dropdown');
 var eventItem = $('.option li');
 
 eventTab.click(function(){
+    if($(this).parents('.midSelect-con__item').hasClass('notData')){
+        alert('이전 조건을 선택하세요')
+        return false;
+    }
+    
     if($(this).hasClass('is_active')){
         $(this).removeClass('is_active');
         $(this).siblings('.option').hide();
@@ -47,10 +55,41 @@ eventTab.click(function(){
     $('.option').hide();
     $(this).addClass('is_active');
     $(this).siblings('.option').show();
+
 });
 
+
+
+// console.log($('.con-event label').length);
+
+// $('.con-event label').html();
+// console.log($('.con-event label').html())
+
+// var labelValue = ''
+// $('.con-event label').each(function(i,a){
+//     if(a == '전체') {
+//         labelValue += '<li class="event--all>'+$('.con-event label').eq(i).text()+'</li>';
+//     } else {
+//         labelValue += '<li>'+$('.con-event label').eq(i).text()+'</li>';
+//     }
+// });
+// $('.con-event .event').append(labelValue);
+// console.log();
+
+
+
+// fn_dataLoad();
+// function fn_dataLoad(el) {
+//     if(el) {
+//         $('.'+el).append();
+//     } else {
+//         //전체데이터를 토글에 어팬드
+//     }
+// }
+
 // 조건선택 all
-eventItem.click(function(){
+
+$('.option li').click(function(){
     if($(this).siblings('.event--all').hasClass('is_active')){
         $(this).siblings('.event--all').removeClass('is_active');
     }
@@ -61,7 +100,44 @@ $('.event--all').click(function(){
     $(this).siblings('li').removeClass('is_active');
 
 });
-//  oprion  클릭 색상
+
+// 선택 초기화 버튼
+
+$('.option .btn-reset').click(function(){
+    $(this).parents('.option').find('li').removeClass('is_active');
+});
+
+$('.select-con--item input[type=radio]').click(function(){
+    $('.select-con--item input[type=radio]').next('label').removeClass('is_active');
+    $('.select-con--item input[type=radio]').attr('checked',false);
+    $(this).attr('checked',true);
+    $(this).next('label').addClass('is_active');
+});
+$('.option .btn-submit').click(function(){
+    $(this).parents('.midSelect-con__item').find('label').removeClass('is_active');
+    $(this).parents('.option').find('li').each(function(key,val){
+        if($(this).hasClass('is_active') == true) {
+            var d = $(this).data('for');
+            $(this).parents('li.midSelect-con__item').find('.select-con--item').each(function(key2,val2){
+                var c = $(this).find('input').prop('id');
+                
+                if(c === d) {
+                    $(this).find('label').addClass('is_active')
+                } 
+            })
+        }
+        $(this).removeClass('is_active')
+        
+    })
+
+    $(this).parents('.option').hide();
+    $('.dropdown').removeClass('is_active');
+});
+
+
+
+
+
 
 
 
@@ -468,10 +544,40 @@ $('.slide .slide-con').slick({
     arrows : true,
 });
 
-
+fn_dropDownLoad()
 })(jQuery);
 
 });
+
+
+
+function fn_dropDownLoad() {
+    var labelValue = '';
+    $('.midSelect-con__list .midSelect-con__item').each(function(key,val){
+        $(this).children('.option').find('li').remove();
+        $(this).children('.select-con').find('label').each(function(key2,val2){
+            if($(this).text() == '전체'){
+                labelValue += '<li class="event--all" data-for="'+$(this).prop('for')+'">'+$(this).text()+'</li>';
+            }else{
+                labelValue += '<li class="" data-for="'+$(this).prop('for')+'">'+$(this).text()+'</li>';
+            }
+        })
+        
+        $(this).children('.option').find('ul').append(labelValue)
+        labelValue = '';
+    });
+    $('.option li').click(function(){
+        if($(this).siblings('.event--all').hasClass('is_active')){
+            $(this).siblings('.event--all').removeClass('is_active');
+        }
+        $(this).toggleClass('is_active');
+    });
+    
+    $('.event--all').click(function(){
+        $(this).siblings('li').removeClass('is_active');
+    
+    });
+}
 
 
 // 스크롤 이벤트

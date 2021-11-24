@@ -124,7 +124,7 @@ depth_2 : "팀"
             </div>
             <div class="midSelect-con mt-17">
                 <ul class="midSelect-con__list">
-                    <li class="midSelect-con__item">
+                    <li class="midSelect-con__item con-event">
                         <div class="dropdown" data-id="0">종목선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con">
                             <div class="select-con--item">
@@ -133,31 +133,31 @@ depth_2 : "팀"
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_0">
-                                <label for="event_1">검도</label>
+                                <label for="event_0">검도</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_1">
-                                <label for="event_2">골프</label>
+                                <label for="event_1">골프</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_2">
-                                <label for="event_3">궁도</label>
+                                <label for="event_2">궁도</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_3">
-                                <label for="event_4">수영</label>
+                                <label for="event_3">수영</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_4">
-                                <label for="event_5">택견</label>
+                                <label for="event_4">택견</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_5">
-                                <label for="event_6">컬링</label>
+                                <label for="event_5">컬링</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_6">
-                                <label for="event_7">크리켓</label>
+                                <label for="event_6">크리켓</label>
                             </div>
                         </div>
 
@@ -194,20 +194,76 @@ depth_2 : "팀"
                         <div class="dropdown" data-id="1">시도선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="seoul" value="seoul">
-                                <label for="seoul">서울</label>
+                                <input type="radio" name="sido" id="seoul" value="seoul" onclick="fn_sidoChange(this)">
+                                <label for="seoul">서울특별시</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="radio" name="sido" id="busan" value="busan" onclick="fn_sidoChange(this)">
-                                <label for="busan">부산</label>
+                                <label for="busan">부산광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="deagu">
-                                <label for="deagu">대구</label>
+                                <input type="radio" name="sido" id="deagu" onclick="fn_sidoChange(this)">
+                                <label for="deagu">대구광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="radio" name="sido" id="incheon">
-                                <label for="incheon">인천</label>
+                                <input type="radio" name="sido" id="incheon" onclick="fn_sidoChange(this)">
+                                <label for="incheon">인천광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Gwangju" onclick="fn_sidoChange(this)">
+                                <label for="Gwangju">광주광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Daejeon" onclick="fn_sidoChange(this)">
+                                <label for="Daejeon">대전광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Ulsan" onclick="fn_sidoChange(this)">
+                                <label for="Ulsan">울산광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Sejong" onclick="fn_sidoChange(this)">
+                                <label for="Sejong">세종특별자치시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Gyeonggi" onclick="fn_sidoChange(this)">
+                                <label for="Gyeonggi">경기도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Gangwon" onclick="fn_sidoChange(this)">
+                                <label for="Gangwon">강원도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Chungbuk" onclick="fn_sidoChange(this)">
+                                <label for="Chungbuk">충청북도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Chungnam" onclick="fn_sidoChange(this)">
+                                <label for="Chungnam">충청남도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Jeonbuk" onclick="fn_sidoChange(this)">
+                                <label for="Jeonbuk">전라북도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Jeonnam" onclick="fn_sidoChange(this)">
+                                <label for="Jeonnam">전라남도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Gyeongbuk" onclick="fn_sidoChange(this)">
+                                <label for="Gyeongbuk">경상북도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Gyeongnam" onclick="fn_sidoChange(this)">
+                                <label for="Gyeongnam">경상남도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="Jeju" onclick="fn_sidoChange(this)">
+                                <label for="Jeju">제주특별자치도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="radio" name="sido" id="none" onclick="fn_sidoChange(this)">
+                                <label for="none">시도없음</label>
                             </div>
                         </div>
 
@@ -220,27 +276,6 @@ depth_2 : "팀"
                                 </div>
                                 <div class="option-body">
                                     <ul class="event">
-                                        <li class="event--all">
-                                            전체
-                                        </li>
-                                        <li>서울특별시</li>
-                                        <li>부산광역시</li>
-                                        <li>대구광역시</li>
-                                        <li>인천광역시</li>
-                                        <li>광주광역시</li>
-                                        <li>대전광역시</li>
-                                        <li>울산광역시</li>
-                                        <li>세종특별자치시</li>
-                                        <li>경기도</li>
-                                        <li>강원도</li>
-                                        <li>충청북도</li>
-                                        <li>충청남도</li>
-                                        <li>전라북도</li>
-                                        <li>전라남도</li>
-                                        <li>경상북도</li>
-                                        <li>경상남도</li>
-                                        <li>제주특별자치도</li>
-                                        <li>시도없음</li>
                                     </ul>
                                 </div>
                             </div>
@@ -252,7 +287,7 @@ depth_2 : "팀"
                             </div>
                         </div>
                     </li>
-                    <li class="midSelect-con__item" >
+                    <li class="midSelect-con__item notData" >
                         <div class="dropdown" data-id="2">시군구 선택 <i class="icon icon-regist_arrow"></i> <i class="icon icon-regist_arrow--white"></i></div>
                         <div class="select-con concon">
                             <div class="select-con--item">
@@ -318,7 +353,7 @@ depth_2 : "팀"
                             <div class="option-footer">
                                 <div class="btn-group">
                                     <button type="button" class="btn-sky btn-reset">선택 초기화</button>
-                                    <button type="button" class="btn-sky btn-sebmit">선택 완료</button>
+                                    <button type="button" class="btn-sky btn-submit">선택 완료</button>
                                 </div>
                             </div>
                         </div>
@@ -446,20 +481,20 @@ depth_2 : "팀"
 
 <script>
 
-var 라벨0 = $('.midSelect-con__item').eq(0).find('label');
-var 옵션0 = $('.option').eq(0).find('.event');
+// var 라벨0 = $('.midSelect-con__item').eq(0).find('label');
+// var 옵션0 = $('.option').eq(0).find('.event');
    
-var 종목 = []
+// var 종목 = []
 
-for(var i = 1; i < $('input[name=event]').length; i++){
-    종목.push( 라벨0.eq(i).html() )
-}
+// for(var i = 1; i < $('input[name=event]').length; i++){
+//     종목.push( 라벨0.eq(i).html() )
+// }
 
-종목.forEach(function(a){
-    var html = '<li>'+ a +'</li>'
-    옵션0.append(html);
-});
-옵션0.prepend('<li class="event--all"><label for="event_all">전체</label></li>')
+// 종목.forEach(function(a){
+//     var html = '<li>'+ a +'</li>'
+//     옵션0.append(html);
+// });
+// 옵션0.prepend('<li class="event--all"><label for="event_all">전체</label></li>')
 
 
 
@@ -480,7 +515,9 @@ for(var i = 1; i < $('input[name=event]').length; i++){
                                                 <label for="gong_${i}">${data}</label>
                                             </div>`
                                 $('.concon').append(html);
+
                         });
+                        console.log($(me).parents('.midSelect-con__item').next('.midSelect-con__item').removeClass('notData'));
                     });
                 }
             }

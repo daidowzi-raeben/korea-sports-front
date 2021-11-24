@@ -427,6 +427,15 @@ $border: #BEBEBE;
                                 line-height: 30px;
                                 padding-left: 16px;
                                 cursor: pointer;
+
+                                &.is_active{
+                                    border: 1px solid #1971e3;
+                                    border-radius: 20px;
+                                    color: #1971e3;
+                                    line-height: 28px;
+                                    padding-left: 15px;
+                                }
+
                             }
                             input:checked + label{
                                 border: 1px solid #1971e3;
