@@ -336,6 +336,26 @@
     display: flex;
     justify-content: center;
 
+    button{
+        position: relative;
+        i{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .icon-pagination-white, .icon-pagination--d-white{
+            display: none;
+        }
+
+        &:hover{
+            .icon-pagination-white, .icon-pagination--d-white{
+                display: block;
+            }
+        }
+    }
+
     button,
     li{
         min-width: 35px;
@@ -345,6 +365,8 @@
         background-color: #fff;
         text-align: center;
         line-height: 35px;
+        position: relative;
+
         &:hover{
             background: #3D3D3D;
             border: 1px solid #3D3D3D;
@@ -393,6 +415,10 @@
     &-control--next{
         font-size: 0;
         margin-left: 25px;
+
+        button{
+            transform: rotate(180deg);
+        }
 
         i{
             transform: rotate(180deg);

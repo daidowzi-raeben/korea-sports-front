@@ -30,7 +30,7 @@
         <div class="modal-body">
             <p>
                 확인버튼을 클릭하시면<br />
-                선수 / 선수등록 몰록 엑셀파일이 <br />
+                선수 / 선수등록 목록 엑셀파일이 <br />
                 다운로드됩니다.
             </p>
         </div>
@@ -535,6 +535,16 @@
             <div class="lookup-body">
                 <div class="table-wrap mt-20">
                     <table>
+                        <colgroup>
+                            <col width="56">
+                            <col width="87">
+                            <col width="67">
+                            <col width="162">
+                            <col width="227">
+                            <col width="153">
+                            <col width="230">
+                            <col width="224">
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th scope="col">번호</th>
@@ -567,8 +577,14 @@
                 <!-- 페이지네이션 -->
                 <div class="pagination mt-30">
                     <div class="pagination-control--prev">
-                        <button type="button"><i class="icon icon-pagination--d"></i></button>
-                        <button type="button" class="prev"><i class="icon icon-pagination"></i></button>
+                        <button type="button">
+                            <i class="icon icon-pagination--d"></i>
+                            <i class="icon icon-pagination--d-white"></i>
+                        </button>
+                        <button type="button" class="prev">
+                            <i class="icon icon-pagination"></i>
+                            <i class="icon icon-pagination-white"></i>
+                        </button>
                     </div>
                     <ol class="pagination-list">
                         <li><a href="#">1</a></li>
@@ -578,8 +594,14 @@
                         <li><a href="#">5</a></li>
                     </ol>
                     <div class="pagination-control--next">
-                        <button type="button" class="next"><i class="icon icon-pagination"></i></button>
-                        <button type="button"><i class="icon icon-pagination--d"></i></button>
+                        <button type="button" class="next">
+                            <i class="icon icon-pagination"></i>
+                            <i class="icon icon-pagination-white"></i>
+                        </button>
+                        <button type="button">
+                            <i class="icon icon-pagination--d"></i>
+                            <i class="icon icon-pagination--d-white"></i>
+                        </button>
                     </div>
                 </div>
             </div>

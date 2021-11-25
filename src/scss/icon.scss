@@ -136,9 +136,21 @@
         display: inline-block;
     }
     &-pagination--d{
-        width: 10px;
+        width: 11px;
         height: 10px;
         background: url(../img/common/pagination_arrow_d.svg) no-repeat center / 100%;
+        display: inline-block;
+    }
+    &-pagination--d-white{
+        width: 11px;
+        height: 10px;
+        background: url(../img/common/icon-pagination--d-white.svg) no-repeat center / 100%;
+        display: inline-block;
+    }
+    &-pagination-white{
+        width: 5px;
+        height: 10px;
+        background: url(../img/common/icon-pagination-white.svg) no-repeat center / 100%;
         display: inline-block;
     }
     &-lock{
