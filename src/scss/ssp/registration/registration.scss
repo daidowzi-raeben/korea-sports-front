@@ -411,6 +411,13 @@ $border: #BEBEBE;
                         height: 311px;
                         overflow-y: scroll;
                         padding:8px 9px;
+
+                        .con-part{
+                            border-bottom: 1px solid #B9BCC4;
+                            padding-bottom: 16px;
+                            margin-bottom: 16px;
+                        }
+
                         &::-webkit-scrollbar{
                             
                         }
