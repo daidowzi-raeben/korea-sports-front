@@ -186,8 +186,12 @@ $(window).on('scroll', function(){
                 }
             }
         });
-        if(st.eq(0).offset().top > wst) {
-            cl.eq(0).addClass('is_active');
+        if(st.eq(0).length != 0){
+            if(st.eq(0).offset().top > wst) {
+                cl.eq(0).addClass('is_active');
+            }
+        }else{
+            return false;
         }
 
 });
