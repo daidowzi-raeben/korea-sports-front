@@ -1,6 +1,6 @@
 <div class="conWrap">
     <div class="graph">
-        <div class="graph-scroll graph-scroll--bar">
+        <div class="graph-scroll graph-scroll--bar gageGraph">
             <div class="parent">
                 <ul class="container clb">
                     <!-- 데이터 반복 / data-option은 숫자만 입력 -->
@@ -197,3 +197,16 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        var bar_el = $('.graph-scroll--bar .parent .container li');
+        var bar_total_w = 0;
+        bar_el.each(function () {
+            bar_total_w = $(this).outerWidth() + bar_total_w;
+        });
+        $('.graph-scroll--bar .parent .container').css({
+            'width': bar_total_w + 50,
+            'display': 'flex'
+        });
+    });
+</script>
