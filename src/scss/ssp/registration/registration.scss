@@ -640,6 +640,20 @@ $border: #BEBEBE;
         }
 
     }
+    .conWrap {
+        .graph {
+            &::after {
+                content: "";
+                width: 47px;
+                height: 29px;
+                position: absolute;
+                background: url(../../img/ssp/mouse_drag.svg) no-repeat;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -30px;
+            }
+        }
+    }
 }
 
 .b-right{
@@ -652,5 +666,14 @@ $border: #BEBEBE;
     }
     .height-96{
         height: 96px !important;
+    }
+    .height-49 {
+        height: 49px !important;
+    }
+}
+
+tr.border-bottom {
+    th {
+        border-bottom: 1px solid #3d3d3d !important;
     }
 }
