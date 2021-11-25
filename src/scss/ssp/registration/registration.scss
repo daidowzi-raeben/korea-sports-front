@@ -620,6 +620,25 @@ $border: #BEBEBE;
             }
         }
 
+        &.lookup__list{
+            .lookup-header{
+                padding-bottom: 0;
+                border-bottom: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            table{
+                border-top: none;
+                th{
+                    background-color: #F1F4F6;
+                }
+            }
+            .lookup-header__title{
+                margin-bottom: 0;
+            }
+        }
+
     }
 }
 
