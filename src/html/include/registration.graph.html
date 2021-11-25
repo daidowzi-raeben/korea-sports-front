@@ -197,16 +197,3 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function(){
-        var bar_el = $('.graph-scroll--bar .parent .container li');
-        var bar_total_w = 0;
-        bar_el.each(function () {
-            bar_total_w = $(this).outerWidth() + bar_total_w;
-        });
-        $('.graph-scroll--bar .parent .container').css({
-            'width': bar_total_w + 50,
-            'display': 'flex'
-        });
-    });
-</script>

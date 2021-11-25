@@ -1,44 +1,51 @@
 $(document).ready(function () {
-        var bar_el = $('.graph-scroll--bar .parent .container').children();
+        var bar_el = $('.graph-scroll--bar .parent .container li');
         var bar_total_w = 0;
+        
         bar_el.each(function () {
-            bar_total_w = $(this).outerWidth() + bar_total_w;
+            bar_total_w += bar_el.outerWidth();
         });
+        
         $('.graph-scroll--bar .parent .container').css({
             'width': bar_total_w,
             'display': 'flex'
         });
-        
+
+        bar_el = $('.graph-scroll--bar .parent .container li').outerWidth();
+        bar_el_length = $('.graph-scroll--bar .parent .container li').length;
+            
+        $('.graph-scroll--bar .parent .container').css('width', bar_el * bar_el_length - 70);   
+
     var g_slider = document.querySelector(".graph-scroll--bar .parent");
     var g_slider_inner = document.querySelector(".graph-scroll--bar .parent .container");
     var g_pressed = false;
     var g_start;
     var x;
 
-    g_slider.addEventListener("mousedown", e => {
+    g_slider.addEventListener("mousedown",function(e){
         g_pressed = true;
         g_start = e.offsetX - g_slider_inner.offsetLeft;
         g_slider.style.cursor = "grabbing";
     })
 
-    g_slider.addEventListener("mouseenter", () => {
+    g_slider.addEventListener("mouseenter",function(){
         g_slider.style.cursor = "grab";
     })
 
-    g_slider.addEventListener("mouseup", () => {
+    g_slider.addEventListener("mouseup", function(){
         g_slider.style.cursor = "grab";
     })
 
-    window.addEventListener("mouseup", () => {
+    window.addEventListener("mouseup",function(){
         g_pressed = false;
     })
 
-    g_slider.addEventListener("mousemove", e => {
+    g_slider.addEventListener("mousemove",function(e){
         if (!g_pressed) return
         e.preventDefault();
         x = e.offsetX;
 
-        g_slider_inner.style.left = `${x - g_start}px`;
+        g_slider_inner.style.left = (x - g_start) + 'px';
         checkboundary();
     })
 
@@ -49,7 +56,7 @@ $(document).ready(function () {
         if (parseInt(g_slider_inner.style.left) > 0) {
             g_slider_inner.style.left = "0px";
         } else if (inner.right < outer.right) {
-            g_slider_inner.style.left = `-${inner.width - outer.width}px`;
+            g_slider_inner.style.left = '-' + (inner.width - outer.width) + 'px';
         }
     }
 
@@ -111,5 +118,5 @@ $(document).ready(function () {
         return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
     }
 
-
+    
 });
