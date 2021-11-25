@@ -580,28 +580,18 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
 <!-- contents end -->
 
 <script>
-    // var 라벨0 = $('.midSelect-con__item').eq(0).find('label');
-    // var 옵션0 = $('.option').eq(0).find('.event');
-
-    // var 종목 = []
-
-    // for(var i = 1; i < $('input[name=event]').length; i++){
-    //     종목.push( 라벨0.eq(i).html() )
-    // }
-
-    // 종목.forEach(function(a){
-    //     var html = '<li>'+ a +'</li>'
-    //     옵션0.append(html);
-    // });
-    // 옵션0.prepend('<li class="event--all"><label for="event_all">전체</label></li>')
-
     function fn_sidoChange(me) {
         var chk = $(me).is(":checked");
         if (chk) {
             $.getJSON("../../json/test.json", function (a) {
                 $(".concon").html("");
                 a.data.forEach(function (data, i) {
-                    var html = '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' + i + '"><label for="gong_${i}">' + data + '</label></div>'
+                    var html =
+                        '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
+                        i +
+                        '"><label for="gong_${i}">' +
+                        data +
+                        "</label></div>";
                     $(".concon").append(html);
                 });
                 console.log(
@@ -614,6 +604,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         }
     }
 
+    //  클릭 이벤트 함수
     function clickHandler() {
         $(".option li").click(function () {
             if ($(this).siblings(".event--all").hasClass("is_active")) {
@@ -627,42 +618,51 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         });
     }
 
+    // 데이터 통신
+
     $('select[name="event"]').on("change", function () {
-        $("ul.event:first").html("");
+        $(".select-con:first").html("");
         if ($(this).val() == "동계종목") {
             $.getJSON("../../json/test.json", function (a) {
-                a.data.forEach(function (data) {
-                    var event = "<li>" + data + "</li>";
-
-                    $("ul.event:first").append(event);
+                a.data.forEach(function (val, key) {
+                    var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                    $(".select-con:first").append(event);
                 });
-                $("ul.event:first").prepend('<li class="event--all">전체</li>');
-                clickHandler();
-            });
+                $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                                                fn_dropDownLoad();
+                                            });
+                                            clickHandler();
         } else if ($(this).val() == "하계종목") {
             $.getJSON("../../json/test2.json", function (a) {
-                a.data.forEach(function (data) {
-                    var event = "<li>" + data + "</li>";
-
-                    $("ul.event:first").append(event);
+                a.data.forEach(function (val, key) {
+                    var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                    $(".select-con:first").append(event);
                 });
-                $("ul.event:first").prepend('<li class="event--all">전체</li>');
-                clickHandler();
+                $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                                                fn_dropDownLoad();
             });
+            clickHandler();
         }
     });
 
-    //    console.log( $('.midSelect-con__item:not(:first)') )
-
-    //    $('.select-con--item label').on('click', function(){
-    //        var parentList =   $(this).parents('.midSelect-con__item');
-    //         console.log(parentList);
-    //        if( parentList.prev().find('input').is(':checked') == false ){
-    //             alert('이전 조건을 클릭하세요')
-    //             // return false;
-    //         }
-
-    //      });
+    // <div class="select-con">
+    //     <div class="select-con--item">
+    //         <input type="checkbox" name="event" id="event_all" />
+    //         <label for="event_all">전체</label>
+    //     </div>
+    // </div>
 </script>
 
 <!-- footer -->
