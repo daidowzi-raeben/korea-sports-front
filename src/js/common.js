@@ -1,9 +1,9 @@
 
 $(document).ready(function(){
-
  // 미디어 레이어 팝업
- var media_li = $('.container.media .img-box');
 
+
+ var media_li = $('.container.media .img-box');
  media_li.click(function(){
     $('.layer-media').fadeIn();
  });
@@ -548,9 +548,20 @@ $('.slide .slide-con').slick({
 fn_dropDownLoad()
 })(jQuery);
 
+
+
 });
 
+var contents = $('.modal-contents');
 
+function graph_pop_open(pop_name){
+    $('#' + pop_name).show();
+    $('.registration_pop .modal-body').html('<div>asedfasdfs</div>');
+
+}
+function graph_pop_close(pop_name){
+    $('#' + pop_name).hide();
+}
 
 function fn_dropDownLoad() {
     var labelValue = '';

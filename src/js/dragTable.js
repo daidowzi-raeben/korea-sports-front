@@ -4,46 +4,46 @@ $(document).ready(function () {
     $('.graph-scroll--table .parent .container').css('height',table_h);
     $('.graph-scroll--table .parent').css('width',1200 - table_thead_w);
     
-        var slider = document.querySelector(".graph-scroll--table .parent .container");
-        var slide_inner = document.querySelector(".graph-scroll--table .parent .container table");
-        var pressed = false;
+        var t_slider = document.querySelector(".graph-scroll--table .parent .container");
+        var t_slider_inner = document.querySelector(".graph-scroll--table .parent .container table");
+        var t_pressed = false;
         var offsetX;
         var x;
 
-        slider.addEventListener("mousedown",function(e){
-            pressed = true;
-            offsetX = e.offsetX - slide_inner.offsetLeft;
-            slider.style.cursor = "grabbing";
+        t_slider.addEventListener("mousedown",function(e){
+            t_pressed = true;
+            offsetX = e.offsetX - t_slider_inner.offsetLeft;
+            t_slider.style.cursor = "grabbing";
         })
 
-        slider.addEventListener("mouseenter",function(){
-            slider.style.cursor = "grab";
+        t_slider.addEventListener("mouseenter",function(){
+            t_slider.style.cursor = "grab";
         })
 
-        slider.addEventListener("mouseup", function(){
-            slider.style.cursor = "grab";
+        t_slider.addEventListener("mouseup", function(){
+            t_slider.style.cursor = "grab";
         })
 
         window.addEventListener("mouseup",function(){
-            pressed = false;
+            t_pressed = false;
         })
 
-        slider.addEventListener("mousemove", function(e){
-            if (!pressed) return
+        t_slider.addEventListener("mousemove", function(e){
+            if (!t_pressed) return
             e.preventDefault();
             x = e.offsetX;
 
-            slide_inner.style.left = (x - offsetX) + 'px';
+            t_slider_inner.style.left = (x - offsetX) + 'px';
             checkboundary();
         })
 
         function checkboundary() {
-            var outer = slider.getBoundingClientRect();
-            var inner = slide_inner.getBoundingClientRect();
-            if (parseInt(slide_inner.style.left) > 0) {
-                slide_inner.style.left = 0;
+            var outer = t_slider.getBoundingClientRect();
+            var inner = t_slider_inner.getBoundingClientRect();
+            if (parseInt(t_slider_inner.style.left) > 0) {
+                t_slider_inner.style.left = 0;
             } else if (inner.right < outer.right) {
-                slide_inner.style.left = '-' + (inner.width - outer.width) + 'px';
+                t_slider_inner.style.left = '-' + (inner.width - outer.width) + 'px';
             }
         }
    
