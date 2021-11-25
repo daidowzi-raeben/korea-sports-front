@@ -1,5 +1,6 @@
 @import "./var";
 @import "./mixin";
+@import "./graph";
 @mixin label($checkSize){
     display: block;
     position:relative;
