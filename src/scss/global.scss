@@ -131,6 +131,11 @@
         margin-top: #{$i}px !important;
     }
 }
+@for $i from 5 through 35{
+    .mt-#{$i*5}{
+        margin-top: #{$i*5}px !important;
+    }
+}
 
 
 // 인라인블럭 간격 제거

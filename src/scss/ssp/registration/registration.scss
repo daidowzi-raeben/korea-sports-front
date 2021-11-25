@@ -501,9 +501,12 @@ $border: #BEBEBE;
     }
 
     .lookup{
-        padding-bottom: 24px;
         position: relative;
-        margin-top: 174px;
+        margin-bottom: 95px;
+
+        &:first-child{
+            margin-top: 83px;
+        }
         
         &-header{
             border-bottom: 1px solid $border;

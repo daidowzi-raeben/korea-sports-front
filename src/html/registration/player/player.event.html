@@ -16,7 +16,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         <div class="modal-body">
             <p>
                 확인버튼을 클릭하시면<br />
-                선수 / 실업 시군구 현황 엑셀파일이 <br />
+                선수 / 종별 현황 엑셀파일이 <br />
                 다운로드됩니다.
             </p>
         </div>
@@ -81,9 +81,9 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                 </div>
                 <div class="topSelect-con__right">
                     <ul class="player">
-                        <li><a href="#"></a>종별 현황</li>
+                        <li class="is_active"><a href="#"></a>종별 현황</li>
                         <li><a href="#"></a>시도별 현황</li>
-                        <li class="is_active"><a href="#"></a>실업 시군구 현황</li>
+                        <li><a href="#"></a>실업 시군구 현황</li>
                         <li><a href="#"></a>동계종목 현황</li>
                         <li><a href="#"></a>학년별 현황</li>
                         <li><a href="#"></a>선수등록 목록</li>
@@ -97,7 +97,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         </div>
         <div class="midSelect">
             <div class="midSelect-tit">
-                <h3>실업 시군구 현황</h3>
+                <h3>종별 현황</h3>
                 <span>등록연도</span>
                 <div class="formInput">
                     <div class="select-group">
@@ -192,7 +192,17 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                         <div class="select-con">
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
+                                    name="sido"
+                                    id="cidoAll"
+                                    value="cidoAll"
+                                    onclick="fn_sidoChange(this)"
+                                />
+                                <label for="cidoAll">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input
+                                    type="checkbox"
                                     name="sido"
                                     id="seoul"
                                     value="seoul"
@@ -202,7 +212,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="busan"
                                     value="busan"
@@ -212,7 +222,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="deagu"
                                     onclick="fn_sidoChange(this)"
@@ -221,7 +231,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="incheon"
                                     onclick="fn_sidoChange(this)"
@@ -230,7 +240,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Gwangju"
                                     onclick="fn_sidoChange(this)"
@@ -239,7 +249,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Daejeon"
                                     onclick="fn_sidoChange(this)"
@@ -248,7 +258,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Ulsan"
                                     onclick="fn_sidoChange(this)"
@@ -257,7 +267,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Sejong"
                                     onclick="fn_sidoChange(this)"
@@ -266,7 +276,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Gyeonggi"
                                     onclick="fn_sidoChange(this)"
@@ -275,7 +285,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Gangwon"
                                     onclick="fn_sidoChange(this)"
@@ -284,7 +294,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Chungbuk"
                                     onclick="fn_sidoChange(this)"
@@ -293,7 +303,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Chungnam"
                                     onclick="fn_sidoChange(this)"
@@ -302,7 +312,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Jeonbuk"
                                     onclick="fn_sidoChange(this)"
@@ -311,7 +321,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Jeonnam"
                                     onclick="fn_sidoChange(this)"
@@ -320,7 +330,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Gyeongbuk"
                                     onclick="fn_sidoChange(this)"
@@ -329,7 +339,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Gyeongnam"
                                     onclick="fn_sidoChange(this)"
@@ -338,7 +348,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="Jeju"
                                     onclick="fn_sidoChange(this)"
@@ -347,7 +357,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="select-con--item">
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="sido"
                                     id="none"
                                     onclick="fn_sidoChange(this)"
@@ -365,86 +375,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                     </p>
                                 </div>
                                 <div class="option-body">
-                                    <ul class="event event-radio"></ul>
-                                </div>
-                            </div>
-                            <div class="option-footer">
-                                <div class="btn-group">
-                                    <button type="button" class="btn-sky btn-reset">
-                                        선택 초기화
-                                    </button>
-                                    <button type="button" class="btn-sky btn-submit">
-                                        선택 완료
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="midSelect-con__item notData">
-                        <div class="dropdown" data-id="2">
-                            시군구 선택 <i class="icon icon-regist_arrow"></i>
-                            <i class="icon icon-regist_arrow--white"></i>
-                        </div>
-                        <div class="select-con concon">
-                            <div class="select-con--item">
-                                <input type="checkbox" name="sigungu" id="sigungu_all" />
-                                <label for="sigungu_all">전체</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="sigungu" id="gangnam" />
-                                <label for="gangnam">강남구</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="sigungu" id="gangdong" />
-                                <label for="gangdong">강동구</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="sigungu" id="gangbuk" />
-                                <label for="gangbuk">강북구</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="sigungu" id="gangseo" />
-                                <label for="gangseo">강서구</label>
-                            </div>
-                        </div>
-
-                        <div class="option">
-                            <div class="option-main">
-                                <div class="option-header">
-                                    <p>
-                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
-                                        가능합니다.
-                                    </p>
-                                </div>
-                                <div class="option-body">
-                                    <ul class="event">
-                                        <li class="event--all">전체</li>
-                                        <li class="event-item">강남구</li>
-                                        <li class="event-item">강동구</li>
-                                        <li class="event-item">강북구</li>
-                                        <li class="event-item">강서구</li>
-                                        <li class="event-item">관악구</li>
-                                        <li class="event-item">관악구</li>
-                                        <li class="event-item">광진구</li>
-                                        <li class="event-item">구로구</li>
-                                        <li class="event-item">금천구</li>
-                                        <li class="event-item">노원구</li>
-                                        <li class="event-item">도봉구</li>
-                                        <li class="event-item">동작구</li>
-                                        <li class="event-item">마포구</li>
-                                        <li class="event-item">서대문구</li>
-                                        <li class="event-item">서초구</li>
-                                        <li class="event-item">성동구</li>
-                                        <li class="event-item">성북구</li>
-                                        <li class="event-item">송파구</li>
-                                        <li class="event-item">양천구</li>
-                                        <li class="event-item">영등포구</li>
-                                        <li class="event-item">용산구</li>
-                                        <li class="event-item">은평구</li>
-                                        <li class="event-item">종로구</li>
-                                        <li class="event-item">중구</li>
-                                        <li class="event-item">중랑구</li>
-                                    </ul>
+                                    <ul class="event"></ul>
                                 </div>
                             </div>
                             <div class="option-footer">
@@ -480,35 +411,6 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                         </div>
                     </li>
-                    <li class="midSelect-con__item">
-                        <div class="dropdown b-right dropdown__non">종별선택</div>
-                        <div class="select-con b-right">
-                            <div class="select-con--item">
-                                <input type="checkbox" name="jong" id="jong_all" />
-                                <label for="jong_all">전체</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="jong" id="jong_sdc" />
-                                <label for="jong_sdc">시도청</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="jong" id="jong_sdche" />
-                                <label for="jong_sdche">시도체육회</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="jong" id="jong_gg" />
-                                <label for="jong_gg">경기단체</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="jong" id="jong_giup" />
-                                <label for="jong_giup">기업</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="jong" id="jong_gong" />
-                                <label for="jong_gong">공공기관</label>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </div>
             <div class="midSelect-footer mt-20">
@@ -527,9 +429,9 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup">
+        <div class="lookup mt-85">
             <div class="lookup-header">
-                <strong class="lookup-header__about">실업 시군구 현황</strong>
+                <strong class="lookup-header__about">종별 현황</strong>
                 <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
                 <div class="standard">
                     <dl class="standard-day">
@@ -557,7 +459,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
 
         <div class="lookup">
             <div class="lookup-header">
-                <strong class="lookup-header__about">실업 시군구 현황</strong>
+                <strong class="lookup-header__about">종별 현황</strong>
                 <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
                 <div class="standard">
                     <dl class="standard-day">
@@ -586,64 +488,184 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                             </th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">총계</th>
+                                            <th>총계</th>
                                         </tr>
                                         <tr>
-                                            <!-- rowspan 속성이 들어갈 경우 클래스 추가 -->
-                                            <th rowspan="4" class="b-r-d">빙상</th>
+                                            <th>골프</th>
                                         </tr>
                                         <tr>
-                                            <!-- rowspan 자식일 경우 첫번째 클래스 추가 -->
-                                            <th class="b-ltb">스피드</th>
+                                            <th>궁도</th> 
                                         </tr>
                                         <tr>
-                                            <th>쇼트트랙</th>
+                                            <th>근대5종</th>
                                         </tr>
                                         <tr>
-                                            <th>피겨</th>
+                                            <th>농구</th>
                                         </tr>
                                         <tr>
-                                            <th rowspan="7" class="b-r-d">스키</th>
+                                            <th>당구</th>
                                         </tr>
                                         <tr>
-                                            <th class="b-ltb">알파인</th>
+                                            <th>댄스스포츠</th>
                                         </tr>
                                         <tr>
-                                            <th>크로스컨트리</th>
+                                            <th>럭비</th>
                                         </tr>
                                         <tr>
-                                            <th>스노보드</th>
+                                            <th>레슬링</th>
                                         </tr>
                                         <tr>
-                                            <th>스키점프</th>
+                                            <th>롤러</th>
                                         </tr>
                                         <tr>
-                                            <th>프리스타일</th>
+                                            <th>루지</th>
                                         </tr>
                                         <tr>
-                                            <th>노르딕복합</th>
+                                            <th>바둑</th>
                                         </tr>
                                         <tr>
-                                            <th rowspan="3" class="b-r-d">봅슬레이<br>스켈레톤</th>
-                                            </th>
+                                            <th>바이애슬론</th>
                                         </tr>
                                         <tr>
-                                            <th class="b-ltb">봅슬레이</th>
+                                            <th>배구</th>
                                         </tr>
                                         <tr>
-                                            <th>스켈레톤</th>
+                                            <th>배드민턴</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">아이스하키</th>
+                                            <th>보디빌딩</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">컬링</th>
+                                            <th>복싱</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">바이애슬론</th>
+                                            <th>볼링</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2">루지</th>
+                                            <th>봅슬레이스켈레톤</th>
+                                        </tr>
+                                        <tr>
+                                            <th>빙상</th>
+                                        </tr>
+                                        <tr>
+                                            <th>사격</th>
+                                        </tr>
+                                        <tr>
+                                            <th>산악</th>
+                                        </tr>
+                                        <tr>
+                                            <th>세팍타크로</th>
+                                        </tr>
+                                        <tr>
+                                            <th>소프트테니스</th>
+                                        </tr>
+                                        <tr>
+                                            <th>수상스키·웨이크스포츠</th>
+                                        </tr>
+                                        <tr>
+                                            <th>수영</th>
+                                        </tr>
+                                        <tr>
+                                            <th>수중_핀수영</th>
+                                        </tr>
+                                        <tr>
+                                            <th>스쿼시</th>
+                                        </tr>
+                                        <tr>
+                                            <th>스키</th>
+                                        </tr>
+                                        <tr>
+                                            <th>승마</th>
+                                        </tr>
+                                        <tr>
+                                            <th>씨름</th>
+                                        </tr>
+                                        <tr>
+                                            <th>아이스하키</th>
+                                        </tr>
+                                        <tr>
+                                            <th>야구소프트볼(소프트볼)</th>
+                                        </tr>
+                                        <tr>
+                                            <th>야구소프트볼(야구)</th>
+                                        </tr>
+                                        <tr>
+                                            <th>양궁</th>
+                                        </tr>
+                                        <tr>
+                                            <th>에어로빅힙합</th>
+                                        </tr>
+                                        <tr>
+                                            <th>역도</th>
+                                        </tr>
+                                        <tr>
+                                            <th>요트</th>
+                                        </tr>
+                                        <tr>
+                                            <th>우슈</th>
+                                        </tr>
+                                        <tr>
+                                            <th>유도</th>
+                                        </tr>
+                                        <tr>
+                                            <th>육상</th>
+                                        </tr>
+                                        <tr>
+                                            <th>자전거</th>
+                                        </tr>
+                                        <tr>
+                                            <th>조정</th>
+                                        </tr>
+                                        <tr>
+                                            <th>주짓수</th>
+                                        </tr>
+                                        <tr>
+                                            <th>철인3종</th>
+                                        </tr>
+                                        <tr>
+                                            <th>체조</th>
+                                        </tr>
+                                        <tr>
+                                            <th>축구</th>
+                                        </tr>
+                                        <tr>
+                                            <th>카누</th>
+                                        </tr>
+                                        <tr>
+                                            <th>카라테</th>
+                                        </tr>
+                                        <tr>
+                                            <th>카바디</th>
+                                        </tr>
+                                        <tr>
+                                            <th>컬링</th>
+                                        </tr>
+                                        <tr>
+                                            <th>킥복싱</th>
+                                        </tr>
+                                        <tr>
+                                            <th>탁구</th>
+                                        </tr>
+                                        <tr>
+                                            <th>태권도</th>
+                                        </tr>
+                                        <tr>
+                                            <th>택견</th>
+                                        </tr>
+                                        <tr>
+                                            <th>테니스</th>
+                                        </tr>
+                                        <tr>
+                                            <th>패러글라이딩</th>
+                                        </tr>
+                                        <tr>
+                                            <th>펜싱</th>
+                                        </tr>
+                                        <tr>
+                                            <th>하키</th>
+                                        </tr>
+                                        <tr>
+                                            <th>핸드볼</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -655,43 +677,35 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                         <thead>
                                             <tr>
                                                 <th colspan="3" rowspan="2">
-                                                    시작
-                                                </th>
-                                                <th colspan="3" rowspan="2">
                                                     전체
                                                 </th>
                                                 <th colspan="3" rowspan="2">
-                                                    전체
+                                                    13세이하부
                                                 </th>
                                                 <th colspan="3" rowspan="2">
-                                                    전체
+                                                    16세이하부
                                                 </th>
                                                 <th colspan="3" rowspan="2">
-                                                    전체
+                                                    19세이하부
                                                 </th>
                                                 <th colspan="3" rowspan="2">
-                                                    전체
+                                                    대학부
+                                                </th>
+                                                <th colspan="21">
+                                                    일반부 
                                                 </th>
                                                 <th colspan="3" rowspan="2">
-                                                    전체
-                                                </th>
-                                                <th colspan="3" rowspan="2">
-                                                    전체
-                                                </th>
-                                                <th colspan="32">
-                                                    일반부
-                                                </th>
+                                                    미지정
+                                                </th> 
                                             </tr>
                                             <tr>
                                                 <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">끝</th>
+                                                <th colspan="3">시도체육회</th>
+                                                <th colspan="3">경기단체</th>
+                                                <th colspan="3">기업</th>
+                                                <th colspan="3">공공기관</th>
+                                                <th colspan="3">군</th>
+                                                <th colspan="3">기타</th>
                                             </tr>
                                             <tr class="kind">
                                                 <th>남</th>
@@ -739,37 +753,13 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                                 <th>남</th>
                                                 <th>여</th>
                                                 <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
                                             </tr>
 
-                                            @@for(var i=0; i<16; i++){ 
+                                            @@for(var i=0; i<60; i++){ 
                                             <tr>
                                                 <td>200</td>
                                                 <td>200</td>
                                                 <!-- 각 섹션 마지막 td에 클래스 삽입 -->
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
                                                 <td class="b-r-3">200</td>
                                                 <td>200</td>
                                                 <td>200</td>
