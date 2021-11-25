@@ -396,6 +396,14 @@ $border: #BEBEBE;
                                 display: block;
                             }
                         }
+                        &.dropdown__non{
+                            cursor:default;
+                            &:hover{
+                                  background-color: #eeeff1;
+                                  color: $dark;
+
+                            }
+                        }
                     }
                     .select-con{
                         border-left: 1px solid #b9bcc4;

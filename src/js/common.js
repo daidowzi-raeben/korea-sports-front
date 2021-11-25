@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 //조건선택 탭 열기
 
-var eventTab = $('.midSelect-con__item .dropdown');
+var eventTab = $('.midSelect-con__item .dropdown:not(.dropdown__non)');
 var eventItem = $('.option li');
 
 eventTab.click(function(){
@@ -133,9 +133,6 @@ $('.option .btn-submit').click(function(){
     $(this).parents('.option').hide();
     $('.dropdown').removeClass('is_active');
 });
-
-
-
 
 
 
@@ -577,9 +574,15 @@ function fn_dropDownLoad() {
         $(this).siblings('li').removeClass('is_active');
     
     });
+
+    // dropDown ridop
+    var dropRadio = $('.event-radio li');
+        dropRadio.click(function(){
+        dropRadio.removeClass('is_active');
+        $(this).addClass('is_active');
+    });
 }
 
 
-// 스크롤 이벤트
 
 
