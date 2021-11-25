@@ -27,6 +27,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
     </div>
 </div>
 
+@@include('../../include/registration.modal.html')
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -144,7 +145,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_7" />
-                                <label for="event_7">라켓볼/label>
+                                <label for="event_7">라켓볼</label>
                             </div>
                         </div>
 
@@ -410,6 +411,8 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
         </div>
 
         <!-- 조회 결과  -->
+        <div class="modal-contents">
+
         <div class="lookup">
             <div class="lookup-header">
                 <strong class="lookup-header__about">종별 현황</strong>
@@ -425,7 +428,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                         <li class="gender">남여총계</li>
                     </ul>
                 </div>
-                <button type="button" class="deskTop">
+                <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
                     <i class="icon icon-deskTop"></i>
                 </button>
             </div>
@@ -448,7 +451,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                         <dd>2020/12/31 23:44:03</dd>
                     </dl>
                 </div>
-                <button type="button" class="deskTop">
+                <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
                     <i class="icon icon-deskTop"></i>
                 </button>
             </div>
@@ -793,6 +796,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                 </div>
             </div>
         </div>
+        </div>
     </div>
 </div>
 <!-- contents end -->
@@ -882,6 +886,8 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
     //         <label for="event_all">전체</label>
     //     </div>
     // </div>
+
+
 </script>
 
 <!-- footer -->
