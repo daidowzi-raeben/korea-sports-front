@@ -737,6 +737,10 @@ $border: #BEBEBE;
     border-right: 1px solid #b9bcc4 !important;
 }
 
+.b-l-d2 {
+    border-left: 1px solid #d2d2d2;
+}
+
 .thead{
     .height-89{
         height: 89px !important;
@@ -753,4 +757,20 @@ tr.border-bottom {
     th {
         border-bottom: 1px solid #3d3d3d !important;
     }
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.hg-35 {
+    height: 35px !important;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
 }
