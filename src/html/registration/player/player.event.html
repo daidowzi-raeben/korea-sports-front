@@ -832,7 +832,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                     var html =
                         '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
                         i +
-                        '"><label for="gong_${i}">' +
+                        '"><label for="gong_' + i + '">' +
                         data +
                         "</label></div>";
                     $(".concon").append(html);
@@ -843,6 +843,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                         .next(".midSelect-con__item")
                         .removeClass("notData")
                 );
+                fn_dropDownLoad();
             });
         }
     }
