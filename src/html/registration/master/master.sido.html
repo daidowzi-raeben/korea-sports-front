@@ -1,8 +1,6 @@
-@@include('../../include/header.html', { title : "등록현황 - 선수", type : "ssp-sub", active_1 : '',
-active_2 : '', active_3 : '', active_4 : 'is_active' })
+@@include('../../include/header.html', { title : "등록현황 - 선수", type : "ssp-sub", active_1 : '', active_2 : '', active_3 : '', active_4 : 'is_active' })
 <!-- header -->
-@@include('../../include/ssp.nav.html',{ type: "registration", active_1 : '', active_2 : "",
-active_3 : '', active_4 : '', active_5 : 'is_active' })
+@@include('../../include/ssp.nav.html',{ type: "registration", active_1 : '', active_2 : "", active_3 : '', active_4 : '', active_5 : 'is_active' })
 <!-- nav -->
 @@include('../../include/ssp.banner.html',{ type : "registration", depth_2 : "팀" })
 <!-- banner -->
@@ -52,20 +50,14 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                         <li class="referee">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_referee.svg"
-                                    alt="regist_referee"
-                                />
+                                <img src="../../../img/ssp/regist_referee.svg" alt="regist_referee" />
                             </div>
                             <span>심판</span>
                         </li>
                         <li class="manager">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_manager.svg"
-                                    alt="regist_manager"
-                                />
+                                <img src="../../../img/ssp/regist_manager.svg" alt="regist_manager" />
                             </div>
                             <span>선수관리<br />담당자</span>
                         </li>
@@ -85,12 +77,8 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                         <li class="is_active"><a href="#"></a>시도별 현황</li>
                         <li><a href="#"></a>실업 시군구 현황</li>
                         <li><a href="#"></a>동계종목 현황</li>
-                        <li><a href="#"></a>학년별 현황</li>
-                        <li><a href="#"></a>선수등록 목록</li>
-                        <li><a href="#"></a>선수등록 이력조회</li>
-                        <li><a href="#"></a>2021년 이전자료</li>
-                        <li><a href="#"></a>2013~2021년 자료</li>
-                        <li><a href="#"></a>선수통합검색</li>
+                        <li><a href="#"></a>지도자등록 목록</li>
+                        <li><a href="#"></a>임원 등록이력 조회</li>
                     </ul>
                 </div>
             </div>
@@ -167,10 +155,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                         </select>
                                         <i class="icon icon-select__arrow" aria-hidden="true"></i>
                                     </div>
-                                    <p>
-                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
-                                        가능합니다.
-                                    </p>
+                                    <p><i class="icon icon-multi"></i> 각 조회조건들은 다중선택이 가능합니다.</p>
                                 </div>
                                 <div class="option-body">
                                     <ul class="event"></ul>
@@ -178,12 +163,8 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                             <div class="option-footer">
                                 <div class="btn-group">
-                                    <button type="button" class="btn-sky btn-reset">
-                                        선택 초기화
-                                    </button>
-                                    <button type="button" class="btn-sky btn-submit">
-                                        선택 완료
-                                    </button>
+                                    <button type="button" class="btn-sky btn-reset">선택 초기화</button>
+                                    <button type="button" class="btn-sky btn-submit">선택 완료</button>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +195,10 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                         </div>
                     </li>
                     <li class="midSelect-con__item">
-                        <div class="dropdown b-right dropdown__non">종별선택</div>
+                        <div class="dropdown" data-id="1">
+                            종별선택 <i class="icon icon-regist_arrow"></i>
+                            <i class="icon icon-regist_arrow--white"></i>
+                        </div>
                         <div class="select-con b-right">
                             <div class="con-part">
                                 <div class="select-con--item">
@@ -260,10 +244,8 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                     <label for="jong_gong">공공기관</label>
                                 </div>
                             </div>
-                            
                         </div>
                     </li>
-                    
                 </ul>
             </div>
             <div class="midSelect-footer mt-20">
@@ -272,9 +254,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                     각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
                 </p>
                 <div class="btn-group">
-                    <button type="button" class="btn-dark btn-open" data-name="popup1">
-                        다운로드
-                    </button>
+                    <button type="button" class="btn-dark btn-open" data-name="popup1">다운로드</button>
                     <button type="button" class="btn-dark">조건 초기화</button>
                     <a href="#" role="button" class="btn-dark btn-sm">조회</a>
                 </div>
@@ -336,9 +316,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th colspan="2" class="center height-89">
-                                                종목구분
-                                            </th>
+                                            <th colspan="2" class="center height-89">종목구분</th>
                                         </tr>
                                         <tr>
                                             <th colspan="2">총계</th>
@@ -532,70 +510,30 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                     <table>
                                         <thead>
                                             <tr class>
-                                                <th colspan="3">
-                                                    전체
-                                                </th>
-                                                <th colspan="3">
-                                                    서울
-                                                </th>
-                                                <th colspan="3">
-                                                    부산
-                                                </th>
-                                                <th colspan="3">
-                                                    대구
-                                                </th>
-                                                <th colspan="3">
-                                                    인천
-                                                </th>
-                                                <th colspan="3">
-                                                    광주
-                                                </th>
-                                                <th colspan="3">
-                                                    대전
-                                                </th>
-                                                <th colspan="3">
-                                                    울산
-                                                </th>
-                                                <th colspan="3">
-                                                    세종
-                                                </th>
-                                                <th colspan="3">
-                                                    경기
-                                                </th>
-                                                <th colspan="3">
-                                                    강원
-                                                </th>
-                                                <th colspan="3">
-                                                    충북
-                                                </th>
-                                                <th colspan="3">
-                                                    충남
-                                                </th>
-                                                <th colspan="3">
-                                                    전북
-                                                </th>
-                                                <th colspan="3">
-                                                    전남
-                                                </th>
-                                                <th colspan="3">
-                                                    경북
-                                                </th>
-                                                <th colspan="3">
-                                                    경남
-                                                </th>
-                                                <th colspan="3">
-                                                    제주
-                                                </th>
-                                                <th colspan="3">
-                                                    시도없음
-                                                </th>
-                                                <th colspan="3">
-                                                    시도미지정
-                                                </th>
+                                                <th colspan="3">전체</th>
+                                                <th colspan="3">서울</th>
+                                                <th colspan="3">부산</th>
+                                                <th colspan="3">대구</th>
+                                                <th colspan="3">인천</th>
+                                                <th colspan="3">광주</th>
+                                                <th colspan="3">대전</th>
+                                                <th colspan="3">울산</th>
+                                                <th colspan="3">세종</th>
+                                                <th colspan="3">경기</th>
+                                                <th colspan="3">강원</th>
+                                                <th colspan="3">충북</th>
+                                                <th colspan="3">충남</th>
+                                                <th colspan="3">전북</th>
+                                                <th colspan="3">전남</th>
+                                                <th colspan="3">경북</th>
+                                                <th colspan="3">경남</th>
+                                                <th colspan="3">제주</th>
+                                                <th colspan="3">시도없음</th>
+                                                <th colspan="3">시도미지정</th>
                                             </tr>
-                                            
+
                                             <tr class="kind">
-                                                @@for(var j=0; j < 20; j++){ 
+                                                @@for(var j=0; j < 20; j++){
                                                 <th>남</th>
                                                 <th>여</th>
                                                 <!-- 각 섹션 마지막 th에 클래스 삽입 -->
@@ -603,18 +541,14 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                                 }
                                             </tr>
 
-                                            @@for(var i=0; i < 61; i++){ 
+                                            @@for(var i=0; i < 61; i++){
                                             <tr>
-                                                @@for(var a=0; a < 20; a++){ 
+                                                @@for(var a=0; a < 20; a++){
                                                 <td>587</td>
                                                 <td>252</td>
                                                 <!-- 각 섹션 마지막 td에 클래스 삽입 -->
                                                 <td class="b-r-3">734</td>
-                                                }
-                                            }
-                                                
-                                                
-                                                
+                                                } }
                                             </tr>
                                             }
                                         </thead>
@@ -624,15 +558,12 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
-                
-                    
-            
         </div>
     </div>
 </div>
 <!-- contents end -->
-
 
 <script>
     function fn_sidoChange(me) {
@@ -641,20 +572,10 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
             $.getJSON("../../json/test.json", function (a) {
                 $(".concon").html("");
                 a.data.forEach(function (data, i) {
-                    var html =
-                        '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
-                        i +
-                        '"><label for="gong_' + i + '">' +
-                        data +
-                        "</label></div>";
+                    var html = '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' + i + '"><label for="gong_' + i + '">' + data + "</label></div>";
                     $(".concon").append(html);
                 });
-                console.log(
-                    $(me)
-                        .parents(".midSelect-con__item")
-                        .next(".midSelect-con__item")
-                        .removeClass("notData")
-                );
+                console.log($(me).parents(".midSelect-con__item").next(".midSelect-con__item").removeClass("notData"));
                 fn_dropDownLoad();
             });
         }
@@ -691,9 +612,9 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                                     <input type="checkbox" name="event" id="event_all" />
                                                     <label for="event_all">전체</label>
                                                 </div>`);
-                                                fn_dropDownLoad();
-                                            });
-                                            clickHandler();
+                fn_dropDownLoad();
+            });
+            clickHandler();
         } else if ($(this).val() == "하계종목") {
             $.getJSON("../../json/test2.json", function (a) {
                 a.data.forEach(function (val, key) {
@@ -707,7 +628,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
                                                     <input type="checkbox" name="event" id="event_all" />
                                                     <label for="event_all">전체</label>
                                                 </div>`);
-                                                fn_dropDownLoad();
+                fn_dropDownLoad();
             });
             clickHandler();
         }
