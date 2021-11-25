@@ -161,29 +161,36 @@
             <div class="lookup-body">
                 <div class="table-wrap mt-20">
                     <table>
+                        <colgroup>
+                            <col width="81">
+                            <col width="130">
+                            <col width="127">
+                            <col width="127">
+                            <col width="*">
+                            <col width="227">
+                            <col width="124">
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th scope="col">번호</th>
+                                <th scope="col">이름</th>
                                 <th scope="col">출생년도</th>
-                                <th scope="col">성별</th>
-                                <th scope="col">시도</th>
-                                <th scope="col">종목</th>
-                                <th scope="col">종별</th>
+                                <th scope="col">등록년도</th>
                                 <th scope="col">소속팀명</th>
-                                <th scope="col">소속구분</th>
+                                <th scope="col">종목</th>
+                                <th scope="col">구분</th>
                             </tr>
                         </thead>
                         <tbody>
                             @@for(var i = 0; i <15; i++){
                                 <tr>
                                     <td>15</td>
+                                    <td class="text-left">강대한</td>
                                     <td>1983</td>
-                                    <td>남성</td>
-                                    <td>세종특별자치시</td>
-                                    <td>야구소프트볼(소프트볼)</td>
-                                    <td>19세이하부</td>
+                                    <td>2021</td>
                                     <td class="text-left">서울아트란티스피닉스</td>
-                                    <td class="text-left">학교운동부 - 16세이하부</td>
+                                    <td>야구소프트볼(소프트볼)</td>
+                                    <td>선수</td>
                                 </tr>
                             }
                         </tbody>

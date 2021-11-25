@@ -1,0 +1,754 @@
+@@include('../../include/header.html', { title : "등록현황 - 선수", type : "ssp-sub", active_1 : '',
+active_2 : '', active_3 : '', active_4 : 'is_active' })
+<!-- header -->
+@@include('../../include/ssp.nav.html',{ type: "registration", active_1 : '', active_2 : '',
+active_3 : '', active_4 : 'is_active', active_5 : '' })
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{ type : "registration", depth_2 : "선수관리담당자" })
+<!-- banner -->
+
+<!-- 모달창 -->
+<div class="modal-wrap" id="popup1">
+    <div class="modal">
+        <div class="modal-header">
+            <h1>파일을 다운로드 하시겠습니까?</h1>
+        </div>
+        <div class="modal-body">
+            <p>
+                확인버튼을 클릭하시면<br />
+                선수 / 실업 시군구 현황 엑셀파일이 <br />
+                다운로드됩니다.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-close button-grey">취소</button>
+            <button type="button" class="button-blue">확인</button>
+        </div>
+    </div>
+</div>
+
+<!-- contents start -->
+<div class="container registration">
+    <div class="container-inner">
+        <div class="topSelect">
+            <h3>등록현황 선택</h3>
+            <div class="topSelect-con">
+                <div class="topSelect-con__left">
+                    <ul>
+                        <li class="player">
+                            <a href="#"></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_player.svg" alt="regist_player" />
+                            </div>
+                            <span>선수</span>
+                        </li>
+                        <li class="master">
+                            <a href="#"></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_master.svg" alt="regist_master" />
+                            </div>
+                            <span>지도자</span>
+                        </li>
+                        <li class="referee">
+                            <a href="#"></a>
+                            <div class="top-icon">
+                                <img
+                                    src="../../../img/ssp/regist_referee.svg"
+                                    alt="regist_referee"
+                                />
+                            </div>
+                            <span>심판</span>
+                        </li>
+                        <li class="manager is_active">
+                            <a href="#"></a>
+                            <div class="top-icon">
+                                <img
+                                    src="../../../img/ssp/regist_manager.svg"
+                                    alt="regist_manager"
+                                />
+                            </div>
+                            <span>선수관리<br />담당자</span>
+                        </li>
+                        <li class="team">
+                            <a href="#"></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_team.svg" alt="regist_team" />
+                            </div>
+                            <span>팀</span>
+                        </li>
+                    </ul>
+                    <p class="txt">원하시는 등록현황을 선택해보세요.</p>
+                </div>
+                <div class="topSelect-con__right">
+                    <ul class="manager">
+                        <li class=""><a href="#"></a>종별 현황</li>
+                        <li class="is_active"><a href="#"></a>시도별 현황</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="midSelect">
+            <div class="midSelect-tit">
+                <h3>시도별 현황</h3>
+                <span>등록연도</span>
+                <div class="formInput">
+                    <div class="select-group">
+                        <select name="" id="b">
+                            <option value="0" selected>2021</option>
+                            <option value="1">2020</option>
+                            <option value="2">2019</option>
+                        </select>
+                        <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="midSelect-con mt-17">
+                <ul class="midSelect-con__list">
+                    <li class="midSelect-con__item con-event">
+                        <div class="dropdown" data-id="0">
+                            종목선택 <i class="icon icon-regist_arrow"></i>
+                            <i class="icon icon-regist_arrow--white"></i>
+                        </div>
+                        <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_all" />
+                                <label for="event_all">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_0" />
+                                <label for="event_0">검도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_1" />
+                                <label for="event_1">골프</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_2" />
+                                <label for="event_2">궁도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_3" />
+                                <label for="event_3">근대5종</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_4" />
+                                <label for="event_4">농구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_5" />
+                                <label for="event_5">당구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_6" />
+                                <label for="event_6">댄스스포츠</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_7" />
+                                <label for="event_7">라켓볼</label>
+                            </div>
+                        </div>
+
+                        <div class="option formInput">
+                            <div class="option-main">
+                                <div class="option-header">
+                                    <div class="select-group wd-290 mr-25">
+                                        <select name="event">
+                                            <option value="하계종목" selected>하계 종목</option>
+                                            <option value="동계종목">동계 종목</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                        <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                    </div>
+                                    <p>
+                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
+                                        가능합니다.
+                                    </p>
+                                </div>
+                                <div class="option-body">
+                                    <ul class="event"></ul>
+                                </div>
+                            </div>
+                            <div class="option-footer">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-sky btn-reset">
+                                        선택 초기화
+                                    </button>
+                                    <button type="button" class="btn-sky btn-submit">
+                                        선택 완료
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="midSelect-con__item">
+                        <div class="dropdown dropdown__non">소속구분</div>
+                        <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_all" />
+                                <label for="belong_all">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_1" />
+                                <label for="belong_1">학교운동부</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_2" />
+                                <label for="belong_2">직장운동부</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_3" />
+                                <label for="belong_3">전문클럽 등</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_3" />
+                                <label for="belong_3">생활클럽 등</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="midSelect-con__item">
+                        <div class="dropdown b-right" data-id="">종별선택
+                            <i class="icon icon-regist_arrow"></i>
+                            <i class="icon icon-regist_arrow--white"></i>
+                        </div>
+                        <div class="select-con b-right">
+                            <div class="con-part">
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_all" />
+                                    <label for="jong_all">전체</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_13" />
+                                    <label for="jong_13">13세이하부</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_16" />
+                                    <label for="jong_16">16세이하부</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_19" />
+                                    <label for="jong_19">19세이하부</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_univ" />
+                                    <label for="jong_univ">대학부</label>
+                                </div>
+                            </div>
+                            <div class="sadf">
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_sdc" />
+                                    <label for="jong_sdc">시도청</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_sdche" />
+                                    <label for="jong_sdche">시도체육회</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_gg" />
+                                    <label for="jong_gg">경기단체</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_giup" />
+                                    <label for="jong_giup">기업</label>
+                                </div>
+                                <div class="select-con--item">
+                                    <input type="checkbox" name="jong" id="jong_gong" />
+                                    <label for="jong_gong">공공기관</label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="option formInput">
+                            <div class="option-main">
+                                <div class="option-header">
+                                    <div class="select-group wd-290 mr-25">
+                                        <select name="event">
+                                            <option value="하계종목" selected>하계 종목</option>
+                                            <option value="동계종목">동계 종목</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                        <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                    </div>
+                                    <p>
+                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
+                                        가능합니다.
+                                    </p>
+                                </div>
+                                <div class="option-body">
+                                    <ul class="event"></ul>
+                                </div>
+                            </div>
+                            <div class="option-footer">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-sky btn-reset">
+                                        선택 초기화
+                                    </button>
+                                    <button type="button" class="btn-sky btn-submit">
+                                        선택 완료
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="midSelect-footer mt-20 mb-83">
+                <p class="discription">
+                    <i class="icon icon-multi"></i>
+                    각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
+                </p>
+                <div class="btn-group">
+                    <button type="button" class="btn-dark btn-open" data-name="popup1">
+                        다운로드
+                    </button>
+                    <button type="button" class="btn-dark">조건 초기화</button>
+                    <a href="#" role="button" class="btn-dark btn-sm">조회</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 조회 결과  -->
+        <div class="lookup mt-80">
+            <div class="lookup-header">
+                <strong class="lookup-header__about">시도별 현황</strong>
+                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                <div class="standard">
+                    <dl class="standard-day">
+                        <dt>통계생성 기준 :</dt>
+                        <dd>2020/12/31 23:44:03</dd>
+                    </dl>
+                    <ul class="standard-list">
+                        <li class="man">남자합계</li>
+                        <li class="woman">여자합계</li>
+                        <li class="gender">남여총계</li>
+                    </ul>
+                </div>
+                <button type="button" class="deskTop">
+                    <i class="icon icon-deskTop"></i>
+                </button>
+            </div>
+            <div class="lookup-body">
+                <!-- 데이터 조회 전 -->
+                <!-- <div class="empty">
+                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                </div> -->
+                @@include('../../include/registration.graph.html')
+            </div>
+        </div>
+
+        <div class="lookup">
+            <div class="lookup-header">
+                <strong class="lookup-header__about">시도별 현황</strong>
+                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                <div class="standard">
+                    <dl class="standard-day">
+                        <dt>통계생성 기준 :</dt>
+                        <dd>2020/12/31 23:44:03</dd>
+                    </dl>
+                </div>
+                <button type="button" class="deskTop">
+                    <i class="icon icon-deskTop"></i>
+                </button>
+            </div>
+            <div class="lookup-body">
+                <!-- 데이터 조회 전 -->
+                <!-- <div class="empty">
+                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                </div> -->
+                <div class="conWrap mb-100">
+                    <div class="graph">
+                        <div class="graph-scroll graph-scroll--table clb">
+                            <div class="thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" class="title center height-89">
+                                                종목구분
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">총계</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">검도</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">골프</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">궁도</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">근대5종</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">농구</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">당구</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">댄스스포츠</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">럭비</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">레슬링</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">롤러</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">루지</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">바둑</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">바이애슬론</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">배구</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">배드민턴</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">보디빌딩</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">복싱</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">볼링</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">봅슬레이스켈레톤</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">빙상</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">사격</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">산악</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">세팍타크로</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">소프트테니스</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">수상스키·웨이크스포츠</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">수영</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">수중_핀수영</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">스쿼시</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">스키</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">승마</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">씨름</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">아이스하키</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">야구소프트볼(소프트볼)</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">야구소프트볼(야구)</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">양궁</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">에어로빅힙합</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">역도</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">요트</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">우슈</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">유도</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">육상</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">자전거</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">조정</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">주짓수</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">철인3종</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">체조</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">축구</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">카누</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">카라테</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">카바디</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">컬링</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">킥복싱</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">탁구</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">태권도</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">택견</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">테니스</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">패러글라이딩</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">펜싱</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">하키</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">핸드볼</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="parent">
+                                <div class="container">
+                                    <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">
+                                                    전체
+                                                </th>
+                                                <th colspan="3">
+                                                    서울
+                                                </th>
+                                                <th colspan="3">
+                                                    부산
+                                                </th>
+                                                <th colspan="3">
+                                                    대구
+                                                </th>
+                                                <th colspan="3">
+                                                    인천
+                                                </th>
+                                                <th colspan="3">
+                                                    광주
+                                                </th>
+                                                <th colspan="3">
+                                                    대전
+                                                </th>
+                                                <th colspan="3">
+                                                    울산
+                                                </th>
+                                                <th colspan="3">
+                                                    세종
+                                                </th>
+                                                <th colspan="3">
+                                                    경기
+                                                </th>
+                                                <th colspan="3">
+                                                    강원
+                                                </th>
+                                                <th colspan="3">
+                                                    충북
+                                                </th>
+                                                <th colspan="3">
+                                                    충남
+                                                </th>
+                                                <th colspan="3">
+                                                    전북
+                                                </th>
+                                                <th colspan="3">
+                                                    전남
+                                                </th>
+                                                <th colspan="3">
+                                                    경북
+                                                </th>
+                                                <th colspan="3">
+                                                    경남
+                                                </th>
+                                                <th colspan="3">
+                                                    제주
+                                                </th>
+                                                <th colspan="3">
+                                                    시도없음
+                                                </th>
+                                                <th colspan="3">
+                                                    시도미지정
+                                                </th>
+                                            </tr>
+                                            <tr class="kind">
+                                                @@for(var j=0; j<20; j++){ 
+                                                <th>남</th>
+                                                <th>여</th>
+                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                <th class="b-r-3">소계</th>
+                                                }
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>95,694</td>
+                                                <td>27,590</td>
+                                                    <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                                <td class="b-r-3">123,284</td>
+                                                @@for(var q=0; q<19; q++){
+                                                    <td>587</td>
+                                                    <td>252</td>
+                                                    <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                                    <td class="b-r-3">734</td>
+                                                }
+                                            </tr>
+                                            @@for(var i=0; i<60; i++){ 
+                                            <tr>
+                                                @@for(var a=0; a<20; a++){
+                                                    <td>587</td>
+                                                    <td>252</td>
+                                                    <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                                    <td class="b-r-3">734</td>
+                                                }
+                                            </tr>
+                                            }
+                                        </thead>
+                                    </table>
+                                    <!-- 데이터 반복 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contents end -->
+
+<script>
+    function fn_sidoChange(me) {
+        var chk = $(me).is(":checked");
+        if (chk) {
+            $.getJSON("../../json/test.json", function (a) {
+                $(".concon").html("");
+                a.data.forEach(function (data, i) {
+                    var html =
+                        '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
+                        i +
+                        '"><label for="gong_' + i + '">' +
+                        data +
+                        "</label></div>";
+                    $(".concon").append(html);
+                });
+                console.log(
+                    $(me)
+                        .parents(".midSelect-con__item")
+                        .next(".midSelect-con__item")
+                        .removeClass("notData")
+                );
+                fn_dropDownLoad();
+            });
+        }
+    }
+
+    //  클릭 이벤트 함수
+    function clickHandler() {
+        $(".option li").click(function () {
+            if ($(this).siblings(".event--all").hasClass("is_active")) {
+                $(this).siblings(".event--all").removeClass("is_active");
+            }
+            $(this).toggleClass("is_active");
+        });
+
+        $(".event--all").click(function () {
+            $(this).siblings("li").removeClass("is_active");
+        });
+    }
+
+    // 데이터 통신
+
+    $('select[name="event"]').on("change", function () {
+        $(".select-con:first").html("");
+        if ($(this).val() == "동계종목") {
+            $.getJSON("../../json/test.json", function (a) {
+                a.data.forEach(function (val, key) {
+                    var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                    $(".select-con:first").append(event);
+                });
+                $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                                                fn_dropDownLoad();
+                                            });
+                                            clickHandler();
+        } else if ($(this).val() == "하계종목") {
+            $.getJSON("../../json/test2.json", function (a) {
+                a.data.forEach(function (val, key) {
+                    var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                    $(".select-con:first").append(event);
+                });
+                $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                                                fn_dropDownLoad();
+            });
+            clickHandler();
+        }
+    });
+
+    // <div class="select-con">
+    //     <div class="select-con--item">
+    //         <input type="checkbox" name="event" id="event_all" />
+    //         <label for="event_all">전체</label>
+    //     </div>
+    // </div>
+</script>
+
+<!-- footer -->
+@@include('../../include/footer.html',{ type : 'ssp-sub' })
