@@ -617,9 +617,14 @@ function graph_pop_open(pop_name) {
     var bar_el = $('.registration_pop .graph-scroll--bar .parent .container li');
     var bar_total_w = 0;
 
-    bar_el.each(function () {
-        bar_total_w += bar_el.outerWidth();
-    });
+        if(bar_el.length != 0){
+
+            bar_el.each(function () {
+                bar_total_w += bar_el.outerWidth();
+            });
+        }else{
+            return false;
+        }
 
     $('.registration_pop .graph-scroll--bar .parent .container').css({
         'width': bar_total_w,
