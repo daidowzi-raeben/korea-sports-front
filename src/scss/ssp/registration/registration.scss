@@ -246,6 +246,13 @@ $border: #BEBEBE;
         &-con{
             position: relative;
 
+            .option-wrap{
+                .option{
+                    display: block;
+                    position: static;
+                }
+            }
+
             .option{
                 
                 display: none;
@@ -641,8 +648,8 @@ $border: #BEBEBE;
 
     }
 }
-.conWrap {
-    .lookupGraph{
+.lookupGraph {
+    .conWrap{
         .graph {
             &::after {
                 content: "";
@@ -656,6 +663,49 @@ $border: #BEBEBE;
             }
         }
     }
+}
+
+.regTab{
+    background-color: #EEEFF1;
+    border: 1px solid #B9BCC4;
+    border-radius: 7px;
+
+    &-list{
+        display: flex;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: inherit;
+
+        }
+    }
+
+    &-item{
+        width: 100%;
+        height: 60px;
+        border-right: 1px solid #B9BCC4;
+
+
+        &:first-child{
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+        }
+
+        &:last-child{
+            border-right: none;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+        }
+
+        &.is_active{
+            background-color: #339FD9;
+            color: #fff;
+        }
+    }
+
 }
 
 .b-right{
