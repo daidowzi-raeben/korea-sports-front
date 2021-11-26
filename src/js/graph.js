@@ -1,11 +1,11 @@
 $(document).ready(function () {
-        var bar_el = $('.graph-scroll--bar .parent .container li').length ? $('.graph-scroll--bar .parent .container li') : 0;
+        var bar_el = $('.graph-scroll--bar .parent .container li');
         var bar_total_w = 0;
         
-        for(var i=0; i<bar_el.length; i++){
-            bar_total_w += bar_el[i].outerWidth();
-            
-        }    
+        bar_el.each(function () {
+            bar_total_w += bar_el.outerWidth();
+        });
+        
         $('.graph-scroll--bar .parent .container').css({
             'width': bar_total_w,
             'display': 'flex'
@@ -22,32 +22,32 @@ $(document).ready(function () {
     var g_start;
     var x;
 
-        g_slider.addEventListener("mousedown",function(e){
-            g_pressed = true;
-            g_start = e.offsetX - g_slider_inner.offsetLeft;
-            g_slider.style.cursor = "grabbing";
-        })
-        
-        g_slider.addEventListener("mouseenter",function(){
-            g_slider.style.cursor = "grab";
-        })
-        
-        g_slider.addEventListener("mouseup", function(){
-            g_slider.style.cursor = "grab";
-        })
-        
-        window.addEventListener("mouseup",function(){
-            g_pressed = false;
-        })
-        
-        g_slider.addEventListener("mousemove",function(e){
-            if (!g_pressed) return
-            e.preventDefault();
-            x = e.offsetX;
-            
-            g_slider_inner.style.left = (x - g_start) + 'px';
-            checkboundary();
-        })
+    g_slider.addEventListener("mousedown",function(e){
+        g_pressed = true;
+        g_start = e.offsetX - g_slider_inner.offsetLeft;
+        g_slider.style.cursor = "grabbing";
+    })
+
+    g_slider.addEventListener("mouseenter",function(){
+        g_slider.style.cursor = "grab";
+    })
+
+    g_slider.addEventListener("mouseup", function(){
+        g_slider.style.cursor = "grab";
+    })
+
+    window.addEventListener("mouseup",function(){
+        g_pressed = false;
+    })
+
+    g_slider.addEventListener("mousemove",function(e){
+        if (!g_pressed) return
+        e.preventDefault();
+        x = e.offsetX;
+
+        g_slider_inner.style.left = (x - g_start) + 'px';
+        checkboundary();
+    })
 
     function checkboundary() {
         var outer = g_slider.getBoundingClientRect();
