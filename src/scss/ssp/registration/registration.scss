@@ -714,3 +714,44 @@ tr.border-bottom {
         border-bottom: 1px solid #3d3d3d !important;
     }
 }
+
+.numberbox{
+    margin: 25px 0 20px 0;
+    display: flex;
+    min-height: 106px;
+    border: 1px solid #b9b9b9;
+    &-left{
+        padding: 30px 39px;
+        text-align: center;
+        border-right: 1px solid #b9b9b9;
+    }
+    &-right{
+        padding-top: 25px;
+        padding-left: 40px;    
+        &__list{
+            .data{
+                display: flex;
+                &-list{
+                    margin-bottom: 10px;
+                    strong{
+                       font-weight: 500;
+                       margin-right: 15px;
+                   }
+                    &::after{
+                        content: '';
+                        display: inline-flex;
+                        width: 1px;
+                        height: 15px;
+                        background-color: #aaaaaa;
+                        margin: 0 20px;
+                    }
+                    &:last-child{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
