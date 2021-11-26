@@ -26,7 +26,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
         </div>
     </div>
 </div>
-
+@@include('../../include/registration.modal.html')
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -52,20 +52,14 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                         <li class="referee">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_referee.svg"
-                                    alt="regist_referee"
-                                />
+                                <img src="../../../img/ssp/regist_referee.svg" alt="regist_referee" />
                             </div>
                             <span>심판</span>
                         </li>
                         <li class="manager is_active">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_manager.svg"
-                                    alt="regist_manager"
-                                />
+                                <img src="../../../img/ssp/regist_manager.svg" alt="regist_manager" />
                             </div>
                             <span>선수관리<br />담당자</span>
                         </li>
@@ -183,167 +177,77 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                         </div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="seoul"
-                                    value="seoul"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="seoul" value="seoul"
+                                    onclick="fn_sidoChange(this)" />
                                 <label for="seoul">서울특별시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="busan"
-                                    value="busan"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="busan" value="busan"
+                                    onclick="fn_sidoChange(this)" />
                                 <label for="busan">부산광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="deagu"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="deagu" onclick="fn_sidoChange(this)" />
                                 <label for="deagu">대구광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="incheon"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="incheon" onclick="fn_sidoChange(this)" />
                                 <label for="incheon">인천광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Gwangju"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Gwangju" onclick="fn_sidoChange(this)" />
                                 <label for="Gwangju">광주광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Daejeon"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Daejeon" onclick="fn_sidoChange(this)" />
                                 <label for="Daejeon">대전광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Ulsan"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Ulsan" onclick="fn_sidoChange(this)" />
                                 <label for="Ulsan">울산광역시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Sejong"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Sejong" onclick="fn_sidoChange(this)" />
                                 <label for="Sejong">세종특별자치시</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Gyeonggi"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Gyeonggi" onclick="fn_sidoChange(this)" />
                                 <label for="Gyeonggi">경기도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Gangwon"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Gangwon" onclick="fn_sidoChange(this)" />
                                 <label for="Gangwon">강원도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Chungbuk"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Chungbuk" onclick="fn_sidoChange(this)" />
                                 <label for="Chungbuk">충청북도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Chungnam"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Chungnam" onclick="fn_sidoChange(this)" />
                                 <label for="Chungnam">충청남도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Jeonbuk"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Jeonbuk" onclick="fn_sidoChange(this)" />
                                 <label for="Jeonbuk">전라북도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Jeonnam"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Jeonnam" onclick="fn_sidoChange(this)" />
                                 <label for="Jeonnam">전라남도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Gyeongbuk"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Gyeongbuk" onclick="fn_sidoChange(this)" />
                                 <label for="Gyeongbuk">경상북도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Gyeongnam"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Gyeongnam" onclick="fn_sidoChange(this)" />
                                 <label for="Gyeongnam">경상남도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Jeju"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="Jeju" onclick="fn_sidoChange(this)" />
                                 <label for="Jeju">제주특별자치도</label>
                             </div>
                             <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="none"
-                                    onclick="fn_sidoChange(this)"
-                                />
+                                <input type="radio" name="sido" id="none" onclick="fn_sidoChange(this)" />
                                 <label for="none">시도없음</label>
                             </div>
                         </div>
@@ -516,54 +420,55 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-80">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">시도별 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
-                    <ul class="standard-list">
-                        <li class="man">남자합계</li>
-                        <li class="woman">여자합계</li>
-                        <li class="gender">남여총계</li>
-                    </ul>
+        <div class="modal-contents">
+            <div class="lookup">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">시도별 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                        <ul class="standard-list">
+                            <li class="man">남자합계</li>
+                            <li class="woman">여자합계</li>
+                            <li class="gender">남여총계</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div>
+                    <!-- @@include('../../include/registration.graph.html')-->
+                </div>
             </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> 
-                <!-- @@include('../../include/registration.graph.html')-->
-            </div>
-        </div>
 
-        <div class="lookup">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">시도별 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
+            <div class="lookup lookupTable">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">시도별 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> 
-                <!-- <div class="conWrap mb-100">
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div>
+                    <!-- <div class="conWrap mb-100">
                     <div class="graph">
                         <div class="graph-scroll graph-scroll--table clb">
                             <div class="thead">
@@ -860,6 +765,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                         </div>
                     </div>
                 </div>-->
+                </div>
             </div>
         </div>
     </div>
@@ -883,9 +789,9 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                 });
                 console.log(
                     $(me)
-                        .parents(".midSelect-con__item")
-                        .next(".midSelect-con__item")
-                        .removeClass("notData")
+                    .parents(".midSelect-con__item")
+                    .next(".midSelect-con__item")
+                    .removeClass("notData")
                 );
                 fn_dropDownLoad();
             });
@@ -923,9 +829,9 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                                                     <input type="checkbox" name="event" id="event_all" />
                                                     <label for="event_all">전체</label>
                                                 </div>`);
-                                                fn_dropDownLoad();
-                                            });
-                                            clickHandler();
+                fn_dropDownLoad();
+            });
+            clickHandler();
         } else if ($(this).val() == "하계종목") {
             $.getJSON("../../json/test2.json", function (a) {
                 a.data.forEach(function (val, key) {
@@ -939,7 +845,7 @@ active_3 : '', active_4 : 'is_active', active_5 : '' })
                                                     <input type="checkbox" name="event" id="event_all" />
                                                     <label for="event_all">전체</label>
                                                 </div>`);
-                                                fn_dropDownLoad();
+                fn_dropDownLoad();
             });
             clickHandler();
         }

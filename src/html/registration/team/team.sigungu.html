@@ -26,7 +26,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         </div>
     </div>
 </div>
-
+@@include('../../include/registration.modal.html')
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -468,225 +468,229 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-80">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">실업 시군구 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
-                    <ul class="standard-list">
-                        <li class="man">남자합계</li>
-                        <li class="woman">여자합계</li>
-                        <li class="gender">남여총계</li>
-                    </ul>
+        <div class="modal-contents">
+            <div class="lookup lookupGraph">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">실업 시군구 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                        <ul class="standard-list">
+                            <li class="man">남자합계</li>
+                            <li class="woman">여자합계</li>
+                            <li class="gender">남여총계</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                @@include('../../include/registration.graph.html')
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    @@include('../../include/registration.graph.html')
+                </div>
             </div>
         </div>
 
-        <div class="lookup">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">실업 시군구 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
+        <div class="modal-contents">
+            <div class="lookup lookupTable">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">실업 시군구 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                <div class="conWrap mb-100">
-                    <div class="graph">
-                        <div class="graph-scroll graph-scroll--table clb">
-                            <div class="thead">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th class="height-89 center">
-                                                종목구분
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>총계</th>
-                                        </tr>
-                                        <tr>
-                                            <th>검도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>레슬링</th>
-                                        </tr>
-                                        <tr>
-                                            <th>롤러</th>
-                                        </tr>
-                                        <tr>
-                                            <th>바둑</th>
-                                        </tr>
-                                        <tr>
-                                            <th>보디빌딩</th>
-                                        </tr>
-                                        <tr>
-                                            <th>사격</th>
-                                        </tr>
-                                        <tr>
-                                            <th>씨름</th>
-                                        </tr>
-                                        <tr>
-                                            <th>역도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>유도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>조정</th>
-                                        </tr>
-                                        <tr>
-                                            <th>체조</th>
-                                        </tr>
-                                        <tr>
-                                            <th>카누</th>
-                                        </tr>
-                                        <tr>
-                                            <th>탁구</th>
-                                        </tr>
-                                        <tr>
-                                            <th>택견</th>
-                                        </tr>
-                                        <tr>
-                                            <th>테니스</th>
-                                        </tr>
-                                        <tr>
-                                            <th>펜싱</th>
-                                        </tr>
-                                        <tr>
-                                            <th>핸드볼</th>
-                                        </tr>
-                                        <tr>
-                                            <th>택견</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="parent">
-                                <div class="container">
-                                    <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    <div class="conWrap mb-100">
+                        <div class="graph">
+                            <div class="graph-scroll graph-scroll--table clb">
+                                <div class="thead">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="4">
-                                                    전체
-                                                </th>
-                                                <th colspan="4">
-                                                    강남구
-                                                </th>
-                                                <th colspan="4">
-                                                    강동구
-                                                </th>
-                                                <th colspan="4">
-                                                    강북구
-                                                </th>
-                                                <th colspan="4">
-                                                    강서구
-                                                </th>
-                                                <th colspan="4">
-                                                    관악구
-                                                </th>
-                                                <th colspan="4">
-                                                    광진구
-                                                </th>
-                                                <th colspan="4">
-                                                    구로구
-                                                </th>
-                                                <th colspan="4">
-                                                    금천구
-                                                </th>
-                                                <th colspan="4">
-                                                    노원구
-                                                </th>
-                                                <th colspan="4">
-                                                    도봉구
-                                                </th>
-                                                <th colspan="4">
-                                                    동작구
-                                                </th>
-                                                <th colspan="4">
-                                                    마포구
-                                                </th>
-                                                <th colspan="4">
-                                                    서대문구
-                                                </th>
-                                                <th colspan="4">
-                                                    서초구
-                                                </th>
-                                                <th colspan="4">
-                                                    성동구
-                                                </th>
-                                                <th colspan="4">
-                                                    성북구
-                                                </th>
-                                                <th colspan="4">
-                                                    송파구
-                                                </th>
-                                                <th colspan="4">
-                                                    영등포구
-                                                </th>
-                                                <th colspan="4">
-                                                    용산구
-                                                </th>
-                                                <th colspan="4">
-                                                    은평구
-                                                </th>
-                                                <th colspan="4">
-                                                    종로구
-                                                </th>
-                                                <th colspan="4">
-                                                    중구
-                                                </th>
-                                                <th colspan="4">
-                                                    중랑구
+                                                <th class="height-89 center">
+                                                    종목구분
                                                 </th>
                                             </tr>
-                                            <tr class="kind">
-                                                @@for(var j=0; j<24; j++){ 
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th>혼성</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                }
+                                            <tr>
+                                                <th>총계</th>
                                             </tr>
-                                            @@for(var i=0; i<19; i++){ 
-                                                <tr>
-                                                    @@for(var a=0; a<24; a++){
-                                                        <td>587</td>
-                                                        <td>252</td>
-                                                        <td>734</td>
-                                                        <td class="b-r-3">734</td>
-                                                    }
-                                                </tr>
-                                            }
+                                            <tr>
+                                                <th>검도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>레슬링</th>
+                                            </tr>
+                                            <tr>
+                                                <th>롤러</th>
+                                            </tr>
+                                            <tr>
+                                                <th>바둑</th>
+                                            </tr>
+                                            <tr>
+                                                <th>보디빌딩</th>
+                                            </tr>
+                                            <tr>
+                                                <th>사격</th>
+                                            </tr>
+                                            <tr>
+                                                <th>씨름</th>
+                                            </tr>
+                                            <tr>
+                                                <th>역도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>유도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>조정</th>
+                                            </tr>
+                                            <tr>
+                                                <th>체조</th>
+                                            </tr>
+                                            <tr>
+                                                <th>카누</th>
+                                            </tr>
+                                            <tr>
+                                                <th>탁구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>택견</th>
+                                            </tr>
+                                            <tr>
+                                                <th>테니스</th>
+                                            </tr>
+                                            <tr>
+                                                <th>펜싱</th>
+                                            </tr>
+                                            <tr>
+                                                <th>핸드볼</th>
+                                            </tr>
+                                            <tr>
+                                                <th>택견</th>
+                                            </tr>
                                         </thead>
                                     </table>
-                                    <!-- 데이터 반복 -->
+                                </div>
+                                <div class="parent">
+                                    <div class="container">
+                                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="4">
+                                                        전체
+                                                    </th>
+                                                    <th colspan="4">
+                                                        강남구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        강동구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        강북구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        강서구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        관악구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        광진구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        구로구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        금천구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        노원구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        도봉구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        동작구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        마포구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        서대문구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        서초구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        성동구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        성북구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        송파구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        영등포구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        용산구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        은평구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        종로구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        중구
+                                                    </th>
+                                                    <th colspan="4">
+                                                        중랑구
+                                                    </th>
+                                                </tr>
+                                                <tr class="kind">
+                                                    @@for(var j=0; j<24; j++){ 
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th>혼성</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    }
+                                                </tr>
+                                                @@for(var i=0; i<19; i++){ 
+                                                    <tr>
+                                                        @@for(var a=0; a<24; a++){
+                                                            <td>587</td>
+                                                            <td>252</td>
+                                                            <td>734</td>
+                                                            <td class="b-r-3">734</td>
+                                                        }
+                                                    </tr>
+                                                }
+                                            </thead>
+                                        </table>
+                                        <!-- 데이터 반복 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
