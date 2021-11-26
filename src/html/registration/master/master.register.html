@@ -1,25 +1,25 @@
 @@include('../../include/header.html', {
-    title : "등록현황 - 선수",
-    type : "ssp-sub",
-    active_1 : '',
-    active_2 : '',
-    active_3 : '',
-    active_4 : 'is_active'
-    })
-    <!-- header -->
-    @@include('../../include/ssp.nav.html',{
-    type: "registration",
-    active_1 : '',
-    active_2 : "",
-    active_3 : '',
-    active_4 : '',
-    active_5 : 'is_active'
-    })
-    <!-- nav -->
-    @@include('../../include/ssp.banner.html',{
-    type : "registration",
-    depth_2 : "선수"
-    })
+title : "등록현황 - 선수",
+type : "ssp-sub",
+active_1 : '',
+active_2 : '',
+active_3 : '',
+active_4 : 'is_active'
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "registration",
+active_1 : '',
+active_2 : "",
+active_3 : '',
+active_4 : '',
+active_5 : 'is_active'
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "registration",
+depth_2 : "선수"
+})
 
 <!-- 모달창 -->
 <div class="modal-wrap" id="popup1">
@@ -66,20 +66,14 @@
                         <li class="referee">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_referee.svg"
-                                    alt="regist_referee"
-                                />
+                                <img src="../../../img/ssp/regist_referee.svg" alt="regist_referee" />
                             </div>
                             <span>심판</span>
                         </li>
                         <li class="manager">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_manager.svg"
-                                    alt="regist_manager"
-                                />
+                                <img src="../../../img/ssp/regist_manager.svg" alt="regist_manager" />
                             </div>
                             <span>선수관리<br />담당자</span>
                         </li>
@@ -101,12 +95,12 @@
                         <li><a href="#"></a>동계종목 현황</li>
                         <li><a href="#"></a>지도자등록 목록</li>
                         <li class="is_active"><a href="#"></a>임원 등록이력 조회</li>
-                        
+
                     </ul>
                 </div>
             </div>
         </div>
-        
+
         <div class="midSelect">
             <div class="midSelect-title mb-13">
                 <h3 class="font-25">임원 등록이력 조회</h3>
@@ -162,7 +156,8 @@
             <div class="lookup-header">
                 <div>
                     <strong class="lookup-header__about">임원 등록이력</strong>
-                    <h2 class="lookup-header__title">조회결과 <span class="ml-15">252<span class="font-17">건</span></span></h2>
+                    <h2 class="lookup-header__title">조회결과 <span class="ml-15">252<span class="font-17">건</span></span>
+                    </h2>
                 </div>
             </div>
             <div class="lookup-body">
@@ -176,7 +171,7 @@
                             <col width="396">
                             <col width="219">
                             <col width="124">
-                             
+
                         </colgroup>
                         <thead>
                             <tr>
@@ -190,17 +185,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @@for(var i = 0; i <15; i++){
-                                <tr>
-                                    <td>15</td>
-                                    <td class="text-left">강대한</td>
-                                    <td>1983</td>
-                                    <td>2021</td>
-                                    <td class="text-left">서울아트란티스피닉스</td>
-                                    <td>야구소프트볼(소프트볼)</td>
-                                    <td>임원</td>
+                            @@for(var i = 0; i <15; i++){ <tr>
+                                <td>15</td>
+                                <td class="text-left">강대한</td>
+                                <td>1983</td>
+                                <td>2021</td>
+                                <td class="text-left">서울아트란티스피닉스</td>
+                                <td>야구소프트볼(소프트볼)</td>
+                                <td>임원</td>
                                 </tr>
-                            }
+                                }
                         </tbody>
                     </table>
                 </div>
@@ -239,89 +233,88 @@
         </div>
 
 
-</div>
-<!-- contents end -->
+    </div>
+    <!-- contents end -->
 
-<script>
-    function fn_sidoChange(me) {
-        var chk = $(me).is(":checked");
-        if (chk) {
-            $.getJSON("../../json/test.json", function (a) {
-                $(".concon").html("");
-                a.data.forEach(function (data, i) {
-                    var html =
-                        '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
-                        i +
-                        '"><label for="gong_' + i + '">' +
-                        data +
-                        "</label></div>";
-                    $(".concon").append(html);
-                });
-                console.log(
-                    $(me)
+    <script>
+        function fn_sidoChange(me) {
+            var chk = $(me).is(":checked");
+            if (chk) {
+                $.getJSON("../../json/test.json", function (a) {
+                    $(".concon").html("");
+                    a.data.forEach(function (data, i) {
+                        var html =
+                            '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
+                            i +
+                            '"><label for="gong_' + i + '">' +
+                            data +
+                            "</label></div>";
+                        $(".concon").append(html);
+                    });
+                    console.log(
+                        $(me)
                         .parents(".midSelect-con__item")
                         .next(".midSelect-con__item")
                         .removeClass("notData")
-                );
-                fn_dropDownLoad();
-            });
-        }
-    }
-
-    //  클릭 이벤트 함수
-    function clickHandler() {
-        $(".option li").click(function () {
-            if ($(this).siblings(".event--all").hasClass("is_active")) {
-                $(this).siblings(".event--all").removeClass("is_active");
+                    );
+                    fn_dropDownLoad();
+                });
             }
-            $(this).toggleClass("is_active");
-        });
-
-        $(".event--all").click(function () {
-            $(this).siblings("li").removeClass("is_active");
-        });
-    }
-
-    // 데이터 통신
-
-    $('select[name="event"]').on("change", function () {
-        $(".select-con:first").html("");
-        if ($(this).val() == "동계종목") {
-            $.getJSON("../../json/test.json", function (a) {
-                a.data.forEach(function (val, key) {
-                    var event = `<div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_${key}" />
-                                    <label for="event_${key}">${val}</label>
-                                </div>`;
-                    $(".select-con:first").append(event);
-                });
-                $(".select-con:first").prepend(`<div class="select-con--item">
-                                                    <input type="checkbox" name="event" id="event_all" />
-                                                    <label for="event_all">전체</label>
-                                                </div>`);
-                                                fn_dropDownLoad();
-                                            });
-                                            clickHandler();
-        } else if ($(this).val() == "하계종목") {
-            $.getJSON("../../json/test2.json", function (a) {
-                a.data.forEach(function (val, key) {
-                    var event = `<div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_${key}" />
-                                    <label for="event_${key}">${val}</label>
-                                </div>`;
-                    $(".select-con:first").append(event);
-                });
-                $(".select-con:first").prepend(`<div class="select-con--item">
-                                                    <input type="checkbox" name="event" id="event_all" />
-                                                    <label for="event_all">전체</label>
-                                                </div>`);
-                                                fn_dropDownLoad();
-            });
-            clickHandler();
         }
-    });
 
-</script>
+        //  클릭 이벤트 함수
+        function clickHandler() {
+            $(".option li").click(function () {
+                if ($(this).siblings(".event--all").hasClass("is_active")) {
+                    $(this).siblings(".event--all").removeClass("is_active");
+                }
+                $(this).toggleClass("is_active");
+            });
 
-<!-- footer -->
-@@include('../../include/footer.html',{ type : 'ssp-sub' })
+            $(".event--all").click(function () {
+                $(this).siblings("li").removeClass("is_active");
+            });
+        }
+
+        // 데이터 통신
+
+        $('select[name="event"]').on("change", function () {
+            $(".select-con:first").html("");
+            if ($(this).val() == "동계종목") {
+                $.getJSON("../../json/test.json", function (a) {
+                    a.data.forEach(function (val, key) {
+                        var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                        $(".select-con:first").append(event);
+                    });
+                    $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                    fn_dropDownLoad();
+                });
+                clickHandler();
+            } else if ($(this).val() == "하계종목") {
+                $.getJSON("../../json/test2.json", function (a) {
+                    a.data.forEach(function (val, key) {
+                        var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                        $(".select-con:first").append(event);
+                    });
+                    $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                    fn_dropDownLoad();
+                });
+                clickHandler();
+            }
+        });
+    </script>
+
+    <!-- footer -->
+    @@include('../../include/footer.html',{ type : 'ssp-sub' })
