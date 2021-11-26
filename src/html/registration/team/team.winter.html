@@ -26,7 +26,7 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         </div>
     </div>
 </div>
-
+@@include('../../include/registration.modal.html')
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -339,177 +339,181 @@ active_3 : '', active_4 : '', active_5 : 'is_active' })
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-80">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">동계종목 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
-                    <ul class="standard-list">
-                        <li class="man">남자합계</li>
-                        <li class="woman">여자합계</li>
-                        <li class="gender">남여총계</li>
-                    </ul>
+        <div class="modal-contents">
+            <div class="lookup lookupGraph">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">동계종목 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                        <ul class="standard-list">
+                            <li class="man">남자합계</li>
+                            <li class="woman">여자합계</li>
+                            <li class="gender">남여총계</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                @@include('../../include/registration.graph.html')
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    @@include('../../include/registration.graph.html')
+                </div>
             </div>
         </div>
 
-        <div class="lookup">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">동계종목 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
+        <div class="modal-contents">
+            <div class="lookup lookupTable">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">동계종목 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                <div class="conWrap mb-100">
-                    <div class="graph">
-                        <div class="graph-scroll graph-scroll--table clb">
-                            <div class="thead">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2" class="title center">
-                                                종목구분
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">총계</th>
-                                        </tr>
-                                        <tr>
-                                            <th rowspan="3" class="b-r-d">빙상</th>
-                                            <th class="b-ltb">스피드</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">쇼트트랙</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">피겨</th>
-                                        </tr>
-                                        <tr>
-                                            <th rowspan="6" class="b-r-d">스키</th>
-                                            <th class="b-ltb">알파인</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">크로스컨트리</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">스노보드</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">스키점프</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">프리스타일</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">노르딕복합</th>
-                                        </tr>
-                                        <tr>
-                                            <th rowspan="2" class="b-r-d">봅슬레이<br/>스켈레톤</th>
-                                            <th class="b-ltb">봅슬레이</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">스켈레톤</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">아이스하키</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">컬링</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">바이애슬론</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">루지</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="parent">
-                                <div class="container">
-                                    <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    <div class="conWrap mb-100">
+                        <div class="graph">
+                            <div class="graph-scroll graph-scroll--table clb">
+                                <div class="thead">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="4" rowspan="2">
-                                                    전체
-                                                </th>
-                                                <th colspan="4" rowspan="2">
-                                                    13세이하부
-                                                </th>
-                                                <th colspan="4" rowspan="2">
-                                                    16세이하부
-                                                </th>
-                                                <th colspan="4" rowspan="2">
-                                                    19세이하부
-                                                </th>
-                                                <th colspan="4" rowspan="2">
-                                                    대학부
-                                                </th>
-                                                <th colspan="28">
-                                                    일반부
-                                                </th>
-                                                <th colspan="4" rowspan="2">
-                                                    미지정
+                                                <th colspan="2" class="title center">
+                                                    종목구분
                                                 </th>
                                             </tr>
                                             <tr>
-                                                <th colspan="4">시도청</th>
-                                                <th colspan="4">시도체육회</th>
-                                                <th colspan="4">경기단체</th>
-                                                <th colspan="4">기업</th>
-                                                <th colspan="4">공공기관</th>
-                                                <th colspan="4">군</th>
-                                                <th colspan="4">기타</th>
+                                                <th colspan="2">총계</th>
                                             </tr>
-                                            <tr class="kind">
-                                                @@for(var j=0; j<13; j++){ 
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th>혼성</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                }
+                                            <tr>
+                                                <th rowspan="3" class="b-r-d">빙상</th>
+                                                <th class="b-ltb">스피드</th>
                                             </tr>
-                                            @@for(var i=0; i<16; i++){ 
-                                                <tr>
-                                                    @@for(var a=0; a<13; a++){
-                                                        <td>587</td>
-                                                        <td>252</td>
-                                                        <td>734</td>
-                                                        <td class="b-r-3">734</td>
-                                                    }
-                                                </tr>
-                                            }
+                                            <tr>
+                                                <th class="b-ltb">쇼트트랙</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">피겨</th>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="6" class="b-r-d">스키</th>
+                                                <th class="b-ltb">알파인</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">크로스컨트리</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">스노보드</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">스키점프</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">프리스타일</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">노르딕복합</th>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="2" class="b-r-d">봅슬레이<br/>스켈레톤</th>
+                                                <th class="b-ltb">봅슬레이</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">스켈레톤</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">아이스하키</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">컬링</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">바이애슬론</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">루지</th>
+                                            </tr>
                                         </thead>
                                     </table>
-                                    <!-- 데이터 반복 -->
+                                </div>
+                                <div class="parent">
+                                    <div class="container">
+                                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="4" rowspan="2">
+                                                        전체
+                                                    </th>
+                                                    <th colspan="4" rowspan="2">
+                                                        13세이하부
+                                                    </th>
+                                                    <th colspan="4" rowspan="2">
+                                                        16세이하부
+                                                    </th>
+                                                    <th colspan="4" rowspan="2">
+                                                        19세이하부
+                                                    </th>
+                                                    <th colspan="4" rowspan="2">
+                                                        대학부
+                                                    </th>
+                                                    <th colspan="28">
+                                                        일반부
+                                                    </th>
+                                                    <th colspan="4" rowspan="2">
+                                                        미지정
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="4">시도청</th>
+                                                    <th colspan="4">시도체육회</th>
+                                                    <th colspan="4">경기단체</th>
+                                                    <th colspan="4">기업</th>
+                                                    <th colspan="4">공공기관</th>
+                                                    <th colspan="4">군</th>
+                                                    <th colspan="4">기타</th>
+                                                </tr>
+                                                <tr class="kind">
+                                                    @@for(var j=0; j<13; j++){ 
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th>혼성</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    }
+                                                </tr>
+                                                @@for(var i=0; i<16; i++){ 
+                                                    <tr>
+                                                        @@for(var a=0; a<13; a++){
+                                                            <td>587</td>
+                                                            <td>252</td>
+                                                            <td>734</td>
+                                                            <td class="b-r-3">734</td>
+                                                        }
+                                                    </tr>
+                                                }
+                                            </thead>
+                                        </table>
+                                        <!-- 데이터 반복 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
