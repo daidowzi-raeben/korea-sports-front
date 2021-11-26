@@ -11,6 +11,7 @@
 .container {
     width: 100%;
     background: #fff;
+
     &-inner {
         width: 1200px;
         margin: 0 auto;
@@ -20,43 +21,54 @@
 .searchBox {
     width: 100%;
     margin: 76px 0 80px;
+
     h2 {
         font-size: 25px;
         margin-bottom: 14px;
     }
+
     >div {
         padding: 30px 30px 0;
         background: #f5f5f5;
         border: 1px solid #acacac;
         border-radius: 10px;
         position: relative;
+
         &::after {
             clear: both;
             display: block;
             content: "";
         }
+
         ul {
             width: 747px;
+
             .searchBox-item {
                 float: left;
                 margin: 0 30px 30px 0;
-                &:nth-child(3), &:last-child {
+
+                &:nth-child(3),
+                &:last-child {
                     margin-right: 0;
                 }
+
                 .searchTitle {
                     display: block;
                     margin-bottom: 5px;
                     font-weight: 500;
                 }
             }
+
             .searchBox-btn {
                 padding-top: 27px;
+
                 button {
                     padding: 0 32px;
                     font-size: 17px;
                 }
             }
         }
+
         .searchBox-img {
             position: absolute;
             right: 30px;
@@ -70,16 +82,19 @@
 
 .titleWithEX {
     overflow: hidden;
+
     h2 {
         font-size: 23px;
         float: left;
     }
+
     .countTitle {
         float: left;
         font-size: 17px;
         padding-top: 4px;
         margin: 0 0 20px 16px;
         font-weight: 500;
+
         span {
             font-size: 20px;
             font-weight: 700;
@@ -96,6 +111,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:last-child {
         margin-bottom: 85px;
     }
@@ -103,16 +119,20 @@
 
 .table-wrap.blue-table {
     margin-bottom: 80px;
+
     &:last-child {
         margin-bottom: 100px;
     }
+
     table {
         border-top: 1px solid #d2d2d2;
+
         thead {
             th {
                 background: #f1f4f6;
             }
         }
+
         tbody {
             td {
                 padding: 8px 11px;
@@ -124,34 +144,78 @@
 
 
 // 등록현황 그래프 모달
-#registration_pop{
-    .modal{
+#registration_pop {
+    .modal {
         width: 100%;
         height: 100vh;
         position: relative;
-        &-header{
+        &-header {
             height: 60px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: linear-gradient(265deg, #339fd9, #035ac6);
             padding: 0 30px;
-            h1{
+
+            h1 {
                 color: #fff;
             }
-            button{
-                i{
+            
+            button {
+                i {
                     width: 18px;
                     height: 18px;
-
+                    
                 }
             }
         }
-        &-body{
-        
+        &-con{
+            height: calc(100% - 60px);
+            overflow: scroll;
+            &__body {
+                padding: 40px 30px 0 30px;
+                .modal-contents {
+                    .lookup{
+
+                        &:first-child{
+                            margin: 0;
+                        }
+                        &:last-child{
+                            .conWrap{
+                                .graph{
+                                    &::after{
+                                        content:none;
+                                    }
+                                }
+                            }
+                        }
+                        &-header{
+                            position: relative;
+                            &__about{
+                                display: none;
+                            }
+                            &__title{
+                                margin-bottom: 6px !important;
+                            }
+                            .download{
+                                position: absolute;
+                                color: #fff;
+                                font-size: 17px;
+                                font-weight: 500;
+                                background: #3d3d3d;
+                                border-radius: 5px;
+                                padding: 10px 30px;
+                                right: 0;
+                                bottom: 21px;
+                            }
+                        }
+                }
+                .deskTop {
+                    display: none;
+                }
+            }
         }
-        &-footer{
-            position: absolute;
+        &__foot{
             width: 100%;
             height: 123px;
             background: #f2f7f9;
@@ -159,14 +223,160 @@
             align-items: center;
             justify-content: center;
             border-top: 1px solid #9dadbb;
-            bottom: 0;
-
-            img{
+    
+            img {
                 position: relative;
                 top: -5px;
             }
 
         }
+        }
     }
 }
+
+.modal-contents {
+
+    .lookup {
+        position: relative;
+        margin-bottom: 95px;
+      
+        &:first-child {
+            margin-top: 83px;
+        }
+
+        &-header {
+            border-bottom: 1px solid #BEBEBE;
+            padding-bottom: 24px;
+
+            .deskTop {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                width: 62px;
+                height: 62px;
+                border: 1px solid #969EB2;
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                top: 25px;
+            }
+
+            &__about {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            &__title {
+                font-size: 23px;
+                margin-bottom: 16px;
+
+                span {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+
+            .standard {
+                display: flex;
+
+                &-day {
+                    display: flex;
+                    font-size: 16px;
+
+                    dt {
+                        margin-right: 3px;
+                    }
+                }
+
+                &-list {
+                    display: flex;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: 21px;
+                        background-color: #a1a1a1;
+                        margin-left: 25px;
+                        margin-right: 25px;
+                    }
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 30px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        &::before {
+                            display: block;
+                            content: '';
+                            width: 17px;
+                            height: 17px;
+                            border-radius: 50%;
+                            margin-right: 8px;
+                        }
+
+                        &.man {
+                            &::before {
+                                background-color: #00B3CA;
+                            }
+                        }
+
+                        &.woman {
+                            &::before {
+                                background-color: #7DD0B6;
+                            }
+                        }
+
+                        &.gender {
+                            &::before {
+                                background-color: #E38690;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        &-body {
+
+            .empty {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 266px;
+            }
+        }
+
+        &.lookup__list {
+            .lookup-header {
+                padding-bottom: 0;
+                border-bottom: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            table {
+                border-top: none;
+
+                th {
+                    background-color: #F1F4F6;
+                }
+            }
+
+            .lookup-header__title {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
 @import 'registration/registration.scss';
