@@ -597,7 +597,7 @@ $border: #BEBEBE;
         margin-bottom: 95px;
 
         &:first-child{
-            margin-top: 85px;
+            margin-top: 83px;
         }
         
         &-header{
@@ -725,6 +725,9 @@ $border: #BEBEBE;
         }
 
     }
+    .lookup.lookupGraph{
+        margin-top: 83px;
+    }
     .conWrap {
         .graph-scroll--bar {
             &::after {
@@ -832,4 +835,8 @@ tr.border-bottom {
             width: 103px;
         }
     }
+}
+
+.mt-83 {
+    margin-top: 83px;
 }

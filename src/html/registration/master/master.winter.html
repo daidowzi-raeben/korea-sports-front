@@ -1,6 +1,8 @@
-@@include('../../include/header.html', { title : "등록현황 - 선수", type : "ssp-sub", active_1 : '', active_2 : '', active_3 : '', active_4 : 'is_active' })
+@@include('../../include/header.html', { title : "등록현황 - 선수", type : "ssp-sub", active_1 : '', active_2 : '', active_3 :
+'', active_4 : 'is_active' })
 <!-- header -->
-@@include('../../include/ssp.nav.html',{ type: "registration", active_1 : '', active_2 : "", active_3 : '', active_4 : '', active_5 : 'is_active' })
+@@include('../../include/ssp.nav.html',{ type: "registration", active_1 : '', active_2 : "", active_3 : '', active_4 :
+'', active_5 : 'is_active' })
 <!-- nav -->
 @@include('../../include/ssp.banner.html',{ type : "registration", depth_2 : "팀" })
 <!-- banner -->
@@ -24,7 +26,7 @@
         </div>
     </div>
 </div>
-
+@@include('../../include/registration.modal.html')
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -108,11 +110,13 @@
                         </div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="checkbox" name="sido" id="seoul" value="seoul" onclick="fn_sidoChange(this)" />
+                                <input type="checkbox" name="sido" id="seoul" value="seoul"
+                                    onclick="fn_sidoChange(this)" />
                                 <label for="seoul">서울특별시</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="checkbox" name="sido" id="busan" value="busan" onclick="fn_sidoChange(this)" />
+                                <input type="checkbox" name="sido" id="busan" value="busan"
+                                    onclick="fn_sidoChange(this)" />
                                 <label for="busan">부산광역시</label>
                             </div>
                             <div class="select-con--item">
@@ -198,7 +202,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                     <li class="midSelect-con__item">
                         <div class="dropdown dropdown__non">소속구분</div>
                         <div class="select-con">
@@ -224,7 +228,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                 </ul>
             </div>
             <div class="midSelect-footer mt-20">
@@ -241,340 +245,343 @@
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-80">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">동계종목 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
-                    <ul class="standard-list">
-                        <li class="man">남자합계</li>
-                        <li class="woman">여자합계</li>
-                        <li class="gender">남여총계</li>
-                    </ul>
+        <div class="modal-contents">
+            <div class="lookup lookupGraph mt-80">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">동계종목 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                        <ul class="standard-list">
+                            <li class="man">남자합계</li>
+                            <li class="woman">여자합계</li>
+                            <li class="gender">남여총계</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
                     <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
                 </div> -->
-                @@include('../../include/registration.graph.html')
-            </div>
-        </div>
-
-        <div class="lookup">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">동계종목 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
+                    @@include('../../include/registration.graph.html')
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
             </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
+            <div class="lookup lookupTable">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">동계종목 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
+                </div>
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
                     <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
                 </div> -->
-                <div class="conWrap" style="width:1200px; margin:0 auto;">
-                    <div class="graph">
-                        <div class="graph-scroll graph-scroll--table clb">
-                            <div class="thead">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2" class="title center">
-                                                종목구분
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">총계</th>
-                                        </tr>
-                                        <tr>
-                                            <!-- rowspan 속성이 들어갈 경우 클래스 추가 -->
-                                            <th rowspan="4" class="b-r-d">빙상</th>
-                                        </tr>
-                                        <tr>
-                                            <!-- rowspan 자식일 경우 첫번째 클래스 추가 -->
-                                            <th class="b-ltb">스피드</th>
-                                        </tr>
-                                        <tr>
-                                            <th>쇼트트랙</th>
-                                        </tr>
-                                        <tr>
-                                            <th>피겨</th>
-                                        </tr>
-                                        <tr>
-                                            <th rowspan="7" class="b-r-d">스키</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">알파인</th>
-                                        </tr>
-                                        <tr>
-                                            <th>크로스컨트리</th>
-                                        </tr>
-                                        <tr>
-                                            <th>스노보드</th>
-                                        </tr>
-                                        <tr>
-                                            <th>스키점프</th>
-                                        </tr>
-                                        <tr>
-                                            <th>프리스타일</th>
-                                        </tr>
-                                        <tr>
-                                            <th>노르딕복합</th>
-                                        </tr>
-                                        <tr>
-                                            <th rowspan="3" class="b-r-d">봅슬레이<br>스켈레톤</th>
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th class="b-ltb">봅슬레이</th>
-                                        </tr>
-                                        <tr>
-                                            <th>스켈레톤</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">아이스하키</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">컬링</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">바이애슬론</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">루지</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="parent">
-                                <div class="container">
-                                    <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                    <div class="conWrap">
+                        <div class="graph">
+                            <div class="graph-scroll graph-scroll--table clb">
+                                <div class="thead">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="3" rowspan="2">
-                                                    전체
-                                                </th>
-                                                <th colspan="3" rowspan="2">
-                                                    13세이하부
-                                                </th>
-                                                <th colspan="3" rowspan="2">
-                                                    16세이하부
-                                                </th>
-                                                <th colspan="3" rowspan="2">
-                                                    19세이하부
-                                                </th>
-                                                <th colspan="3" rowspan="2">
-                                                    대학부
-                                                </th>
-                                                <th colspan="21">
-                                                    일반부
-                                                </th>
-                                                <th colspan="3" rowspan="2">
-                                                    미지정
+                                                <th colspan="2" class="title center">
+                                                    종목구분
                                                 </th>
                                             </tr>
                                             <tr>
-                                                <th colspan="3">시도청</th>
-                                                <th colspan="3">시도체육회</th>
-                                                <th colspan="3">경기단체</th>
-                                                <th colspan="3">기업</th>
-                                                <th colspan="3">공공기관</th>
-                                                <th colspan="3">군</th>
-                                                <th colspan="3">기타</th>
+                                                <th colspan="2">총계</th>
                                             </tr>
-                                            <tr class="kind">
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                
-                                            </tr>
-
-                                            @@for(var i=0; i<16; i++){ 
                                             <tr>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <!-- 각 섹션 마지막 td에 클래스 삽입 -->
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                
+                                                <!-- rowspan 속성이 들어갈 경우 클래스 추가 -->
+                                                <th rowspan="4" class="b-r-d">빙상</th>
                                             </tr>
-                                            }
+                                            <tr>
+                                                <!-- rowspan 자식일 경우 첫번째 클래스 추가 -->
+                                                <th class="b-ltb">스피드</th>
+                                            </tr>
+                                            <tr>
+                                                <th>쇼트트랙</th>
+                                            </tr>
+                                            <tr>
+                                                <th>피겨</th>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="7" class="b-r-d">스키</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">알파인</th>
+                                            </tr>
+                                            <tr>
+                                                <th>크로스컨트리</th>
+                                            </tr>
+                                            <tr>
+                                                <th>스노보드</th>
+                                            </tr>
+                                            <tr>
+                                                <th>스키점프</th>
+                                            </tr>
+                                            <tr>
+                                                <th>프리스타일</th>
+                                            </tr>
+                                            <tr>
+                                                <th>노르딕복합</th>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="3" class="b-r-d">봅슬레이<br>스켈레톤</th>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="b-ltb">봅슬레이</th>
+                                            </tr>
+                                            <tr>
+                                                <th>스켈레톤</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">아이스하키</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">컬링</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">바이애슬론</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">루지</th>
+                                            </tr>
                                         </thead>
                                     </table>
-                                    <!-- 데이터 반복 -->
+                                </div>
+                                <div class="parent">
+                                    <div class="container">
+                                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="3" rowspan="2">
+                                                        전체
+                                                    </th>
+                                                    <th colspan="3" rowspan="2">
+                                                        13세이하부
+                                                    </th>
+                                                    <th colspan="3" rowspan="2">
+                                                        16세이하부
+                                                    </th>
+                                                    <th colspan="3" rowspan="2">
+                                                        19세이하부
+                                                    </th>
+                                                    <th colspan="3" rowspan="2">
+                                                        대학부
+                                                    </th>
+                                                    <th colspan="21">
+                                                        일반부
+                                                    </th>
+                                                    <th colspan="3" rowspan="2">
+                                                        미지정
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="3">시도청</th>
+                                                    <th colspan="3">시도체육회</th>
+                                                    <th colspan="3">경기단체</th>
+                                                    <th colspan="3">기업</th>
+                                                    <th colspan="3">공공기관</th>
+                                                    <th colspan="3">군</th>
+                                                    <th colspan="3">기타</th>
+                                                </tr>
+                                                <tr class="kind">
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+
+                                                </tr>
+
+                                                @@for(var i=0; i<16; i++){ <tr>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+
+                                                    </tr>
+                                                    }
+                                            </thead>
+                                        </table>
+                                        <!-- 데이터 반복 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- contents end -->
+    <!-- contents end -->
 
-<script>
-    function fn_sidoChange(me) {
-        var chk = $(me).is(":checked");
-        if (chk) {
-            $.getJSON("../../json/test.json", function (a) {
-                $(".concon").html("");
-                a.data.forEach(function (data, i) {
-                    var html = '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' + i + '"><label for="gong_' + i + '">' + data + "</label></div>";
-                    $(".concon").append(html);
+    <script>
+        function fn_sidoChange(me) {
+            var chk = $(me).is(":checked");
+            if (chk) {
+                $.getJSON("../../json/test.json", function (a) {
+                    $(".concon").html("");
+                    a.data.forEach(function (data, i) {
+                        var html =
+                            '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
+                            i + '"><label for="gong_' + i + '">' + data + "</label></div>";
+                        $(".concon").append(html);
+                    });
+                    console.log($(me).parents(".midSelect-con__item").next(".midSelect-con__item").removeClass(
+                        "notData"));
+                    fn_dropDownLoad();
                 });
-                console.log($(me).parents(".midSelect-con__item").next(".midSelect-con__item").removeClass("notData"));
-                fn_dropDownLoad();
-            });
-        }
-    }
-
-    //  클릭 이벤트 함수
-    function clickHandler() {
-        $(".option li").click(function () {
-            if ($(this).siblings(".event--all").hasClass("is_active")) {
-                $(this).siblings(".event--all").removeClass("is_active");
             }
-            $(this).toggleClass("is_active");
-        });
-
-        $(".event--all").click(function () {
-            $(this).siblings("li").removeClass("is_active");
-        });
-    }
-
-    // 데이터 통신
-
-    $('select[name="event"]').on("change", function () {
-        $(".select-con:first").html("");
-        if ($(this).val() == "동계종목") {
-            $.getJSON("../../json/test.json", function (a) {
-                a.data.forEach(function (val, key) {
-                    var event = `<div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_${key}" />
-                                    <label for="event_${key}">${val}</label>
-                                </div>`;
-                    $(".select-con:first").append(event);
-                });
-                $(".select-con:first").prepend(`<div class="select-con--item">
-                                                    <input type="checkbox" name="event" id="event_all" />
-                                                    <label for="event_all">전체</label>
-                                                </div>`);
-                fn_dropDownLoad();
-            });
-            clickHandler();
-        } else if ($(this).val() == "하계종목") {
-            $.getJSON("../../json/test2.json", function (a) {
-                a.data.forEach(function (val, key) {
-                    var event = `<div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_${key}" />
-                                    <label for="event_${key}">${val}</label>
-                                </div>`;
-                    $(".select-con:first").append(event);
-                });
-                $(".select-con:first").prepend(`<div class="select-con--item">
-                                                    <input type="checkbox" name="event" id="event_all" />
-                                                    <label for="event_all">전체</label>
-                                                </div>`);
-                fn_dropDownLoad();
-            });
-            clickHandler();
         }
-    });
-</script>
 
-<!-- footer -->
-@@include('../../include/footer.html',{ type : 'ssp-sub' })
+        //  클릭 이벤트 함수
+        function clickHandler() {
+            $(".option li").click(function () {
+                if ($(this).siblings(".event--all").hasClass("is_active")) {
+                    $(this).siblings(".event--all").removeClass("is_active");
+                }
+                $(this).toggleClass("is_active");
+            });
+
+            $(".event--all").click(function () {
+                $(this).siblings("li").removeClass("is_active");
+            });
+        }
+
+        // 데이터 통신
+
+        $('select[name="event"]').on("change", function () {
+            $(".select-con:first").html("");
+            if ($(this).val() == "동계종목") {
+                $.getJSON("../../json/test.json", function (a) {
+                    a.data.forEach(function (val, key) {
+                        var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                        $(".select-con:first").append(event);
+                    });
+                    $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                    fn_dropDownLoad();
+                });
+                clickHandler();
+            } else if ($(this).val() == "하계종목") {
+                $.getJSON("../../json/test2.json", function (a) {
+                    a.data.forEach(function (val, key) {
+                        var event = `<div class="select-con--item">
+                                    <input type="checkbox" name="event" id="event_${key}" />
+                                    <label for="event_${key}">${val}</label>
+                                </div>`;
+                        $(".select-con:first").append(event);
+                    });
+                    $(".select-con:first").prepend(`<div class="select-con--item">
+                                                    <input type="checkbox" name="event" id="event_all" />
+                                                    <label for="event_all">전체</label>
+                                                </div>`);
+                    fn_dropDownLoad();
+                });
+                clickHandler();
+            }
+        });
+    </script>
+
+    <!-- footer -->
+    @@include('../../include/footer.html',{ type : 'ssp-sub' })

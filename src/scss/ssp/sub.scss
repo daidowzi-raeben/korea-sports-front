@@ -176,10 +176,6 @@
                 padding: 40px 30px 0 30px;
                 .modal-contents {
                     .lookup{
-
-                        &:first-child{
-                            margin: 0 0 50px 0;
-                        }
                         &:last-child{
                             .conWrap{
                                 .graph{
@@ -209,6 +205,10 @@
                                 bottom: 21px;
                             }
                         }
+                }
+                .lookupGraph{
+                    margin-top: 0 !important;
+                    margin-bottom: 50px !important;
                 }
                 .deskTop {
                     display: none;
