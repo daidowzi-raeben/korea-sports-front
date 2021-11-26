@@ -323,6 +323,14 @@ $border: #BEBEBE;
         &-con{
             position: relative;
 
+            // 1개 있는 옵션
+            .option-wrap{
+                .option{
+                    display: block;
+                    position: static;
+                }
+            }
+
             .option{
                 
                 display: none;
