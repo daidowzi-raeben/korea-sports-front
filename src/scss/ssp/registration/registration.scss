@@ -213,6 +213,50 @@ $border: #BEBEBE;
             }
         }
     }
+
+    .regTab{
+        background-color: #EEEFF1;
+        border: 1px solid #B9BCC4;
+        border-radius: 7px;
+
+        &-list{
+            display: flex;
+            a{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                color: inherit;
+
+            }
+        }
+
+        &-item{
+            width: 100%;
+            height: 60px;
+            border-right: 1px solid #B9BCC4;
+
+
+            &:first-child{
+                border-top-left-radius: 7px;
+                border-bottom-left-radius: 7px;
+            }
+
+            &:last-child{
+                border-right: none;
+                border-top-right-radius: 7px;
+                border-bottom-right-radius: 7px;
+            }
+
+            &.is_active{
+                background-color: #339FD9;
+                color: #fff;
+            }
+        }
+
+    }
+
     .midSelect{
         &-tit{
             display: flex;
@@ -278,6 +322,14 @@ $border: #BEBEBE;
 
         &-con{
             position: relative;
+
+            // 1개 있는 옵션
+            .option-wrap{
+                .option{
+                    display: block;
+                    position: static;
+                }
+            }
 
             .option{
                 
@@ -693,10 +745,6 @@ $border: #BEBEBE;
     border-right: 1px solid #b9bcc4 !important;
 }
 
-.b-l-d2 {
-    border-left: 1px solid #d2d2d2;
-}
-
 .thead{
     .height-89{
         height: 89px !important;
@@ -714,6 +762,22 @@ tr.border-bottom {
         border-bottom: 1px solid #3d3d3d !important;
     }
 }
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.hg-35 {
+    height: 35px !important;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+
 
 .numberbox{
     margin: 25px 0 20px 0;
