@@ -820,3 +820,16 @@ tr.border-bottom {
         }
     }
 }
+
+.table-top {
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+        margin-top: 20px;
+        .select-group {
+            width: 103px;
+        }
+    }
+}
