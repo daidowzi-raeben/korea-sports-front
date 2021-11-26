@@ -2,8 +2,12 @@ $(document).ready(function () {
     var table_h = $('.graph-scroll--table .parent table').outerHeight();
     var table_thead_w =  $('.graph-scroll--table .thead').outerWidth();
     $('.graph-scroll--table .parent .container').css('height',table_h);
-    $('.graph-scroll--table .parent').css('width',1200 - table_thead_w);
+    $('.graph-scroll--table .parent').css('width' , 1200 - table_thead_w);
     
+    t_slider_fuc();
+    // $('.graph-scroll--table .parent').css('width','calc(100% - ' + (- table_thead_w) + ')' );
+    function t_slider_fuc(){
+        
         var t_slider = document.querySelector(".graph-scroll--table .parent .container");
         var t_slider_inner = document.querySelector(".graph-scroll--table .parent .container table");
         var t_pressed = false;
@@ -47,5 +51,7 @@ $(document).ready(function () {
             }
         }
    
+    }
             
 });
+
