@@ -86,7 +86,7 @@
         </div>
         <div class="midSelect">
             <div class="midSelect-tit">
-                <h3>지도자등록 목록</h3>
+                <h3>실업 시군구 현황</h3>
                 <span>등록연도</span>
                 <div class="formInput">
                     <div class="select-group">
@@ -125,23 +125,19 @@
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_3" />
-                                <label for="event_3">근대5종</label>
+                                <label for="event_3">수영</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_4" />
-                                <label for="event_4">농구</label>
+                                <label for="event_4">택견</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_5" />
-                                <label for="event_5">당구</label>
+                                <label for="event_5">컬링</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="event" id="event_6" />
-                                <label for="event_6">댄스스포츠</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_6" />
-                                <label for="event_6">라켓볼</label>
+                                <label for="event_6">크리켓</label>
                             </div>
                         </div>
 
@@ -156,7 +152,10 @@
                                         </select>
                                         <i class="icon icon-select__arrow" aria-hidden="true"></i>
                                     </div>
-                                    <p><i class="icon icon-multi"></i> 각 조회조건들은 다중선택이 가능합니다.</p>
+                                    <p>
+                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
+                                        가능합니다.
+                                    </p>
                                 </div>
                                 <div class="option-body">
                                     <ul class="event"></ul>
@@ -164,8 +163,12 @@
                             </div>
                             <div class="option-footer">
                                 <div class="btn-group">
-                                    <button type="button" class="btn-sky btn-reset">선택 초기화</button>
-                                    <button type="button" class="btn-sky btn-submit">선택 완료</button>
+                                    <button type="button" class="btn-sky btn-reset">
+                                        선택 초기화
+                                    </button>
+                                    <button type="button" class="btn-sky btn-submit">
+                                        선택 완료
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -176,15 +179,6 @@
                             <i class="icon icon-regist_arrow--white"></i>
                         </div>
                         <div class="select-con">
-                            <div class="select-con--item">
-                                <input
-                                    type="radio"
-                                    name="sido"
-                                    id="Gyeonggi"
-                                    onclick="fn_sidoChange(this)"
-                                />
-                                <label for="Gyeonggi">전체</label>
-                            </div>
                             <div class="select-con--item">
                                 <input
                                     type="radio"
@@ -259,7 +253,15 @@
                                 />
                                 <label for="Sejong">세종특별자치시</label>
                             </div>
-                            
+                            <div class="select-con--item">
+                                <input
+                                    type="radio"
+                                    name="sido"
+                                    id="Gyeonggi"
+                                    onclick="fn_sidoChange(this)"
+                                />
+                                <label for="Gyeonggi">경기도</label>
+                            </div>
                             <div class="select-con--item">
                                 <input
                                     type="radio"
@@ -352,7 +354,60 @@
                                     </p>
                                 </div>
                                 <div class="option-body">
-                                    <ul></ul>
+                                    <ul class="event event-radio"></ul>
+                                </div>
+                            </div>
+                            <div class="option-footer">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-sky btn-reset">
+                                        선택 초기화
+                                    </button>
+                                    <button type="button" class="btn-sky btn-submit">
+                                        선택 완료
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="midSelect-con__item notData">
+                        <div class="dropdown" data-id="2">
+                            시군구 선택 <i class="icon icon-regist_arrow"></i>
+                            <i class="icon icon-regist_arrow--white"></i>
+                        </div>
+                        <div class="select-con concon">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sigungu" id="sigungu_all" />
+                                <label for="sigungu_all">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sigungu" id="gangnam" />
+                                <label for="gangnam">강남구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sigungu" id="gangdong" />
+                                <label for="gangdong">강동구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sigungu" id="gangbuk" />
+                                <label for="gangbuk">강북구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sigungu" id="gangseo" />
+                                <label for="gangseo">강서구</label>
+                            </div>
+                        </div>
+
+                        <div class="option">
+                            <div class="option-main">
+                                <div class="option-header">
+                                    <p>
+                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
+                                        가능합니다.
+                                    </p>
+                                </div>
+                                <div class="option-body">
+                                    <ul class="event">
+                                    </ul>
                                 </div>
                             </div>
                             <div class="option-footer">
@@ -368,27 +423,6 @@
                         </div>
                     </li>
                     <li class="midSelect-con__item">
-                        <div class="dropdown dropdown__non">팀 성별</div>
-                        <div class="select-con">
-                            <div class="select-con--item">
-                                <input type="checkbox" name="belong" id="belong_all" />
-                                <label for="belong_all">전체</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="belong" id="belong_1" />
-                                <label for="belong_1">남성</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="belong" id="belong_2" />
-                                <label for="belong_2">여성</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="belong" id="belong_3" />
-                                <label for="belong_3">혼성</label>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="midSelect-con__item">
                         <div class="dropdown dropdown__non">소속구분</div>
                         <div class="select-con">
                             <div class="select-con--item">
@@ -397,15 +431,11 @@
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="belong" id="belong_1" />
-                                <label for="belong_1">학교운동부</label>
+                                <label for="belong_1">직장운동부</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="belong" id="belong_2" />
-                                <label for="belong_2">직장운동부</label>
-                            </div>
-                            <div class="select-con--item">
-                                <input type="checkbox" name="belong" id="belong_3" />
-                                <label for="belong_3">전문클럽 등</label>
+                                <label for="belong_2">전문클럽 등</label>
                             </div>
                             <div class="select-con--item">
                                 <input type="checkbox" name="belong" id="belong_3" />
@@ -414,54 +444,31 @@
                         </div>
                     </li>
                     <li class="midSelect-con__item">
-                        <div class="dropdown" data-id="1">
-                            종별선택 <i class="icon icon-regist_arrow"></i>
-                            <i class="icon icon-regist_arrow--white"></i>
-                        </div>
+                        <div class="dropdown b-right dropdown__non">종별선택</div>
                         <div class="select-con b-right">
-                            <div class="con-part">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_all" />
-                                    <label for="jong_all">전체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_sdc" />
-                                    <label for="jong_sdc">13세이하부</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_sdche" />
-                                    <label for="jong_sdche">16세이하부</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_gg" />
-                                    <label for="jong_gg">19세이하부</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_giup" />
-                                    <label for="jong_giup">대학부</label>
-                                </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="jong" id="jong_all" />
+                                <label for="jong_all">전체</label>
                             </div>
-                            <div class="sadf">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_sdc" />
-                                    <label for="jong_sdc">시도청</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_sdche" />
-                                    <label for="jong_sdche">시도체육회</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_gg" />
-                                    <label for="jong_gg">경기단체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_giup" />
-                                    <label for="jong_giup">기업</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_gong" />
-                                    <label for="jong_gong">공공기관</label>
-                                </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="jong" id="jong_sdc" />
+                                <label for="jong_sdc">시도청</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="jong" id="jong_sdche" />
+                                <label for="jong_sdche">시도체육회</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="jong" id="jong_gg" />
+                                <label for="jong_gg">경기단체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="jong" id="jong_giup" />
+                                <label for="jong_giup">기업</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="jong" id="jong_gong" />
+                                <label for="jong_gong">공공기관</label>
                             </div>
                         </div>
                     </li>
@@ -473,12 +480,15 @@
                     각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
                 </p>
                 <div class="btn-group">
-                    <button type="button" class="btn-dark btn-open" data-name="popup1">다운로드</button>
+                    <button type="button" class="btn-dark btn-open" data-name="popup1">
+                        다운로드
+                    </button>
                     <button type="button" class="btn-dark">조건 초기화</button>
                     <a href="#" role="button" class="btn-dark btn-sm">조회</a>
                 </div>
             </div>
         </div>
+
         <!-- 조회 결과  -->
         <div class="lookup mt-80 lookup__list">
             <div class="lookup-header">
