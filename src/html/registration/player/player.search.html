@@ -1,259 +1,791 @@
 @@include('../../include/header.html', {
-    title : "등록현황 - 선수",
-    type : "ssp-sub",
-    active_1 : '',
-    active_2 : '',
-    active_3 : '',
-    active_4 : 'is_active'
-    })
-    <!-- header -->
-    @@include('../../include/ssp.nav.html',{
-    type: "registration",
-    active_1 : '',
-    active_2 : "",
-    active_3 : '',
-    active_4 : '',
-    active_5 : 'is_active'
-    })
-    <!-- nav -->
-    @@include('../../include/ssp.banner.html',{
-    type : "registration",
-    depth_2 : "팀"
-    })
-    <!-- banner -->
-    
-    <!-- contents start -->
-    <div class="container registration">
-        <div class="container-inner">
-            <div class="topSelect">
-                <h3>등록현황 선택</h3>
-                <div class="topSelect-con">
-                    <div class="topSelect-con__left">
-                        <ul>
-                            <li class="player is_active">
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <img src="../../../img/ssp/regist_player.svg" alt="">
-                                </div>
-                                <span>선수</span>
-                            </li>
-                            <li class="master">
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <img src="../../../img/ssp/regist_master.svg" alt="">
-                                </div>
-                                <span>지도자</span>
-                            </li>
-                            <li class="referee">
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <img src="../../../img/ssp/regist_referee.svg" alt="">
-                                </div>
-                                <span>심판</span>
-                            </li>
-                            <li class="manager">
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <img src="../../../img/ssp/regist_manager.svg" alt="">
-                                </div>
-                                <span>선수관리<br>담당자</span>
-                            </li>
-                            <li class="team">
-                                <a href=""></a>
-                                <div class="top-icon">
-                                    <img src="../../../img/ssp/regist_team.svg" alt="">
-    
-                                </div>
-                                <span>팀</span>
-                            </li>
-                        </ul>
-                        <p class="txt">원하시는 등록현황을 선택해보세요.</p>
-                    </div>
-                    <div class="topSelect-con__right">
-                        <ul class="player">
-                            <li><a href=""></a>종별 현황</li>
-                            <li><a href=""></a>시도별 현황</li>
-                            <li><a href=""></a>실업 시군구 현황</li>
-                            <li><a href=""></a>동계종목 현황</li>
-                            <li><a href=""></a>학년별 현황</li>
-                            <li><a href=""></a>선수등록 목록</li>
-                            <li><a href=""></a>선수등록 이력조회</li>
-                            <li><a href=""></a>2021년 이전자료</li>
-                            <li><a href=""></a>2013~2021년 자료</li>
-                            <li class="is_active"><a href=""></a>선수통합검색</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="midSelect">
-                <div class="midSelect-tit">
-                    <h3>실업 시군구 현황</h3>
-                    <span>등록연도</span>
-                    <div class="formInput">
-                        <div class="select-group">
-                            <select name="" id="b">
-                                <option value="0" selected>2021</option>
-                                <option value="1">2020</option>
-                                <option value="2">2019</option>
-                            </select>
-                            <i class="icon icon-select__arrow" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="midSelect-con">
+title : "등록현황 - 선수",
+type : "ssp-sub",
+active_1 : '',
+active_2 : '',
+active_3 : '',
+active_4 : 'is_active'
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "registration",
+active_1 : '',
+active_2 : "",
+active_3 : '',
+active_4 : '',
+active_5 : 'is_active'
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "registration",
+depth_2 : "팀"
+})
+<!-- banner -->
+
+<!-- contents start -->
+<div class="container registration">
+    <div class="container-inner">
+        <div class="topSelect">
+            <h3>등록현황 선택</h3>
+            <div class="topSelect-con">
+                <div class="topSelect-con__left">
                     <ul>
-                        <li>
-                            <div class="dropdown">종목선택</div>
-                            <div class="select-con">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_all">
-                                    <label for="event_all">전체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_1">
-                                    <label for="event_1">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_2">
-                                    <label for="event_2">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_3">
-                                    <label for="event_3">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_4">
-                                    <label for="event_4">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_5">
-                                    <label for="event_5">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_6">
-                                    <label for="event_6">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_3">
-                                    <label for="event_3">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_3">
-                                    <label for="event_3">검도</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="event" id="event_3">
-                                    <label for="event_3">검도</label>
-                                </div>
+                        <li class="player is_active">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_player.svg" alt="">
                             </div>
+                            <span>선수</span>
                         </li>
-                        <li>
-                            <div class="dropdown">시도선택</div>
-                            <div class="select-con">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sido" id="sido_all">
-                                    <label for="sido_all">전체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sido" id="seoul">
-                                    <label for="seoul">서울</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sido" id="busan">
-                                    <label for="busan">부산</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sido" id="deagu">
-                                    <label for="deagu">대구</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sido" id="incheon">
-                                    <label for="incheon">인천</label>
-                                </div>
+                        <li class="master">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_master.svg" alt="">
                             </div>
+                            <span>지도자</span>
                         </li>
-                        <li>
-                            <div class="dropdown">시군구 선택</div>
-                            <div class="select-con">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sigungu" id="sigungu_all">
-                                    <label for="sigungu_all">전체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sigungu" id="gangnam">
-                                    <label for="gangnam">강남구</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sigungu" id="gangdong">
-                                    <label for="gangdong">강동구</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sigungu" id="gangbuk">
-                                    <label for="gangbuk">강북구</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="sigungu" id="gangseo">
-                                    <label for="gangseo">강서구</label>
-                                </div>
+                        <li class="referee">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_referee.svg" alt="">
                             </div>
+                            <span>심판</span>
                         </li>
-                        <li>
-                            <div class="dropdown">소속구분</div>
-                            <div class="select-con">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="belong" id="belong_all">
-                                    <label for="belong_all">전체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="belong" id="belong_1">
-                                    <label for="belong_1">직장운동부</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="belong" id="belong_2">
-                                    <label for="belong_2">전문클럽 등</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="belong" id="belong_3">
-                                    <label for="belong_3">생활클럽 등</label>
-                                </div>
+                        <li class="manager">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_manager.svg" alt="">
                             </div>
+                            <span>선수관리<br>담당자</span>
                         </li>
-                        <li>
-                            <div class="dropdown b-right">종별선택</div>
-                            <div class="select-con b-right">
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_all">
-                                    <label for="jong_all">전체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_sdc">
-                                    <label for="jong_sdc">시도청</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_sdche">
-                                    <label for="jong_sdche">시도체육회</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_gg">
-                                    <label for="jong_gg">경기단체</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_giup">
-                                    <label for="jong_giup">기업</label>
-                                </div>
-                                <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_gong">
-                                    <label for="jong_gong">공공기관</label>
-                                </div>
+                        <li class="team">
+                            <a href=""></a>
+                            <div class="top-icon">
+                                <img src="../../../img/ssp/regist_team.svg" alt="">
+
                             </div>
+                            <span>팀</span>
                         </li>
+                    </ul>
+                    <p class="txt">원하시는 등록현황을 선택해보세요.</p>
+                </div>
+                <div class="topSelect-con__right">
+                    <ul class="player">
+                        <li><a href=""></a>종별 현황</li>
+                        <li><a href=""></a>시도별 현황</li>
+                        <li><a href=""></a>실업 시군구 현황</li>
+                        <li><a href=""></a>동계종목 현황</li>
+                        <li><a href=""></a>학년별 현황</li>
+                        <li><a href=""></a>선수등록 목록</li>
+                        <li><a href=""></a>선수등록 이력조회</li>
+                        <li><a href=""></a>2021년 이전자료</li>
+                        <li><a href=""></a>2013~2021년 자료</li>
+                        <li class="is_active"><a href=""></a>선수통합검색</li>
                     </ul>
                 </div>
             </div>
         </div>
+        <div class="midSelect">
+            <div class="midSelect-tit">
+                <h3>실업 시군구 현황</h3>
+                <span>등록연도</span>
+                <div class="formInput">
+                    <div class="select-group">
+                        <select name="" id="b">
+                            <option value="0" selected>2021</option>
+                            <option value="1">2020</option>
+                            <option value="2">2019</option>
+                        </select>
+                        <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="midSelect-con mt-17">
+                <ul class="midSelect-con__list">
+                    <li class="midSelect-con__item con-event">
+                        <div class="dropdown" data-id="0">
+                            종목선택 <i class="icon icon-regist_arrow"></i>
+                            <i class="icon icon-regist_arrow--white"></i>
+                        </div>
+                        <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_all" />
+                                <label for="event_all">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_0" />
+                                <label for="event_0">검도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_1" />
+                                <label for="event_1">골프</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_2" />
+                                <label for="event_2">궁도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_3" />
+                                <label for="event_3">근대5종</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_4" />
+                                <label for="event_4">농구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_5" />
+                                <label for="event_5">당구</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_6" />
+                                <label for="event_6">댄스스포츠</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="event" id="event_6" />
+                                <label for="event_6">라켓볼</label>
+                            </div>
+                        </div>
+
+                        <div class="option formInput">
+                            <div class="option-main">
+                                <div class="option-header">
+                                    <div class="select-group wd-290 mr-25">
+                                        <select name="event">
+                                            <option value="하계종목" selected>하계 종목</option>
+                                            <option value="동계종목">동계 종목</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                        <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                    </div>
+                                    <p>
+                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
+                                        가능합니다.
+                                    </p>
+                                </div>
+                                <div class="option-body">
+                                    <ul class="event"></ul>
+                                </div>
+                            </div>
+                            <div class="option-footer">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-sky btn-reset">
+                                        선택 초기화
+                                    </button>
+                                    <button type="button" class="btn-sky btn-submit">
+                                        선택 완료
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="midSelect-con__item">
+                        <div class="dropdown" data-id="1">
+                            시도선택 <i class="icon icon-regist_arrow"></i>
+                            <i class="icon icon-regist_arrow--white"></i>
+                        </div>
+                        <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Gyeonggi" onclick="fn_sidoChange(this)" />
+                                <label for="Gyeonggi">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="seoul" value="seoul"
+                                    onclick="fn_sidoChange(this)" />
+                                <label for="seoul">서울특별시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="busan" value="busan"
+                                    onclick="fn_sidoChange(this)" />
+                                <label for="busan">부산광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="deagu" onclick="fn_sidoChange(this)" />
+                                <label for="deagu">대구광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="incheon" onclick="fn_sidoChange(this)" />
+                                <label for="incheon">인천광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Gwangju" onclick="fn_sidoChange(this)" />
+                                <label for="Gwangju">광주광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Daejeon" onclick="fn_sidoChange(this)" />
+                                <label for="Daejeon">대전광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Ulsan" onclick="fn_sidoChange(this)" />
+                                <label for="Ulsan">울산광역시</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Sejong" onclick="fn_sidoChange(this)" />
+                                <label for="Sejong">세종특별자치시</label>
+                            </div>
+
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Gangwon" onclick="fn_sidoChange(this)" />
+                                <label for="Gangwon">강원도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Chungbuk" onclick="fn_sidoChange(this)" />
+                                <label for="Chungbuk">충청북도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Chungnam" onclick="fn_sidoChange(this)" />
+                                <label for="Chungnam">충청남도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Jeonbuk" onclick="fn_sidoChange(this)" />
+                                <label for="Jeonbuk">전라북도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Jeonnam" onclick="fn_sidoChange(this)" />
+                                <label for="Jeonnam">전라남도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Gyeongbuk" onclick="fn_sidoChange(this)" />
+                                <label for="Gyeongbuk">경상북도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Gyeongnam" onclick="fn_sidoChange(this)" />
+                                <label for="Gyeongnam">경상남도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="Jeju" onclick="fn_sidoChange(this)" />
+                                <label for="Jeju">제주특별자치도</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="sido" id="none" onclick="fn_sidoChange(this)" />
+                                <label for="none">시도없음</label>
+                            </div>
+                        </div>
+
+                        <div class="option">
+                            <div class="option-main">
+                                <div class="option-header">
+                                    <p>
+                                        <i class="icon icon-multi"></i> 각 조회조건들은 다중선택이
+                                        가능합니다.
+                                    </p>
+                                </div>
+                                <div class="option-body">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                            <div class="option-footer">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-sky btn-reset">
+                                        선택 초기화
+                                    </button>
+                                    <button type="button" class="btn-sky btn-submit">
+                                        선택 완료
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="midSelect-con__item">
+                        <div class="dropdown dropdown__non">성별선택</div>
+                        <div class="select-con">
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_all" />
+                                <label for="belong_all">전체</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_1" />
+                                <label for="belong_1">남성</label>
+                            </div>
+                            <div class="select-con--item">
+                                <input type="checkbox" name="belong" id="belong_2" />
+                                <label for="belong_2">여성</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="midSelect-con__item">
+                        <div class="dropdown dropdown__non">선수이름</div>
+                        <div class="select-con">
+                            <div class="conWrap">
+                                <div class="formInput clb mt-15">
+                                    <div>
+                                        <label for="a"></label>
+                                        <input type="text" placeholder="검색할 이름을 입력하세요">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="midSelect-footer mt-20">
+                <p class="discription">
+                    <i class="icon icon-multi"></i>
+                    각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
+                </p>
+                <div class="btn-group">
+                   
+                    <button type="button" class="btn-dark">조건 초기화</button>
+                    <a href="#" role="button" class="btn-dark btn-sm">조회</a>
+                </div>
+            </div>
+            <!-- 조회 결과  -->
+            <div class="lookup mt-80 lookup__list">
+                <div class="lookup-header">
+                    <div>
+                        <strong class="lookup-header__about">선수통합검색</strong>
+                        <h2 class="lookup-header__title">조회결과 <span class="ml-15">252<span
+                                    class="font-17">건</span></span></h2>
+                    </div>
+                </div>
+                <div class="lookup-body">
+                    <div class="table-wrap mt-20">
+                        <table>
+                            <colgroup>
+                                <col width="81">
+                                <col width="130">
+                                <col width="127">
+                                <col width="96">
+                                <col width="162">
+                                <col width="227">
+                                <col width="153">
+                                <col width="230 ">
+
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">이름</th>
+                                    <th scope="col">출생년도</th>
+                                    <th scope="col">성별</th>
+                                    <th scope="col">시도</th>
+                                    <th scope="col">종목</th>
+                                    <th scope="col">종별</th>
+                                    <th scope="col">소속팀명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for(var i = 0; i <15; i++){ <tr>
+                                    <td>15</td>
+                                    <td class="text-left">강대한</td>
+                                    <td>1983</td>
+                                    <td>남성</td>
+                                    <td>세종특별자치시</td>
+                                    <td>야구소프트볼(소프트볼)</td>
+                                    <td>19세이하부</td>
+                                    <td class="text-left">서울아트란티스피닉스</td>
+                                    </tr>
+                                    }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 페이지네이션 -->
+                    <div class="pagination mt-30">
+                        <div class="pagination-control--prev">
+                            <button type="button">
+                                <i class="icon icon-pagination--d"></i>
+                                <i class="icon icon-pagination--d-white"></i>
+                            </button>
+                            <button type="button" class="prev">
+                                <i class="icon icon-pagination"></i>
+                                <i class="icon icon-pagination-white"></i>
+                            </button>
+                        </div>
+                        <ol class="pagination-list">
+                            <li><a href="#">1</a></li>
+                            <li class="is_active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ol>
+                        <div class="pagination-control--next">
+                            <button type="button" class="next">
+                                <i class="icon icon-pagination"></i>
+                                <i class="icon icon-pagination-white"></i>
+                            </button>
+                            <button type="button">
+                                <i class="icon icon-pagination--d"></i>
+                                <i class="icon icon-pagination--d-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lookup mt-80 lookup__list">
+                        <div class="lookup-header">
+                            <div>
+                                <strong class="lookup-header__about">선수통합검색</strong>
+                                <h2 class="lookup-header__title">조회결과 <span class="ml-15">252<span
+                                            class="font-17">건</span></span></h2>
+                            </div>
+                        </div>
+                        <div class="lookup-body">
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numberbox">
+                                <div class="numberbox-left">
+                                    <span>번호<br>15</span>
+                                </div>
+                                <div class="numberbox-right">
+                                    <div class="numberbox-right__list">
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>이름</strong>
+                                                <span>강대한</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>출생년도</strong>
+                                                <span>1983</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>성별</strong>
+                                                <span>남성</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>시도</strong>
+                                                <span>세종특별자치시</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>소속팀명</strong>
+                                                <span>서울아트란티스피닉스</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="data">
+                                            <li class="data-list">
+                                                <strong>종목</strong>
+                                                <span>야구소프트볼(소프트볼)</span>
+                                            </li>
+                                            <li class="data-list">
+                                                <strong>종별</strong>
+                                                <span>19세이하부</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 페이지네이션 -->
+                            <div class="pagination mt-30">
+                                <div class="pagination-control--prev">
+                                    <button type="button">
+                                        <i class="icon icon-pagination--d"></i>
+                                        <i class="icon icon-pagination--d-white"></i>
+                                    </button>
+                                    <button type="button" class="prev">
+                                        <i class="icon icon-pagination"></i>
+                                        <i class="icon icon-pagination-white"></i>
+                                    </button>
+                                </div>
+                                <ol class="pagination-list">
+                                    <li><a href="#">1</a></li>
+                                    <li class="is_active"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                </ol>
+                                <div class="pagination-control--next">
+                                    <button type="button" class="next">
+                                        <i class="icon icon-pagination"></i>
+                                        <i class="icon icon-pagination-white"></i>
+                                    </button>
+                                    <button type="button">
+                                        <i class="icon icon-pagination--d"></i>
+                                        <i class="icon icon-pagination--d-white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
     <!-- contents end -->
-    
+
     <!-- footer -->
     @@include('../../include/footer.html',{
     type : 'ssp-sub'
