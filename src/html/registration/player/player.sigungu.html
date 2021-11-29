@@ -1,25 +1,10 @@
-@@include('../../include/header.html', {
-    title : "등록현황 - 선수",
-    type : "ssp-sub",
-    active_1 : '',
-    active_2 : '',
-    active_3 : '',
-    active_4 : 'is_active'
-    })
-    <!-- header -->
-    @@include('../../include/ssp.nav.html',{
-    type: "registration",
-    active_1 : '',
-    active_2 : "",
-    active_3 : '',
-    active_4 : '',
-    active_5 : 'is_active'
-    })
-    <!-- nav -->
-    @@include('../../include/ssp.banner.html',{
-    type : "registration",
-    depth_2 : "선수"
-    })
+@@include('../../include/header.html', { title : "등록현황 - 선수", type : "ssp-sub", active_1 : '',
+active_2 : '', active_3 : '', active_4 : 'is_active' })
+<!-- header -->
+@@include('../../include/ssp.nav.html',{ type: "registration", active_1 : '', active_2 : "",
+active_3 : '', active_4 : '', active_5 : 'is_active' })
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{ type : "registration", depth_2 : "선수" })
 
 <!-- 모달창 -->
 <div class="modal-wrap" id="popup1">
@@ -40,6 +25,8 @@
         </div>
     </div>
 </div>
+
+@@include('../../include/registration.modal.html')
 
 <!-- contents start -->
 <div class="container registration">
@@ -431,8 +418,7 @@
                                     </p>
                                 </div>
                                 <div class="option-body">
-                                    <ul class="event">
-                                    </ul>
+                                    <ul class="event"></ul>
                                 </div>
                             </div>
                             <div class="option-footer">
@@ -515,282 +501,323 @@
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-80">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">실업 시군구 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
-                    <ul class="standard-list">
-                        <li class="man">남자합계</li>
-                        <li class="woman">여자합계</li>
-                        <li class="gender">남여총계</li>
-                    </ul>
+        <div class="modal-contents">
+            <div class="lookup lookupGraph">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">실업 시군구 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                        <ul class="standard-list">
+                            <li class="man">남자합계</li>
+                            <li class="woman">여자합계</li>
+                            <li class="gender">남여총계</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                @@include('../../include/registration.graph.html')
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    @@include('../../include/registration.graph.html')
+                </div>
             </div>
         </div>
 
-        <div class="lookup">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">실업 시군구 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
+        <div class="modal-contents lookupTable">
+            <div class="lookup">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">실업 시군구 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                    </div>
+                    <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                <div class="conWrap" style="width:1200px; margin:0 auto;">
-                    <div class="graph">
-                        <div class="graph-scroll graph-scroll--table clb">
-                            <div class="thead">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2" class="height-89 center">
-                                                종목구분
-                                            </th>
-                                        </tr>
-                                        <tr><th>총계</th></tr>
-                                        <tr><th>검도</th></tr>
-                                        <tr><th>레슬링</th></tr>
-                                        <tr><th>롤러</th></tr>
-                                        <tr><th>바둑</th></tr>
-                                        <tr><th>보디빌딩</th></tr>
-                                        <tr><th>사격</th></tr>
-                                        <tr><th>씨름</th></tr>
-                                        <tr><th>역도</th></tr>
-                                        <tr><th>유도</th></tr>
-                                        <tr><th>조정</th></tr>
-                                        <tr><th>체조</th></tr>
-                                        <tr><th>카누</th></tr>
-                                        <tr><th>탁구</th></tr>
-                                        <tr><th>택견</th></tr>
-                                        <tr><th>테니스</th></tr>
-                                        <tr><th>펜싱</th></tr>
-                                        <tr><th>핸드볼</th></tr>
-                                        <tr><th>택견</th></tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="parent">
-                                <div class="container">
-                                    <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    <div class="conWrap" style="width: 1200px; margin: 0 auto">
+                        <div class="graph">
+                            <div class="graph-scroll graph-scroll--table clb">
+                                <div class="thead">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="3">전체</th>
-                                                <th colspan="3">강남구</th>
-                                                <th colspan="3">강동구</th>
-                                                <th colspan="3">강북구</th>
-                                                <th colspan="3">강서구</th>
-                                                <th colspan="3">관악구</th>
-                                                <th colspan="3">광진구</th>
-                                                <th colspan="3">구로구</th>
-                                                <th colspan="3">금천구</th>
-                                                <th colspan="3">노원구</th>
-                                                <th colspan="3">도봉구</th>
-                                                <th colspan="3">동작구</th>
-                                                <th colspan="3">마포구</th>
-                                                <th colspan="3">서대문구</th>
-                                                <th colspan="3">서초구</th>
-                                                <th colspan="3">성동구</th>
-                                                <th colspan="3">성북구</th>
-                                                <th colspan="3">송파구</th>
-                                                <th colspan="3">영등포구</th>
-                                                <th colspan="3">용산구</th>
-                                                <th colspan="3">은평구</th>
-                                                <th colspan="3">종로구</th>
-                                                <th colspan="3">중구</th>
-                                                <th colspan="3">중랑구</th>
+                                                <th colspan="2" class="height-89 center">종목구분</th>
                                             </tr>
-                                            <tr class="kind">
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                            </tr>
-
-                                            @@for(var i=0; i<19; i++){
                                             <tr>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <!-- 각 섹션 마지막 td에 클래스 삽입 -->
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
+                                                <th>총계</th>
                                             </tr>
-                                            }
+                                            <tr>
+                                                <th>검도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>레슬링</th>
+                                            </tr>
+                                            <tr>
+                                                <th>롤러</th>
+                                            </tr>
+                                            <tr>
+                                                <th>바둑</th>
+                                            </tr>
+                                            <tr>
+                                                <th>보디빌딩</th>
+                                            </tr>
+                                            <tr>
+                                                <th>사격</th>
+                                            </tr>
+                                            <tr>
+                                                <th>씨름</th>
+                                            </tr>
+                                            <tr>
+                                                <th>역도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>유도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>조정</th>
+                                            </tr>
+                                            <tr>
+                                                <th>체조</th>
+                                            </tr>
+                                            <tr>
+                                                <th>카누</th>
+                                            </tr>
+                                            <tr>
+                                                <th>탁구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>택견</th>
+                                            </tr>
+                                            <tr>
+                                                <th>테니스</th>
+                                            </tr>
+                                            <tr>
+                                                <th>펜싱</th>
+                                            </tr>
+                                            <tr>
+                                                <th>핸드볼</th>
+                                            </tr>
+                                            <tr>
+                                                <th>택견</th>
+                                            </tr>
                                         </thead>
                                     </table>
-                                    <!-- 데이터 반복 -->
+                                </div>
+                                <div class="parent">
+                                    <div class="container">
+                                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="3">전체</th>
+                                                    <th colspan="3">강남구</th>
+                                                    <th colspan="3">강동구</th>
+                                                    <th colspan="3">강북구</th>
+                                                    <th colspan="3">강서구</th>
+                                                    <th colspan="3">관악구</th>
+                                                    <th colspan="3">광진구</th>
+                                                    <th colspan="3">구로구</th>
+                                                    <th colspan="3">금천구</th>
+                                                    <th colspan="3">노원구</th>
+                                                    <th colspan="3">도봉구</th>
+                                                    <th colspan="3">동작구</th>
+                                                    <th colspan="3">마포구</th>
+                                                    <th colspan="3">서대문구</th>
+                                                    <th colspan="3">서초구</th>
+                                                    <th colspan="3">성동구</th>
+                                                    <th colspan="3">성북구</th>
+                                                    <th colspan="3">송파구</th>
+                                                    <th colspan="3">영등포구</th>
+                                                    <th colspan="3">용산구</th>
+                                                    <th colspan="3">은평구</th>
+                                                    <th colspan="3">종로구</th>
+                                                    <th colspan="3">중구</th>
+                                                    <th colspan="3">중랑구</th>
+                                                </tr>
+                                                <tr class="kind">
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                </tr>
+
+                                                @@for(var i=0; i<19; i++){
+                                                <tr>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                </tr>
+                                                }
+                                            </thead>
+                                        </table>
+                                        <!-- 데이터 반복 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -807,7 +834,9 @@
                     var html =
                         '<div class="select-con--item"><input type="checkbox" name="event" id="gong_' +
                         i +
-                        '"><label for="gong_' + i + '">' +
+                        '"><label for="gong_' +
+                        i +
+                        '">' +
                         data +
                         "</label></div>";
                     $(".concon").append(html);
@@ -854,9 +883,9 @@
                                                     <input type="checkbox" name="event" id="event_all" />
                                                     <label for="event_all">전체</label>
                                                 </div>`);
-                                                fn_dropDownLoad();
-                                            });
-                                            clickHandler();
+                fn_dropDownLoad();
+            });
+            clickHandler();
         } else if ($(this).val() == "하계종목") {
             $.getJSON("../../json/test2.json", function (a) {
                 a.data.forEach(function (val, key) {
@@ -870,12 +899,11 @@
                                                     <input type="checkbox" name="event" id="event_all" />
                                                     <label for="event_all">전체</label>
                                                 </div>`);
-                                                fn_dropDownLoad();
+                fn_dropDownLoad();
             });
             clickHandler();
         }
     });
-
 </script>
 
 <!-- footer -->

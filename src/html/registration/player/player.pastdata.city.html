@@ -22,6 +22,8 @@
     })
 
     
+    @@include('../../include/registration.modal.html')
+
 
 <!-- contents start -->
 <div class="container registration">
@@ -152,7 +154,8 @@
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-85">
+        <div class="modal-contents">
+        <div class="lookup lookupGraph">
             <div class="lookup-header">
                 <strong class="lookup-header__about">시도별 선수 등록 현황</strong>
                 <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
@@ -167,7 +170,7 @@
                         <li class="gender">남여총계</li>
                     </ul>
                 </div>
-                <button type="button" class="deskTop">
+                <button type="button" class="deskTop"  onClick="graph_pop_open('registration_pop')">
                     <i class="icon icon-deskTop"></i>
                 </button>
             </div>
@@ -179,388 +182,391 @@
                 @@include('../../include/registration.graph.html')
             </div>
         </div>
-
-        <div class="lookup">
-            <div class="lookup-header">
-                <strong class="lookup-header__about">시도별 선수 등록 현황</strong>
-                <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
-                <div class="standard">
-                    <dl class="standard-day">
-                        <dt>통계생성 기준 :</dt>
-                        <dd>2020/12/31 23:44:03</dd>
-                    </dl>
+        </div>
+        
+        <div class="modal-contents lookupTable">
+            <div class="lookup">
+                <div class="lookup-header">
+                    <strong class="lookup-header__about">시도별 선수 등록 현황</strong>
+                    <h2 class="lookup-header__title">조회결과 <span>(도표)</span></h2>
+                    <div class="standard">
+                        <dl class="standard-day">
+                            <dt>통계생성 기준 :</dt>
+                            <dd>2020/12/31 23:44:03</dd>
+                        </dl>
+                    </div>
+                    <button type="button" class="deskTop"  onClick="graph_pop_open('registration_pop')">
+                        <i class="icon icon-deskTop"></i>
+                    </button>
                 </div>
-                <button type="button" class="deskTop">
-                    <i class="icon icon-deskTop"></i>
-                </button>
-            </div>
-            <div class="lookup-body">
-                <!-- 데이터 조회 전 -->
-                <!-- <div class="empty">
-                    <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
-                </div> -->
-                <div class="conWrap" style="width: 1200px; margin: 0 auto">
-                    <div class="graph">
-                        <div class="graph-scroll graph-scroll--table clb">
-                            <div class="thead">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2" class="height-89 center">종목구분</th>
-                                        </tr>
-                                        <tr>
-                                            <th>총계</th>
-                                        </tr>
-                                        <tr>
-                                            <th>골프</th>
-                                        </tr>
-                                        <tr>
-                                            <th>궁도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>근대5종</th>
-                                        </tr>
-                                        <tr>
-                                            <th>농구</th>
-                                        </tr>
-                                        <tr>
-                                            <th>당구</th>
-                                        </tr>
-                                        <tr>
-                                            <th>댄스스포츠</th>
-                                        </tr>
-                                        <tr>
-                                            <th>럭비</th>
-                                        </tr>
-                                        <tr>
-                                            <th>레슬링</th>
-                                        </tr>
-                                        <tr>
-                                            <th>롤러</th>
-                                        </tr>
-                                        <tr>
-                                            <th>루지</th>
-                                        </tr>
-                                        <tr>
-                                            <th>바둑</th>
-                                        </tr>
-                                        <tr>
-                                            <th>바이애슬론</th>
-                                        </tr>
-                                        <tr>
-                                            <th>배구</th>
-                                        </tr>
-                                        <tr>
-                                            <th>배드민턴</th>
-                                        </tr>
-                                        <tr>
-                                            <th>보디빌딩</th>
-                                        </tr>
-                                        <tr>
-                                            <th>복싱</th>
-                                        </tr>
-                                        <tr>
-                                            <th>볼링</th>
-                                        </tr>
-                                        <tr>
-                                            <th>봅슬레이스켈레톤</th>
-                                        </tr>
-                                        <tr>
-                                            <th>빙상</th>
-                                        </tr>
-                                        <tr>
-                                            <th>사격</th>
-                                        </tr>
-                                        <tr>
-                                            <th>산악</th>
-                                        </tr>
-                                        <tr>
-                                            <th>세팍타크로</th>
-                                        </tr>
-                                        <tr>
-                                            <th>소프트테니스</th>
-                                        </tr>
-                                        <tr>
-                                            <th>수상스키·웨이크스포츠</th>
-                                        </tr>
-                                        <tr>
-                                            <th>수영</th>
-                                        </tr>
-                                        <tr>
-                                            <th>수중_핀수영</th>
-                                        </tr>
-                                        <tr>
-                                            <th>스쿼시</th>
-                                        </tr>
-                                        <tr>
-                                            <th>스키</th>
-                                        </tr>
-                                        <tr>
-                                            <th>승마</th>
-                                        </tr>
-                                        <tr>
-                                            <th>씨름</th>
-                                        </tr>
-                                        <tr>
-                                            <th>아이스하키</th>
-                                        </tr>
-                                        <tr>
-                                            <th>야구소프트볼(소프트볼)</th>
-                                        </tr>
-                                        <tr>
-                                            <th>야구소프트볼(야구)</th>
-                                        </tr>
-                                        <tr>
-                                            <th>양궁</th>
-                                        </tr>
-                                        <tr>
-                                            <th>에어로빅힙합</th>
-                                        </tr>
-                                        <tr>
-                                            <th>역도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>요트</th>
-                                        </tr>
-                                        <tr>
-                                            <th>우슈</th>
-                                        </tr>
-                                        <tr>
-                                            <th>유도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>육상</th>
-                                        </tr>
-                                        <tr>
-                                            <th>자전거</th>
-                                        </tr>
-                                        <tr>
-                                            <th>조정</th>
-                                        </tr>
-                                        <tr>
-                                            <th>주짓수</th>
-                                        </tr>
-                                        <tr>
-                                            <th>철인3종</th>
-                                        </tr>
-                                        <tr>
-                                            <th>체조</th>
-                                        </tr>
-                                        <tr>
-                                            <th>축구</th>
-                                        </tr>
-                                        <tr>
-                                            <th>카누</th>
-                                        </tr>
-                                        <tr>
-                                            <th>카라테</th>
-                                        </tr>
-                                        <tr>
-                                            <th>카바디</th>
-                                        </tr>
-                                        <tr>
-                                            <th>컬링</th>
-                                        </tr>
-                                        <tr>
-                                            <th>킥복싱</th>
-                                        </tr>
-                                        <tr>
-                                            <th>탁구</th>
-                                        </tr>
-                                        <tr>
-                                            <th>태권도</th>
-                                        </tr>
-                                        <tr>
-                                            <th>택견</th>
-                                        </tr>
-                                        <tr>
-                                            <th>테니스</th>
-                                        </tr>
-                                        <tr>
-                                            <th>패러글라이딩</th>
-                                        </tr>
-                                        <tr>
-                                            <th>펜싱</th>
-                                        </tr>
-                                        <tr>
-                                            <th>하키</th>
-                                        </tr>
-                                        <tr>
-                                            <th>핸드볼</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="parent">
-                                <div class="container">
-                                    <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                <div class="lookup-body">
+                    <!-- 데이터 조회 전 -->
+                    <!-- <div class="empty">
+                        <p>선택된 데이터가 없습니다. 조회를 시작해보세요.</p>
+                    </div> -->
+                    <div class="conWrap" style="width: 1200px; margin: 0 auto">
+                        <div class="graph">
+                            <div class="graph-scroll graph-scroll--table clb">
+                                <div class="thead">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="3">전체</th>
-                                                <th colspan="3">서울</th>
-                                                <th colspan="3">부산</th>
-                                                <th colspan="3">대구</th>
-                                                <th colspan="3">인천</th>
-                                                <th colspan="3">광주</th>
-                                                <th colspan="3">대전</th>
-                                                <th colspan="3">울산</th>
-                                                <th colspan="3">세종</th>
-                                                <th colspan="3">경기</th>
-                                                <th colspan="3">강원</th>
-                                                <th colspan="3">충북</th>
-                                                <th colspan="3">충남</th>
-                                                <th colspan="3">전북</th>
-                                                <th colspan="3">전남</th>
-                                                <th colspan="3">경북</th>
-                                                <th colspan="3">경남</th>
-                                                <th colspan="3">제주</th>
-                                                <th colspan="3">시도없음</th>
-                                                <th colspan="3">시도미지정</th>
+                                                <th colspan="2" class="height-89 center">종목구분</th>
                                             </tr>
-                                            <tr class="kind">
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <!-- 각 섹션 마지막 th에 클래스 삽입 -->
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                                <th>남</th>
-                                                <th>여</th>
-                                                <th class="b-r-3">소계</th>
-                                            </tr>
-
-                                            @@for(var i=0; i<60; i++){
                                             <tr>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <!-- 각 섹션 마지막 td에 클래스 삽입 -->
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
-                                                <td>200</td>
-                                                <td>200</td>
-                                                <td class="b-r-3">200</td>
+                                                <th>총계</th>
                                             </tr>
-                                            }
+                                            <tr>
+                                                <th>골프</th>
+                                            </tr>
+                                            <tr>
+                                                <th>궁도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>근대5종</th>
+                                            </tr>
+                                            <tr>
+                                                <th>농구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>당구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>댄스스포츠</th>
+                                            </tr>
+                                            <tr>
+                                                <th>럭비</th>
+                                            </tr>
+                                            <tr>
+                                                <th>레슬링</th>
+                                            </tr>
+                                            <tr>
+                                                <th>롤러</th>
+                                            </tr>
+                                            <tr>
+                                                <th>루지</th>
+                                            </tr>
+                                            <tr>
+                                                <th>바둑</th>
+                                            </tr>
+                                            <tr>
+                                                <th>바이애슬론</th>
+                                            </tr>
+                                            <tr>
+                                                <th>배구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>배드민턴</th>
+                                            </tr>
+                                            <tr>
+                                                <th>보디빌딩</th>
+                                            </tr>
+                                            <tr>
+                                                <th>복싱</th>
+                                            </tr>
+                                            <tr>
+                                                <th>볼링</th>
+                                            </tr>
+                                            <tr>
+                                                <th>봅슬레이스켈레톤</th>
+                                            </tr>
+                                            <tr>
+                                                <th>빙상</th>
+                                            </tr>
+                                            <tr>
+                                                <th>사격</th>
+                                            </tr>
+                                            <tr>
+                                                <th>산악</th>
+                                            </tr>
+                                            <tr>
+                                                <th>세팍타크로</th>
+                                            </tr>
+                                            <tr>
+                                                <th>소프트테니스</th>
+                                            </tr>
+                                            <tr>
+                                                <th>수상스키·웨이크스포츠</th>
+                                            </tr>
+                                            <tr>
+                                                <th>수영</th>
+                                            </tr>
+                                            <tr>
+                                                <th>수중_핀수영</th>
+                                            </tr>
+                                            <tr>
+                                                <th>스쿼시</th>
+                                            </tr>
+                                            <tr>
+                                                <th>스키</th>
+                                            </tr>
+                                            <tr>
+                                                <th>승마</th>
+                                            </tr>
+                                            <tr>
+                                                <th>씨름</th>
+                                            </tr>
+                                            <tr>
+                                                <th>아이스하키</th>
+                                            </tr>
+                                            <tr>
+                                                <th>야구소프트볼(소프트볼)</th>
+                                            </tr>
+                                            <tr>
+                                                <th>야구소프트볼(야구)</th>
+                                            </tr>
+                                            <tr>
+                                                <th>양궁</th>
+                                            </tr>
+                                            <tr>
+                                                <th>에어로빅힙합</th>
+                                            </tr>
+                                            <tr>
+                                                <th>역도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>요트</th>
+                                            </tr>
+                                            <tr>
+                                                <th>우슈</th>
+                                            </tr>
+                                            <tr>
+                                                <th>유도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>육상</th>
+                                            </tr>
+                                            <tr>
+                                                <th>자전거</th>
+                                            </tr>
+                                            <tr>
+                                                <th>조정</th>
+                                            </tr>
+                                            <tr>
+                                                <th>주짓수</th>
+                                            </tr>
+                                            <tr>
+                                                <th>철인3종</th>
+                                            </tr>
+                                            <tr>
+                                                <th>체조</th>
+                                            </tr>
+                                            <tr>
+                                                <th>축구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>카누</th>
+                                            </tr>
+                                            <tr>
+                                                <th>카라테</th>
+                                            </tr>
+                                            <tr>
+                                                <th>카바디</th>
+                                            </tr>
+                                            <tr>
+                                                <th>컬링</th>
+                                            </tr>
+                                            <tr>
+                                                <th>킥복싱</th>
+                                            </tr>
+                                            <tr>
+                                                <th>탁구</th>
+                                            </tr>
+                                            <tr>
+                                                <th>태권도</th>
+                                            </tr>
+                                            <tr>
+                                                <th>택견</th>
+                                            </tr>
+                                            <tr>
+                                                <th>테니스</th>
+                                            </tr>
+                                            <tr>
+                                                <th>패러글라이딩</th>
+                                            </tr>
+                                            <tr>
+                                                <th>펜싱</th>
+                                            </tr>
+                                            <tr>
+                                                <th>하키</th>
+                                            </tr>
+                                            <tr>
+                                                <th>핸드볼</th>
+                                            </tr>
                                         </thead>
                                     </table>
-                                    <!-- 데이터 반복 -->
+                                </div>
+                                <div class="parent">
+                                    <div class="container">
+                                        <!-- 데이터 반복 / data-option은 숫자만 입력 -->
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="3">전체</th>
+                                                    <th colspan="3">서울</th>
+                                                    <th colspan="3">부산</th>
+                                                    <th colspan="3">대구</th>
+                                                    <th colspan="3">인천</th>
+                                                    <th colspan="3">광주</th>
+                                                    <th colspan="3">대전</th>
+                                                    <th colspan="3">울산</th>
+                                                    <th colspan="3">세종</th>
+                                                    <th colspan="3">경기</th>
+                                                    <th colspan="3">강원</th>
+                                                    <th colspan="3">충북</th>
+                                                    <th colspan="3">충남</th>
+                                                    <th colspan="3">전북</th>
+                                                    <th colspan="3">전남</th>
+                                                    <th colspan="3">경북</th>
+                                                    <th colspan="3">경남</th>
+                                                    <th colspan="3">제주</th>
+                                                    <th colspan="3">시도없음</th>
+                                                    <th colspan="3">시도미지정</th>
+                                                </tr>
+                                                <tr class="kind">
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <!-- 각 섹션 마지막 th에 클래스 삽입 -->
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                    <th>남</th>
+                                                    <th>여</th>
+                                                    <th class="b-r-3">소계</th>
+                                                </tr>
+
+                                                @@for(var i=0; i<60; i++){
+                                                <tr>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <!-- 각 섹션 마지막 td에 클래스 삽입 -->
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td class="b-r-3">200</td>
+                                                </tr>
+                                                }
+                                            </thead>
+                                        </table>
+                                        <!-- 데이터 반복 -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>

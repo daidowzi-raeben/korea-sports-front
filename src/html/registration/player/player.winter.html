@@ -41,6 +41,9 @@
     </div>
 </div>
 
+@@include('../../include/registration.modal.html')
+
+
 <!-- contents start -->
 <div class="container registration">
     <div class="container-inner">
@@ -371,7 +374,8 @@
         </div>
 
         <!-- 조회 결과  -->
-        <div class="lookup mt-80">
+        <div class="modal-contents">
+        <div class="lookup lookupGraph">
             <div class="lookup-header">
                 <strong class="lookup-header__about">동계종목 현황</strong>
                 <h2 class="lookup-header__title">조회결과 <span>(그래프)</span></h2>
@@ -386,7 +390,7 @@
                         <li class="gender">남여총계</li>
                     </ul>
                 </div>
-                <button type="button" class="deskTop">
+                <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
                     <i class="icon icon-deskTop"></i>
                 </button>
             </div>
@@ -398,7 +402,9 @@
                 @@include('../../include/registration.graph.html')
             </div>
         </div>
+        </div>
 
+        <div class="modal-contents lookupTable">
         <div class="lookup">
             <div class="lookup-header">
                 <strong class="lookup-header__about">동계종목  현황</strong>
@@ -409,7 +415,7 @@
                         <dd>2020/12/31 23:44:03</dd>
                     </dl>
                 </div>
-                <button type="button" class="deskTop">
+                <button type="button" class="deskTop" onClick="graph_pop_open('registration_pop')">
                     <i class="icon icon-deskTop"></i>
                 </button>
             </div>
@@ -629,6 +635,8 @@
                         </div>
                     </div>
             </div>
+        </div>
+        </div>
         </div>
     </div>
 </div>
