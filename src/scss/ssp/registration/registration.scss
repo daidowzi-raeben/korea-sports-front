@@ -727,18 +727,20 @@ $border: #BEBEBE;
     }
     .lookup.lookupGraph{
         margin-top: 83px;
-    }
-    .conWrap {
-        .graph-scroll--bar {
-            &::after {
-                content: "";
-                width: 47px;
-                height: 29px;
-                position: absolute;
-                background: url(../../img/ssp/mouse_drag.svg) no-repeat;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: -30px;
+        .lookup-body{
+            .conWrap {
+                .graph {
+                    &::after {
+                        content: "";
+                        width: 47px;
+                        height: 29px;
+                        position: absolute;
+                        background: url(../../img/ssp/mouse_drag.svg) no-repeat;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -30px;
+                    }
+                }
             }
         }
     }
@@ -876,4 +878,8 @@ tr.border-bottom {
 
 .mt-83 {
     margin-top: 83px;
+}
+
+.ht-49{
+    height: 49px !important;
 }

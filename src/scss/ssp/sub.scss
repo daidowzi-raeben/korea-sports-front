@@ -209,6 +209,22 @@
                 .lookupGraph{
                     margin-top: 0 !important;
                     margin-bottom: 50px !important;
+                        .lookup-body{
+                            .conWrap {
+                                .graph {
+                                    &::after {
+                                        content: "";
+                                        width: 47px;
+                                        height: 29px;
+                                        position: absolute;
+                                        background: url(../../img/ssp/mouse_drag.svg) no-repeat;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        bottom: -30px;
+                                    }
+                                }
+                            }
+                        }
                 }
                 .deskTop {
                     display: none;
