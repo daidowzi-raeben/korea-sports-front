@@ -39,35 +39,35 @@
 <script>
     $(document).ready(function () {
         $('.schedule-slider').slick({
-                infinite: false
-            });
+            infinite: false
+        });
         $('.counter').counterUp({
             delay: 10,
             time: 1000
         });
-        
-        
+
+
         var list = document.querySelectorAll(".circle");
         var length = list.length;
         var index = 0;
         list[0].classList.add("active");
         // change();
-        
+
         // setInterval(() => {
-            //   index = (index + 1) % length;
-            //   change();
-            // }, 3000);
-            
-            // function change() {
-            //     list.forEach(function(item, i) {
-            //         if (i === index) {
-            //             item.classList.add("active");
-            //         } else {
-            //             item.classList.remove("active");
-            //         }
-            //     });
-            // }
-         
+        //   index = (index + 1) % length;
+        //   change();
+        // }, 3000);
+
+        // function change() {
+        //     list.forEach(function(item, i) {
+        //         if (i === index) {
+        //             item.classList.add("active");
+        //         } else {
+        //             item.classList.remove("active");
+        //         }
+        //     });
+        // }
+     
     });
 </script>
 
@@ -112,5 +112,6 @@
 </body>
 <script src="../../../js/graph.js"></script>
 <script src="../../../js/dragTable.js"></script>
+
 </html>
 }
