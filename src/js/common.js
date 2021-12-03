@@ -3,12 +3,8 @@ $(document).ready(function () {
     $('.nav .menu .toggle').on('click',function(){
         if($(this).parent().hasClass('active')){
             $(this).parent().removeClass('active');
-            // $(this).siblings('.menu-drop').slideDown('slow');
         }else{
             $(this).parent().addClass('active');
-            // $(this).siblings('.menu-drop').slideUp('slow');
-
-
         }
     });
     // 미디어 레이어 팝업
