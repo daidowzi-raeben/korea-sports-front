@@ -215,18 +215,19 @@ $(document).ready(function () {
         $('.fixed-right ul li').css('color', color[n_idx]);
         $('.ssp-text').css('color', ssp_color[n_idx]);
     }
+    $('.header').addClass('active');
 
     function fixed_top_chg(st) {
         if (st > $(section[1]).offset().top - 50) {
-            $('.fixed-top').removeClass('active');
+            $('.header').removeClass('active');
             if (st > $(section[3]).offset().top - 50) {
-                $('.fixed-top').addClass('active');
+                $('.header').addClass('active');
             }
             if (st > $(section[4]).offset().top - 50) {
-                $('.fixed-top').removeClass('active');
+                $('.header').removeClass('active');
             }
         } else {
-            $('.fixed-top').addClass('active');
+            $('.header').addClass('active');
         }
     }
     var _el = $('.itv-banner--topslider li[aria-hidden=false]'),

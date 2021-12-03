@@ -1,17 +1,21 @@
-
 .wrap {
-    .fixed-top.active {
-        border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    .header.active {
         background: rgb(0, 0, 0, 0.3);
-        .join{
-            li {
-                a {
-                    color: #fff;
+
+        .login {
+            .join {
+                li {
+                    a {
+                        color: #fff;
+                    }
                 }
             }
+
         }
+
         .fixed-top {
-        
+            border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+
             &__left {
 
                 .logo {
@@ -427,7 +431,7 @@
                                         fill: none;
                                         top: 50%;
                                         left: 50%;
-                                        transform: translate(-50%,-50%);
+                                        transform: translate(-50%, -50%);
                                         width: 46px;
                                         height: 46px;
                                     }
@@ -675,7 +679,8 @@
                     margin: 0 auto;
                     position: relative;
                     overflow: hidden;
-                    .hidden-box{
+
+                    .hidden-box {
                         position: absolute;
                         width: 155px;
                         height: 100%;
@@ -684,22 +689,27 @@
                         opacity: 1;
                         animation: .1s box_fadeout 2s forwards;
                     }
+
                     @keyframes box_fadeout {
-                        from{
+                        from {
                             opacity: 1;
                         }
-                        to{
+
+                        to {
                             opacity: 0;
                         }
                     }
-                    .hidden-box.left{
+
+                    .hidden-box.left {
                         left: 0;
                         bottom: 64px;
                     }
-                    .hidden-box.right{
+
+                    .hidden-box.right {
                         right: 0;
                         bottom: 64px;
                     }
+
                     .center-circle {
                         position: absolute;
                         left: 50%;
@@ -763,8 +773,9 @@
                             justify-content: center;
                             // bottom: -25px;
                             top: 200px;
+
                             li {
-                                
+
                                 width: 7px;
                                 height: 7px;
                                 border-radius: 50%;
@@ -784,8 +795,8 @@
 
                             li.slick-active {
                                 background: #0cafb5;
-                                button {
-                                }
+
+                                button {}
                             }
 
                             .btn-play {
@@ -796,7 +807,7 @@
                                 background: url('../../img/main/pause.svg')no-repeat;
                                 display: inline-block;
                             }
-                            
+
                             .btn-play.pause {
                                 background: url('../../img/main/play.svg')no-repeat;
 
@@ -1743,9 +1754,4 @@
 
 .border-b {
     border-bottom: 1px solid #3d3d3d;
-}
-
-@media(max-width: 1250px){
-    .fixed-top{ padding: 25px 4px 0 4px !important;}
-
 }

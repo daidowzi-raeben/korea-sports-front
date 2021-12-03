@@ -37,10 +37,12 @@
                     display: flex;
                     flex-direction: column;
                     margin-right: 63px;
-                    overflow: hidden;
-
-                    img {
+                    
+                    .img {
                         width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        overflow: hidden;
                     }
 
                     .issue {

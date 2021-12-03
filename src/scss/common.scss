@@ -9,6 +9,13 @@
         position: fixed;
         width: 100%;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding:  18px 40px 0 40px;
+        border-bottom: 1px solid #bebebe;
+        transition: all .2s;
+        min-width: 1200px;
         .searchPop {
             position: fixed;
             width: 100vw;
@@ -73,7 +80,21 @@
                 }
             }
         }
-
+        
+        .login{
+            position: relative;
+           
+           ul{
+               display: flex;
+               align-items: center;
+               justify-content: flex-end;
+               li{
+                   &:first-child{
+                       margin-right:14px;
+                   }
+               }
+           }
+        }
         .fixed-top {
             width: 100%;
             min-width: 1200px;
@@ -82,12 +103,9 @@
             display: flex;
             align-items: baseline;
             justify-content: space-between;
-            padding: 25px 40px 0 40px;
             transition: all .2s;
-            background: #fff;
-            border-bottom: 1px solid #bebebe;
             position: relative;
-
+            margin-top: -9px;
             .join {
                 position: absolute;
                 right: 0px;
@@ -895,4 +913,12 @@
         font-size: 16px;
         display: inline-block;
     }
+}
+
+
+@media(max-width: 1250px) {
+    .header{
+        padding: 18px 4px 0 4px !important;
+    }
+
 }
