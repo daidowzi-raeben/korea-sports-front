@@ -3,13 +3,14 @@
         border-bottom: 1px solid rgb(255, 255, 255, 0.3);
         background: rgb(0, 0, 0, 0.3);
 
-        .join{
+        .join {
             li {
                 a {
                     color: #fff;
                 }
             }
         }
+
         .fixed-top {
             &__left {
 
@@ -238,7 +239,6 @@
                         color: #fff;
                         font-size: 53px;
                         font-weight: 500;
-                        // font-family: 'NotoSans';
                         font-family: "NotoSerif", sans-serif;
 
                         margin-bottom: 45px;
@@ -251,7 +251,6 @@
                     p {
                         color: #fff;
                         font-size: 30px;
-                        font-family: 'NotoSans';
                         margin-bottom: 100px;
                         line-height: 1.33;
                         font-weight: normal;
@@ -261,7 +260,6 @@
                         color: #fff;
                         font-size: 30px;
                         font-weight: 400;
-                        font-family: 'NotoSans';
                     }
                 }
 
@@ -409,7 +407,6 @@
 
                                 &__item {
                                     margin: 0 12px;
-
                                     .circle {
                                         position: relative;
                                         display: flex;
@@ -422,33 +419,34 @@
 
                                     .circle-back {
                                         position: absolute;
-                                        inset: 0;
-                                        color: var(--inactive-color);
+                                        // inset: 0;
+                                        color: rgb(211, 211, 211);
                                         stroke: currentColor;
-                                        stroke-width: var(--stroke-width);
+                                        stroke-width: 2;
                                         fill: none;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 46px;
+                                        height: 46px;
                                     }
 
                                     .circle-front {
                                         position: absolute;
                                         inset: 0;
-                                        color: var(--color);
+                                        color: #fff;
                                         stroke: currentColor;
-                                        stroke-width: var(--stroke-width);
+                                        stroke-width: 2;
                                         fill: none;
-                                        /* Make the start of the animation visible from above. */
                                         transform: rotate(-90deg);
-                                        /*  */
                                         stroke-dasharray: 157 157;
                                         stroke-dashoffset: -157;
                                         transition: stroke-dashoffset ease-in-out 500ms;
                                     }
 
                                     .circle.active .circle-front {
-                                        /* Animate with keyframes instead of transition. */
                                         transition: none;
-                                        /* Indication of 0% progress. */
-                                        stroke-dasharray: 0 157;
+                                        stroke-dasharray: 157;
                                         stroke-dashoffset: 0;
                                         animation: spin 5s linear infinite;
                                     }
@@ -472,13 +470,10 @@
                                         position: relative;
                                     }
 
-
-
                                     @keyframes spin {
                                         from {
                                             stroke-dasharray: 0 157;
                                         }
-
                                         to {
                                             stroke-dasharray: 157 157;
                                         }
@@ -486,7 +481,6 @@
                                 }
                             }
                         }
-
                         .page {
                             color: #fff;
                             font-size: 15px;
@@ -537,7 +531,6 @@
                         span {
                             font-size: 14px;
                             color: #fff;
-                            font-family: 'NotoSans', sans-serif;
                             font-weight: 300;
                         }
                     }
@@ -595,7 +588,6 @@
 
                     span {
                         font-size: 18px;
-                        font-family: 'NotoSans', sans-serif;
                         font-weight: 500;
                         display: block;
                     }
@@ -621,7 +613,6 @@
                             color: #3d3d3d;
                             font-style: normal;
                             top: 245px;
-                            font-family: 'NotoSans', sans-serif;
                             display: block;
                             width: 100%;
                             text-align: center;
@@ -679,7 +670,8 @@
                     margin: 0 auto;
                     position: relative;
                     overflow: hidden;
-                    .hidden-box{
+
+                    .hidden-box {
                         position: absolute;
                         width: 155px;
                         height: 100%;
@@ -688,22 +680,27 @@
                         opacity: 1;
                         animation: .1s box_fadeout 2s forwards;
                     }
+
                     @keyframes box_fadeout {
-                        from{
+                        from {
                             opacity: 1;
                         }
-                        to{
+
+                        to {
                             opacity: 0;
                         }
                     }
-                    .hidden-box.left{
+
+                    .hidden-box.left {
                         left: 0;
                         bottom: 64px;
                     }
-                    .hidden-box.right{
+
+                    .hidden-box.right {
                         right: 0;
                         bottom: 64px;
                     }
+
                     .center-circle {
                         position: absolute;
                         left: 50%;
@@ -713,7 +710,8 @@
                         border-radius: 50%;
                         border: 5px solid #0cafb5;
                         z-index: 1;
-                        top: 32px;
+                        // top: 32px;
+                        bottom: 65px;
                     }
 
                     ul {
@@ -761,9 +759,10 @@
                         }
 
                         .slick-dots {
-                            align-items: center;
+                            // align-items: center;
                             display: flex;
                             justify-content: center;
+                            bottom: -25px;
 
                             li {
                                 width: unset;
@@ -778,6 +777,8 @@
 
                                     &::before {
                                         content: '';
+                                        width: unset;
+                                        height: unset;
                                     }
                                 }
                             }
@@ -796,7 +797,7 @@
                                 background: url('../../img/main/pause.svg')no-repeat;
                                 display: inline-block;
                             }
-                            
+
                             .btn-play.pause {
                                 background: url('../../img/main/play.svg')no-repeat;
 
@@ -1442,12 +1443,6 @@
 
 }
 
-
-:root {
-    --color: #fff;
-    --inactive-color: rgb(211, 211, 211);
-    --stroke-width: 2;
-}
 
 
 // 스포츠 지원포털 - 경기인신청
