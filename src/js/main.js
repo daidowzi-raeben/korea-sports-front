@@ -1,7 +1,12 @@
 $(document).ready(function () {
+    $('.header i.search').click(function(){
+        $('.header .searchPop').fadeIn();
+        $('.header .searchPop input').focus();
+    });
+    $('.searchPop-close').click(function(){
+        $('.searchPop').hide();
+    });
 
-    // console.log($('.itv-banner--topslider li[aria-hidden=false]'));
-    // $('.itv-banner--topslider li[aria-hidden=false]:last-child').hide();
     // 메인 슬라이드 
     var m_slide_idx = $('.main-slider ul li').length;
     var m_slide_interval = setInterval(function () {

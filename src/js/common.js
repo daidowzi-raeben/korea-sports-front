@@ -1,7 +1,6 @@
 $(document).ready(function () {
+
     // 미디어 레이어 팝업
-
-
     var media_li = $('.container.media .img-box');
     media_li.click(function () {
         $('.layer-media').fadeIn();

@@ -23,6 +23,25 @@
 <body>
     <div class="wrap sports-main">
         <div class="header">
+            <div class="searchPop">
+                <button type="button" class="searchPop-close">
+                    <i class="icon icon-close_w--2"></i>
+                </button>
+                <div class="searchPop-inner">
+                    <h1>SEARCH</h1>
+                    <input type="text" class="searchPop-inner--input" placeholder="검색어를 입력하세요.">
+                    <div class="keyword">
+                        <span>KEYWORDS</span>
+                        <ul>
+                            <li><a href="">#내생애주기</a></li>
+                            <li><a href="">#경기인관리</a></li>
+                            <li><a href="">#경기인등록</a></li>
+                            <li><a href="">#S피플</a></li>
+                            <li><a href="">#증명서발급</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="fixed-top active">
                 <div class="fixed-top__left">
                     <a href=""></a>
@@ -65,6 +84,7 @@
         @@if(context.type == "ssp-sub"){
         <!DOCTYPE html>
         <html lang="ko">
+
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,8 +106,9 @@
             <script src="../../../js/air-datepicker/datepicker.js"></script>
             <script src="../../../js/air-datepicker/datepicker.en.js"></script>
         </head>
+
         <body>
-            <div class="wrap ssp-sub"> 
+            <div class="wrap ssp-sub">
                 <div class="header">
                     <div class="fixed-top">
                         <div class="fixed-top__left">
