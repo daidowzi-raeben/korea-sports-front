@@ -49,14 +49,14 @@
             <div class="topSelect-con">
                 <div class="topSelect-con__left">
                     <ul>
-                        <li class="player is_active">
+                        <li class="player">
                             <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_player.svg" alt="regist_player" />
                             </div>
                             <span>선수</span>
                         </li>
-                        <li class="master">
+                        <li class="master is_active">
                             <a href="#"></a>
                             <div class="top-icon">
                                 <img src="../../../img/ssp/regist_master.svg" alt="regist_master" />
@@ -66,20 +66,14 @@
                         <li class="referee">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_referee.svg"
-                                    alt="regist_referee"
-                                />
+                                <img src="../../../img/ssp/regist_referee.svg" alt="regist_referee" />
                             </div>
                             <span>심판</span>
                         </li>
                         <li class="manager">
                             <a href="#"></a>
                             <div class="top-icon">
-                                <img
-                                    src="../../../img/ssp/regist_manager.svg"
-                                    alt="regist_manager"
-                                />
+                                <img src="../../../img/ssp/regist_manager.svg" alt="regist_manager" />
                             </div>
                             <span>선수관리<br />담당자</span>
                         </li>
@@ -97,21 +91,18 @@
                     <ul class="player">
                         <li><a href="#"></a>종별 현황</li>
                         <li><a href="#"></a>시도별 현황</li>
-                        <li class="is_active"><a href="#"></a>실업 시군구 현황</li>
+                        <li><a href="#"></a>실업 시군구 현황</li>
                         <li><a href="#"></a>동계종목 현황</li>
                         <li><a href="#"></a>학년별 현황</li>
-                        <li><a href="#"></a>선수등록 목록</li>
-                        <li><a href="#"></a>선수등록 이력조회</li>
-                        <li><a href="#"></a>2021년 이전자료</li>
-                        <li><a href="#"></a>2013~2021년 자료</li>
-                        <li><a href="#"></a>선수통합검색</li>
+                        <li class="is_active"><a href="#"></a>지도자등록 목록</li>
+                        <li><a href="#"></a>임원 등록이력 조회</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="midSelect">
             <div class="midSelect-tit">
-                <h3>실업 시군구 현황</h3>
+                <h3>지도자등록 목록</h3>
                 <span>등록연도</span>
                 <div class="formInput">
                     <div class="select-group">
@@ -133,7 +124,7 @@
                         </div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_all" />
+                                <input type="checkbox" name="event" id="event_all" class="check-all"/>
                                 <label for="event_all">전체</label>
                             </div>
                             <div class="select-con--item">
@@ -401,7 +392,7 @@
                         </div>
                         <div class="select-con concon">
                             <div class="select-con--item">
-                                <input type="checkbox" name="sigungu" id="sigungu_all" />
+                                <input type="checkbox" name="sigungu" id="sigungu_all" class="check-all"/>
                                 <label for="sigungu_all">전체</label>
                             </div>
                             <div class="select-con--item">
@@ -451,7 +442,7 @@
                         <div class="dropdown dropdown__non">소속구분</div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="checkbox" name="belong" id="belong_all" />
+                                <input type="checkbox" name="belong" id="belong_all" class="check-all"/>
                                 <label for="belong_all">전체</label>
                             </div>
                             <div class="select-con--item">
@@ -476,7 +467,7 @@
                         <div class="select-con b-right">
                             <div class="con-part">
                                 <div class="select-con--item">
-                                    <input type="checkbox" name="jong" id="jong_all" />
+                                    <input type="checkbox" name="jong" id="jong_all" class="check-all"/>
                                     <label for="jong_all">전체</label>
                                 </div>
                                 <div class="select-con--item">
@@ -590,8 +581,14 @@
                 <!-- 페이지네이션 -->
                 <div class="pagination mt-30">
                     <div class="pagination-control--prev">
-                        <button type="button"><i class="icon icon-pagination--d"></i></button>
-                        <button type="button" class="prev"><i class="icon icon-pagination"></i></button>
+                        <button type="button">
+                            <i class="icon icon-pagination--d"></i>
+                            <i class="icon icon-pagination--d-white"></i>
+                        </button>
+                        <button type="button" class="prev">
+                            <i class="icon icon-pagination"></i>
+                            <i class="icon icon-pagination-white"></i>
+                        </button>
                     </div>
                     <ol class="pagination-list">
                         <li><a href="#">1</a></li>
@@ -601,8 +598,14 @@
                         <li><a href="#">5</a></li>
                     </ol>
                     <div class="pagination-control--next">
-                        <button type="button" class="next"><i class="icon icon-pagination"></i></button>
-                        <button type="button"><i class="icon icon-pagination--d"></i></button>
+                        <button type="button" class="next">
+                            <i class="icon icon-pagination"></i>
+                            <i class="icon icon-pagination-white"></i>
+                        </button>
+                        <button type="button">
+                            <i class="icon icon-pagination--d"></i>
+                            <i class="icon icon-pagination--d-white"></i>
+                        </button>
                     </div>
                 </div>
             </div>

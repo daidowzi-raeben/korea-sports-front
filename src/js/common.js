@@ -32,6 +32,21 @@ $(document).ready(function () {
 
 
 
+    
+// 선택 옵션 전체 전택 
+var contentItem = $('.select-con--item');
+
+    contentItem.click(function(){
+        if($(this).children('.check-all').prop('checked') == true){
+            $(this).nextAll().children('input').prop('checked', false);
+        }else if($(this).children('input:not(.check-all)').prop('checked')){
+            $(this).siblings().first().children('.check-all').prop('checked', false);
+        }
+        console.log($(this).siblings().first());
+    });
+
+
+
 
 
     //조건선택 탭 열기
@@ -726,3 +741,4 @@ function fn_dropDownLoad() {
         $(this).addClass('is_active');
     });
 }
+
