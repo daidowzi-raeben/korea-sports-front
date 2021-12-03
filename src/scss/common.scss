@@ -273,7 +273,6 @@
             }
 
             .menu {
-                padding: 0 23px;
                 border-right: 1px solid #fff;
                 height: 100%;
                 display: flex;
@@ -284,7 +283,57 @@
                 background-size: 12px 8px;
                 background-position: right 23px center;
                 cursor: pointer;
+                position: relative;
+                span{
+                    padding: 0 23px;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    line-height: 60px;
+                }
+                &-drop{
+                    position: absolute;
+                    top: 100%;
+                    left: -1px;
+                    width: calc(100% + 2px);
+                    z-index: 1;
+                    overflow: hidden;
+                    ul{
+                        width: 100%;
+                        transition: all .5s;
+                        height:0;
+                        
+                        li{
+                            border-bottom: 1px solid #fff;
+                            height: 60px;
+                            background: #2E85CA;
+                            a{
+                                color: #fff;
+                                display: block;
+                                height: 100%;
+                                line-height: 60px;
+                                padding-left: 23px;
+                            }
+                        }
+                        li.bb-none{
+                            border-bottom: none;
+                        }
+                    }
 
+                }
+            }
+            .menu.active{
+                background: url(../img/common/nav_arrow_w_up.svg) no-repeat center;
+                background-size: 12px 8px;
+                background-position: right 23px center;
+                .menu-drop{
+                    border: 1px solid #fff;
+                    border-top: none;
+
+                    ul{
+                        height: auto;
+                    }
+                }
             }
 
             .nav-sub {

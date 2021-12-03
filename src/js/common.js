@@ -1,5 +1,16 @@
 $(document).ready(function () {
+    // nav 드롭다운
+    $('.nav .menu .toggle').on('click',function(){
+        if($(this).parent().hasClass('active')){
+            $(this).parent().removeClass('active');
+            // $(this).siblings('.menu-drop').slideDown('slow');
+        }else{
+            $(this).parent().addClass('active');
+            // $(this).siblings('.menu-drop').slideUp('slow');
 
+
+        }
+    });
     // 미디어 레이어 팝업
     var media_li = $('.container.media .img-box');
     media_li.click(function () {
