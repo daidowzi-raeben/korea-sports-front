@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    // 통합검색
+    $('.header i.search').click(function(){
+        $('.header .searchPop').fadeIn();
+        $('.header .searchPop input').focus();
+    });
+    $('.searchPop-close').click(function(){
+        $('.searchPop').hide();
+    });
+
     // nav 드롭다운
     $('.nav .menu .toggle').on('click',function(){
         if($(this).parent().hasClass('active')){

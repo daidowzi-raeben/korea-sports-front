@@ -36,7 +36,36 @@ depth_3 : ""
                 <div class="info-con__detail">
                     <div class="icon-wrap">
                         <i class="icon-share"></i>
-                        <i class="icon-user"></i>
+                        <div class="user">
+                            <i class="icon-user" onclick="pop_open()"></i>
+                            <div class="user-pop">
+                                <div class="user-pop__tit">
+                                    <span>선수검색 공개설정</span>
+                                    <p>선수통합검색에서 공개여부를 결정할 수 있습니다.</p>
+                                </div>
+                                <div class="user-pop__con">
+                                    <div class="formInput">
+                                        <div class="formInput-radio">
+                                            <div class="radioArea clb">
+                                                <input type="radio" name="groupa" title="GroupA-라디오버튼1" id="radiobtn1">
+                                                <label for="radiobtn1">공개</label>
+                                            </div>
+                                            <div class="radioArea clb">
+                                                <input type="radio" name="groupa" title="GroupA-라디오버튼2" id="radiobtn2">
+                                                <label for="radiobtn2">비공개</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="date">
+                                        2021/11/25 03:27:36
+                                    </div>
+                                </div>
+                                <div class="user-pop__foot">
+                                    <button type="button" onclick="pop_close()">확인</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <h3 class="font-23 font-m">강대한 선수</h3>
                     <div class="info-con__detail--left">
@@ -274,7 +303,7 @@ depth_3 : ""
                     </ul>
                 </div>
             </div>
-            
+
             <!-- 추가요소-->
         </div>
         <div class="state">
@@ -449,25 +478,31 @@ depth_3 : ""
         </div>
     </div>
 </div>
-<script>
-    window.onload = function () {
-        var cycle_h = $('.cycle .history-con ul').outerHeight();
-        $('.cycle .center-bar').css('height', cycle_h + 125 + 'px');
-        var history_b = $('.history-flex .item .item-bar');
-
-        history_b.each(function () {
-            var li_length = $(this).siblings('.item-list').children().length;
-            var item_offset = $(this).parent().offset().top;
-            var target_offset = $(this).siblings('.item-list').children().eq(li_length - 1).find('.target')
-                .offset().top;
-            console.log(target_offset - item_offset);
-            $(this).css('height', target_offset - item_offset);
-
-        });
-    }
-</script>
 
 <!-- footer -->
 @@include('../../include/footer.html',{
 type : 'ssp-sub'
 })
+    <script>
+        window.onload = function () {
+            var cycle_h = $('.cycle .history-con ul').outerHeight();
+            $('.cycle .center-bar').css('height', cycle_h + 125 + 'px');
+            var history_b = $('.history-flex .item .item-bar');
+    
+            history_b.each(function () {
+                var li_length = $(this).siblings('.item-list').children().length;
+                var item_offset = $(this).parent().offset().top;
+                var target_offset = $(this).siblings('.item-list').children().eq(li_length - 1).find('.target')
+                    .offset().top;
+                console.log(target_offset - item_offset);
+                $(this).css('height', target_offset - item_offset);
+    
+            });
+        }
+        function pop_open(){
+            $('.user-pop').fadeIn(300);
+        }
+        function pop_close(){
+          $('.user-pop').fadeOut(300);
+        }
+    </script>
