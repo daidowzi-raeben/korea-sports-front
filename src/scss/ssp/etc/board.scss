@@ -250,11 +250,9 @@
             }
 
         }
-
         .cardV {
             display: flex;
             flex-wrap: wrap;
-
             .cardV-item {
                 border: 1px solid #bcbcbc;
                 width: calc(100%/4 - 10px);
@@ -264,7 +262,11 @@
                 padding: 30px 20px 0 25px;
                 cursor: pointer;
                 transition: 0.2s;
-
+                &:hover{
+                    border: 1px solid #6e6e6e;
+                    background: #F2F2F2;
+                    box-shadow: 3px 3px 6px #0000001A;
+                }
                 dl {
                     dt {
                         margin-bottom: 12px;
