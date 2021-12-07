@@ -216,17 +216,13 @@
                             background: #fff;
                         }
                     }
-
                     .tggleArrow.is_active {
                         transform: translateY(-50%)rotateZ(180deg);
                     }
-
                     .num {
                         width: 5%;
 
                     }
-
-
                     .title {
                         width: 65%;
                         text-align: left;
@@ -664,7 +660,7 @@
         .btn-write {
             position: absolute;
             right: 0;
-            bottom: 0;
+            bottom: -5px;
             width: 159px;
             height: 45px;
             background: #006dbc;
