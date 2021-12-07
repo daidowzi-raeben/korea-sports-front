@@ -1,0 +1,230 @@
+@@include('../../include/header.html', {
+    title : "타임라인",
+    type : "ssp-sub",
+    active_1 : 'is_active',
+    active_2 : '',
+    active_3 : '',
+    active_4 : ''
+    })
+    <!-- header -->
+    @@include('../../include/ssp.nav.html',{
+    type: "mycycle",
+    active_1 : "is_active",
+    active_2 : '',
+    active_3 : '',
+    active_4 : ''
+    })
+    <!-- nav -->
+    @@include('../../include/ssp.banner.html',{
+    type : "mycycle",
+    depth_2 : "타임라인",
+    depth_3 : ""
+    })
+    <!-- banner -->
+    <div class="container">
+        <div class="container-inner board">
+            <h2 class="tit font-25">Board title</h2>
+            <div class="contents">
+                <div class="board-list cardH">
+                    <div class="board-list__top">
+                        <div class="board-list__top--l">
+                            <i class="icon-list"></i>
+                            <span>총 게시물 21, 페이지 1 / 3</span>
+                        </div>
+                        <div class="board-list__top--r">
+                            <div class="formInput">
+                                <div class="select-group">
+                                    <select name="" id="b" class="w-127">
+                                        <option value="0" selected>전체</option>
+                                        <option value="1">전체</option>
+                                        <option value="2">전체</option>
+                                    </select>
+                                    <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                </div>
+                                <div class="select-group">
+                                    <select name="" id="b" class="w-154">
+                                        <option value="0" selected>제목 + 내용</option>
+                                        <option value="1">전체</option>
+                                        <option value="2">전체</option>
+                                    </select>
+                                    <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                                </div>
+                                <div class="formInput-input">
+                                    <input type="text" class="w-288">
+                                   <button type="button" class="submit">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-list__con">
+                        <!-- 활성화된 메뉴에 is_active 클래스 추가 -->
+                        <div class="board-list__con--item is_active">
+                            <ul>
+                                <li class="num">15</li>
+                                <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                                <li class="name">강대한</li>
+                                <li class="date">2021/09/23</li>
+                                <li class="file">
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="board-list__con--item">
+                            <ul>
+                                <li class="num">15</li>
+                                <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                                <li class="name">강대한</li>
+                                <li class="date">2021/09/23</li>
+                                <li class="file">
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="board-list__con--item">
+                            <ul>
+                                <li class="num">15</li>
+                                <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                                <li class="name">강대한</li>
+                                <li class="date">2021/09/23</li>
+                                <li class="file">
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="board-list__con--item">
+                            <ul>
+                                <li class="num">15</li>
+                                <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                                <li class="name">강대한</li>
+                                <li class="date">2021/09/23</li>
+                                <li class="file">
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="board-list__con--item">
+                            <ul>
+                                <li class="num">15</li>
+                                <li class="title">2021년'스포츠교육 플래닛' 과정 안내 및 교육생 모집</li>
+                                <li class="name">강대한</li>
+                                <li class="date">2021/09/23</li>
+                                <li class="file">
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pagination">
+                            <div class="pagination-control--prev">
+                                <button type="button">
+                                    <i class="icon icon-pagination--d"></i>
+                                    <i class="icon icon-pagination--d-white"></i>
+                                </button>
+                                <button type="button" class="prev">
+                                    <i class="icon icon-pagination"></i>
+                                    <i class="icon icon-pagination-white"></i>
+                                </button>
+                            </div>
+                            <ol class="pagination-list">
+                                <li><a href="#">1</a></li>
+                                <li class="is_active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                            </ol>
+                            <div class="pagination-control--next">
+                                <button type="button" class="next">
+                                    <i class="icon icon-pagination"></i>
+                                    <i class="icon icon-pagination-white"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="icon icon-pagination--d"></i>
+                                    <i class="icon icon-pagination--d-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-detail">
+                    <div class="board-detail__tit">
+                        <h3 class="font-20">2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집</h3>
+                        <div class="inner">
+                            <div class="line">
+                                <dl>
+                                    <dt>작성자 :&nbsp;</dt>
+                                    <dd>강대한</dd>
+                                </dl>
+                                <dl>
+                                    <dt>조회수 :&nbsp;</dt>
+                                    <dd>257</dd>
+                                </dl>
+                                <dl>
+                                    <dt>등록일 :&nbsp;</dt>
+                                    <dd>2021/09/23</dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                                <dl>
+                                    <dt>첨부파일 :&nbsp;</dt>
+                                    <dd>211005 2021년_스포츠교육 플래닛 과정_교육신청 안내(pakage).pdf
+                                        <div class="add-file">
+                                            <button type="button"><i class="icon-download"></i></button>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-detail__con ptype">
+                        <p>
+                            대한체육회(大韓體育會, Korean Sport & Olympic Committee, KSOC)는 대한민국의
+                            스포츠를 총괄하는 스포츠 행정 기구이다. 대한민국 체육 운동의 범국민화 및 우수
+                            선수 양성으로 국위 선양과 민족 문화 발전에 기여하기 위하여 1920년 7월 13일 전신인
+                            조선체육회로 설립되어 대한체육회로 설립된 문화체육관광부 소관의 특수법인이며,
+                            대한민국의 아마추어 스포츠 단체를 총괄, 지도하는 문화체육관광부 산하 기타공공기관이다. 또한 국제 올림픽 위원회, 아시아 올림픽 평의회에서 대한민국을 대표하는 국가 올림픽
+                            위원회로서 올림픽, 아시안 게임을 비롯한 국제 스포츠 대회에 참가하는 대한민국의 선수들을 대표한다.
+                        </p>
+                        <p>
+                            서울특별시 송파구 올림픽로 424(방이동 올림픽회관)에 위치하고 있다.
+                            대한민국 시·도 대항으로 열리는 전국체육대회를 주최한다. 대한올림픽위원회는
+                            대한체육회 산하이면서도 독자적인 결정권을 행사하기도 한다. 대한체육회를 중심으로
+                            경기 종목별로 시·도 및 해외지부 아마추어 스포츠 단체를 결성할 수 있다. 현재 57개
+                            스포츠 종목에 대한 가맹단체가 있으며, 7개 스포츠 종목에 대해서는 인정단체로 분류한다.
+                        </p>
+                        <p>
+                            2009년 6월 29일, 별도의 단체였던 대한체육회와 대한올림픽위원회는 완전히
+                            통합되어 대한체육회(영어: Korean Olympic Committee, KOC)[2]가 되었다.
+                            영문 명칭은 대한올림픽위원회의 것을 따랐다. 2016년 국민생활체육회와 통합하여
+                            영문 명칭을 변경했다.
+                        </p>
+                        <div class="photo">
+                            <img src="../../../img/ssp/img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="gong">
+                        <img src="../../../img/ssp/gong.png" alt="">
+                        <p class="font-15">대한체육회가 창작한 2021년' 과정 안내 및 교육생 모집 저작물을 "공공누리"<br>
+                        출처표시 조건에 따라 이용할 수 있습니다. (출처는 구체적인 위치를 표시해야 합니다.)</p>
+                    </div>
+                </div>
+                <div class="foot-btn">
+                    <a href="">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- footer -->
+    @@include('../../include/footer.html',{
+    type : 'ssp-sub'
+    })

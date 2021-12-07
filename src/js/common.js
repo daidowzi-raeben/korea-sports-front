@@ -1,4 +1,11 @@
 $(document).ready(function () {
+// 파일첨부
+    $('.input-file').on("change", function () {
+        var filename = $(this).val();
+        if (filename == "")
+            filename = "파일을 선택해주세요.";
+        $(this).siblings('.filename').text(filename);
+    });
     // 통합검색
     $('.header i.search').click(function(){
         $('.header .searchPop').fadeIn();

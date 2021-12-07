@@ -1,0 +1,266 @@
+@@include('../../include/header.html', {
+title : "타임라인",
+type : "ssp-sub",
+active_1 : 'is_active',
+active_2 : '',
+active_3 : '',
+active_4 : ''
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "mycycle",
+active_1 : "is_active",
+active_2 : '',
+active_3 : '',
+active_4 : ''
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "mycycle",
+depth_2 : "타임라인",
+depth_3 : ""
+})
+<!-- banner -->
+<div class="container">
+    <div class="container-inner board">
+        <h2 class="tit font-25">1:1 상담문의</h2>
+        <div class="contents">
+            <div class="board-list board-list--normal">
+                <div class="board-list__top">
+                    <div class="board-list__top--l">
+                        <i class="icon-list"></i>
+                        <span>총 게시물 21, 페이지 1 / 3</span>
+                    </div>
+                    <div class="board-list__top--r">
+                        <div class="formInput">
+                            <div class="select-group">
+                                <select name="" id="b" class="w-127">
+                                    <option value="0" selected>전체</option>
+                                    <option value="1">전체</option>
+                                    <option value="2">전체</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                            <div class="select-group">
+                                <select name="" id="b" class="w-154">
+                                    <option value="0" selected>제목 + 내용</option>
+                                    <option value="1">전체</option>
+                                    <option value="2">전체</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                            <div class="formInput-input">
+                                <input type="text" class="w-288">
+                                <button type="button" class="submit">검색</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-list__con">
+                    <table>
+                        <colgroup>
+                            <col width="6%">
+                            <col width="10%">
+                            <col width="50%">
+                            <col width="7%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="7%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>구분</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>처리상태</th>
+                                <th>등록일</th>
+                                <th>첨부파일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15</td>
+                                <td>묻고답하기</td>
+                                <td class="tit">
+                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집2021년 '스포츠교육 플래닛'
+                                </td>
+                                <td>박연*</td>
+                                <td><i class="icon-lock"></i>답변대기</td>
+                                <td>2021/09/23</td>
+                                <td>
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>시스템장애신고</td>
+                                <td class="tit">
+                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집
+                                </td>
+                                <td>박연*</td>
+                                <td><i class="icon-message"></i>답변대기</td>
+                                <td>2021/09/23</td>
+                                <td>
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>묻고답하기</td>
+                                <td class="tit">
+                                    2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집
+                                </td>
+                                <td>박연*</td>
+                                <td><i class="icon-lock"></i>답변대기</td>
+                                <td>2021/09/23</td>
+                                <td>
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <div class="pagination-control--prev">
+                            <button type="button">
+                                <i class="icon icon-pagination--d"></i>
+                                <i class="icon icon-pagination--d-white"></i>
+                            </button>
+                            <button type="button" class="prev">
+                                <i class="icon icon-pagination"></i>
+                                <i class="icon icon-pagination-white"></i>
+                            </button>
+                        </div>
+                        <ol class="pagination-list">
+                            <li><a href="#">1</a></li>
+                            <li class="is_active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ol>
+                        <div class="pagination-control--next">
+                            <button type="button" class="next">
+                                <i class="icon icon-pagination"></i>
+                                <i class="icon icon-pagination-white"></i>
+                            </button>
+                            <button type="button">
+                                <i class="icon icon-pagination--d"></i>
+                                <i class="icon icon-pagination--d-white"></i>
+                            </button>
+                        </div>
+                            <button type="button" class="btn-write font-16">1:1상담문의 등록</button>
+                    </div>
+                </div>
+            </div>
+            <div class="board-detail">
+                <div class="board-detail__tit">
+                    <h3 class="font-20">2021년 '스포츠교육 플래닛' 과정 안내 및 교육생 모집</h3>
+                    <div class="inner">
+                        <div class="line">
+                            <dl>
+                                <dt>작성자 :&nbsp;</dt>
+                                <dd>강대한</dd>
+                            </dl>
+                            <dl>
+                                <dt>등록일 :&nbsp;</dt>
+                                <dd>2021/09/23</dd>
+                            </dl>
+
+                        </div>
+                        <div class="line">
+                            <dl>
+                                <dt>첨부파일 :&nbsp;</dt>
+                                <dd>211005 2021년_스포츠교육 플래닛 과정_교육신청 안내(pakage).pdf
+                                    <div class="add-file">
+                                        <button type="button"><i class="icon-download"></i></button>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="board-detail__con">
+                    <div class="con-q">
+                        <h5 class="font-18 font-m">질의 내용</h5>
+                        <p>대한체육회(大韓體育會, Korean Sport & Olympic Committee, KSOC)는 대한민국의 스포츠를 총괄하는 스포츠 행정 기구이다. 대한민국 체육
+                            운동의 범국민화 및 우수 선수 양성으로
+                            국위 선양과 민족 문화 발전에 기여하기 위하여 1920년 7월 13일 전신인 조선체육회로 설립되어 대한체육회로 설립된 문화체육관광부 소관의 특수법인이며, 대한민국의
+                            아마추어
+                            스포츠 단체를 총괄, 지도하는 문화체육관광부 산하 기타공공기관이다. 또한 국제 올림픽 위원회, 아시아 올림픽 평의회에서 대한민국을 대표하는 국가 올림픽 위원회로서
+                            올림픽,
+                            아시안 게임을 비롯한 국제 스포츠 대회에 참가하는 대한민국의 선수들을 대표한다.</p>
+                    </div>
+                    <div class="con-a">
+                        <h5 class="font-18 font-m">답변 내용</h5>
+                        <p>대한체육회(大韓體育會, Korean Sport & Olympic Committee, KSOC)는 대한민국의 스포츠를 총괄하는 스포츠 행정 기구이다. 대한민국 체육
+                            운동의 범국민화 및 우수 선수 양성으로
+                            국위 선양과 민족 문화 발전에 기여하기 위하여 1920년 7월 13일 전신인 조선체육회로 설립되어 대한체육회로 설립된 문화체육관광부 소관의 특수법인이며, 대한민국의
+                            아마추어
+                            스포츠 단체를 총괄, 지도하는 문화체육관광부 산하 기타공공기관이다. 또한 국제 올림픽 위원회, 아시아 올림픽 평의회에서 대한민국을 대표하는 국가 올림픽 위원회로서
+                            올림픽,
+                            아시안 게임을 비롯한 국제 스포츠 대회에 참가하는 대한민국의 선수들을 대표한다.</p>
+                    </div>
+
+                </div>
+                <div class="board-detail__tit b-none mt-157">
+                    <h3 class="font-20">1:1 상담문의 작성</h3>
+                </div>
+                <div class="inquire">
+                    <div class="inquire-top">
+                        <strong class="font-18 font-m">작성 시 유의사항</strong>
+                        <p>주민등록번호, 아이디, 비밀번호, 이메일, 연락처, 주소 등의 개인정보가 포함된 글을 올리실 경우에는<br>
+                            타인에게 해당 정보가 노출될 수 있으니 작성에 유의 하시기 바랍니다. (정보통신망법 제28조)</p>
+                    </div>
+                    <div class="inquire-con">
+                        <div class="inquire-con__tit">
+                            <span>문의제목</span>
+                            <div class="formInput">
+                                <div class="formInput-input">
+                                    <input type="text" placeholder="문의 제목을 작성해주세요.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inquire-con__txt flex-ex">
+                            <span>작성내용</span>
+                            <textarea name="" id="" class="font-16" placeholder="내용을 작성하세요."></textarea>
+                        </div>
+                        <div class="inquire-con__file">
+                            <span>파일첨부</span>
+                            <div class="formInput addFile">
+                                <span class="filename w-373">파일을 선택해주세요.</span>
+                                <label for="input-file" class="upload-custom font-16 font-s">파일찾기</label>
+                                <input type="file" id="input-file" class="input-file">
+                            </div>
+                        </div>
+                        <div class="inquire-con__mun">
+                            <span>자동등록<br>방지문자</span>
+                            <div class="protection w-1091">
+                                <div id="captcha"></div>
+                                <div class="formInput">
+                                    <div class="formInput-input">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foot-area">
+                        <button type="button" class="btn-write font-16">1:1상담문의 등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+@@include('../../include/footer.html',{
+type : 'ssp-sub'
+})
