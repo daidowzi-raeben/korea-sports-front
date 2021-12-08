@@ -216,13 +216,16 @@
                             background: #fff;
                         }
                     }
+
                     .tggleArrow.is_active {
                         transform: translateY(-50%)rotateZ(180deg);
                     }
+
                     .num {
                         width: 5%;
 
                     }
+
                     .title {
                         width: 65%;
                         text-align: left;
@@ -250,9 +253,11 @@
             }
 
         }
+
         .cardV {
             display: flex;
             flex-wrap: wrap;
+
             .cardV-item {
                 border: 1px solid #bcbcbc;
                 width: calc(100%/4 - 10px);
@@ -262,11 +267,13 @@
                 padding: 30px 20px 0 25px;
                 cursor: pointer;
                 transition: 0.2s;
-                &:hover{
+
+                &:hover {
                     border: 1px solid #6e6e6e;
                     background: #F2F2F2;
                     box-shadow: 3px 3px 6px #0000001A;
                 }
+
                 dl {
                     dt {
                         margin-bottom: 12px;
@@ -535,10 +542,12 @@
 
             &__txt {
                 align-items: flex-start;
-                span{
+
+                span {
                     position: relative;
                     top: 8px;
                 }
+
                 textarea {
                     height: 332px;
                     padding: 20px;
@@ -608,6 +617,20 @@
 
     }
 
+    .contents {
+        &-txt {
+            p {
+                margin-bottom: 37px;
+                line-height: 35px;
+            }
+        }
+
+        &-photo {
+            padding-bottom: 65px;
+
+        }
+    }
+
     .foot-area {
         display: flex;
         justify-content: flex-end;
@@ -659,6 +682,7 @@
     .pagination {
         margin-top: 30px;
         position: relative;
+
         .btn-write {
             position: absolute;
             right: 0;
@@ -670,13 +694,15 @@
             color: #fff;
             border-radius: 3px;
             border: none;
+
             &:hover {
                 background: #0058bc;
             }
 
         }
     }
-    .flex-ex{
+
+    .flex-ex {
         align-items: flex-start !important;
     }
 }

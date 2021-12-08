@@ -4,6 +4,7 @@
 @import 'global.scss';
 
 //  main,sub header - common style 
+
 .wrap {
     .header {
         position: fixed;
@@ -32,7 +33,6 @@
                 right: 66px;
                 top: 44px;
             }
-
             &-inner {
                 display: flex;
                 width: 1200px;
@@ -52,6 +52,7 @@
 
                 .input-area {
                     position: relative;
+
                     input {
                         width: 100%;
                         height: 100px;
@@ -108,6 +109,222 @@
             }
         }
 
+        .totalMenu {
+            min-width: 1920px;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            position: fixed;
+            z-index: 3;
+            display: none;
+            &-inner {
+                height:100%;
+                position: relative;
+                display: flex;
+                .leftTxt{
+                    position: absolute;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #979797;
+                    transform: rotateZ(-90deg)translateY(-50%);
+                    left: -30px;
+                    top: 50%;
+                    
+                }
+                .btn-close{
+                    position: absolute;
+                    top: 80px;
+                    right: 90px;
+                    width: 25px;
+                    height: 25px;
+                    background: url(../img/common/menu_close.svg)no-repeat center;
+                    background-size: 100%;
+                    z-index: 4;
+                }
+                &__left{
+                    width: 660px;
+                    min-width: 660px;
+                    background: url(../img/common/totalMenu_bg.png)no-repeat center;
+                    background-size: cover;
+                    padding: 120px 0 0 257px;
+                    .text{
+                        h1,h2{
+                            color: #fff;
+                        }
+                        .logo{
+                            display: block;
+                            margin-bottom: 23px;
+                        }
+                        h1{
+                            font-size: 43px;
+                            font-weight: 500;
+                            margin-bottom: 30px;
+                            line-height: 1.2;
+                            font-family: "NotoSerif", sans-serif;
+                            span{
+                                font-weight: 300px;
+                                font-size: 40px;
+                            }
+                        }
+                        p{
+                            font-size: 18px;
+                            color: #fff;
+                            font-weight: 300;
+                            line-height: 1.67;
+                            margin-bottom: 100px;
+                        }
+                        h2{
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+                    }
+                    
+                }
+                &__right {
+                   padding: 50px 0 50px 90px;
+                   width: calc(100% - 660px);
+                   min-width: 1260px;
+                   height: 100%;
+                   overflow-y: scroll;
+                    >li {
+                        padding: 40px 0 33px 0;
+                        border-bottom: 1px solid #797979;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+                        .titLeft {
+                            width: 180px;
+
+                            strong {
+                                a {
+                                    font-size: 25px;
+                                    font-weight: bold;
+                                }
+
+                                a.is_active {
+                                    position: relative;
+                                    &::after{
+                                        content: '';
+                                        display: inline-block;
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: -3px;
+                                        width: 100%;
+                                        height: 2px;
+                                        background: #3d3d3d;
+                                    }
+                                }
+                            }
+                        }
+
+                        .titRight {
+                            position: relative;
+                            top: 7px;
+                            width: calc(100% - 180px);
+                            &-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                margin-bottom: 17px;
+
+                                .subMenu {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    width: 100%;
+                                    strong {
+                                        a {
+                                            font-size: 18px;
+                                            font-weight: 500;
+                                            position: relative;
+                                            &:hover{
+                                                &::after {
+                                                    content: '';
+                                                    display: inline-block;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    bottom: -3px;
+                                                    width: 100%;
+                                                    height: 2px;
+                                                    background: #3d3d3d;
+                                                }
+                                            }
+                                        }
+
+                                        a.is_active {
+                                            &::after {
+                                                content: '';
+                                                display: inline-block;
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: -3px;
+                                                width: 100%;
+                                                height: 2px;
+                                                background: #3d3d3d;
+                                            }
+                                        }
+                                    }
+                                    ul{
+                                        // width: calc(100% - 117px);
+                                        padding-left: 60px;
+                                        position: relative;
+                                        top: 2px;
+                                        li{
+                                            float: left;
+                                            margin-right: 30px;
+                                            margin-bottom: 10px;
+                                            a{
+                                                font-size: 16px;
+                                                position: relative;
+                                                &:hover{
+                                                    &::after {
+                                                        content: '';
+                                                        display: inline-block;
+                                                        position: absolute;
+                                                        left: 0;
+                                                        bottom: -3px;
+                                                        width: 100%;
+                                                        height: 2px;
+                                                        background: #3d3d3d;
+                                                    }
+                                                }
+                                            }
+                                            a.is_active{
+                                                &::after {
+                                                    content: '';
+                                                    display: inline-block;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    bottom: -3px;
+                                                    width: 100%;
+                                                    height: 2px;
+                                                    background: #3d3d3d;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .titRight.inline{
+                            .titRight-wrap{
+                                display: inline-block;
+                                margin-right: 30px;
+                                .subMenu{
+                                    strong{
+                                        width: unset;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .login {
             position: relative;
 

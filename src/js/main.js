@@ -1,6 +1,13 @@
 $(document).ready(function () {
-    // $('.main-slider ul li').css('width',$(window).width());
-
+    $('.header .menu').click(function(){
+        $('.totalMenu').fadeIn();
+        $('body').css('overflow-y', 'hidden');
+    });
+    $('.totalMenu .btn-close').click(function(){
+        $('.totalMenu').fadeOut();
+        $('body').css('overflow-y', 'auto');
+    });
+    // 헤더 
     $('.header i.search').click(function(){
         $('.header .searchPop').fadeIn();
         $('.header .searchPop input').focus();
@@ -188,7 +195,10 @@ $(document).ready(function () {
         var st = $(window).scrollTop();
         offset_go(st);
         fixed_top_chg(st);
-        $('.main-header').css({
+        $('.header').css({
+            left: 0 - $(this).scrollLeft()
+        });
+        $('.totalMenu').css({
             left: 0 - $(this).scrollLeft()
         });
     });
