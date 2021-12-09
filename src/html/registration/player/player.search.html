@@ -91,7 +91,7 @@ depth_2 : "팀"
                 <span>등록연도</span>
                 <div class="formInput">
                     <div class="select-group">
-                        <select  name="selfName" id="b">
+                        <select name="selfName" id="b">
                             <option value="0" selected>2021</option>
                             <option value="1">2020</option>
                             <option value="2">2019</option>
@@ -109,7 +109,7 @@ depth_2 : "팀"
                         </div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_all" class="check-all"/>
+                                <input type="checkbox" name="event" id="event_all" class="check-all" />
                                 <label for="event_all">전체</label>
                             </div>
                             <div class="select-con--item">
@@ -141,8 +141,8 @@ depth_2 : "팀"
                                 <label for="event_6">댄스스포츠</label>
                             </div>
                             <div class="select-con--item">
-                                <input type="checkbox" name="event" id="event_6" />
-                                <label for="event_6">라켓볼</label>
+                                <input type="checkbox" name="event" id="event_7" />
+                                <label for="event_7">라켓볼</label>
                             </div>
                         </div>
 
@@ -185,7 +185,8 @@ depth_2 : "팀"
                         </div>
                         <div class="select-con">
                             <div class="select-con--item">
-                                <input type="checkbox" name="sido" id="Gyeonggi" class="check-all" onclick="fn_sidoChange(this)" />
+                                <input type="checkbox" name="sido" id="Gyeonggi" class="check-all"
+                                    onclick="fn_sidoChange(this)" />
                                 <label for="Gyeonggi">전체</label>
                             </div>
                             <div class="select-con--item">
@@ -308,7 +309,6 @@ depth_2 : "팀"
                             <div class="conWrap">
                                 <div class="formInput clb mt-15">
                                     <div>
-                                        <label for="a"></label>
                                         <input type="text" placeholder="검색할 이름을 입력하세요">
                                     </div>
                                 </div>
@@ -324,7 +324,7 @@ depth_2 : "팀"
                     각 항목의 <strong>조회조건</strong>들은 <strong>다중선택</strong>이 가능합니다.
                 </p>
                 <div class="btn-group">
-                   
+
                     <button type="button" class="btn-dark">조건 초기화</button>
                     <a href="#" role="button" class="btn-dark btn-sm">조회</a>
                 </div>
@@ -335,7 +335,7 @@ depth_2 : "팀"
                     <div>
                         <strong class="lookup-header__about">선수통합검색</strong>
                         <h2 class="lookup-header__title">조회결과 <span class="ml-15">252</span><span
-                                    class="font-17">건</span></h2>
+                                class="font-17">건</span></h2>
                     </div>
                 </div>
                 <div class="lookup-body">
@@ -416,7 +416,7 @@ depth_2 : "팀"
                             <div>
                                 <strong class="lookup-header__about">선수통합검색</strong>
                                 <h2 class="lookup-header__title">조회결과 <span class="ml-15">252</span><span
-                                            class="font-17">건</span></h2>
+                                        class="font-17">건</span></h2>
                             </div>
                         </div>
                         <div class="lookup-body">
@@ -785,9 +785,10 @@ depth_2 : "팀"
             </div>
         </div>
     </div>
-    <!-- contents end -->
+</div>
+<!-- contents end -->
 
-    <!-- footer -->
-    @@include('../../include/footer.html',{
-    type : 'ssp-sub'
-    })
+<!-- footer -->
+@@include('../../include/footer.html',{
+type : 'ssp-sub'
+})
