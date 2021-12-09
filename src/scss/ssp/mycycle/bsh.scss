@@ -36,6 +36,7 @@ table.pn-10 {
         padding: 35px 20px;
         border-bottom: 1px solid #d2d2d2;
         overflow: hidden;
+        position: relative;
     }
     &-left {
         float: left;
@@ -72,8 +73,9 @@ table.pn-10 {
         }
     }
     &-arrow {
-        float: right;
-        margin-right: 60px;
-        line-height: 155px;
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
