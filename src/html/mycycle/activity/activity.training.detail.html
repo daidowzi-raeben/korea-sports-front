@@ -1,149 +1,150 @@
 @@include('../../include/header.html', {
-    title : "활동이력",
-    page_name : "대표선수/후보선수 훈련이력 조회",
-    type : "ssp-sub",
-    active_1 : 'is_active',
-    active_2 : '',
-    active_3 : '',
-    active_4 : ''
-    })
-    <!-- header -->
-    @@include('../../include/ssp.nav.html',{
-    type: "mycycle",
-    active_1 : '',
-    active_2 : '',
-    active_3 : "is_active",
-    active_4 : ''
-    })
-    <!-- nav -->
-    @@include('../../include/ssp.banner.html',{
-    type : "mycycle",
-    depth_2 : "활동이력",
-    depth_3 : "대표선수/후보선수 훈련이력"
-    })
-    <!-- banner -->
-    
-    <!-- contents start -->
-    <div class="container">
-        <div class="container-inner">
-            <form action="/" method="GET">
-                <div class="searchBox">
-                    <h2>대표선수·후보선수 훈련이력</h2>
-                    <div>
-                        <ul class="formInput">
-                            <li class="searchBox-item">
-                                <span class="searchTitle">구분</span>
-                                <div class="select-group wd-229">
-                                    <select name="kind" id="kind">
-                                        <option value="0" selected="">전체</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                    <i class="icon icon-select__arrow" aria-hidden="true"></i>
-                                </div>
-                            </li>
-                            <li class="searchBox-item">
-                                <span class="searchTitle">훈련기간</span>
-                                <div>
-                                    <input type='text' id="datepicker1" class="calender month datepicker-here wd-161 mr-5" data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
-                                    <input type='text' id="datepicker2" class="calender month datepicker-here wd-161" data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
-                                </div>
-                                <script src="../../js/ksDatepicker.js"></script>
-                                <script>
-                                    $(document).ready(function(){
-                                        var cntr = $('.conWrap');
-                                        ksdatepicker.fnc_set(cntr);
-                                    });
-                                </script>
-                            </li>
-                            <li class="searchBox-item searchBox-btn">
-                                <button type="button" class="btn btn-block">조회</button>
-                            </li>
-                        </ul>
-                        <div class="searchBox-img"></div>
-                    </div>
-                </div>
-            </form>
-            <div class="table-wrap blue-table mb-30">
-                <div class="titleWithEX">
-                    <p class="font-m font-18">대표선수·후보선수 훈련이력</p>
-                    <h2>조회결과</h2>
-                    <p class="countTitle">
-                        <span class="font-roboto">252</span>건
-                    </p>
-                </div>
-                <table>
-                    <colgroup>
-                        <col style="width:107px">
-                        <col style="width:338px">
-                        <col style="width:235px">
-                        <col style="width:262px">
-                        <col style="width:262px">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">종목</th>
-                            <th scope="col">구분</th>
-                            <th scope="col">시작일</th>
-                            <th scope="col">종료일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="font-roboto">15</span></td>
-                            <td>야구소프트볼(소프트볼)</td>
-                            <td>꿈나무선수</td>
-                            <td><span class="font-roboto">2021.01.10</span></td>
-                            <td><span class="font-roboto">2021.11.10</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    
-            <div class="pagination mb-100">
-                <div class="pagination-control--prev">
-                    <button type="button">
-                        <i class="icon icon-pagination--d"></i>
-                        <i class="icon icon-pagination--d-white"></i>
-                    </button>
-                    <button type="button" class="prev">
-                        <i class="icon icon-pagination"></i>
-                        <i class="icon icon-pagination-white"></i>
-                    </button>
-                </div>
-                <ol class="pagination-list">
-                    <li><a href="#">1</a></li>
-                    <li class="is_active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                </ol>
-                <div class="pagination-control--next">
-                    <button type="button" class="next">
-                        <i class="icon icon-pagination"></i>
-                        <i class="icon icon-pagination-white"></i>
-                    </button>
-                    <button type="button">
-                        <i class="icon icon-pagination--d"></i>
-                        <i class="icon icon-pagination--d-white"></i>
-                    </button>
+title : "활동이력",
+page_name : "대표선수/후보선수 훈련이력 조회",
+type : "ssp-sub",
+active_1 : 'is_active',
+active_2 : '',
+active_3 : '',
+active_4 : ''
+})
+<!-- header -->
+@@include('../../include/ssp.nav.html',{
+type: "mycycle",
+active_1 : '',
+active_2 : '',
+active_3 : "is_active",
+active_4 : ''
+})
+<!-- nav -->
+@@include('../../include/ssp.banner.html',{
+type : "mycycle",
+depth_2 : "활동이력",
+depth_3 : "대표선수/후보선수 훈련이력"
+})
+<!-- banner -->
+
+<!-- contents start -->
+<div class="container">
+    <div class="container-inner">
+        <form action="/" method="GET">
+            <div class="searchBox">
+                <h2>대표선수·후보선수 훈련이력</h2>
+                <div>
+                    <ul class="formInput">
+                        <li class="searchBox-item">
+                            <span class="searchTitle">구분</span>
+                            <div class="select-group wd-229">
+                                <select name="kind" id="kind">
+                                    <option value="0" selected="">전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                                <i class="icon icon-select__arrow" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="searchBox-item">
+                            <span class="searchTitle">훈련기간</span>
+                            <div>
+                                <input type='text' id="datepicker1" class="calender month datepicker-here wd-161 mr-5"
+                                    data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
+                                <input type='text' id="datepicker2" class="calender month datepicker-here wd-161"
+                                    data-position="bottom left" data-language='en' data-date-format="yyyy/mm" />
+                            </div>
+                            <script src="../../js/ksDatepicker.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    var cntr = $('.conWrap');
+                                    ksdatepicker.fnc_set(cntr);
+                                });
+                            </script>
+                        </li>
+                        <li class="searchBox-item searchBox-btn">
+                            <button type="button" class="btn btn-block">조회</button>
+                        </li>
+                    </ul>
+                    <div class="searchBox-img"></div>
                 </div>
             </div>
-        
+        </form>
+        <div class="table-wrap blue-table mb-30">
+            <div class="titleWithEX">
+                <p class="font-m font-18">대표선수·후보선수 훈련이력</p>
+                <h2>조회결과</h2>
+                <p class="countTitle">
+                    <span class="font-roboto">252</span>건
+                </p>
+            </div>
+            <table>
+                <colgroup>
+                    <col style="width:107px">
+                    <col style="width:338px">
+                    <col style="width:235px">
+                    <col style="width:262px">
+                    <col style="width:262px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">종목</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">시작일</th>
+                        <th scope="col">종료일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="font-roboto">15</span></td>
+                        <td>야구소프트볼(소프트볼)</td>
+                        <td>꿈나무선수</td>
+                        <td><span class="font-roboto">2021.01.10</span></td>
+                        <td><span class="font-roboto">2021.11.10</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
+        <div class="pagination mb-100">
+            <div class="pagination-control--prev">
+                <button type="button">
+                    <i class="icon icon-pagination--d"></i>
+                    <i class="icon icon-pagination--d-white"></i>
+                </button>
+                <button type="button" class="prev">
+                    <i class="icon icon-pagination"></i>
+                    <i class="icon icon-pagination-white"></i>
+                </button>
+            </div>
+            <ol class="pagination-list">
+                <li><a href="#">1</a></li>
+                <li class="is_active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ol>
+            <div class="pagination-control--next">
+                <button type="button" class="next">
+                    <i class="icon icon-pagination"></i>
+                    <i class="icon icon-pagination-white"></i>
+                </button>
+                <button type="button">
+                    <i class="icon icon-pagination--d"></i>
+                    <i class="icon icon-pagination--d-white"></i>
+                </button>
+            </div>
+        </div>
+
     </div>
-    <!-- contents end -->
-    <!-- footer -->
-    @@include('../../include/footer.html',{
-    type : 'ssp-sub'
-    })
-    
-    
-    <script src="../../js/ksDatepicker.js"></script>
-    <script>
-        $(document).ready(function(){
-            var cntr = $('.conWrap');
-            ksdatepicker.fnc_set(cntr);
-        });
-    </script>
+</div>
+<!-- contents end -->
+
+<script src="../../js/ksDatepicker.js"></script>
+<script>
+    $(document).ready(function () {
+        var cntr = $('.conWrap');
+        ksdatepicker.fnc_set(cntr);
+    });
+</script>
+<!-- footer -->
+@@include('../../include/footer.html',{
+type : 'ssp-sub'
+})
