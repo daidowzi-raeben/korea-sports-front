@@ -125,7 +125,6 @@ input::placeholder {
 
 .hero {
     &-list {
-        cursor: pointer;
 
 
         &::after {
@@ -137,6 +136,8 @@ input::placeholder {
         &__item {
             float: left;
             margin-right: 33px;
+            margin-bottom: 65px;
+            cursor: pointer;
 
             &:hover .heroPics{
                 border-color: #3d3d3d;
@@ -180,7 +181,6 @@ input::placeholder {
 
     .heroPics {
         padding: 25px 15px 28px 15px;
-        margin: 0 0 65px 0;
         width: 275px;
         height: 298px;
         border: 1px solid #bcbcbc;
