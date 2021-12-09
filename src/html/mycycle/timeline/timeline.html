@@ -478,31 +478,31 @@ depth_3 : ""
         </div>
     </div>
 </div>
+<script>
+    window.onload = function () {
+        var cycle_h = $('.cycle .history-con ul').outerHeight();
+        $('.cycle .center-bar').css('height', cycle_h + 125 + 'px');
+        var history_b = $('.history-flex .item .item-bar');
 
+        history_b.each(function () {
+            var li_length = $(this).siblings('.item-list').children().length;
+            var item_offset = $(this).parent().offset().top;
+            var target_offset = $(this).siblings('.item-list').children().eq(li_length - 1).find('.target')
+                .offset().top;
+            console.log(target_offset - item_offset);
+            $(this).css('height', target_offset - item_offset);
+
+        });
+    }
+    function pop_open(){
+        $('.user-pop').fadeIn(300);
+    }
+    function pop_close(){
+      $('.user-pop').fadeOut(300);
+    }
+</script>
 <!-- footer -->
 @@include('../../include/footer.html',{
 type : 'ssp-sub'
 })
-    <script>
-        window.onload = function () {
-            var cycle_h = $('.cycle .history-con ul').outerHeight();
-            $('.cycle .center-bar').css('height', cycle_h + 125 + 'px');
-            var history_b = $('.history-flex .item .item-bar');
     
-            history_b.each(function () {
-                var li_length = $(this).siblings('.item-list').children().length;
-                var item_offset = $(this).parent().offset().top;
-                var target_offset = $(this).siblings('.item-list').children().eq(li_length - 1).find('.target')
-                    .offset().top;
-                console.log(target_offset - item_offset);
-                $(this).css('height', target_offset - item_offset);
-    
-            });
-        }
-        function pop_open(){
-            $('.user-pop').fadeIn(300);
-        }
-        function pop_close(){
-          $('.user-pop').fadeOut(300);
-        }
-    </script>
