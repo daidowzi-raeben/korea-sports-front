@@ -149,11 +149,10 @@ $border: #BEBEBE;
             &__right {
                 padding-left: 20px;
 
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
-
+                ul {            
+                    font-size: 0;        
                     li {
+                        display: inline-block;
                         width: 147px;
                         height: 50px;
                         border-radius: 3px;
@@ -163,6 +162,7 @@ $border: #BEBEBE;
                         position: relative;
                         text-align: center;
                         line-height: 48px;
+                        font-size: 16px;
 
                         a {
                             position: absolute;
@@ -170,13 +170,13 @@ $border: #BEBEBE;
                             left: 0;
                             width: 100%;
                             height: 100%;
-
                         }
 
                         &:hover {
                             border: 1px solid #fff;
 
                         }
+                        
                     }
                 }
 
@@ -545,6 +545,15 @@ $border: #BEBEBE;
                                 padding-left: 15px;
 
                             }
+                        }
+                    }
+                    
+                    &:last-of-type {
+                        .dropdown {
+                            border-right: 1px solid #b9bcc4;
+                        }
+                        .select-con {
+                            border-right: 1px solid #b9bcc4;
                         }
                     }
                 }
